@@ -15,6 +15,10 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSUT().children.count, 1)
     }
     
+    func test_firstChild_isGeneralViewController() {
+        XCTAssertNotNil(makeSUT().children.first as? GeneralViewController)
+    }
+    
     func test_tabBarItems() {
         let sut = makeSUT()
         let tabBarItemsProperties = [TabBarItemProperties(title: "General", imageSystemName: "person.crop.circle")]

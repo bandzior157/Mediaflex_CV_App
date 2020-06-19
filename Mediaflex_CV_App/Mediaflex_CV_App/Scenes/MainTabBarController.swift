@@ -11,7 +11,7 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
-        let first = UIViewController()
+        let first = GeneralViewController()
         first.tabBarItem.title = "General"
         first.tabBarItem.image = UIImage(systemName: "person.crop.circle")
         

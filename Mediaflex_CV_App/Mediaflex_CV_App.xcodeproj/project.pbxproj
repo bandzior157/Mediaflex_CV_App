@@ -14,6 +14,7 @@
 		5A7B9A79249CC39C007D8199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A77249CC39C007D8199 /* LaunchScreen.storyboard */; };
 		5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */; };
 		5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */; };
+		5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A94249CF147007D8199 /* GeneralViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5A7B9A85249CC39D007D8199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5A7B9A94249CF147007D8199 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,17 @@
 			isa = PBXGroup;
 			children = (
 				5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */,
+				5A7B9A93249CF11E007D8199 /* General */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5A7B9A93249CF11E007D8199 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				5A7B9A94249CF147007D8199 /* GeneralViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			files = (
 				5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
+				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 			);
