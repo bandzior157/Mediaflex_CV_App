@@ -12,7 +12,8 @@
 		5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A70249CC39A007D8199 /* ViewController.swift */; };
 		5A7B9A76249CC39C007D8199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A75249CC39C007D8199 /* Assets.xcassets */; };
 		5A7B9A79249CC39C007D8199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A77249CC39C007D8199 /* LaunchScreen.storyboard */; };
-		5A7B9A84249CC39D007D8199 /* Mediaflex_CV_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A83249CC39D007D8199 /* Mediaflex_CV_AppTests.swift */; };
+		5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */; };
+		5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		5A7B9A78249CC39C007D8199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A7B9A7A249CC39C007D8199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7B9A7F249CC39C007D8199 /* Mediaflex_CV_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mediaflex_CV_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A7B9A83249CC39D007D8199 /* Mediaflex_CV_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediaflex_CV_AppTests.swift; sourceTree = "<group>"; };
 		5A7B9A85249CC39D007D8199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		5A7B9A6B249CC39A007D8199 /* Mediaflex_CV_App */ = {
 			isa = PBXGroup;
 			children = (
+				5A7B9A90249CCA0A007D8199 /* Scenes */,
 				5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */,
 				5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */,
 				5A7B9A70249CC39A007D8199 /* ViewController.swift */,
@@ -90,10 +93,18 @@
 		5A7B9A82249CC39C007D8199 /* Mediaflex_CV_AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A7B9A83249CC39D007D8199 /* Mediaflex_CV_AppTests.swift */,
+				5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */,
 				5A7B9A85249CC39D007D8199 /* Info.plist */,
 			);
 			path = Mediaflex_CV_AppTests;
+			sourceTree = "<group>";
+		};
+		5A7B9A90249CCA0A007D8199 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			files = (
 				5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
+				5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A7B9A84249CC39D007D8199 /* Mediaflex_CV_AppTests.swift in Sources */,
+				5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
