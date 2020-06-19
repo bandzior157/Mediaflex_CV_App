@@ -32,3 +32,27 @@ class Mediaflex_CV_AppTests: XCTestCase {
     }
 
 }
+
+class MainViewControllerTests: XCTestCase {
+    
+    func test_childrenCount_equals_one() {
+        let sut = makeSUT()
+        XCTAssertEqual(sut.children.count, 1)
+    }
+    
+    
+    // MARK: - Helpers
+    
+    private func makeSUT() -> UITabBarController {
+        MainTabBarController()
+    }
+    
+}
+
+class MainTabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        addChild(UIViewController())
+    }
+    
+}
