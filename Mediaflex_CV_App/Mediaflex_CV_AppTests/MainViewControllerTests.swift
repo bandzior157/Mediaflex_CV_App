@@ -12,8 +12,7 @@ import XCTest
 class MainViewControllerTests: XCTestCase {
     
     func test_childrenCount_equals_one() {
-        let sut = makeSUT()
-        XCTAssertEqual(sut.children.count, 1)
+        XCTAssertEqual(makeSUT().children.count, 1)
     }
     
     func test_firstChild_tabBarItem_general() {
