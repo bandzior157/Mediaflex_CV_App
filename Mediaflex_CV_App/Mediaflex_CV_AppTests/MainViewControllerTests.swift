@@ -15,10 +15,18 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSUT().children.count, 1)
     }
     
-    func test_firstChild_tabBarItem_general() {
-        let tabBarItem = makeSUT().children.first!.tabBarItem!
-        XCTAssertEqual(tabBarItem.title, "General")
-        XCTAssertEqual(tabBarItem.image, UIImage(systemName: "person.crop.circle"))
+    func test_tabBarItems() {
+        let sut = makeSUT()
+        let tabBarItemsProperties = [TabBarItemProperties(title: "General", imageSystemName: "person.crop.circle")]
+                
+        for child in sut.children {
+            test_tabBarItem(child.tabBarItem, properties: tabBarItemsProperties[0])
+        }
+    }
+    
+    private func test_tabBarItem(_ tabBarItem: UITabBarItem, properties: TabBarItemProperties) {
+       XCTAssertEqual(tabBarItem.title, properties.title)
+       XCTAssertEqual(tabBarItem.image, UIImage(systemName: properties.imageSystemName))
     }
     
     
@@ -28,4 +36,9 @@ class MainViewControllerTests: XCTestCase {
         MainTabBarController()
     }
     
+}
+
+struct TabBarItemProperties {
+    let title: String
+    let imageSystemName: String
 }
