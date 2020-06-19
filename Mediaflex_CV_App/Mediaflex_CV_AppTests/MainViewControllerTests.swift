@@ -16,6 +16,12 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.children.count, 1)
     }
     
+    func test_firstChild_tabBarItem_general() {
+        let tabBarItem = makeSUT().children.first!.tabBarItem!
+        XCTAssertEqual(tabBarItem.title, "General")
+        XCTAssertEqual(tabBarItem.image, UIImage(systemName: "person.crop.circle"))
+    }
+    
     
     // MARK: - Helpers
     
