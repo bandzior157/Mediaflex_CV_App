@@ -6,7 +6,7 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-class MainTabBarPresenter: MainTabBarPresenting {
+class MainTabBarPresenter: MainTabBarPresenting {    
     func viewDidLoad() {
     
     }

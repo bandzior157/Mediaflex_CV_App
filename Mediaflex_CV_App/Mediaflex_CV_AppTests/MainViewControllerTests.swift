@@ -41,25 +41,22 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertEqual(presenter.viewDidLoadCounter, 1)
     }
         
+    func test_updateByViewModel_updatesGeneralViewController() {
+        let generalViewController = MockGeneralViewController()
+        let viewModel = MainTabBarViewModel(general: dummyGeneralViewModel)
+        let sut = makeSUT(generalViewController)
+        sut.update(viewModel: viewModel)
+        XCTAssertEqual(generalViewController.updateViewModels, [dummyGeneralViewModel])
+    }
+    
     
     // MARK: - Helpers
     
-    private func makeSUT() -> MainTabBarController {
-        let sut = MainTabBarController()
-        return sut
+    private func makeSUT(_ generalView: UIViewController & GeneralViewing = GeneralViewController()) -> MainTabBarController {
+        MainTabBarController(generalView: generalView)
     }
     
+    private let dummyGeneralViewModel = GeneralViewModel(name: "", role: "", summary: "", email: "", phone: "", linkedIn: "", github: "")
 }
 
-struct TabBarItemProperties {
-    let title: String
-    let imageSystemName: String
-}
 
-class MockMainTabBarPresenter: MainTabBarPresenting {
-    private(set) var viewDidLoadCounter = 0
-    
-    func viewDidLoad() {
-        viewDidLoadCounter += 1
-    }
-}

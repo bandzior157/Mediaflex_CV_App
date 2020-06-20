@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
+		5A15B7CE249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */; };
+		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
+		5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */; };
 		5A648F64249D060100F7222F /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A648F63249D060100F7222F /* MainTabBarContract.swift */; };
 		5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */; };
 		5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
+		5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainTabBarPresenter.swift; sourceTree = "<group>"; };
+		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
+		5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeneralViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		5A648F63249D060100F7222F /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
 		5A7B9A69249CC39A007D8199 /* Mediaflex_CV_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediaflex_CV_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +72,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
+			isa = PBXGroup;
+			children = (
+				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
+				5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */,
+			);
+			path = "Test dummies";
+			sourceTree = "<group>";
+		};
+		5A15B7CF249E2E0000DB62F5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */,
+				5A15B7D2249E2E1500DB62F5 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5A15B7D2249E2E1500DB62F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5A7B9A60249CC39A007D8199 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */,
+				5A15B7CF249E2E0000DB62F5 /* Helpers */,
+				5A15B7CA249E2DB400DB62F5 /* Test dummies */,
 				5A7B9A85249CC39D007D8199 /* Info.plist */,
 			);
 			path = Mediaflex_CV_AppTests;
@@ -247,6 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */,
+				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
+				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
+				5A15B7CE249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift in Sources */,
+				5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
