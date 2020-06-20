@@ -10,12 +10,15 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
+    var presenter: MainTabBarPresenting?
+    
     override func viewDidLoad() {
         let first = GeneralViewController()
         first.tabBarItem.title = "General"
         first.tabBarItem.image = UIImage(systemName: "person.crop.circle")
         
         addChild(first)
+        presenter?.viewDidLoad()
     }
     
 }

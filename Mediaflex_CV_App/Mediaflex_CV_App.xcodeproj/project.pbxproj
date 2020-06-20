@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A648F64249D060100F7222F /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A648F63249D060100F7222F /* MainTabBarContract.swift */; };
 		5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */; };
 		5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */; };
 		5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A70249CC39A007D8199 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 		5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */; };
 		5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */; };
 		5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A94249CF147007D8199 /* GeneralViewController.swift */; };
+		5A7B9A99249CF4AB007D8199 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A98249CF4AB007D8199 /* MainTabBarPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A648F63249D060100F7222F /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
 		5A7B9A69249CC39A007D8199 /* Mediaflex_CV_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediaflex_CV_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5A7B9A94249CF147007D8199 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		5A7B9A98249CF4AB007D8199 /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,7 @@
 		5A7B9A90249CCA0A007D8199 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */,
+				5A7B9A97249CF490007D8199 /* MainTabBar */,
 				5A7B9A93249CF11E007D8199 /* General */,
 			);
 			path = Scenes;
@@ -116,6 +120,16 @@
 				5A7B9A94249CF147007D8199 /* GeneralViewController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		5A7B9A97249CF490007D8199 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5A648F63249D060100F7222F /* MainTabBarContract.swift */,
+				5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */,
+				5A7B9A98249CF4AB007D8199 /* MainTabBarPresenter.swift */,
+			);
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A648F64249D060100F7222F /* MainTabBarContract.swift in Sources */,
 				5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
+				5A7B9A99249CF4AB007D8199 /* MainTabBarPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

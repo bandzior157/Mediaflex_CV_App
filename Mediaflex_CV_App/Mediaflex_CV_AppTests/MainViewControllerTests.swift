@@ -24,20 +24,29 @@ class MainViewControllerTests: XCTestCase {
         let tabBarItemsProperties = [TabBarItemProperties(title: "General", imageSystemName: "person.crop.circle")]
                 
         for child in sut.children {
-            test_tabBarItem(child.tabBarItem, properties: tabBarItemsProperties[0])
+            test_tabBarItem(child.tabBarItem, has: tabBarItemsProperties[0])
         }
     }
     
-    private func test_tabBarItem(_ tabBarItem: UITabBarItem, properties: TabBarItemProperties) {
-       XCTAssertEqual(tabBarItem.title, properties.title)
-       XCTAssertEqual(tabBarItem.image, UIImage(systemName: properties.imageSystemName))
+    private func test_tabBarItem(_ tabBarItem: UITabBarItem, has properties: TabBarItemProperties) {
+        XCTAssertEqual(tabBarItem.title, properties.title)
+        XCTAssertEqual(tabBarItem.image, UIImage(systemName: properties.imageSystemName))
     }
     
+    func test_presenter_viewDidLoad_getCalled() {
+        let presenter = MockMainTabBarPresenter()
+        let sut = makeSUT()
+        sut.presenter = presenter
+        sut.viewDidLoad()
+        XCTAssertEqual(presenter.viewDidLoadCounter, 1)
+    }
+        
     
     // MARK: - Helpers
     
-    private func makeSUT() -> UITabBarController {
-        MainTabBarController()
+    private func makeSUT() -> MainTabBarController {
+        let sut = MainTabBarController()
+        return sut
     }
     
 }
@@ -45,4 +54,12 @@ class MainViewControllerTests: XCTestCase {
 struct TabBarItemProperties {
     let title: String
     let imageSystemName: String
+}
+
+class MockMainTabBarPresenter: MainTabBarPresenting {
+    private(set) var viewDidLoadCounter = 0
+    
+    func viewDidLoad() {
+        viewDidLoadCounter += 1
+    }
 }
