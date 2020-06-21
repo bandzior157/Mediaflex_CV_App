@@ -6,8 +6,16 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-class MainTabBarPresenter: MainTabBarPresenting {    
-    func viewDidLoad() {
+class MainTabBarPresenter: MainTabBarPresenting {
     
+    private let service: ResumeServicing
+    
+    init(service: ResumeServicing) {
+        self.service = service
     }
+    
+    func viewDidLoad() {
+        service.fetchResume()
+    }
+    
 }
