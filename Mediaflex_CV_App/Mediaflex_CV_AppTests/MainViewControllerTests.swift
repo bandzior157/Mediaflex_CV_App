@@ -33,7 +33,7 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertEqual(tabBarItem.image, UIImage(systemName: properties.imageSystemName))
     }
     
-    func test_presenter_viewDidLoad_getCalled() {
+    func test_presenter_viewDidLoad_getCalledOn_viewDidLoad() {
         let presenter = MockMainTabBarPresenter()
         let sut = makeSUT()
         sut.presenter = presenter
