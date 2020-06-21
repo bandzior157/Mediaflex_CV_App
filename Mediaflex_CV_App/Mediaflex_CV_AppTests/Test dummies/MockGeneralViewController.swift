@@ -10,9 +10,11 @@ import UIKit
 @testable import Mediaflex_CV_App
 
 class MockGeneralViewController: UIViewController, GeneralViewing {
+    
     private(set) var updateViewModels = [GeneralViewModel]()
     
     func update(viewModel: GeneralViewModel) {
         updateViewModels.append(viewModel)
     }
+    
 }

@@ -49,6 +49,7 @@ class MainViewControllerTests: XCTestCase {
     }
     
     private let dummyGeneralViewModel = GeneralViewModel(name: "", role: "", summary: "", email: "", phone: "", linkedIn: "", github: "")
+    
 }
 
 

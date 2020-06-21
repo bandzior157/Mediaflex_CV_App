@@ -9,9 +9,11 @@
 @testable import Mediaflex_CV_App
 
 class MockMainTabBarPresenter: MainTabBarPresenting {
+    
     private(set) var viewDidLoadCounter = 0
     
     func viewDidLoad() {
         viewDidLoadCounter += 1
     }
+    
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    
     typealias GeneralView = UIViewController & GeneralViewing
     
     private var generalView: GeneralView

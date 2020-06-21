@@ -81,8 +81,8 @@
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
-				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
 				5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */,
+				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
 				5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */,
 			);
 			path = "Test dummies";

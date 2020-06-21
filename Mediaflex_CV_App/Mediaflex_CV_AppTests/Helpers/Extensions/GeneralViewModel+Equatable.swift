@@ -9,6 +9,7 @@
 @testable import Mediaflex_CV_App
 
 extension GeneralViewModel: Equatable {
+    
     public static func ==(lhs: GeneralViewModel, rhs: GeneralViewModel) -> Bool {
         lhs.name == rhs.name &&
             lhs.role == rhs.role &&
@@ -18,4 +19,5 @@ extension GeneralViewModel: Equatable {
             lhs.linkedIn == rhs.linkedIn &&
             lhs.github == rhs.github
     }
+    
 }

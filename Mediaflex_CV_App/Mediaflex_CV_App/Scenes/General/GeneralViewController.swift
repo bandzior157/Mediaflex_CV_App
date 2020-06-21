@@ -13,7 +13,9 @@ class GeneralViewController: UIViewController {
 }
 
 extension GeneralViewController: GeneralViewing {
+    
     func update(viewModel: GeneralViewModel) {
         
     }
+    
 }
