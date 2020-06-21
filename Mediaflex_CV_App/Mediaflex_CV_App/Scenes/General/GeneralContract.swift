@@ -6,6 +6,10 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
+protocol GeneralViewing {
+    func update(viewModel: GeneralViewModel)
+}
+
 protocol GeneralPresenting {
     func setResume(_ resume: Resume)
 }

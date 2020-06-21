@@ -23,7 +23,3 @@ struct GeneralViewModel {
     let linkedIn: String
     let github: String
 }
-
-protocol GeneralViewing {
-    func update(viewModel: GeneralViewModel)
-}
