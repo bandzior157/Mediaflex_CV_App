@@ -40,14 +40,6 @@ class MainViewControllerTests: XCTestCase {
         sut.viewDidLoad()
         XCTAssertEqual(presenter.viewDidLoadCounter, 1)
     }
-        
-    func test_updateByViewModel_updatesGeneralViewController() {
-        let generalViewController = MockGeneralViewController()
-        let viewModel = MainTabBarViewModel(general: dummyGeneralViewModel)
-        let sut = makeSUT(generalViewController)
-        sut.update(viewModel: viewModel)
-        XCTAssertEqual(generalViewController.updateViewModels, [dummyGeneralViewModel])
-    }
     
     
     // MARK: - Helpers

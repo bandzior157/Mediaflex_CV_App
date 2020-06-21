@@ -34,9 +34,3 @@ class MainTabBarController: UITabBarController {
     }
     
 }
-
-extension MainTabBarController: MainTabBarViewing {
-    func update(viewModel: MainTabBarViewModel) {
-        generalView.update(viewModel: viewModel.general)
-    }
-}

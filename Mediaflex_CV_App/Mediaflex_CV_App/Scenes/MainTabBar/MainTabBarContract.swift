@@ -10,10 +10,6 @@ protocol MainTabBarPresenting {
     func viewDidLoad()
 }
 
-protocol MainTabBarViewing {
-    func update(viewModel: MainTabBarViewModel)
-}
-
 struct MainTabBarViewModel {
     let general: GeneralViewModel
 }
