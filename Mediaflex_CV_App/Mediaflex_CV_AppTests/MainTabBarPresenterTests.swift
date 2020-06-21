@@ -18,11 +18,30 @@ class MainTabBarPresenterTests: XCTestCase {
         XCTAssertEqual(service.fetchResumeCounter, 1)
     }
     
+    func test_generalPresenter_setResume_getCalledOn_didFetchResume() {
+        let resume = Resume(name: "ABC")
+        let generalPresenter = MockGeneralPresenter()
+        let sut = makeSUT()
+        sut.generalPresenter = generalPresenter
+        sut.didFetchResume(resume)
+        XCTAssertEqual(generalPresenter.resumes, [resume])
+    }
+    
     
     // MARK: - Helpers
     
     private func makeSUT(_ service: MockResumeService = MockResumeService()) -> MainTabBarPresenter {
         MainTabBarPresenter(service: service)
+    }
+    
+}
+
+class MockGeneralPresenter: GeneralPresenting {
+    
+    private(set) var resumes = [Resume]()
+
+    func setResume(_ resume: Resume) {
+        resumes.append(resume)
     }
     
 }

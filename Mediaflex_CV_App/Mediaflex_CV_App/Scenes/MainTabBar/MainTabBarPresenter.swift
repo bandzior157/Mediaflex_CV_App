@@ -10,12 +10,22 @@ class MainTabBarPresenter: MainTabBarPresenting {
     
     private let service: ResumeServicing
     
+    var generalPresenter: GeneralPresenting?
+    
     init(service: ResumeServicing) {
         self.service = service
     }
     
     func viewDidLoad() {
         service.fetchResume()
+    }
+    
+}
+
+extension MainTabBarPresenter: ResumeServiceDelegate {
+    
+    func didFetchResume(_ resume: Resume) {
+        generalPresenter?.setResume(resume)
     }
     
 }

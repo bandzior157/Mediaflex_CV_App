@@ -14,6 +14,10 @@
 		5A15B7D6249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D5249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift */; };
 		5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */; };
 		5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */; };
+		5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7DC249FF2B300DB62F5 /* ResumeServiceDelegate.swift */; };
+		5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7DF249FF2E000DB62F5 /* Resume.swift */; };
+		5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7E1249FF39A00DB62F5 /* GeneralContract.swift */; };
+		5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */; };
 		5A648F64249D060100F7222F /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A648F63249D060100F7222F /* MainTabBarContract.swift */; };
 		5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */; };
 		5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */; };
@@ -44,6 +48,10 @@
 		5A15B7D5249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenterTests.swift; sourceTree = "<group>"; };
 		5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServicing.swift; sourceTree = "<group>"; };
 		5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeService.swift; sourceTree = "<group>"; };
+		5A15B7DC249FF2B300DB62F5 /* ResumeServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServiceDelegate.swift; sourceTree = "<group>"; };
+		5A15B7DF249FF2E000DB62F5 /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		5A15B7E1249FF39A00DB62F5 /* GeneralContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralContract.swift; sourceTree = "<group>"; };
+		5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resume+Equatable.swift"; sourceTree = "<group>"; };
 		5A648F63249D060100F7222F /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
 		5A7B9A69249CC39A007D8199 /* Mediaflex_CV_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediaflex_CV_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
+				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -109,8 +118,17 @@
 			isa = PBXGroup;
 			children = (
 				5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */,
+				5A15B7DC249FF2B300DB62F5 /* ResumeServiceDelegate.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5A15B7DE249FF2D500DB62F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A15B7DF249FF2E000DB62F5 /* Resume.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5A7B9A60249CC39A007D8199 = {
@@ -134,6 +152,7 @@
 		5A7B9A6B249CC39A007D8199 /* Mediaflex_CV_App */ = {
 			isa = PBXGroup;
 			children = (
+				5A15B7DE249FF2D500DB62F5 /* Models */,
 				5A15B7D7249FEFEA00DB62F5 /* Services */,
 				5A7B9A90249CCA0A007D8199 /* Scenes */,
 				5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */,
@@ -170,6 +189,7 @@
 		5A7B9A93249CF11E007D8199 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				5A15B7E1249FF39A00DB62F5 /* GeneralContract.swift */,
 				5A7B9A94249CF147007D8199 /* GeneralViewController.swift */,
 			);
 			path = General;
@@ -291,7 +311,10 @@
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */,
+				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
+				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
+				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				5A7B9A99249CF4AB007D8199 /* MainTabBarPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */,
+				5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */,
 				5A15B7D6249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
 				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
