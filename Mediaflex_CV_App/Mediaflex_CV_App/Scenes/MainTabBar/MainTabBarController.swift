@@ -22,15 +22,19 @@ class MainTabBarController: UITabBarController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        let first = generalView
-        first.tabBarItem.title = "General"
-        first.tabBarItem.image = UIImage(systemName: "person.crop.circle")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let generalViewController = storyboard.instantiateViewController(withIdentifier: "GeneralViewController") as! GeneralViewController
         
-        addChild(first)
+        let generalViewController2 = GeneralViewController()
+        self.generalView = generalViewController2
+        super.init(coder: coder)
+    }
+        
+    override func viewDidLoad() {
+        generalView.tabBarItem.title = "General"
+        generalView.tabBarItem.image = UIImage(systemName: "person.crop.circle")
+        
+        addChild(generalView)
         presenter?.viewDidLoad()
     }
     

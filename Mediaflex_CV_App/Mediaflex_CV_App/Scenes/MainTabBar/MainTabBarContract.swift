@@ -16,6 +16,7 @@ struct MainTabBarViewModel {
 
 struct GeneralViewModel {
     let name: String
+    let imageUrl: String
     let role: String
     let summary: String
     let email: String

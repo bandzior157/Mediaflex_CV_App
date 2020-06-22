@@ -48,7 +48,7 @@ class MainViewControllerTests: XCTestCase {
         MainTabBarController(generalView: generalView)
     }
     
-    private let dummyGeneralViewModel = GeneralViewModel(name: "", role: "", summary: "", email: "", phone: "", linkedIn: "", github: "")
+    private let dummyGeneralViewModel = GeneralViewModel(name: "", imageUrl: "", role: "", summary: "", email: "", phone: "", linkedIn: "", github: "")
     
 }
 
