@@ -66,7 +66,7 @@ class PersonView: UIView {
         addSubview(stackView2)
         bringSubviewToFront(stackView2)
         
-        temporaryContentSetup()
+//        temporaryContentSetup()
         
         layoutImageView()
         layoutSeparatorView()

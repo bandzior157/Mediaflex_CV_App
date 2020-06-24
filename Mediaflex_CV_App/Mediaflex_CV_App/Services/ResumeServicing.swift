@@ -9,3 +9,15 @@
 protocol ResumeServicing {
     func fetchResume()
 }
+
+class FakeResumeService: ResumeServicing {
+    
+    var delegate: ResumeServiceDelegate?
+    
+    private let resume = Resume(name: "My name")
+    
+    func fetchResume() {
+        delegate?.didFetchResume(resume)
+    }
+    
+}
