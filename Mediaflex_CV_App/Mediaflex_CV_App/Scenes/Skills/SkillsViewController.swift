@@ -53,18 +53,27 @@ extension SkillsViewController: SkillsViewing {
 }
 
 extension SkillsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = viewModel?.sections[section] else { return 0 }
         return section.elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = UITableViewCell()
+        guard let cellViewModel = viewModel?.sections[indexPath.section].elements[indexPath.row] else {
+            return cell
+        }
+        cell.update(viewModel: cellViewModel)
+        return cell
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel?.sections.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel?.sections[section].title
     }
     
 }

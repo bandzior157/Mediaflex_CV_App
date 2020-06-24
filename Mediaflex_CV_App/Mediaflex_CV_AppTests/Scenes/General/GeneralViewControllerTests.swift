@@ -107,10 +107,3 @@ class GeneralViewControllerTests: XCTestCase {
 
 }
 
-extension UITableView {
-    
-    func cell(at row: Int) -> UITableViewCell? {
-        cellForRow(at: IndexPath(row: row, section: 0))
-    }
-    
-}
