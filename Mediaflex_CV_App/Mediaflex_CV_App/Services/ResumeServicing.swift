@@ -14,7 +14,7 @@ class FakeResumeService: ResumeServicing {
     
     var delegate: ResumeServiceDelegate?
     
-    private let resume = Resume(name: "My name")
+    private let resume = Resume(name: "Fake name", imageUrl: "", role: "Fake role")
     
     func fetchResume() {
         delegate?.didFetchResume(resume)

@@ -8,4 +8,6 @@
 
 struct Resume {
     let name: String
+    let imageUrl: String
+    let role: String
 }

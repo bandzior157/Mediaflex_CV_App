@@ -21,6 +21,15 @@ struct GeneralViewModel {
     let elements: [CellViewModel]
 }
 
+extension GeneralViewModel {
+    init(resume: Resume) {
+        self.name = resume.name
+        self.imageUrl = resume.imageUrl
+        self.role = resume.role
+        self.elements = []
+    }
+}
+
 struct CellViewModel {
     let title: String
 }
