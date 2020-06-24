@@ -12,7 +12,11 @@ class SkillsViewController: UIViewController {
     
     var tableView = UITableView()
     
-    private var viewModel: SkillsViewModel?
+    private var viewModel: SkillsViewModel? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,8 @@ class SkillsViewController: UIViewController {
     }
     
     private func setupSubviews() {
+        tableView.dataSource = self
+        tableView.delegate = self
         view.addSubview(tableView)
         layoutTableView()
     }
@@ -43,5 +49,26 @@ extension SkillsViewController: SkillsViewing {
     func update(viewModel: SkillsViewModel) {
         self.viewModel = viewModel
     }
+    
+}
+
+extension SkillsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let section = viewModel?.sections[section] else { return 0 }
+        return section.elements.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        viewModel?.sections.count ?? 0
+    }
+    
+}
+
+extension SkillsViewController: UITableViewDelegate {
     
 }

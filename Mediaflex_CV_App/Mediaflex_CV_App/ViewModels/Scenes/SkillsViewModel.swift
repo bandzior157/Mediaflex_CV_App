@@ -8,6 +8,13 @@
 
 struct SkillsViewModel {
     
+    let sections: [SectionViewModel]
+    
+}
+
+struct SectionViewModel {
+    
     let title: String
+    let elements: [CellViewModel]
     
 }
