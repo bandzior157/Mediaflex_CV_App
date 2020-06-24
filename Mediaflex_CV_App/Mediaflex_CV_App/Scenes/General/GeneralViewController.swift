@@ -76,7 +76,12 @@ extension GeneralViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = viewModel?.elements[indexPath.row].title
+
+        guard let cellViewModel = viewModel?.elements[indexPath.row] else {
+            return cell
+        }
+
+        cell.update(viewModel: cellViewModel)
         return cell
     }
     
@@ -88,4 +93,7 @@ extension GeneralViewController: UITableViewDataSource {
 
 extension GeneralViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
 }

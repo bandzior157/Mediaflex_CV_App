@@ -11,6 +11,8 @@
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
 		26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD124A3A73D001D9444 /* FakeResumeService.swift */; };
+		26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */; };
+		26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
@@ -54,6 +56,8 @@
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
 		26742AD124A3A73D001D9444 /* FakeResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResumeService.swift; sourceTree = "<group>"; };
+		26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelUpdating.swift; sourceTree = "<group>"; };
+		26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellViewModelUpdating.swift"; sourceTree = "<group>"; };
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
 		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
+			isa = PBXGroup;
+			children = (
+				26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */,
+				26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */,
+			);
+			path = CellViewModelUpdating;
+			sourceTree = "<group>";
+		};
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 			children = (
 				5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */,
 				26742ACF24A3A6BD001D9444 /* PersonViewing.swift */,
+				26742AD324A3ACF8001D9444 /* CellViewModelUpdating */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -389,6 +403,7 @@
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
 				26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */,
+				26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,
@@ -397,6 +412,7 @@
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 				26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
+				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

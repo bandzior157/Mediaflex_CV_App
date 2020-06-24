@@ -19,7 +19,7 @@ class ResumeTabBarPresenterTests: XCTestCase {
     }
     
     func test_generalPresenter_setResume_getCalledOn_didFetchResume() {
-        let resume = Resume(name: "ABC", imageUrl: "A", role: "B")
+        let resume = Resume()
         let generalPresenter = MockGeneralPresenter()
         let sut = makeSUT()
         sut.generalPresenter = generalPresenter

@@ -22,7 +22,9 @@ struct GeneralViewModel {
 extension GeneralViewModel {
     init(resume: Resume) {
         self.personViewViewModel = PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role)
-        self.elements = []
+        
+        let summaryCellViewModel = CellViewModel(title: resume.summary)
+        self.elements = [summaryCellViewModel]
     }
 }
 
@@ -31,6 +33,15 @@ struct PersonViewViewModel {
     let imageUrl: String
     let role: String
 }
+
 struct CellViewModel {
     let title: String
+    let imageName: String?
+    let selectable: Bool
+    
+    init(title: String = "", imageName: String? = nil, selectable: Bool = true) {
+        self.title = title
+        self.imageName = imageName
+        self.selectable = selectable
+    }
 }

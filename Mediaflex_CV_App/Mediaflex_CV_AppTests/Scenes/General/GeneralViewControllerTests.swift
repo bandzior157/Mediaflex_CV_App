@@ -37,13 +37,54 @@ class GeneralViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
     }
     
-    func test_tableViewElement_configuredByCellViewModel() {
+    func test_tableViewCell_text_isViewModelTitle() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(title: "Title")
+        let cellViewModel = CellViewModel(title: "First")
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
-        
-        let indexPath = IndexPath(row: 0, section: 0)
-        XCTAssertEqual(sut.tableView.cellForRow(at: indexPath)?.textLabel?.text, cellViewModel.title)
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertNotNil(cell)
+        XCTAssertEqual(cell?.textLabel?.text, "First")
+    }
+    
+    func test_tableViewCell_image_renderedByViewModelImageName() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(imageName: "linkedIn")
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertNotNil(cell)
+        XCTAssertEqual(cell?.imageView?.image, UIImage(named: "linkedIn"))
+    }
+    
+    func test_tableViewCell_noImage_renderedByViewModelWithoutImageName() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(imageName: nil)
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertNotNil(cell)
+        XCTAssertNil(cell?.imageView?.image)
+    }
+    
+    func test_tableViewCell_defaultSelection_renderedByViewModelSelectable() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(selectable: true)
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertNotNil(cell)
+        XCTAssertEqual(cell?.selectionStyle.rawValue, UITableViewCell.SelectionStyle.default.rawValue)
+    }
+    
+    func test_tableViewCell_noneSelection_renderedByViewModelNotSelectable() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(selectable: false)
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertNotNil(cell)
+        XCTAssertEqual(cell?.selectionStyle.rawValue, UITableViewCell.SelectionStyle.none.rawValue)
     }
     
 
@@ -64,4 +105,12 @@ class GeneralViewControllerTests: XCTestCase {
         CellViewModel(title: "")
     }
 
+}
+
+extension UITableView {
+    
+    func cell(at row: Int) -> UITableViewCell? {
+        cellForRow(at: IndexPath(row: row, section: 0))
+    }
+    
 }

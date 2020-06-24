@@ -10,4 +10,12 @@ struct Resume {
     let name: String
     let imageUrl: String
     let role: String
+    let summary: String
+    
+    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "") {
+        self.name = name
+        self.imageUrl = imageUrl
+        self.role = role
+        self.summary = summary
+    }
 }

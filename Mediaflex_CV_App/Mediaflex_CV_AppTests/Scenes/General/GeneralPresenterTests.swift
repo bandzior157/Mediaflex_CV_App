@@ -18,7 +18,8 @@ class GeneralPresenterTests: XCTestCase {
         sut.view = view
         sut.setResume(resume)
         
-        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", imageUrl: "imageUrl", role: "role"), elements: [])]
+        let summaryCellViewModel = CellViewModel(title: resume.summary)
+        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", imageUrl: "imageUrl", role: "role"), elements: [summaryCellViewModel])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     
