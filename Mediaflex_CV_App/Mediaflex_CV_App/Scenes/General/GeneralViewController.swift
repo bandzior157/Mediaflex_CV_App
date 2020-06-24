@@ -43,10 +43,10 @@ class GeneralViewController: UIViewController {
         let layoutGuide = view.safeAreaLayoutGuide
         
         let personViewConstraints = [
-            personView.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 0),
-            personView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: 0),
-            personView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: -0),
-            personView.bottomAnchor.constraint(lessThanOrEqualTo: layoutGuide.bottomAnchor, constant: -0)
+            personView.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+            personView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor),
+            personView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor),
+            personView.bottomAnchor.constraint(lessThanOrEqualTo: layoutGuide.bottomAnchor)
         ]
         
         let tableViewConstraints = [
