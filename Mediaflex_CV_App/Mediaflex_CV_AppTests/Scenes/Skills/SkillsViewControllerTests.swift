@@ -15,7 +15,7 @@ class SkillsViewControllerTests: XCTestCase {
         let sut = makeSUT()
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
     }
-    
+
     
     // MARK: - Helpers
     
