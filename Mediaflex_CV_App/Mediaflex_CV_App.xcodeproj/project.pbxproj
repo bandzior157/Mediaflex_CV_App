@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+AnchorConstraints.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -108,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2625268A24A3C83400E301F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */,
+				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 		5A7B9A82249CC39C007D8199 /* Mediaflex_CV_AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2625268A24A3C83400E301F9 /* Models */,
 				26742AD824A3C275001D9444 /* Views */,
 				5A15B7E9249FFD3200DB62F5 /* Scenes */,
 				5A15B7CF249E2E0000DB62F5 /* Helpers */,
@@ -419,6 +430,7 @@
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 				26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
+				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 			);

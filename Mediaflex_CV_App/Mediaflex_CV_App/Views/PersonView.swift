@@ -10,12 +10,14 @@ import UIKit
 
 class PersonView: UIView {
     
+    private static let imageViewSide: CGFloat = 80
+    
     lazy var imageView: UIImageView = {
         var imageView = UIImageView()
         imageView.image = UIImage(systemName: "person.crop.circle")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 40
+        imageView.layer.cornerRadius = PersonView.imageViewSide
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -88,38 +90,37 @@ class PersonView: UIView {
         
     }
     
+    
+    // MARK: - Layout
+    
     private func layoutImageView() {
-        let constraints = [
-            imageView.heightAnchor.constraint(equalToConstant: 80),
-            imageView.widthAnchor.constraint(equalToConstant: 80)
-        ]
-        
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate(getImageViewConstraints())
     }
     
     private func layoutSeparatorView() {
-        let constraints = [
-            separatorView.heightAnchor.constraint(equalToConstant: 1),
-            separatorView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.8)
-        ]
-        
         separatorView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate(getSeparatorViewConstraints())
     }
     
     private func layout(contentView view: UIView) {
-        let constraints = anchorConstraints(view: view, in: safeAreaLayoutGuide, margins: Margins(vertical: 32, horizontal: 16))
+        let constraints = NSLayoutConstraint.anchorConstraints(view: view, in: safeAreaLayoutGuide, margins: Margins(vertical: 32, horizontal: 16))
                 
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(constraints)
     }
     
-    private func anchorConstraints(view: UIView, in layoutGuide: UILayoutGuide, margins: Margins) -> [NSLayoutConstraint] {
-        [view.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: CGFloat(margins.top)),
-         view.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: CGFloat(margins.left)),
-         view.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: -CGFloat(margins.right)),
-         view.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -CGFloat(margins.bottom))]
+    
+    // MARK: - Constraints
+    
+    private func getSeparatorViewConstraints() -> [NSLayoutConstraint] {
+        [separatorView.heightAnchor.constraint(equalToConstant: 1),
+         separatorView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.8)]
+    }
+    
+    private func getImageViewConstraints() -> [NSLayoutConstraint] {
+        [imageView.heightAnchor.constraint(equalToConstant: PersonView.imageViewSide),
+        imageView.widthAnchor.constraint(equalToConstant: PersonView.imageViewSide)]
     }
     
 }
