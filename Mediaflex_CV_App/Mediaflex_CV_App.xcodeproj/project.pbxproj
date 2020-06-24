@@ -32,7 +32,6 @@
 		5A6E87FE24A0EC8D00DD8789 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */; };
 		5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */; };
 		5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */; };
-		5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A70249CC39A007D8199 /* ViewController.swift */; };
 		5A7B9A76249CC39C007D8199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A75249CC39C007D8199 /* Assets.xcassets */; };
 		5A7B9A79249CC39C007D8199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A77249CC39C007D8199 /* LaunchScreen.storyboard */; };
 		5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* ResumeTabBarControllerTests.swift */; };
@@ -78,7 +77,6 @@
 		5A7B9A69249CC39A007D8199 /* Mediaflex_CV_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediaflex_CV_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A7B9A70249CC39A007D8199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A7B9A75249CC39C007D8199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A7B9A78249CC39C007D8199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A7B9A7A249CC39C007D8199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 				5A6E87F424A0EBD900DD8789 /* Other */,
 				5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */,
 				5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */,
-				5A7B9A70249CC39A007D8199 /* ViewController.swift */,
 				5A7B9A75249CC39C007D8199 /* Assets.xcassets */,
 				5A7B9A77249CC39C007D8199 /* LaunchScreen.storyboard */,
 				5A7B9A7A249CC39C007D8199 /* Info.plist */,
@@ -398,7 +395,6 @@
 				5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */,
 				5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
-				5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
