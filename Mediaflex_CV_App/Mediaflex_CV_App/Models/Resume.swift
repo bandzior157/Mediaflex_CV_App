@@ -15,8 +15,9 @@ struct Resume {
     let email: String
     let phone: String
     let linkedInUrl: String
+    let github: String
     
-    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phone: String = "", linkedInUrl: String = "") {
+    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phone: String = "", linkedInUrl: String = "", github: String = "") {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role
@@ -24,6 +25,7 @@ struct Resume {
         self.email = email
         self.phone = phone
         self.linkedInUrl = linkedInUrl
+        self.github = github
     }
     
 }

@@ -19,6 +19,8 @@ extension GeneralViewModel {
         let emailCellViewModel = CellViewModel(title: resume.email, imageName: "email", selectable: true)
         let phoneCellViewModel = CellViewModel(title: resume.phone, imageName: "phone", selectable: true)
         let linkedInCellViewModel = CellViewModel(title: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
-        self.elements = [summaryCellViewModel, emailCellViewModel, phoneCellViewModel, linkedInCellViewModel]
+        let githubCellViewModel = CellViewModel(title: resume.github, imageName: "github", selectable: true)
+
+        self.elements = [summaryCellViewModel, emailCellViewModel, phoneCellViewModel, linkedInCellViewModel, githubCellViewModel]
     }
 }

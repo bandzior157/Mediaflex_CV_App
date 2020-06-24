@@ -17,7 +17,8 @@ class FakeResumeService {
         summary: "Some information about person. It could be summary of his pros and cons, experience, motivation or projects involed in. Should be visible in multiple lines.",
         email: "fake@gmail.com",
         phone: "+012 345 678 890",
-        linkedInUrl: "linkedin.com/fakeAccount")
+        linkedInUrl: "linkedin.com/fakeAccount",
+        github: "github.com/fakeAccount")
 
 }
 
