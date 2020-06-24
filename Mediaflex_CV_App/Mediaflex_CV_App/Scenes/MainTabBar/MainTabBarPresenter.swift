@@ -1,12 +1,12 @@
 //
-//  MainTabBarPresenter.swift
+//  ResumeTabBarPresenter.swift
 //  Mediaflex_CV_App
 //
 //  Created by Łukasz Bazior on 19/06/2020.
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-class MainTabBarPresenter: MainTabBarPresenting {
+class ResumeTabBarPresenter: ResumeTabBarPresenting {
     
     private let service: ResumeServicing
     
@@ -22,7 +22,7 @@ class MainTabBarPresenter: MainTabBarPresenting {
     
 }
 
-extension MainTabBarPresenter: ResumeServiceDelegate {
+extension ResumeTabBarPresenter: ResumeServiceDelegate {
     
     func didFetchResume(_ resume: Resume) {
         generalPresenter?.setResume(resume)

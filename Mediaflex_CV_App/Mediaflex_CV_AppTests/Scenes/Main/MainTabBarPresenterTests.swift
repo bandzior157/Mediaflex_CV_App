@@ -1,5 +1,5 @@
 //
-//  MainTabBarPresenterTests.swift
+//  ResumeTabBarPresenterTests.swift
 //  Mediaflex_CV_AppTests
 //
 //  Created by Łukasz Bazior on 21/06/2020.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Mediaflex_CV_App
 
-class MainTabBarPresenterTests: XCTestCase {
+class ResumeTabBarPresenterTests: XCTestCase {
     
     func test_resumeService_fetchResume_getCalledOn_viewDidLoad() {
         let service = MockResumeService()
@@ -30,8 +30,8 @@ class MainTabBarPresenterTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(_ service: MockResumeService = MockResumeService()) -> MainTabBarPresenter {
-        MainTabBarPresenter(service: service)
+    private func makeSUT(_ service: MockResumeService = MockResumeService()) -> ResumeTabBarPresenter {
+        ResumeTabBarPresenter(service: service)
     }
     
 }

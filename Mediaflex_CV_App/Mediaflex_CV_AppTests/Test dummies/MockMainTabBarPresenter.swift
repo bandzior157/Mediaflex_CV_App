@@ -1,5 +1,5 @@
 //
-//  MockMainTabBarPresenter.swift
+//  MockResumeTabBarPresenter.swift
 //  Mediaflex_CV_AppTests
 //
 //  Created by Łukasz Bazior on 20/06/2020.
@@ -8,7 +8,7 @@
 
 @testable import Mediaflex_CV_App
 
-class MockMainTabBarPresenter: MainTabBarPresenting {
+class MockResumeTabBarPresenter: ResumeTabBarPresenting {
     
     private(set) var viewDidLoadCounter = 0
     

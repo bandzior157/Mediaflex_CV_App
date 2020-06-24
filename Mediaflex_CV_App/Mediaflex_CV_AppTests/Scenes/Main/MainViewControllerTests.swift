@@ -1,5 +1,5 @@
 //
-//  MainViewControllerTests.swift
+//  ResumeViewControllerTests.swift
 //  Mediaflex_CV_AppTests
 //
 //  Created by Łukasz Bazior on 19/06/2020.
@@ -9,10 +9,10 @@
 import XCTest
 @testable import Mediaflex_CV_App
 
-class MainViewControllerTests: XCTestCase {
+class ResumeViewControllerTests: XCTestCase {
     
     func test_initWithCoder_returnsNil() {
-        XCTAssertNil(MainTabBarController(coder: NSCoder()))
+        XCTAssertNil(ResumeTabBarController(coder: NSCoder()))
     }
     
     func test_childrenCount_equals_one() {
@@ -38,7 +38,7 @@ class MainViewControllerTests: XCTestCase {
     }
     
     func test_presenter_viewDidLoad_getCalledOn_viewDidLoad() {
-        let presenter = MockMainTabBarPresenter()
+        let presenter = MockResumeTabBarPresenter()
         let sut = makeSUT()
         sut.presenter = presenter
         sut.viewDidLoad()
@@ -48,8 +48,8 @@ class MainViewControllerTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(_ generalView: UIViewController & GeneralViewing = GeneralViewController()) -> MainTabBarController {
-        MainTabBarController(generalView: generalView)
+    private func makeSUT(_ generalView: UIViewController & GeneralViewing = GeneralViewController()) -> ResumeTabBarController {
+        ResumeTabBarController(generalView: generalView)
     }
     
     private let dummyGeneralViewModel = GeneralViewModel(name: "", imageUrl: "", role: "", summary: "", email: "", phone: "", linkedIn: "", github: "")
