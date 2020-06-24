@@ -10,7 +10,7 @@ import UIKit
 
 class PersonView: UIView {
     
-    private static let imageViewSide: CGFloat = 80
+    private static let imageViewSide: CGFloat = 120
     
     lazy var imageView: UIImageView = {
         var imageView = UIImageView()
