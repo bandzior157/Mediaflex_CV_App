@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */; };
+		2625268E24A3CD7500E301F9 /* PersonViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */; };
+		2625269124A3CDBF00E301F9 /* GeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625269024A3CDBF00E301F9 /* GeneralViewModel.swift */; };
+		2625269524A3CDF600E301F9 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625269424A3CDF600E301F9 /* CellViewModel.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -54,6 +57,9 @@
 
 /* Begin PBXFileReference section */
 		2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+AnchorConstraints.swift"; sourceTree = "<group>"; };
+		2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewViewModel.swift; sourceTree = "<group>"; };
+		2625269024A3CDBF00E301F9 /* GeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewModel.swift; sourceTree = "<group>"; };
+		2625269424A3CDF600E301F9 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -115,6 +121,32 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2625268F24A3CD9F00E301F9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2625269324A3CDDE00E301F9 /* Views */,
+				2625269224A3CDD200E301F9 /* Scenes */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2625269224A3CDD200E301F9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2625269024A3CDBF00E301F9 /* GeneralViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2625269324A3CDDE00E301F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */,
+				2625269424A3CDF600E301F9 /* CellViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
@@ -259,6 +291,7 @@
 			children = (
 				5A15B7DE249FF2D500DB62F5 /* Models */,
 				5A15B7D7249FEFEA00DB62F5 /* Services */,
+				2625268F24A3CD9F00E301F9 /* ViewModels */,
 				5A6E87FC24A0EC8200DD8789 /* Views */,
 				5A7B9A90249CCA0A007D8199 /* Scenes */,
 				5A6E87F424A0EBD900DD8789 /* Other */,
@@ -414,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6E87FE24A0EC8D00DD8789 /* PersonView.swift in Sources */,
+				2625268E24A3CD7500E301F9 /* PersonViewViewModel.swift in Sources */,
 				5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */,
 				5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
@@ -425,6 +459,7 @@
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,
+				2625269124A3CDBF00E301F9 /* GeneralViewModel.swift in Sources */,
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
@@ -432,6 +467,7 @@
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
+				2625269524A3CDF600E301F9 /* CellViewModel.swift in Sources */,
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
