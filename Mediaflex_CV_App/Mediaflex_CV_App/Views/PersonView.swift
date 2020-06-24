@@ -22,14 +22,12 @@ class PersonView: UIView {
     
     lazy var nameLabel: UILabel = {
         var label = UILabel()
-        label.textColor = .label
         label.font = .preferredFont(forTextStyle: .headline)
         return label
     }()
     
     lazy var roleLabel: UILabel = {
         var label = UILabel()
-        label.textColor = .label
         label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
@@ -53,6 +51,8 @@ class PersonView: UIView {
     private func setup() {
         backgroundColor = .systemBackground
         
+        placeholderSetup()
+        
         let stackView = UIStackView(arrangedSubviews: [imageView, nameLabel, roleLabel])
         stackView.alignment = .center
         stackView.axis = .vertical
@@ -71,14 +71,22 @@ class PersonView: UIView {
         layout(contentView: stackView2)
     }
     
-    private func temporaryContentSetup() {
-        nameLabel.backgroundColor = .secondarySystemBackground
-        roleLabel.backgroundColor = .secondarySystemBackground
-        imageView.backgroundColor = .secondarySystemBackground
+    private func placeholderSetup() {
+        nameLabel.text = "ABCDEFGHIJKLMNOPRS"
+        roleLabel.text = "ABCDEFGHIJK"
         
-        nameLabel.text = "Łukasz Bazior"
-        roleLabel.text = "iOS Developer"
-        imageView.setImage(at: "https://media-exp1.licdn.com/dms/image/C4D03AQF5fFNIFwTLLA/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=DoVe9sBKssGRF01TyOX60xW754ABQ1fchbjhrOS1wXM")
+        setLabelsVisible(false)
+    }
+    
+    internal func setLabelsVisible(_ visible: Bool) {
+        let textColor : UIColor = visible ? .label : .clear
+        let backgroundColor: UIColor = visible ? .clear : .lightGray
+        nameLabel.textColor = textColor
+        roleLabel.textColor = textColor
+        
+        nameLabel.backgroundColor = backgroundColor
+        roleLabel.backgroundColor = backgroundColor
+        
     }
     
     private func layoutImageView() {

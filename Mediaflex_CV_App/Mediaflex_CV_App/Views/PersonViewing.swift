@@ -15,5 +15,7 @@ extension PersonView: PersonViewing {
         nameLabel.text = viewModel.fullName
         roleLabel.text = viewModel.role
         imageView.setImage(at: viewModel.imageUrl)
+        
+        setLabelsVisible(true)
     }
 }
