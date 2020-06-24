@@ -11,9 +11,26 @@
 extension GeneralViewModel: Equatable {
     
     public static func ==(lhs: GeneralViewModel, rhs: GeneralViewModel) -> Bool {
-        lhs.name == rhs.name &&
+        lhs.personViewViewModel == rhs.personViewViewModel &&
+            lhs.elements == rhs.elements
+    }
+    
+}
+
+extension PersonViewViewModel: Equatable {
+    
+    public static func ==(lhs: PersonViewViewModel, rhs: PersonViewViewModel) -> Bool {
+        lhs.fullName == rhs.fullName &&
             lhs.imageUrl == rhs.imageUrl &&
             lhs.role == rhs.role
+    }
+    
+}
+
+extension CellViewModel: Equatable {
+    
+    public static func ==(lhs: CellViewModel, rhs: CellViewModel) -> Bool {
+        lhs.title == rhs.title
     }
     
 }

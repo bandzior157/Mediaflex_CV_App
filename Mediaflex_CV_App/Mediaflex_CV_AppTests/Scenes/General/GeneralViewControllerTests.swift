@@ -13,11 +13,13 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_personViewSubviews_areSet_onUpdateWithViewModel() {
         let sut = makeSUT()
-        let viewModel = GeneralViewModel(name: "name", imageUrl: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png", role: "role", elements: [])
+        let personVM = PersonViewViewModel(fullName: "name", imageUrl: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png", role: "role")
+        let viewModel =
+            GeneralViewModel(personViewViewModel: personVM, elements: [])
         
         sut.update(viewModel: viewModel)
-        XCTAssertEqual(sut.personView.nameLabel.text, viewModel.name)
-        XCTAssertEqual(sut.personView.roleLabel.text, viewModel.role)
+        XCTAssertEqual(sut.personView.nameLabel.text, viewModel.personViewViewModel.fullName)
+        XCTAssertEqual(sut.personView.roleLabel.text, viewModel.personViewViewModel.role)
         XCTAssertNotNil(sut.personView.imageView.image)
     }
     
@@ -54,7 +56,8 @@ class GeneralViewControllerTests: XCTestCase {
     }
     
     private func makeViewModel(elements: [CellViewModel] = []) -> GeneralViewModel {
-        GeneralViewModel(name: "", imageUrl: "", role: "", elements: elements)
+        GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "", imageUrl: "", role: ""), elements: elements)
+        
     }
     
     private func dummyCellViewModel() -> CellViewModel {

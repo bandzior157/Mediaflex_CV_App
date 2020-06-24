@@ -15,21 +15,22 @@ struct ResumeTabBarViewModel {
 }
 
 struct GeneralViewModel {
-    let name: String
-    let imageUrl: String
-    let role: String
+    let personViewViewModel: PersonViewViewModel
     let elements: [CellViewModel]
 }
 
 extension GeneralViewModel {
     init(resume: Resume) {
-        self.name = resume.name
-        self.imageUrl = resume.imageUrl
-        self.role = resume.role
+        self.personViewViewModel = PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role)
         self.elements = []
     }
 }
 
+struct PersonViewViewModel {
+    let fullName: String
+    let imageUrl: String
+    let role: String
+}
 struct CellViewModel {
     let title: String
 }

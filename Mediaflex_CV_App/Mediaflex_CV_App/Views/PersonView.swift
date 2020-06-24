@@ -65,16 +65,13 @@ class PersonView: UIView {
         
         addSubview(stackView2)
         bringSubviewToFront(stackView2)
-        
-//        temporaryContentSetup()
-        
+                
         layoutImageView()
         layoutSeparatorView()
         layout(contentView: stackView2)
     }
     
     private func temporaryContentSetup() {
-//        backgroundColor = .systemTeal
         nameLabel.backgroundColor = .secondarySystemBackground
         roleLabel.backgroundColor = .secondarySystemBackground
         imageView.backgroundColor = .secondarySystemBackground

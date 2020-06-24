@@ -33,4 +33,8 @@ class ResumeTabBarController: UITabBarController {
         presenter?.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        presenter?.viewDidLoad()
+    }
+    
 }

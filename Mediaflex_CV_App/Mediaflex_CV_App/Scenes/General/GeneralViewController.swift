@@ -18,9 +18,8 @@ class GeneralViewController: UIViewController {
             tableView.reloadData()
             
             guard let viewModel = viewModel else { return }
-            personView.nameLabel.text = viewModel.name
-            personView.roleLabel.text = viewModel.role
-            personView.imageView.setImage(at: viewModel.imageUrl)
+            
+            personView.update(viewModel: viewModel.personViewViewModel)
         }
     }
     
