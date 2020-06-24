@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
-		5A15B7CE249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */; };
+		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
 		5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */; };
-		5A15B7D6249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D5249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift */; };
+		5A15B7D6249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D5249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift */; };
 		5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */; };
 		5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */; };
 		5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7DC249FF2B300DB62F5 /* ResumeServiceDelegate.swift */; };
@@ -19,7 +19,7 @@
 		5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7E1249FF39A00DB62F5 /* GeneralContract.swift */; };
 		5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */; };
 		5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7EC249FFD5D00DB62F5 /* GeneralViewControllerTests.swift */; };
-		5A648F64249D060100F7222F /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A648F63249D060100F7222F /* MainTabBarContract.swift */; };
+		5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A648F63249D060100F7222F /* ResumeTabBarContract.swift */; };
 		5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */; };
 		5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */; };
 		5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87FA24A0EC6E00DD8789 /* Margins.swift */; };
@@ -29,10 +29,10 @@
 		5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A70249CC39A007D8199 /* ViewController.swift */; };
 		5A7B9A76249CC39C007D8199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A75249CC39C007D8199 /* Assets.xcassets */; };
 		5A7B9A79249CC39C007D8199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A77249CC39C007D8199 /* LaunchScreen.storyboard */; };
-		5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */; };
-		5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */; };
+		5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* ResumeTabBarControllerTests.swift */; };
+		5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A91249CCA18007D8199 /* ResumeTabBarController.swift */; };
 		5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A94249CF147007D8199 /* GeneralViewController.swift */; };
-		5A7B9A99249CF4AB007D8199 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A98249CF4AB007D8199 /* MainTabBarPresenter.swift */; };
+		5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A98249CF4AB007D8199 /* ResumeTabBarPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 
 /* Begin PBXFileReference section */
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
-		5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainTabBarPresenter.swift; sourceTree = "<group>"; };
+		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
 		5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeneralViewModel+Equatable.swift"; sourceTree = "<group>"; };
-		5A15B7D5249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenterTests.swift; sourceTree = "<group>"; };
+		5A15B7D5249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarPresenterTests.swift; sourceTree = "<group>"; };
 		5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServicing.swift; sourceTree = "<group>"; };
 		5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeService.swift; sourceTree = "<group>"; };
 		5A15B7DC249FF2B300DB62F5 /* ResumeServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServiceDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		5A15B7E1249FF39A00DB62F5 /* GeneralContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralContract.swift; sourceTree = "<group>"; };
 		5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resume+Equatable.swift"; sourceTree = "<group>"; };
 		5A15B7EC249FFD5D00DB62F5 /* GeneralViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewControllerTests.swift; sourceTree = "<group>"; };
-		5A648F63249D060100F7222F /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
+		5A648F63249D060100F7222F /* ResumeTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarContract.swift; sourceTree = "<group>"; };
 		5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadGuarantee.swift; sourceTree = "<group>"; };
 		5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImageAtUrlString.swift"; sourceTree = "<group>"; };
 		5A6E87FA24A0EC6E00DD8789 /* Margins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margins.swift; sourceTree = "<group>"; };
@@ -72,10 +72,10 @@
 		5A7B9A7A249CC39C007D8199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7B9A7F249CC39C007D8199 /* Mediaflex_CV_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mediaflex_CV_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7B9A85249CC39D007D8199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
-		5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5A7B9A8E249CC9F4007D8199 /* ResumeTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarControllerTests.swift; sourceTree = "<group>"; };
+		5A7B9A91249CCA18007D8199 /* ResumeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarController.swift; sourceTree = "<group>"; };
 		5A7B9A94249CF147007D8199 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
-		5A7B9A98249CF4AB007D8199 /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
+		5A7B9A98249CF4AB007D8199 /* ResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */,
 				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
-				5A15B7CD249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift */,
+				5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */,
 			);
 			path = "Test dummies";
 			sourceTree = "<group>";
@@ -144,19 +144,19 @@
 		5A15B7E9249FFD3200DB62F5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5A15B7EA249FFD3C00DB62F5 /* Main */,
+				5A15B7EA249FFD3C00DB62F5 /* ResumeTabBar */,
 				5A15B7EB249FFD4500DB62F5 /* General */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		5A15B7EA249FFD3C00DB62F5 /* Main */ = {
+		5A15B7EA249FFD3C00DB62F5 /* ResumeTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				5A7B9A8E249CC9F4007D8199 /* MainViewControllerTests.swift */,
-				5A15B7D5249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift */,
+				5A7B9A8E249CC9F4007D8199 /* ResumeTabBarControllerTests.swift */,
+				5A15B7D5249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift */,
 			);
-			path = Main;
+			path = ResumeTabBar;
 			sourceTree = "<group>";
 		};
 		5A15B7EB249FFD4500DB62F5 /* General */ = {
@@ -243,7 +243,7 @@
 		5A7B9A90249CCA0A007D8199 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5A7B9A97249CF490007D8199 /* MainTabBar */,
+				5A7B9A97249CF490007D8199 /* ResumeTabBar */,
 				5A7B9A93249CF11E007D8199 /* General */,
 			);
 			path = Scenes;
@@ -258,14 +258,14 @@
 			path = General;
 			sourceTree = "<group>";
 		};
-		5A7B9A97249CF490007D8199 /* MainTabBar */ = {
+		5A7B9A97249CF490007D8199 /* ResumeTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				5A648F63249D060100F7222F /* MainTabBarContract.swift */,
-				5A7B9A91249CCA18007D8199 /* MainTabBarController.swift */,
-				5A7B9A98249CF4AB007D8199 /* MainTabBarPresenter.swift */,
+				5A648F63249D060100F7222F /* ResumeTabBarContract.swift */,
+				5A7B9A91249CCA18007D8199 /* ResumeTabBarController.swift */,
+				5A7B9A98249CF4AB007D8199 /* ResumeTabBarPresenter.swift */,
 			);
-			path = MainTabBar;
+			path = ResumeTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6E87FE24A0EC8D00DD8789 /* PersonView.swift in Sources */,
-				5A648F64249D060100F7222F /* MainTabBarContract.swift in Sources */,
+				5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */,
 				5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */,
 				5A7B9A71249CC39A007D8199 /* ViewController.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
@@ -377,12 +377,12 @@
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */,
-				5A7B9A92249CCA18007D8199 /* MainTabBarController.swift in Sources */,
+				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
-				5A7B9A99249CF4AB007D8199 /* MainTabBarPresenter.swift in Sources */,
+				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,14 +390,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A7B9A8F249CC9F4007D8199 /* MainViewControllerTests.swift in Sources */,
+				5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */,
 				5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */,
-				5A15B7D6249FEDBD00DB62F5 /* MainTabBarPresenterTests.swift in Sources */,
+				5A15B7D6249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift in Sources */,
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
 				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
 				5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */,
-				5A15B7CE249E2DEC00DB62F5 /* MockMainTabBarPresenter.swift in Sources */,
+				5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */,
 				5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

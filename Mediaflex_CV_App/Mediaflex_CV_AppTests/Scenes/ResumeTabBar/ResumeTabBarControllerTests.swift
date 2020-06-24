@@ -9,7 +9,7 @@
 import XCTest
 @testable import Mediaflex_CV_App
 
-class ResumeViewControllerTests: XCTestCase {
+class ResumeTabBarControllerTests: XCTestCase {
     
     func test_initWithCoder_returnsNil() {
         XCTAssertNil(ResumeTabBarController(coder: NSCoder()))
