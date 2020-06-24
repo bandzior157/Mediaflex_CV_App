@@ -76,7 +76,9 @@ extension GeneralViewController: GeneralViewing {
 extension GeneralViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel?.text = viewModel?.elements[indexPath.row].title
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -28,11 +28,20 @@ class GeneralViewControllerTests: XCTestCase {
         sut.update(viewModel: makeViewModel(elements: []))
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        sut.update(viewModel: makeViewModel(elements: ["A"]))
+        sut.update(viewModel: makeViewModel(elements: [dummyCellViewModel()]))
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
         
-        sut.update(viewModel: makeViewModel(elements: ["A", "B", "C"]))
+        sut.update(viewModel: makeViewModel(elements: [dummyCellViewModel(), dummyCellViewModel(), dummyCellViewModel()]))
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
+    }
+    
+    func test_tableViewElement_configuredByCellViewModel() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(title: "Title")
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        XCTAssertEqual(sut.tableView.cellForRow(at: indexPath)?.textLabel?.text, cellViewModel.title)
     }
     
 
@@ -44,7 +53,12 @@ class GeneralViewControllerTests: XCTestCase {
         return sut
     }
     
-    private func makeViewModel(elements: [String] = []) -> GeneralViewModel {
+    private func makeViewModel(elements: [CellViewModel] = []) -> GeneralViewModel {
         GeneralViewModel(name: "", imageUrl: "", role: "", elements: elements)
     }
+    
+    private func dummyCellViewModel() -> CellViewModel {
+        CellViewModel(title: "")
+    }
+
 }

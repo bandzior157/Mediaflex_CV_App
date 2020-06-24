@@ -18,5 +18,9 @@ struct GeneralViewModel {
     let name: String
     let imageUrl: String
     let role: String
-    let elements: [String]
+    let elements: [CellViewModel]
+}
+
+struct CellViewModel {
+    let title: String
 }
