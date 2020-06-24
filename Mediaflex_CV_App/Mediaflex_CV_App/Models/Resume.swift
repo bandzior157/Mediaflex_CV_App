@@ -11,11 +11,13 @@ struct Resume {
     let imageUrl: String
     let role: String
     let summary: String
+    let email: String
     
-    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "") {
+    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "") {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role
         self.summary = summary
+        self.email = email
     }
 }
