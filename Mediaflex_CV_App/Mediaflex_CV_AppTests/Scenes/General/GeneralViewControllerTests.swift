@@ -21,6 +21,11 @@ class GeneralViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.personView.imageView.image)
     }
     
+    func test_tableViewElements_basedOnViewModelElements() {
+        let sut = makeSUT()
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
+    }
+    
 
     // MARK: Helpers
     

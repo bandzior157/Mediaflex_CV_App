@@ -11,6 +11,7 @@ import UIKit
 class GeneralViewController: UIViewController {
     
     var personView = PersonView()
+    var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
