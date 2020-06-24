@@ -12,12 +12,8 @@ extension GeneralViewModel: Equatable {
     
     public static func ==(lhs: GeneralViewModel, rhs: GeneralViewModel) -> Bool {
         lhs.name == rhs.name &&
-            lhs.role == rhs.role &&
-            lhs.summary == rhs.summary &&
-            lhs.email == rhs.email &&
-            lhs.phone == rhs.phone &&
-            lhs.linkedIn == rhs.linkedIn &&
-            lhs.github == rhs.github
+            lhs.imageUrl == rhs.imageUrl &&
+            lhs.role == rhs.role
     }
     
 }

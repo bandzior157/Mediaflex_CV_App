@@ -13,31 +13,54 @@ class GeneralViewController: UIViewController {
     var personView = PersonView()
     var tableView = UITableView()
     
+    private var viewModel: GeneralViewModel? {
+        didSet {
+            tableView.reloadData()
+            
+            guard let viewModel = viewModel else { return }
+            personView.nameLabel.text = viewModel.name
+            personView.roleLabel.text = viewModel.role
+            personView.imageView.setImage(at: viewModel.imageUrl)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        tableView.dataSource = self
+        tableView.delegate = self
         setupSubviews()
     }
     
     private func setupSubviews() {
         view.addSubview(personView)
         view.bringSubviewToFront(personView)
-
+        view.addSubview(tableView)
         layoutSubviews()
     }
     
     private func layoutSubviews() {
         let layoutGuide = view.safeAreaLayoutGuide
         
-        let constraints = [
+        let personViewConstraints = [
             personView.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 0),
             personView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: 0),
             personView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: -0),
             personView.bottomAnchor.constraint(lessThanOrEqualTo: layoutGuide.bottomAnchor, constant: -0)
         ]
         
+        let tableViewConstraints = [
+            tableView.topAnchor.constraint(equalTo: personView.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor)
+        ]
+        
         personView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate(personViewConstraints)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate(tableViewConstraints)
     }
         
 }
@@ -45,9 +68,23 @@ class GeneralViewController: UIViewController {
 extension GeneralViewController: GeneralViewing {
     
     func update(viewModel: GeneralViewModel) {
-        personView.nameLabel.text = viewModel.name
-        personView.roleLabel.text = viewModel.role
-        personView.imageView.setImage(at: viewModel.imageUrl)
+        self.viewModel = viewModel
     }
+    
+}
+
+extension GeneralViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel?.elements.count ?? 0
+    }
+    
+}
+
+extension GeneralViewController: UITableViewDelegate {
     
 }

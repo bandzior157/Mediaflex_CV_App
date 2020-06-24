@@ -52,8 +52,6 @@ class ResumeTabBarControllerTests: XCTestCase {
         ResumeTabBarController(generalView: generalView)
     }
     
-    private let dummyGeneralViewModel = GeneralViewModel(name: "", imageUrl: "", role: "", summary: "", email: "", phone: "", linkedIn: "", github: "")
-    
 }
 
 
