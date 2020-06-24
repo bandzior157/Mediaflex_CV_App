@@ -17,7 +17,7 @@ class PersonView: UIView {
         imageView.image = UIImage(systemName: "person.crop.circle")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = PersonView.imageViewSide
+        imageView.layer.cornerRadius = PersonView.imageViewSide/2
         imageView.clipsToBounds = true
         return imageView
     }()
