@@ -11,6 +11,10 @@ import XCTest
 
 class MainViewControllerTests: XCTestCase {
     
+    func test_initWithCoder_returnsNil() {
+        XCTAssertNil(MainTabBarController(coder: NSCoder()))
+    }
+    
     func test_childrenCount_equals_one() {
         XCTAssertEqual(makeSUT().children.count, 1)
     }

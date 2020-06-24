@@ -22,14 +22,9 @@ class MainTabBarController: UITabBarController {
     }
     
     required init?(coder: NSCoder) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let generalViewController = storyboard.instantiateViewController(withIdentifier: "GeneralViewController") as! GeneralViewController
-        
-        let generalViewController2 = GeneralViewController()
-        self.generalView = generalViewController2
-        super.init(coder: coder)
+        nil
     }
-        
+    
     override func viewDidLoad() {
         generalView.tabBarItem.title = "General"
         generalView.tabBarItem.image = UIImage(systemName: "person.crop.circle")
