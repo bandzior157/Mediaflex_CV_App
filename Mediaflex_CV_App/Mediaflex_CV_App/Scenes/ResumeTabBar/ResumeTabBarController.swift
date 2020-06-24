@@ -11,13 +11,18 @@ import UIKit
 class ResumeTabBarController: UITabBarController {
     
     typealias GeneralView = UIViewController & GeneralViewing
+    typealias SkillsView = UIViewController & SkillsViewing
     
     private var generalView: GeneralView
+    private var skillsView: SkillsView
     
     var presenter: ResumeTabBarPresenting?
 
-    init(generalView: GeneralView = GeneralViewController()) {
+    init(generalView: GeneralView = GeneralViewController(),
+         skillsView: SkillsView = SkillsViewController()
+    ) {
         self.generalView = generalView
+        self.skillsView = skillsView
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,7 +34,12 @@ class ResumeTabBarController: UITabBarController {
         generalView.tabBarItem.title = "General"
         generalView.tabBarItem.image = UIImage(systemName: "person.crop.circle")
         
+        skillsView.title = "Skills"
+        skillsView.tabBarItem.image = UIImage(systemName: "star.fill")
+        
         addChild(generalView)
+        addChild(UINavigationController(rootViewController: skillsView))
+        
         presenter?.viewDidLoad()
     }
     

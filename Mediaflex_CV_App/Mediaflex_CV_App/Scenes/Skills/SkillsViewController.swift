@@ -8,16 +8,15 @@
 
 import UIKit
 
-class SkillsViewController: UIViewController {
+class SkillsViewController: UITableViewController {
     
-    var tableView = UITableView()
+    private var viewModel: SkillsViewModel?
     
-    private var viewModel: SkillsViewModel? {
-        didSet {
-            title = viewModel?.title
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
 }
 
 extension SkillsViewController: SkillsViewing {

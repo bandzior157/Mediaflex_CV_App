@@ -16,7 +16,7 @@ class ResumeTabBarControllerTests: XCTestCase {
     }
     
     func test_childrenCount_equals_one() {
-        XCTAssertEqual(makeSUT().children.count, 1)
+        XCTAssertEqual(makeSUT().children.count, 2)
     }
     
     func test_firstChild_isGeneralViewController() {
@@ -25,10 +25,13 @@ class ResumeTabBarControllerTests: XCTestCase {
     
     func test_tabBarItems() {
         let sut = makeSUT()
-        let tabBarItemsProperties = [TabBarItemProperties(title: "General", imageSystemName: "person.crop.circle")]
-                
-        for child in sut.children {
-            test_tabBarItem(child.tabBarItem, has: tabBarItemsProperties[0])
+        let tabBarItemsProperties = [
+            TabBarItemProperties(title: "General", imageSystemName: "person.crop.circle"),
+            TabBarItemProperties(title: "Skills", imageSystemName: "star.fill")
+        ]
+
+        for index in 0...sut.children.count-1 {
+            test_tabBarItem(sut.children[index].tabBarItem, has: tabBarItemsProperties[index])
         }
     }
     

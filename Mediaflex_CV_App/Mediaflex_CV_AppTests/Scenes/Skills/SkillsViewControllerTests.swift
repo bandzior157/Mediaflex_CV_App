@@ -11,13 +11,6 @@ import XCTest
 
 class SkillsViewControllerTests: XCTestCase {
     
-    func test_title_passedByViewModel() {
-        let sut = makeSUT()
-        let viewModel = SkillsViewModel(title: "Title")
-        sut.update(viewModel: viewModel)
-        XCTAssertEqual(sut.title, viewModel.title)
-    }
-    
     func test_tableViewRowsCount_equalsViewModelElementsCount() {
         let sut = makeSUT()
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
@@ -29,4 +22,5 @@ class SkillsViewControllerTests: XCTestCase {
     private func makeSUT() -> SkillsViewController {
         SkillsViewController()
     }
+    
 }

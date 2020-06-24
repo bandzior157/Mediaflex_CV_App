@@ -163,8 +163,8 @@
 		262960A324A3FAB90009FD29 /* Skills */ = {
 			isa = PBXGroup;
 			children = (
-				262960A724A3FD7A0009FD29 /* SkillsViewController.swift */,
 				262960AB24A3FE880009FD29 /* SkillsContract.swift */,
+				262960A724A3FD7A0009FD29 /* SkillsViewController.swift */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
