@@ -13,7 +13,7 @@ extension UITableViewCell: CellViewModelUpdating {
         textLabel?.numberOfLines = 0
         textLabel?.text = viewModel.title
         
-        imageView?.image = UIImage(named: viewModel.imageName ?? "")
+        imageView?.image = UIImage(named: viewModel.imageName ?? "")?.resized(toWidth: 40)
         
         selectionStyle = SelectionStyleProvider.enabled(viewModel.selectable)
     }
