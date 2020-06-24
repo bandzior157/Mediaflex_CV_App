@@ -30,7 +30,10 @@ extension PersonViewViewModel: Equatable {
 extension CellViewModel: Equatable {
     
     public static func ==(lhs: CellViewModel, rhs: CellViewModel) -> Bool {
-        lhs.title == rhs.title
+        lhs.title == rhs.title &&
+            lhs.imageName == rhs.imageName &&
+            lhs.selectable == rhs.selectable
+    
     }
     
 }

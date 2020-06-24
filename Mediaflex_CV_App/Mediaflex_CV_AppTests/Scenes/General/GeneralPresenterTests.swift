@@ -18,7 +18,7 @@ class GeneralPresenterTests: XCTestCase {
         sut.view = view
         sut.setResume(resume)
         
-        let summary = CellViewModel(title: resume.summary)
+        let summary = CellViewModel(title: resume.summary, imageName: nil, selectable: false)
         let email = CellViewModel(title: resume.email, imageName: "email", selectable: true)
         let phone = CellViewModel(title: resume.phone, imageName: "phone", selectable: true)
         let linkedIn = CellViewModel(title: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
