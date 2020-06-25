@@ -13,8 +13,12 @@ extension UITableViewCell: CellViewModelUpdating {
         textLabel?.numberOfLines = 0
         textLabel?.text = viewModel.title
         
+        detailTextLabel?.numberOfLines = 0
+        detailTextLabel?.textColor = .secondaryLabel
+        detailTextLabel?.text = viewModel.subtitle
+        
         imageView?.image = UIImage(named: viewModel.imageName ?? "")?.resized(toWidth: 40)?.withRenderingMode(.alwaysTemplate)
-        imageView?.tintColor = .secondaryLabel
+        imageView?.tintColor = .label // .secondaryLabel
         
         selectionStyle = SelectionStyleProvider.enabled(viewModel.selectable)
     }

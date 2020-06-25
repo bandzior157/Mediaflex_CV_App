@@ -37,13 +37,20 @@ class GeneralViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
     }
     
+    func test_renderedCell_styleSubtitle() {
+        let sut = makeSUT()
+        sut.update(viewModel: makeViewModel(elements: [CellViewModel()]))
+        let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertNotNil(cell)
+        XCTAssertEqual(cell.cellStyle, .subtitle)
+    }
+    
     func test_tableViewCell_text_isViewModelTitle() {
         let sut = makeSUT()
         let cellViewModel = CellViewModel(title: "First")
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
-        XCTAssertNotNil(cell)
         XCTAssertEqual(cell?.textLabel?.text, "First")
     }
     
@@ -53,7 +60,6 @@ class GeneralViewControllerTests: XCTestCase {
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
-        XCTAssertNotNil(cell)
         XCTAssertNotNil(cell?.imageView?.image)
     }
     
@@ -63,7 +69,6 @@ class GeneralViewControllerTests: XCTestCase {
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
-        XCTAssertNotNil(cell)
         XCTAssertNil(cell?.imageView?.image)
     }
     
@@ -73,8 +78,7 @@ class GeneralViewControllerTests: XCTestCase {
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
-        XCTAssertNotNil(cell)
-        XCTAssertEqual(cell?.selectionStyle.rawValue, UITableViewCell.SelectionStyle.default.rawValue)
+        XCTAssertEqual(cell?.selectionStyle, .default)
     }
     
     func test_tableViewCell_noneSelection_renderedByViewModelNotSelectable() {
@@ -83,8 +87,16 @@ class GeneralViewControllerTests: XCTestCase {
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
-        XCTAssertNotNil(cell)
-        XCTAssertEqual(cell?.selectionStyle.rawValue, UITableViewCell.SelectionStyle.none.rawValue)
+        XCTAssertEqual(cell?.selectionStyle, UITableViewCell.SelectionStyle.none)
+    }
+    
+    func test_tableViewCell_subtitle_fromViewModel() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(subtitle: "text")
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertEqual(cell?.detailTextLabel?.text, "text")
     }
     
 
@@ -106,4 +118,5 @@ class GeneralViewControllerTests: XCTestCase {
     }
 
 }
+
 

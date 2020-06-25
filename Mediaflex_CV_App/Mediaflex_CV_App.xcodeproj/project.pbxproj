@@ -29,6 +29,8 @@
 		262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C324A4BD7B0009FD29 /* SkillsGroup.swift */; };
 		262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C524A4D0900009FD29 /* TableViewHeaderView.swift */; };
 		262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */; };
+		262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */; };
+		262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -96,6 +98,8 @@
 		262960C324A4BD7B0009FD29 /* SkillsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsGroup.swift; sourceTree = "<group>"; };
 		262960C524A4D0900009FD29 /* TableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
 		262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RemoveTrailingSeparators.swift"; sourceTree = "<group>"; };
+		262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellStyle.swift"; sourceTree = "<group>"; };
+		262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+SelectionStyle.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 			children = (
 				262960BA24A4BC420009FD29 /* Equatable */,
 				262960AD24A410430009FD29 /* UITableView+CellAtRow.swift */,
+				262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */,
+				262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 				5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */,
 				26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */,
 				262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */,
+				262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
 				26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */,
 				5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */,
@@ -582,6 +589,7 @@
 				262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */,
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
 				262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */,
+				262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */,
 				262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */,
 				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
 				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
