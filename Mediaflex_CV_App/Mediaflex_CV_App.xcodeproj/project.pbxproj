@@ -26,6 +26,7 @@
 		262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */; };
 		262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */; };
 		262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */; };
+		262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C324A4BD7B0009FD29 /* SkillsGroup.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -90,6 +91,7 @@
 		262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960C324A4BD7B0009FD29 /* SkillsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsGroup.swift; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				5A15B7DF249FF2E000DB62F5 /* Resume.swift */,
+				262960C324A4BD7B0009FD29 /* SkillsGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
+				262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */,
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
 				26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */,
 				262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */,

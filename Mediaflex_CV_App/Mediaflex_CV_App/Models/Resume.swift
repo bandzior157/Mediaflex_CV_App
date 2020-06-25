@@ -6,13 +6,6 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-
-struct SkillsGroup {
-    let title: String
-    let skills: [String]
-}
-
-
 struct Resume {
     
     let name: String
