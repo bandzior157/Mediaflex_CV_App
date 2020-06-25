@@ -20,12 +20,7 @@ extension UITableViewCell: CellViewModelUpdating {
         imageView?.image = UIImage(named: viewModel.imageName ?? "")?.resized(toWidth: 30)?.withRenderingMode(.alwaysTemplate)
         imageView?.tintColor = .label
         
-        selectionStyle = SelectionStyleProvider.enabled(viewModel.selectable)
-    }
-}
-
-class SelectionStyleProvider {
-    static func enabled(_ enabled: Bool) -> UITableViewCell.SelectionStyle {
-        enabled ? .default : .none
+        selectionStyle = viewModel.selectable ? .default : .none
+        accessoryType = viewModel.selectable ? .disclosureIndicator : .none
     }
 }

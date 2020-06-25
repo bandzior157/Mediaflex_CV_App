@@ -99,7 +99,34 @@ class GeneralViewControllerTests: XCTestCase {
         XCTAssertEqual(cell?.detailTextLabel?.text, "text")
     }
     
+    func test_tableViewCell_defaultNoSubtitle() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel()
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertNil(cell?.detailTextLabel?.text)
+    }
+    
+    func test_tableViewCell_hasChevron_whenSelectable() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(selectable: true)
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertEqual(cell?.accessoryType, UITableViewCell.AccessoryType.disclosureIndicator)
+    }
+    
+    func test_tableViewCell_hasNoChevron_whenNotSelectable() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(selectable: false)
+        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+                
+        let cell = sut.tableView.cell(at: 0)
+        XCTAssertEqual(cell?.accessoryType, UITableViewCell.AccessoryType.none)
+    }
 
+    
     // MARK: Helpers
     
     private func makeSUT() -> GeneralViewController {
