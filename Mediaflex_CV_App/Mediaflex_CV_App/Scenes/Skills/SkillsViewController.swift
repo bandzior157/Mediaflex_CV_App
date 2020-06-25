@@ -33,6 +33,7 @@ class SkillsViewController: UIViewController {
     private func setupSubviews() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.removeTrailingSeparators()
         view.addSubview(tableView)
         layoutTableView()
     }

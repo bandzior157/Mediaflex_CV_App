@@ -28,6 +28,7 @@
 		262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */; };
 		262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C324A4BD7B0009FD29 /* SkillsGroup.swift */; };
 		262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C524A4D0900009FD29 /* TableViewHeaderView.swift */; };
+		262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -94,6 +95,7 @@
 		262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960C324A4BD7B0009FD29 /* SkillsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsGroup.swift; sourceTree = "<group>"; };
 		262960C524A4D0900009FD29 /* TableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
+		262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RemoveTrailingSeparators.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */,
 				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
 				262960A124A3D16F0009FD29 /* UIImage+Resize.swift */,
+				262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
+				262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */,
 				2625269524A3CDF600E301F9 /* CellViewModel.swift in Sources */,
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 			);
