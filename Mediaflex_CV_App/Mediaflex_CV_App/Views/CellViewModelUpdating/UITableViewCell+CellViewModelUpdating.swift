@@ -17,8 +17,8 @@ extension UITableViewCell: CellViewModelUpdating {
         detailTextLabel?.textColor = .secondaryLabel
         detailTextLabel?.text = viewModel.subtitle
         
-        imageView?.image = UIImage(named: viewModel.imageName ?? "")?.resized(toWidth: 40)?.withRenderingMode(.alwaysTemplate)
-        imageView?.tintColor = .label // .secondaryLabel
+        imageView?.image = UIImage(named: viewModel.imageName ?? "")?.resized(toWidth: 30)?.withRenderingMode(.alwaysTemplate)
+        imageView?.tintColor = .label
         
         selectionStyle = SelectionStyleProvider.enabled(viewModel.selectable)
     }
