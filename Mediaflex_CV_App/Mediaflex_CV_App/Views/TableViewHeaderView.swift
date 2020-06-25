@@ -34,10 +34,10 @@ class TableViewHeaderView: UIView {
 
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            textLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            textLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            textLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
-            textLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+            textLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            textLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            textLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            textLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
     
