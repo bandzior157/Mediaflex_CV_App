@@ -22,11 +22,14 @@ class SkillsViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.tableView.numberOfSections, 2)
     }
     
-    func test_tableViewSectionTitle() {
+    func test_viewForHeaderInSection_forTableView() {
         let sut = makeSUT()
         let viewModel = SkillsViewModel(sections: [SectionViewModel(title: "section title", elements: [])])
         sut.update(viewModel: viewModel)
-        XCTAssertEqual(sut.tableView(sut.tableView, titleForHeaderInSection: 0), "section title")
+        
+        let header = sut.tableView(sut.tableView, viewForHeaderInSection: 0) as? TableViewHeaderView
+        XCTAssertNotNil(header)
+        XCTAssertEqual(header?.textLabel.text, "section title")
     }
     
     func test_tableViewSectionElements_byViewModel() {
