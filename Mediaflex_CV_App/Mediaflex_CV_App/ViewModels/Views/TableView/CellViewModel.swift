@@ -12,7 +12,7 @@ struct CellViewModel {
     let imageName: String?
     let selectable: Bool
     
-    init(title: String = "", imageName: String? = nil, selectable: Bool = true) {
+    init(title: String = "", imageName: String? = nil, selectable: Bool = false) {
         self.title = title
         self.imageName = imageName
         self.selectable = selectable
