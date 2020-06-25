@@ -18,7 +18,12 @@ class FakeResumeService {
         email: "fake@gmail.com",
         phone: "+012 345 678 890",
         linkedInUrl: "linkedin.com/fakeAccount",
-        github: "github.com/fakeAccount")
+        github: "github.com/fakeAccount",
+        skillsGroups: [
+            SkillsGroup(title: "Technical", skills: ["Swift", "Xcode", "CocoaPods"]),
+            SkillsGroup(title: "Needless", skills: ["Drive licence"]),
+            SkillsGroup(title: "Not visible skills", skills: [])
+        ])
 
 }
 
