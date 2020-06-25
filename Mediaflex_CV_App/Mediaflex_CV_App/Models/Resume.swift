@@ -6,6 +6,13 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
+
+struct SkillsGroup {
+    let title: String
+    let skills: [String]
+}
+
+
 struct Resume {
     
     let name: String
@@ -16,8 +23,9 @@ struct Resume {
     let phone: String
     let linkedInUrl: String
     let github: String
+    let skillsGroups: [SkillsGroup]
     
-    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phone: String = "", linkedInUrl: String = "", github: String = "") {
+    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phone: String = "", linkedInUrl: String = "", github: String = "", skillsGroups: [SkillsGroup] = []) {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role
@@ -26,6 +34,7 @@ struct Resume {
         self.phone = phone
         self.linkedInUrl = linkedInUrl
         self.github = github
+        self.skillsGroups = skillsGroups
     }
     
 }

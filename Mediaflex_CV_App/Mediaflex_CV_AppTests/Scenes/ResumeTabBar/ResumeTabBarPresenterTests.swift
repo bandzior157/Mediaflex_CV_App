@@ -27,21 +27,20 @@ class ResumeTabBarPresenterTests: XCTestCase {
         XCTAssertEqual(generalPresenter.resumes, [resume])
     }
     
+    func test_skillsPresenter_setResume_getCalledOn_didFetchResume() {
+        let resume = Resume()
+        let skillsPresenter = MockSkillsPresenter()
+        let sut = makeSUT()
+        sut.skillsPresenter = skillsPresenter
+        sut.didFetchResume(resume)
+        XCTAssertEqual(skillsPresenter.resumes, [resume])
+    }
+    
     
     // MARK: - Helpers
     
     private func makeSUT(_ service: MockResumeService = MockResumeService()) -> ResumeTabBarPresenter {
         ResumeTabBarPresenter(service: service)
-    }
-    
-}
-
-class MockGeneralPresenter: GeneralPresenting {
-    
-    private(set) var resumes = [Resume]()
-
-    func setResume(_ resume: Resume) {
-        resumes.append(resume)
     }
     
 }

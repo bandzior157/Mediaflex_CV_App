@@ -11,7 +11,8 @@ class ResumeTabBarPresenter: ResumeTabBarPresenting {
     private let service: ResumeServicing
     
     var generalPresenter: GeneralPresenting?
-    
+    var skillsPresenter: SkillsPresenting?
+
     init(service: ResumeServicing) {
         self.service = service
     }
@@ -26,6 +27,7 @@ extension ResumeTabBarPresenter: ResumeServiceDelegate {
     
     func didFetchResume(_ resume: Resume) {
         generalPresenter?.setResume(resume)
+        skillsPresenter?.setResume(resume)
     }
     
 }

@@ -12,9 +12,18 @@ struct SkillsViewModel {
     
 }
 
-struct SectionViewModel {
+extension SkillsViewModel {
     
-    let title: String
-    let elements: [CellViewModel]
+    init(resume: Resume) {
+        var tempSections = [SectionViewModel]()
+        
+        for skillsGroup in resume.skillsGroups {
+            let elements = skillsGroup.skills.map { CellViewModel(title: $0) }
+            if elements.isEmpty { continue }
+            tempSections.append(SectionViewModel(title: skillsGroup.title, elements: elements))
+        }
+        
+        self.sections = tempSections
+    }
     
 }

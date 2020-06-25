@@ -17,6 +17,15 @@
 		262960AA24A3FE360009FD29 /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A924A3FE360009FD29 /* SkillsViewModel.swift */; };
 		262960AC24A3FE880009FD29 /* SkillsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960AB24A3FE880009FD29 /* SkillsContract.swift */; };
 		262960AE24A410430009FD29 /* UITableView+CellAtRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960AD24A410430009FD29 /* UITableView+CellAtRow.swift */; };
+		262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960AF24A4AAB70009FD29 /* MockSkillsPresenter.swift */; };
+		262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */; };
+		262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */; };
+		262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B524A4AD510009FD29 /* SkillsPresenter.swift */; };
+		262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B724A4BB670009FD29 /* SectionViewModel.swift */; };
+		262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */; };
+		262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */; };
+		262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */; };
+		262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -72,6 +81,15 @@
 		262960A924A3FE360009FD29 /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
 		262960AB24A3FE880009FD29 /* SkillsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsContract.swift; sourceTree = "<group>"; };
 		262960AD24A410430009FD29 /* UITableView+CellAtRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellAtRow.swift"; sourceTree = "<group>"; };
+		262960AF24A4AAB70009FD29 /* MockSkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSkillsPresenter.swift; sourceTree = "<group>"; };
+		262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralPresenter.swift; sourceTree = "<group>"; };
+		262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenterTests.swift; sourceTree = "<group>"; };
+		262960B524A4AD510009FD29 /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
+		262960B724A4BB670009FD29 /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
+		262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -157,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */,
-				2625269424A3CDF600E301F9 /* CellViewModel.swift */,
+				262960B924A4BBFE0009FD29 /* TableView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +185,7 @@
 			children = (
 				262960AB24A3FE880009FD29 /* SkillsContract.swift */,
 				262960A724A3FD7A0009FD29 /* SkillsViewController.swift */,
+				262960B524A4AD510009FD29 /* SkillsPresenter.swift */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -175,8 +194,31 @@
 			isa = PBXGroup;
 			children = (
 				262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */,
+				262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */,
 			);
 			path = Skills;
+			sourceTree = "<group>";
+		};
+		262960B924A4BBFE0009FD29 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				262960B724A4BB670009FD29 /* SectionViewModel.swift */,
+				2625269424A3CDF600E301F9 /* CellViewModel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		262960BA24A4BC420009FD29 /* Equatable */ = {
+			isa = PBXGroup;
+			children = (
+				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
+				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
+				262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */,
+				262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */,
+				262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */,
+				262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */,
+			);
+			path = Equatable;
 			sourceTree = "<group>";
 		};
 		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
@@ -200,7 +242,9 @@
 			isa = PBXGroup;
 			children = (
 				5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */,
+				262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */,
 				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
+				262960AF24A4AAB70009FD29 /* MockSkillsPresenter.swift */,
 				5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */,
 			);
 			path = "Test dummies";
@@ -218,9 +262,8 @@
 		5A15B7D2249E2E1500DB62F5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
+				262960BA24A4BC420009FD29 /* Equatable */,
 				262960AD24A410430009FD29 /* UITableView+CellAtRow.swift */,
-				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,11 +528,13 @@
 				5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */,
 				5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
+				262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */,
 				262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
 				26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */,
+				262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */,
 				26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */,
@@ -516,12 +561,19 @@
 			files = (
 				5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */,
 				26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */,
+				262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
 				26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */,
 				5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */,
 				262960AE24A410430009FD29 /* UITableView+CellAtRow.swift in Sources */,
 				5A15B7D6249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift in Sources */,
+				262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */,
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
+				262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */,
+				262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */,
+				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
+				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
+				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
 				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
 				5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 struct CellViewModel {
+    
     let title: String
     let imageName: String?
     let selectable: Bool
@@ -16,4 +17,5 @@ struct CellViewModel {
         self.imageName = imageName
         self.selectable = selectable
     }
+    
 }

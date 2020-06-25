@@ -9,3 +9,7 @@
 protocol SkillsViewing {
     func update(viewModel: SkillsViewModel)
 }
+
+protocol SkillsPresenting {
+    func setResume(_ resume: Resume)
+}
