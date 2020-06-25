@@ -72,8 +72,10 @@ extension SkillsViewController: UITableViewDataSource {
         viewModel?.sections.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        viewModel?.sections[section].title
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = TableViewHeaderView()
+        view.textLabel.text = viewModel?.sections[section].title
+        return view
     }
     
 }
