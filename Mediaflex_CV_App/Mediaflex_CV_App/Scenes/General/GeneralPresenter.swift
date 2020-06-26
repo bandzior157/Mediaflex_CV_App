@@ -14,4 +14,8 @@ class GeneralPresenter: GeneralPresenting {
         view?.update(viewModel: GeneralViewModel(resume: resume))
     }
     
+    func didSelect(row: Int) {
+        
+    }
+    
 }

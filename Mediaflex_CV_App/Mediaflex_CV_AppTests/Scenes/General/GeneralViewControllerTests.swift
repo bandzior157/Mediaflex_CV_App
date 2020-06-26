@@ -125,7 +125,24 @@ class GeneralViewControllerTests: XCTestCase {
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.accessoryType, UITableViewCell.AccessoryType.none)
     }
-
+    
+    func test_tableViewDidSelectCell_callsPresenterDidSelectRow() {
+        let sut = makeSUT()
+        let presenter = MockGeneralPresenter()
+        sut.presenter = presenter
+        
+        sut.update(viewModel: makeViewModel(elements: [CellViewModel(), CellViewModel()]))
+        
+        sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
+        XCTAssertEqual(presenter.selectedRows, [1])
+        
+        sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(presenter.selectedRows, [1, 0])
+        
+        sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(presenter.selectedRows, [1, 0, 0])
+    }
+    
     
     // MARK: Helpers
     
@@ -145,5 +162,3 @@ class GeneralViewControllerTests: XCTestCase {
     }
 
 }
-
-

@@ -16,4 +16,10 @@ class MockGeneralPresenter: GeneralPresenting {
         resumes.append(resume)
     }
     
+    private(set) var selectedRows = [Int]()
+    
+    func didSelect(row: Int) {
+        selectedRows.append(row)
+    }
+     
 }

@@ -13,6 +13,8 @@ class GeneralViewController: UIViewController {
     var personView = PersonView()
     var tableView = UITableView()
     
+    var presenter: GeneralPresenting?
+    
     private var viewModel: GeneralViewModel? {
         didSet {
             tableView.reloadData()
@@ -101,6 +103,7 @@ extension GeneralViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.didSelect(row: indexPath.row)
     }
     
 }
