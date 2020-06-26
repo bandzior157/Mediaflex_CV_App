@@ -20,7 +20,7 @@ class GeneralPresenterTests: XCTestCase {
         
         let summary = CellViewModel(title: resume.summary, imageName: nil, selectable: false)
         let email = CellViewModel(title: "Email", subtitle: resume.email, imageName: "email", selectable: true)
-        let phone = CellViewModel(title: "Phone", subtitle: resume.phone, imageName: "phone", selectable: true)
+        let phone = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, imageName: "phone", selectable: true)
         let linkedIn = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
         let github = CellViewModel(title: "GitHub", subtitle: resume.github, imageName: "github", selectable: true)
 
@@ -31,7 +31,7 @@ class GeneralPresenterTests: XCTestCase {
     func test_phoneNumberHandler_getCalled_onPhoneSelection() {
         let phoneNumberHandler = MockPhoneNumberHandler()
         let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.phoneNumber("some phone number")]), phoneNumberHandler: phoneNumberHandler)
-        sut.setResume(Resume(phone: "some phone number"))
+        sut.setResume(Resume(phoneNumber: "some phone number"))
         sut.didSelect(row: 0)
         XCTAssertEqual(phoneNumberHandler.calledPhoneNumbers, ["some phone number"])
     }

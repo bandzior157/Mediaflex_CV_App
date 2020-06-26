@@ -16,7 +16,7 @@ class FakeResumeService {
         role: "Fake role",
         summary: "Some information about person. It could be summary of his pros and cons, experience, motivation or projects involed in. Should be visible in multiple lines.",
         email: "fake@gmail.com",
-        phone: "+48507332167",
+        phoneNumber: "+48507332167",
         linkedInUrl: "https://www.linkedin.com/in/łukasz-bazior-91821798",
         github: "https://github.com/bandzior157",
         skillsGroups: [

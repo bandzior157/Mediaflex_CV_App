@@ -22,7 +22,7 @@ extension GeneralViewModel {
         
         let summaryCellViewModel = CellViewModel(title: resume.summary, imageName: nil, selectable: false)
         let emailCellViewModel = CellViewModel(title: "Email", subtitle: resume.email, imageName: "email", selectable: true)
-        let phoneCellViewModel = CellViewModel(title: "Phone", subtitle: resume.phone, imageName: "phone", selectable: true)
+        let phoneCellViewModel = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, imageName: "phone", selectable: true)
         let linkedInCellViewModel = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
         let githubCellViewModel = CellViewModel(title: "GitHub", subtitle: resume.github, imageName: "github", selectable: true)
 

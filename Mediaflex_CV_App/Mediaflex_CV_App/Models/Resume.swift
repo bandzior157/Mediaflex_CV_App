@@ -13,18 +13,18 @@ struct Resume {
     let role: String
     let summary: String
     let email: String
-    let phone: String
+    let phoneNumber: String
     let linkedInUrl: String
     let github: String
     let skillsGroups: [SkillsGroup]
     
-    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phone: String = "", linkedInUrl: String = "", github: String = "", skillsGroups: [SkillsGroup] = []) {
+    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phoneNumber: String = "", linkedInUrl: String = "", github: String = "", skillsGroups: [SkillsGroup] = []) {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role
         self.summary = summary
         self.email = email
-        self.phone = phone
+        self.phoneNumber = phoneNumber
         self.linkedInUrl = linkedInUrl
         self.github = github
         self.skillsGroups = skillsGroups

@@ -10,7 +10,7 @@ class GeneralCellTypesProvider: GeneralCellTypesProviding {
     func ordered(for resume: Resume) -> [GeneralCellType] {
         [.summary(resume.summary),
          .email(resume.email),
-         .phoneNumber(resume.phone),
+         .phoneNumber(resume.phoneNumber),
          .linkedIn(resume.linkedInUrl),
          .gitHub(resume.github)]
     }
