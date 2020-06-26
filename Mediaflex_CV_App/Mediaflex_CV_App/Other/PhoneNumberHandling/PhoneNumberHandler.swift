@@ -21,7 +21,7 @@ class PhoneNumberHandler: PhoneNumberHandling {
             throw PhoneNumberHandlingError.wrongPhoneNumber
         }
         
-        guard UIApplication.shared.canOpenURL(url) else {
+        guard application.canOpenURL(url) else {
             throw PhoneNumberHandlingError.unableToCall
         }
         
