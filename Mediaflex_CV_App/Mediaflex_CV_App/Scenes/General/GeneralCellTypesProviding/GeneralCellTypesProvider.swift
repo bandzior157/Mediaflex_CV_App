@@ -6,10 +6,6 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-protocol GeneralCellTypesProviding {
-    func ordered(for resume: Resume) -> [GeneralCellType]
-}
-
 class GeneralCellTypesProvider: GeneralCellTypesProviding {
     func ordered(for resume: Resume) -> [GeneralCellType] {
         [.summary(resume.summary),

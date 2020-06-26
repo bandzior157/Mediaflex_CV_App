@@ -12,7 +12,9 @@ import UIKit
 class GeneralPresenter: GeneralPresenting {
     
     var view: GeneralViewing?
-    let generalCellTypesProvider: GeneralCellTypesProviding
+    
+    let cellTypesProvider: GeneralCellTypesProviding
+    let cellViewModelsProvider: GeneralCellViewModelsProviding
     
     private var generalCellTypes: [GeneralCellType]?
     private var viewModel: GeneralViewModel? {
@@ -22,14 +24,17 @@ class GeneralPresenter: GeneralPresenting {
         }
     }
     
-    init(cellTypesProvider: GeneralCellTypesProviding) {
-        self.generalCellTypesProvider = cellTypesProvider
+    init(cellTypesProvider: GeneralCellTypesProviding = GeneralCellTypesProvider(),
+         cellViewModelsProvider: GeneralCellViewModelsProviding = GeneralCellViewModelsProvider()) {
+        self.cellTypesProvider = cellTypesProvider
+        self.cellViewModelsProvider = cellViewModelsProvider
     }
     
     func setResume(_ resume: Resume) {
-        generalCellTypes = generalCellTypesProvider.ordered(for: resume)
+        generalCellTypes = cellTypesProvider.ordered(for: resume)
         
-        let elements = generalCellTypes?.map { $0.cellViewModel } ?? []
+        guard let generalCellTypes = generalCellTypes else { return }
+        let elements = cellViewModelsProvider.get(for: generalCellTypes)
         let viewModel = GeneralViewModel(
             personViewViewModel: PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role),
             elements: elements)
