@@ -154,7 +154,6 @@ class GeneralViewControllerTests: XCTestCase {
     
     private func makeViewModel(elements: [CellViewModel] = []) -> GeneralViewModel {
         GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "", imageUrl: "", role: ""), elements: elements)
-        
     }
     
     private func dummyCellViewModel() -> CellViewModel {

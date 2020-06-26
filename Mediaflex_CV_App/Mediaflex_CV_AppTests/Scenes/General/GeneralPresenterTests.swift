@@ -12,7 +12,7 @@ import XCTest
 class GeneralPresenterTests: XCTestCase {
     
     func test_setResume_callsViewUpdateWithGeneralViewModel() {
-        let sut = makeSUT()
+        let sut = makeSUT(GeneralCellTypesProvider())
         let view = MockGeneralView()
         let resume = Resume(name: "full name", imageUrl: "imageUrl", role: "role")
         sut.view = view
@@ -31,10 +31,22 @@ class GeneralPresenterTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT() -> GeneralPresenter {
-        GeneralPresenter()
+    private func makeSUT(_ cellTypesProvider: GeneralCellTypesProviding = MockGeneralCellTypesProvider()) -> GeneralPresenter {
+        GeneralPresenter(cellTypesProvider: cellTypesProvider)
     }
     
+}
+
+class MockGeneralCellTypesProvider: GeneralCellTypesProviding {
+    let generalCellTypes: [GeneralCellType]
+    
+    init(generalCellTypes: [GeneralCellType] = []) {
+        self.generalCellTypes = generalCellTypes
+    }
+    
+    func ordered(for resume: Resume) -> [GeneralCellType] {
+        generalCellTypes
+    }
 }
 
 class MockGeneralView: GeneralViewing {

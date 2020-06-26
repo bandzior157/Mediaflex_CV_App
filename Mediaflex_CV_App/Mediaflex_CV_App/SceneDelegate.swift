@@ -27,8 +27,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let service = FakeResumeService()
         
         let generalViewController = GeneralViewController()
-        let generalPresenter = GeneralPresenter()
+        let generalPresenter = GeneralPresenter(cellTypesProvider: GeneralCellTypesProvider())
         generalPresenter.view = generalViewController
+        generalViewController.presenter = generalPresenter
         
         let skillsViewController = SkillsViewController()
         let skillsPresenter = SkillsPresenter()
