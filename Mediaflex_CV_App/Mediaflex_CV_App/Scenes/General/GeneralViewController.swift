@@ -31,7 +31,6 @@ class GeneralViewController: UIViewController {
     
     private func setupSubviews() {
         view.addSubview(personView)
-        view.bringSubviewToFront(personView)
         view.addSubview(tableView)
         
         personView.backgroundColor = .systemTeal
