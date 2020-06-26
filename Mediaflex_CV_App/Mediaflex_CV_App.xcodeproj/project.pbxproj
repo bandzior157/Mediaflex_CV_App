@@ -48,6 +48,9 @@
 		26A8B8E724A64194006DF5A1 /* PhoneNumberHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8E624A64194006DF5A1 /* PhoneNumberHandling.swift */; };
 		26A8B8E924A641AF006DF5A1 /* PhoneNumberHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8E824A641AF006DF5A1 /* PhoneNumberHandler.swift */; };
 		26A8B8EB24A641CA006DF5A1 /* PhoneNumberError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8EA24A641CA006DF5A1 /* PhoneNumberError.swift */; };
+		26A8B8EE24A645DD006DF5A1 /* UrlBrowserHandlingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */; };
+		26A8B8F024A645F4006DF5A1 /* UrlBrowserHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8EF24A645F4006DF5A1 /* UrlBrowserHandling.swift */; };
+		26A8B8F224A64605006DF5A1 /* UrlBrowserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
@@ -127,6 +130,9 @@
 		26A8B8E624A64194006DF5A1 /* PhoneNumberHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberHandling.swift; sourceTree = "<group>"; };
 		26A8B8E824A641AF006DF5A1 /* PhoneNumberHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberHandler.swift; sourceTree = "<group>"; };
 		26A8B8EA24A641CA006DF5A1 /* PhoneNumberError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberError.swift; sourceTree = "<group>"; };
+		26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandlingError.swift; sourceTree = "<group>"; };
+		26A8B8EF24A645F4006DF5A1 /* UrlBrowserHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandling.swift; sourceTree = "<group>"; };
+		26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandler.swift; sourceTree = "<group>"; };
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
 		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
@@ -296,6 +302,16 @@
 			path = PhoneNumberHandling;
 			sourceTree = "<group>";
 		};
+		26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */ = {
+			isa = PBXGroup;
+			children = (
+				26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */,
+				26A8B8EF24A645F4006DF5A1 /* UrlBrowserHandling.swift */,
+				26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */,
+			);
+			path = UrlBrowserHandling;
+			sourceTree = "<group>";
+		};
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				26A8B8E524A64179006DF5A1 /* PhoneNumberHandling */,
+				26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */,
 				5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */,
 				5A6E87FA24A0EC6E00DD8789 /* Margins.swift */,
 				5A6E87F724A0EC2D00DD8789 /* Extensions */,
@@ -598,6 +615,7 @@
 				5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */,
 				26A8B8DE24A61C29006DF5A1 /* GeneralCellTypesProviding.swift in Sources */,
 				26A8B8E424A622FC006DF5A1 /* ResumeSetting.swift in Sources */,
+				26A8B8EE24A645DD006DF5A1 /* UrlBrowserHandlingError.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
 				262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */,
 				26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */,
@@ -631,8 +649,10 @@
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
 				262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */,
+				26A8B8F024A645F4006DF5A1 /* UrlBrowserHandling.swift in Sources */,
 				2625269524A3CDF600E301F9 /* CellViewModel.swift in Sources */,
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
+				26A8B8F224A64605006DF5A1 /* UrlBrowserHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

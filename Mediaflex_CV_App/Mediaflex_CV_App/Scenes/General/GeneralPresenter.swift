@@ -36,7 +36,7 @@ class GeneralPresenter: GeneralPresenting {
             case let .phoneNumber(value):
                 try PhoneNumberHandler.call(phoneNumber: value)
             case let .linkedIn(value), let .gitHub(value):
-                open(urlFromString: value)
+                try UrlBrowserHandler.open(urlString: value)
             default:
                 break
             }
