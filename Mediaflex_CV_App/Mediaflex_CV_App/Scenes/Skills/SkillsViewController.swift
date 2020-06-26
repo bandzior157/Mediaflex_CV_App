@@ -10,7 +10,13 @@ import UIKit
 
 class SkillsViewController: UIViewController {
     
-    var tableView = UITableView()
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.removeTrailingSeparators()
+        return tableView
+    }()
     
     private var viewModel: SkillsViewModel? {
         didSet {
@@ -42,16 +48,14 @@ class SkillsViewController: UIViewController {
     }
     
     private func setupSubviews() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.removeTrailingSeparators()
         view.addSubview(tableView)
         layoutTableView()
     }
     
     private func layoutTableView() {
+        let constraints = NSLayoutConstraint.anchorConstraints(view: tableView, in: view.safeAreaLayoutGuide, margins: Margins.init(vertical: 0, horizontal: 0))
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(NSLayoutConstraint.anchorConstraints(view: tableView, in: view.safeAreaLayoutGuide, margins: Margins.init(vertical: 0, horizontal: 0)))
+        NSLayoutConstraint.activate(constraints)
     }
     
     private func reloadSubviews() {
@@ -90,14 +94,14 @@ extension SkillsViewController: UITableViewDataSource {
         viewModel?.sections.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = TableViewHeaderView()
-        view.textLabel.text = viewModel?.sections[section].title
-        return view
-    }
-    
 }
 
 extension SkillsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = TableViewHeaderView()
+        view.update(title: viewModel?.sections[section].title)
+        return view
+    }
     
 }

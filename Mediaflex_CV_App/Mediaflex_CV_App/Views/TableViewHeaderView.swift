@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TableViewHeaderViewing {
+    func update(title: String?)
+}
+
 class TableViewHeaderView: UIView {
     
     lazy var textLabel: UILabel = {
@@ -39,6 +43,14 @@ class TableViewHeaderView: UIView {
             textLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
             textLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
+    }
+    
+}
+
+extension TableViewHeaderView: TableViewHeaderViewing {
+    
+    func update(title: String?) {
+        textLabel.text = title
     }
     
 }
