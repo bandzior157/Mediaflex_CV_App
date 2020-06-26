@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GeneralPresenter: GeneralPresenting {
+class GeneralPresenter {
     
     var view: GeneralViewing?
     
@@ -33,6 +33,10 @@ class GeneralPresenter: GeneralPresenting {
         self.phoneNumberHandler = phoneNumberHandler
         self.urlBrowserHandler = urlBrowserHandler
     }
+    
+}
+
+extension GeneralPresenter: GeneralPresenting {
     
     func didSelect(row: Int) {
         do {
