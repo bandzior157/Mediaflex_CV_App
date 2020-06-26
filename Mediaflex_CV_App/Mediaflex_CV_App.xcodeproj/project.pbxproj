@@ -53,6 +53,7 @@
 		26A8B8F224A64605006DF5A1 /* UrlBrowserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */; };
 		26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F324A65B13006DF5A1 /* MockGeneralView.swift */; };
 		26A8B8F624A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F524A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift */; };
+		26A8B8F824A65BA4006DF5A1 /* MockPhoneNumberHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F724A65BA4006DF5A1 /* MockPhoneNumberHandler.swift */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
@@ -137,6 +138,7 @@
 		26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandler.swift; sourceTree = "<group>"; };
 		26A8B8F324A65B13006DF5A1 /* MockGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralView.swift; sourceTree = "<group>"; };
 		26A8B8F524A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralCellTypesProvider.swift; sourceTree = "<group>"; };
+		26A8B8F724A65BA4006DF5A1 /* MockPhoneNumberHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhoneNumberHandler.swift; sourceTree = "<group>"; };
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
 		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */,
 				26A8B8F324A65B13006DF5A1 /* MockGeneralView.swift */,
 				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
+				26A8B8F724A65BA4006DF5A1 /* MockPhoneNumberHandler.swift */,
 				5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */,
 				26A8B8DF24A6226A006DF5A1 /* MockResumeSetter.swift */,
 				5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */,
@@ -672,6 +675,7 @@
 				26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */,
 				262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
+				26A8B8F824A65BA4006DF5A1 /* MockPhoneNumberHandler.swift in Sources */,
 				26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */,
 				5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */,
 				262960AE24A410430009FD29 /* UITableView+CellAtRow.swift in Sources */,

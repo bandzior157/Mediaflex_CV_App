@@ -72,13 +72,3 @@ class MockUrlBrowserHandler: UrlBrowserHandling {
     }
     
 }
-
-class MockPhoneNumberHandler: PhoneNumberHandling {
-    
-    private(set) var calledPhoneNumbers = [String]()
-    
-    func call(phoneNumber: String) throws {
-        calledPhoneNumbers.append(phoneNumber)
-    }
-    
-}
