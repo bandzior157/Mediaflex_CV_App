@@ -44,6 +44,15 @@ class GeneralPresenterTests: XCTestCase {
         XCTAssertEqual(urlBrowserHandler.openedUrlStrings, ["github url string"])
     }
 
+    func test_urlBrowserHandler_getCalled_onLinkedInSelection() {
+        let urlString = "some url string"
+        let urlBrowserHandler = MockUrlBrowserHandler()
+        let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.linkedIn(urlString)]), urlBrowserHandler: urlBrowserHandler)
+        sut.setResume(Resume(linkedInUrl: urlString))
+        sut.didSelect(row: 0)
+        XCTAssertEqual(urlBrowserHandler.openedUrlStrings, [urlString])
+    }
+    
     
     // MARK: - Helpers
     
