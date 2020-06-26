@@ -28,11 +28,29 @@ class GeneralPresenterTests: XCTestCase {
         XCTAssertEqual(view.updateViewModels, expected)
     }
     
+    func test_phoneNumberHandler_getCalled_onPhoneSelection() {
+        let phoneNumberHandler = MockPhoneNumberHandler()
+        let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.phoneNumber("some phone number")]), phoneNumberHandler: phoneNumberHandler)
+        sut.setResume(Resume(phone: "some phone number"))
+        sut.didSelect(row: 0)
+        XCTAssertEqual(phoneNumberHandler.calledPhoneNumbers, ["some phone number"])
+    }
+    
     
     // MARK: - Helpers
     
     private func makeSUT(_ cellTypesProvider: GeneralCellTypesProviding = MockGeneralCellTypesProvider()) -> GeneralPresenter {
         GeneralPresenter(cellTypesProvider: cellTypesProvider)
+    }
+    
+}
+
+class MockPhoneNumberHandler: PhoneNumberHandling {
+    
+    private(set) var calledPhoneNumbers = [String]()
+    
+    func call(phoneNumber: String) throws {
+        calledPhoneNumbers.append(phoneNumber)
     }
     
 }
