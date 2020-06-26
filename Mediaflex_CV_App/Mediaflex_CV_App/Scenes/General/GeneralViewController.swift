@@ -13,6 +13,8 @@ class GeneralViewController: UIViewController {
     var personView = PersonView()
     var tableView = UITableView()
     
+    private let personViewCornerRadius: CGFloat = 16
+    
     var presenter: GeneralPresenting?
     
     private var viewModel: GeneralViewModel? {
@@ -34,6 +36,7 @@ class GeneralViewController: UIViewController {
     }
     
     private func setupSubviews() {
+        personView.layer.cornerRadius = personViewCornerRadius
         view.addSubview(personView)
         view.bringSubviewToFront(personView)
         view.addSubview(tableView)
@@ -46,7 +49,7 @@ class GeneralViewController: UIViewController {
         let layoutGuide = view.safeAreaLayoutGuide
         
         let personViewConstraints = [
-            personView.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+            personView.topAnchor.constraint(equalTo: view.topAnchor, constant: -personViewCornerRadius),
             personView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor),
             personView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor),
             personView.bottomAnchor.constraint(lessThanOrEqualTo: layoutGuide.bottomAnchor)
