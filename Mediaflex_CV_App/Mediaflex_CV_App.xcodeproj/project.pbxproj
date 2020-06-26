@@ -61,6 +61,8 @@
 		26A8B90324A66454006DF5A1 /* MailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90224A66454006DF5A1 /* MailHandler.swift */; };
 		26A8B90524A6812A006DF5A1 /* ResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90424A6812A006DF5A1 /* ResumeService.swift */; };
 		26A8B90724A6A97A006DF5A1 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */; };
+		26A8B90B24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90A24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift */; };
+		26A8B90D24A6AF30006DF5A1 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90C24A6AF30006DF5A1 /* ExperienceViewController.swift */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
@@ -151,6 +153,8 @@
 		26A8B90224A66454006DF5A1 /* MailHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHandler.swift; sourceTree = "<group>"; };
 		26A8B90424A6812A006DF5A1 /* ResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeService.swift; sourceTree = "<group>"; };
 		26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
+		26A8B90A24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewControllerTests.swift; sourceTree = "<group>"; };
+		26A8B90C24A6AF30006DF5A1 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
 		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
@@ -340,6 +344,22 @@
 			path = MailHandling;
 			sourceTree = "<group>";
 		};
+		26A8B90824A6AE86006DF5A1 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				26A8B90C24A6AF30006DF5A1 /* ExperienceViewController.swift */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		26A8B90924A6AECD006DF5A1 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				26A8B90A24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +423,7 @@
 				5A15B7EA249FFD3C00DB62F5 /* ResumeTabBar */,
 				5A15B7EB249FFD4500DB62F5 /* General */,
 				262960A424A3FAD90009FD29 /* Skills */,
+				26A8B90924A6AECD006DF5A1 /* Experience */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -516,6 +537,7 @@
 				5A7B9A97249CF490007D8199 /* ResumeTabBar */,
 				5A7B9A93249CF11E007D8199 /* General */,
 				262960A324A3FAB90009FD29 /* Skills */,
+				26A8B90824A6AE86006DF5A1 /* Experience */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -666,6 +688,7 @@
 				262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */,
 				262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */,
 				26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */,
+				26A8B90D24A6AF30006DF5A1 /* ExperienceViewController.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				26A8B8E924A641AF006DF5A1 /* PhoneNumberHandler.swift in Sources */,
 				5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */,
@@ -716,6 +739,7 @@
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
 				262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */,
 				262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */,
+				26A8B90B24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift in Sources */,
 				262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */,
 				26A8B8FC24A661FA006DF5A1 /* ResumeTabBarControllerTests.swift in Sources */,
 				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
