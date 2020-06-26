@@ -82,15 +82,3 @@ class MockPhoneNumberHandler: PhoneNumberHandling {
     }
     
 }
-
-class MockGeneralCellTypesProvider: GeneralCellTypesProviding {
-    let generalCellTypes: [GeneralCellType]
-    
-    init(generalCellTypes: [GeneralCellType] = []) {
-        self.generalCellTypes = generalCellTypes
-    }
-    
-    func ordered(for resume: Resume) -> [GeneralCellType] {
-        generalCellTypes
-    }
-}
