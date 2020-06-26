@@ -94,13 +94,3 @@ class MockGeneralCellTypesProvider: GeneralCellTypesProviding {
         generalCellTypes
     }
 }
-
-class MockGeneralView: GeneralViewing {
-    
-    private(set) var updateViewModels = [GeneralViewModel]()
-    
-    func update(viewModel: GeneralViewModel) {
-        updateViewModels.append(viewModel)
-    }
-    
-}
