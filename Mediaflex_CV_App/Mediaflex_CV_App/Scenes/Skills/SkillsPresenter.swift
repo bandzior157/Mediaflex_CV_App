@@ -15,3 +15,7 @@ class SkillsPresenter: SkillsPresenting {
     }
     
 }
+
+extension SkillsPresenter: ResumeSetting {
+    
+}

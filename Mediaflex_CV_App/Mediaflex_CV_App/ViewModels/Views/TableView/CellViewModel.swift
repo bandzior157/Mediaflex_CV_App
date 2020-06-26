@@ -21,8 +21,3 @@ struct CellViewModel {
     }
     
 }
-
-#warning("extract below")
-protocol CellViewModelHaving {
-    var cellViewModel: CellViewModel { get }
-}

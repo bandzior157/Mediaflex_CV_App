@@ -10,6 +10,8 @@ import XCTest
 @testable import Mediaflex_CV_App
 
 class ResumeTabBarPresenterTests: XCTestCase {
+        
+    let mockResumeSetter = MockResumeSetter()
     
     func test_resumeService_fetchResume_getCalledOn_viewDidLoad() {
         let service = MockResumeService()
@@ -20,20 +22,18 @@ class ResumeTabBarPresenterTests: XCTestCase {
     
     func test_generalPresenter_setResume_getCalledOn_didFetchResume() {
         let resume = Resume()
-        let generalPresenter = MockGeneralPresenter()
         let sut = makeSUT()
-        sut.generalPresenter = generalPresenter
+        sut.generalResumeSetter = mockResumeSetter
         sut.didFetchResume(resume)
-        XCTAssertEqual(generalPresenter.resumes, [resume])
+        XCTAssertEqual(mockResumeSetter.resumes, [resume])
     }
     
     func test_skillsPresenter_setResume_getCalledOn_didFetchResume() {
         let resume = Resume()
-        let skillsPresenter = MockSkillsPresenter()
         let sut = makeSUT()
-        sut.skillsPresenter = skillsPresenter
+        sut.skillsResumeSetter = mockResumeSetter
         sut.didFetchResume(resume)
-        XCTAssertEqual(skillsPresenter.resumes, [resume])
+        XCTAssertEqual(mockResumeSetter.resumes, [resume])
     }
     
     

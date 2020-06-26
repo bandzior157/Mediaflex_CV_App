@@ -38,8 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let resumeTabBarController = ResumeTabBarController(generalView: generalViewController, skillsView: skillsViewController)
         let resumeTabBarPresenter = ResumeTabBarPresenter(service: service)
         service.delegate = resumeTabBarPresenter
-        resumeTabBarPresenter.generalPresenter = generalPresenter
-        resumeTabBarPresenter.skillsPresenter = skillsPresenter
+        resumeTabBarPresenter.generalResumeSetter = generalPresenter
+        resumeTabBarPresenter.skillsResumeSetter = skillsPresenter
         
         resumeTabBarController.presenter = resumeTabBarPresenter
         

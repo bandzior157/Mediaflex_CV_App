@@ -11,6 +11,5 @@ protocol GeneralViewing {
 }
 
 protocol GeneralPresenting {
-    func setResume(_ resume: Resume)
     func didSelect(row: Int)
 }

@@ -30,18 +30,6 @@ class GeneralPresenter: GeneralPresenting {
         self.cellViewModelsProvider = cellViewModelsProvider
     }
     
-    func setResume(_ resume: Resume) {
-        generalCellTypes = cellTypesProvider.ordered(for: resume)
-        
-        guard let generalCellTypes = generalCellTypes else { return }
-        let elements = cellViewModelsProvider.get(for: generalCellTypes)
-        let viewModel = GeneralViewModel(
-            personViewViewModel: PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role),
-            elements: elements)
-        
-        self.viewModel = viewModel
-    }
-    
     func didSelect(row: Int) {
         switch generalCellTypes?[row] {
         case let .phoneNumber(value):
@@ -56,6 +44,22 @@ class GeneralPresenter: GeneralPresenting {
             UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
+    }
+    
+}
+
+extension GeneralPresenter: ResumeSetting {
+    
+    func setResume(_ resume: Resume) {
+        generalCellTypes = cellTypesProvider.ordered(for: resume)
+        
+        guard let generalCellTypes = generalCellTypes else { return }
+        let elements = cellViewModelsProvider.get(for: generalCellTypes)
+        let viewModel = GeneralViewModel(
+            personViewViewModel: PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role),
+            elements: elements)
+        
+        self.viewModel = viewModel
     }
     
 }

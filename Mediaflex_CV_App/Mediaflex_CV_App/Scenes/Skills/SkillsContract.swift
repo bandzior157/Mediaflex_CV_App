@@ -11,5 +11,5 @@ protocol SkillsViewing {
 }
 
 protocol SkillsPresenting {
-    func setResume(_ resume: Resume)
+
 }
