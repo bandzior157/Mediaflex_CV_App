@@ -17,11 +17,7 @@ class GeneralViewController: UIViewController {
     
     private var viewModel: GeneralViewModel? {
         didSet {
-            tableView.reloadData()
-            
-            guard let viewModel = viewModel else { return }
-            
-            personView.update(viewModel: viewModel.personViewViewModel)
+            reloadSubviews()
         }
     }
     
@@ -68,6 +64,14 @@ class GeneralViewController: UIViewController {
         NSLayoutConstraint.activate(tableViewConstraints)
     }
         
+    private func reloadSubviews() {
+        ThreadGuarantee.guarantee(on: .main) { [weak self] in
+            self?.tableView.reloadData()
+            
+            guard let viewModel = self?.viewModel else { return }
+            self?.personView.update(viewModel: viewModel.personViewViewModel)
+        }
+    }
 }
 
 extension GeneralViewController: GeneralViewing {

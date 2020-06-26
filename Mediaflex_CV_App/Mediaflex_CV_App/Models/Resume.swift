@@ -31,3 +31,17 @@ struct Resume {
     }
     
 }
+
+extension Resume: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case name = "full_name"
+        case imageUrl = "photo_url"
+        case role
+        case summary
+        case email
+        case phoneNumber = "phone_number"
+        case linkedInUrl = "linkedin_url"
+        case gitHubUrl = "github_url"
+        case skillsGroups = "skills_groups"
+    }
+}

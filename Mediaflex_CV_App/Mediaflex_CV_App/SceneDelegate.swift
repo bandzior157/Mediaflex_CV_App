@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeResumeTabBarController() -> UIViewController {
-        let service = FakeResumeService()
+        let service = ResumeService()
         
         let generalViewController = GeneralViewController()
         let generalPresenter = GeneralPresenter()

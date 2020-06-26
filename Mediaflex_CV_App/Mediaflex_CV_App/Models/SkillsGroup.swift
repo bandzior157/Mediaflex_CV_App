@@ -10,3 +10,10 @@ struct SkillsGroup {
     let title: String
     let skills: [String]
 }
+
+extension SkillsGroup: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case skills
+    }
+}
