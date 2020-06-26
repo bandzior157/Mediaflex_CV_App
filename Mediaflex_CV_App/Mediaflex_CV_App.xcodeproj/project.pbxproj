@@ -55,6 +55,10 @@
 		26A8B8F624A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F524A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift */; };
 		26A8B8F824A65BA4006DF5A1 /* MockPhoneNumberHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F724A65BA4006DF5A1 /* MockPhoneNumberHandler.swift */; };
 		26A8B8FA24A65BD4006DF5A1 /* MockUrlBrowserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F924A65BD4006DF5A1 /* MockUrlBrowserHandler.swift */; };
+		26A8B8FC24A661FA006DF5A1 /* ResumeTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* ResumeTabBarControllerTests.swift */; };
+		26A8B8FF24A66417006DF5A1 /* MailHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8FE24A66417006DF5A1 /* MailHandling.swift */; };
+		26A8B90124A66440006DF5A1 /* MailHandlingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90024A66440006DF5A1 /* MailHandlingError.swift */; };
+		26A8B90324A66454006DF5A1 /* MailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B90224A66454006DF5A1 /* MailHandler.swift */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
@@ -76,7 +80,6 @@
 		5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6E249CC39A007D8199 /* SceneDelegate.swift */; };
 		5A7B9A76249CC39C007D8199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A75249CC39C007D8199 /* Assets.xcassets */; };
 		5A7B9A79249CC39C007D8199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7B9A77249CC39C007D8199 /* LaunchScreen.storyboard */; };
-		5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A8E249CC9F4007D8199 /* ResumeTabBarControllerTests.swift */; };
 		5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A91249CCA18007D8199 /* ResumeTabBarController.swift */; };
 		5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A94249CF147007D8199 /* GeneralViewController.swift */; };
 		5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A98249CF4AB007D8199 /* ResumeTabBarPresenter.swift */; };
@@ -141,6 +144,9 @@
 		26A8B8F524A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralCellTypesProvider.swift; sourceTree = "<group>"; };
 		26A8B8F724A65BA4006DF5A1 /* MockPhoneNumberHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhoneNumberHandler.swift; sourceTree = "<group>"; };
 		26A8B8F924A65BD4006DF5A1 /* MockUrlBrowserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlBrowserHandler.swift; sourceTree = "<group>"; };
+		26A8B8FE24A66417006DF5A1 /* MailHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHandling.swift; sourceTree = "<group>"; };
+		26A8B90024A66440006DF5A1 /* MailHandlingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHandlingError.swift; sourceTree = "<group>"; };
+		26A8B90224A66454006DF5A1 /* MailHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHandler.swift; sourceTree = "<group>"; };
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
 		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
@@ -320,6 +326,16 @@
 			path = UrlBrowserHandling;
 			sourceTree = "<group>";
 		};
+		26A8B8FD24A66404006DF5A1 /* MailHandling */ = {
+			isa = PBXGroup;
+			children = (
+				26A8B8FE24A66417006DF5A1 /* MailHandling.swift */,
+				26A8B90224A66454006DF5A1 /* MailHandler.swift */,
+				26A8B90024A66440006DF5A1 /* MailHandlingError.swift */,
+			);
+			path = MailHandling;
+			sourceTree = "<group>";
+		};
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +425,7 @@
 			children = (
 				26A8B8E524A64179006DF5A1 /* PhoneNumberHandling */,
 				26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */,
+				26A8B8FD24A66404006DF5A1 /* MailHandling */,
 				5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */,
 				5A6E87FA24A0EC6E00DD8789 /* Margins.swift */,
 				5A6E87F724A0EC2D00DD8789 /* Extensions */,
@@ -628,6 +645,7 @@
 				26A8B8DE24A61C29006DF5A1 /* GeneralCellTypesProviding.swift in Sources */,
 				26A8B8E424A622FC006DF5A1 /* ResumeSetting.swift in Sources */,
 				26A8B8EE24A645DD006DF5A1 /* UrlBrowserHandlingError.swift in Sources */,
+				26A8B8FF24A66417006DF5A1 /* MailHandling.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
 				262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */,
 				26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */,
@@ -654,10 +672,12 @@
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
+				26A8B90324A66454006DF5A1 /* MailHandler.swift in Sources */,
 				26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */,
 				26A8B8E724A64194006DF5A1 /* PhoneNumberHandling.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */,
+				26A8B90124A66440006DF5A1 /* MailHandlingError.swift in Sources */,
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
 				262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */,
@@ -672,7 +692,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A7B9A8F249CC9F4007D8199 /* ResumeTabBarControllerTests.swift in Sources */,
 				26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */,
 				262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */,
 				26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */,
@@ -690,6 +709,7 @@
 				262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */,
 				262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */,
 				262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */,
+				26A8B8FC24A661FA006DF5A1 /* ResumeTabBarControllerTests.swift in Sources */,
 				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
 				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
 				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,

@@ -30,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let generalPresenter = GeneralPresenter()
         generalPresenter.view = generalViewController
         generalViewController.presenter = generalPresenter
+        generalPresenter.mailHandler = MailHandler(viewController: generalViewController)
         
         let skillsViewController = SkillsViewController()
         let skillsPresenter = SkillsPresenter()

@@ -54,11 +54,35 @@ class GeneralPresenterTests: XCTestCase {
         XCTAssertEqual(urlBrowserHandler.openedUrlStrings, [urlString])
     }
     
-    
+    func test_mailHandler_getCalled_onMailSelection() {
+        let emailAddress = "test@mail.com"
+        let mailHandler = MockMailHandler()
+        let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.email(emailAddress)]))
+        sut.mailHandler = mailHandler
+        sut.setResume(Resume(email: emailAddress))
+        sut.didSelect(row: 0)
+        XCTAssertEqual(mailHandler.openedEmailAddresses, [emailAddress])
+    }
+
+
     // MARK: - Helpers
     
     private func makeSUT(_ cellTypesProvider: GeneralCellTypesProviding = MockGeneralCellTypesProvider()) -> GeneralPresenter {
         GeneralPresenter(cellTypesProvider: cellTypesProvider)
     }
     
+}
+
+class MockMailHandler {
+    
+    private(set) var openedEmailAddresses = [String]()
+    
+}
+
+extension MockMailHandler: MailHandling {
+    
+    func openMail(toRecipent recipent: String) {
+        openedEmailAddresses.append(recipent)
+    }
+
 }

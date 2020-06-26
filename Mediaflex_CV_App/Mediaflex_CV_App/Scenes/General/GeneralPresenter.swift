@@ -17,6 +17,7 @@ class GeneralPresenter {
     let cellViewModelsProvider: GeneralCellViewModelsProviding
     let phoneNumberHandler: PhoneNumberHandling
     let urlBrowserHandler: UrlBrowserHandling
+    var mailHandler: MailHandling?
     
     private var generalCellTypes: [GeneralCellType]?
     private var viewModel: GeneralViewModel? {
@@ -45,6 +46,8 @@ extension GeneralPresenter: GeneralPresenting {
                 try phoneNumberHandler.call(phoneNumber: value)
             case let .linkedIn(value), let .gitHub(value):
                 try urlBrowserHandler.open(urlString: value)
+            case let .email(recipent):
+                try mailHandler?.openMail(toRecipent: recipent)
             default:
                 break
             }
@@ -52,7 +55,7 @@ extension GeneralPresenter: GeneralPresenting {
 
         }
     }
-
+    
 }
 
 extension GeneralPresenter: ResumeSetting {
