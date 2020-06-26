@@ -24,13 +24,13 @@ class PersonView: UIView {
     
     lazy var nameLabel: UILabel = {
         var label = UILabel()
-        label.font = .preferredFont(forTextStyle: .headline)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         return label
     }()
     
     lazy var roleLabel: UILabel = {
         var label = UILabel()
-        label.font = .preferredFont(forTextStyle: .subheadline)
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label
     }()
     
