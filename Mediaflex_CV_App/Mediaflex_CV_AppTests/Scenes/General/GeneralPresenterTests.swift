@@ -62,13 +62,3 @@ class GeneralPresenterTests: XCTestCase {
     }
     
 }
-
-class MockUrlBrowserHandler: UrlBrowserHandling {
-    
-    private(set) var openedUrlStrings = [String]()
-    
-    func open(urlString: String) throws {
-        openedUrlStrings.append(urlString)
-    }
-    
-}
