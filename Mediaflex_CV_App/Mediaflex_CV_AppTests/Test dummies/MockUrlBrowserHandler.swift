@@ -8,9 +8,13 @@
 
 @testable import Mediaflex_CV_App
 
-class MockUrlBrowserHandler: UrlBrowserHandling {
+class MockUrlBrowserHandler {
     
     private(set) var openedUrlStrings = [String]()
+    
+}
+
+extension MockUrlBrowserHandler: UrlBrowserHandling {
     
     func open(urlString: String) throws {
         openedUrlStrings.append(urlString)
