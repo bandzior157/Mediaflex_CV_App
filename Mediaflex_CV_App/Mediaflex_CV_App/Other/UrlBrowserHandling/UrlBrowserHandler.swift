@@ -8,7 +8,18 @@
 
 import UIKit
 
-class UrlBrowserHandler: UrlBrowserHandling {
+class UrlBrowserHandler {
+    
+    private let application: UIApplication
+      
+    init(application: UIApplication = UIApplication.shared) {
+        self.application = application
+    }
+    
+}
+
+extension UrlBrowserHandler: UrlBrowserHandling {
+    
     func open(urlString: String) throws {
         guard let urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
             throw UrlBrowserHandlingError.unknownError
@@ -18,10 +29,11 @@ class UrlBrowserHandler: UrlBrowserHandling {
             throw UrlBrowserHandlingError.incorrectUrl
         }
         
-        guard UIApplication.shared.canOpenURL(url) else {
+        guard application.canOpenURL(url) else {
             throw UrlBrowserHandlingError.unableToOpen
         }
         
-        UIApplication.shared.open(url)
+        application.open(url)
     }
+    
 }
