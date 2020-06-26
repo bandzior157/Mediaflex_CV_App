@@ -48,13 +48,7 @@ class GeneralPresenter: GeneralPresenting {
 
         }
     }
-    
-    private func open(urlFromString url: String) {
-        guard let newUrl = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
-        if let url = URL(string: newUrl), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        }
-    }
+
 }
 
 extension GeneralPresenter: ResumeSetting {
