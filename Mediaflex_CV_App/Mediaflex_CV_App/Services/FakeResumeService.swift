@@ -18,7 +18,7 @@ class FakeResumeService {
         email: "fake@gmail.com",
         phoneNumber: "+48507332167",
         linkedInUrl: "https://www.linkedin.com/in/łukasz-bazior-91821798",
-        github: "https://github.com/bandzior157",
+        gitHubUrl: "https://github.com/bandzior157",
         skillsGroups: [
             SkillsGroup(title: "Technical", skills: ["Swift", "Xcode", "CocoaPods"]),
             SkillsGroup(title: "Needless", skills: ["Drive licence"]),

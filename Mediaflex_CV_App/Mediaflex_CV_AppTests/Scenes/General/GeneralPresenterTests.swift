@@ -22,9 +22,9 @@ class GeneralPresenterTests: XCTestCase {
         let email = CellViewModel(title: "Email", subtitle: resume.email, imageName: "email", selectable: true)
         let phone = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, imageName: "phone", selectable: true)
         let linkedIn = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
-        let github = CellViewModel(title: "GitHub", subtitle: resume.github, imageName: "github", selectable: true)
+        let gitHub = CellViewModel(title: "GitHub", subtitle: resume.gitHubUrl, imageName: "github", selectable: true)
 
-        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", imageUrl: "imageUrl", role: "role"), elements: [summary, email, phone, linkedIn, github])]
+        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", imageUrl: "imageUrl", role: "role"), elements: [summary, email, phone, linkedIn, gitHub])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     
@@ -39,7 +39,7 @@ class GeneralPresenterTests: XCTestCase {
     func test_urlBrowserHandler_getCalled_onGitHubInSelection() {
         let urlBrowserHandler = MockUrlBrowserHandler()
         let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.gitHub("github url string")]), urlBrowserHandler: urlBrowserHandler)
-        sut.setResume(Resume(github: "github url string"))
+        sut.setResume(Resume(gitHubUrl: "github url string"))
         sut.didSelect(row: 0)
         XCTAssertEqual(urlBrowserHandler.openedUrlStrings, ["github url string"])
     }

@@ -12,6 +12,6 @@ class GeneralCellTypesProvider: GeneralCellTypesProviding {
          .email(resume.email),
          .phoneNumber(resume.phoneNumber),
          .linkedIn(resume.linkedInUrl),
-         .gitHub(resume.github)]
+         .gitHub(resume.gitHubUrl)]
     }
 }
