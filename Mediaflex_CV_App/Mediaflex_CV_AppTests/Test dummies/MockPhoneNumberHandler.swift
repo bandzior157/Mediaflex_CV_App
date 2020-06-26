@@ -8,9 +8,13 @@
 
 @testable import Mediaflex_CV_App
 
-class MockPhoneNumberHandler: PhoneNumberHandling {
+class MockPhoneNumberHandler {
     
     private(set) var calledPhoneNumbers = [String]()
+    
+}
+
+extension MockPhoneNumberHandler: PhoneNumberHandling {
     
     func call(phoneNumber: String) throws {
         calledPhoneNumbers.append(phoneNumber)
