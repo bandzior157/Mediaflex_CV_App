@@ -31,16 +31,17 @@ class GeneralPresenter: GeneralPresenting {
     }
     
     func didSelect(row: Int) {
-        do {switch generalCellTypes?[row] {
-        case let .phoneNumber(value):
-            try PhoneNumberHandler.call(phoneNumber: value)
-        case let .linkedIn(value), let .gitHub(value):
-            open(urlFromString: value)
-        default:
-            break
-        }
-        } catch let error {
-            print("MY PRINT", error.localizedDescription)
+        do {
+            switch generalCellTypes?[row] {
+            case let .phoneNumber(value):
+                try PhoneNumberHandler.call(phoneNumber: value)
+            case let .linkedIn(value), let .gitHub(value):
+                open(urlFromString: value)
+            default:
+                break
+            }
+        } catch {
+
         }
     }
     
