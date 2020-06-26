@@ -14,7 +14,7 @@ class SkillsViewController: UIViewController {
     
     private var viewModel: SkillsViewModel? {
         didSet {
-            tableView.reloadData()
+            reloadSubviews()
         }
     }
     
@@ -52,6 +52,12 @@ class SkillsViewController: UIViewController {
     private func layoutTableView() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(NSLayoutConstraint.anchorConstraints(view: tableView, in: view.safeAreaLayoutGuide, margins: Margins.init(vertical: 0, horizontal: 0)))
+    }
+    
+    private func reloadSubviews() {
+        ThreadGuarantee.guarantee(on: .main) { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
 }

@@ -31,6 +31,8 @@ class ResumeTabBarController: UITabBarController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         generalView.tabBarItem.title = "General"
         generalView.tabBarItem.image = UIImage(systemName: "person.crop.circle")
         
