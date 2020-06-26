@@ -34,12 +34,6 @@ class PersonView: UIView {
         return label
     }()
     
-    lazy var separatorView: UIView = {
-        var view = UIView()
-        view.backgroundColor = .label
-        return view
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -59,17 +53,9 @@ class PersonView: UIView {
         stackView.axis = .vertical
         stackView.spacing = 8
         
-        let stackView2 = UIStackView(arrangedSubviews: [stackView, separatorView])
-        stackView2.alignment = .center
-        stackView2.axis = .vertical
-        stackView2.spacing = 32
-        
-        addSubview(stackView2)
-        bringSubviewToFront(stackView2)
-                
+        addSubview(stackView)
         layoutImageView()
-        layoutSeparatorView()
-        layout(contentView: stackView2)
+        layout(contentView: stackView)
     }
     
     private func placeholderSetup() {
@@ -98,11 +84,6 @@ class PersonView: UIView {
         NSLayoutConstraint.activate(getImageViewConstraints())
     }
     
-    private func layoutSeparatorView() {
-        separatorView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(getSeparatorViewConstraints())
-    }
-    
     private func layout(contentView view: UIView) {
         let constraints = NSLayoutConstraint.anchorConstraints(view: view, in: safeAreaLayoutGuide, margins: Margins(vertical: 32, horizontal: 16))
                 
@@ -112,11 +93,6 @@ class PersonView: UIView {
     
     
     // MARK: - Constraints
-    
-    private func getSeparatorViewConstraints() -> [NSLayoutConstraint] {
-        [separatorView.heightAnchor.constraint(equalToConstant: 1),
-         separatorView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.8)]
-    }
     
     private func getImageViewConstraints() -> [NSLayoutConstraint] {
         [imageView.heightAnchor.constraint(equalToConstant: PersonView.imageViewSide),
