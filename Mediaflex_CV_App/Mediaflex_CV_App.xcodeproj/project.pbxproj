@@ -455,9 +455,9 @@
 				26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */,
 				26A8B8FD24A66404006DF5A1 /* MailHandling */,
 				5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */,
+				26A8B90E24A6B643006DF5A1 /* TealNavigationController.swift */,
 				5A6E87FA24A0EC6E00DD8789 /* Margins.swift */,
 				5A6E87F724A0EC2D00DD8789 /* Extensions */,
-				26A8B90E24A6B643006DF5A1 /* TealNavigationController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";

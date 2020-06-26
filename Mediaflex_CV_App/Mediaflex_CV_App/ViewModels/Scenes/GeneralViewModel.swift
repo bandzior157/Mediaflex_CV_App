@@ -9,11 +9,6 @@
 struct GeneralViewModel {
     let personViewViewModel: PersonViewViewModel
     let elements: [CellViewModel]
-    
-//    init(personViewViewModel: PersonViewViewModel, elements: [CellViewModel]) {
-//        self.personViewViewModel = personViewViewModel
-//        self.elements = elements
-//    }
 }
 
 extension GeneralViewModel {
