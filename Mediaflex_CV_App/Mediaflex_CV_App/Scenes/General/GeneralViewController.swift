@@ -10,8 +10,20 @@ import UIKit
 
 class GeneralViewController: UIViewController {
     
-    var personView = PersonView()
-    var tableView = UITableView()
+    lazy var personView: PersonView = {
+        let personView = PersonView()
+        personView.backgroundColor = .systemTeal
+        return personView
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.removeTrailingSeparators()
+        return tableView
+    }()
         
     var presenter: GeneralPresenting?
     
@@ -24,20 +36,12 @@ class GeneralViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        tableView.dataSource = self
-        tableView.delegate = self
         setupSubviews()
     }
     
     private func setupSubviews() {
         view.addSubview(personView)
         view.addSubview(tableView)
-        
-        personView.backgroundColor = .systemTeal
-        
-        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-        tableView.removeTrailingSeparators()
-        
         layoutSubviews()
     }
     
