@@ -36,12 +36,13 @@ class GeneralPresenterTests: XCTestCase {
         XCTAssertEqual(phoneNumberHandler.calledPhoneNumbers, ["some phone number"])
     }
     
-    func test_urlBrowserHandler_getCalled_onGitHubInSelection() {
+    func test_urlBrowserHandler_getCalled_onGitHubSelection() {
+        let urlString = "some url string"
         let urlBrowserHandler = MockUrlBrowserHandler()
-        let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.gitHub("github url string")]), urlBrowserHandler: urlBrowserHandler)
-        sut.setResume(Resume(gitHubUrl: "github url string"))
+        let sut = GeneralPresenter(cellTypesProvider: MockGeneralCellTypesProvider(generalCellTypes: [.gitHub(urlString)]), urlBrowserHandler: urlBrowserHandler)
+        sut.setResume(Resume(gitHubUrl: urlString))
         sut.didSelect(row: 0)
-        XCTAssertEqual(urlBrowserHandler.openedUrlStrings, ["github url string"])
+        XCTAssertEqual(urlBrowserHandler.openedUrlStrings, [urlString])
     }
 
     func test_urlBrowserHandler_getCalled_onLinkedInSelection() {
