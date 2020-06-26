@@ -11,15 +11,17 @@ import XCTest
 
 class ExperienceViewControllerTests: XCTestCase {
     
-    func test_A() {
-        
+    func test_title() {
+        XCTAssertEqual(makeSUT().title, "Experience")
     }
     
     
     // MARK: - Helpers
     
     private func makeSUT() -> ExperienceViewController {
-        ExperienceViewController()
+        let sut = ExperienceViewController()
+        sut.loadViewIfNeeded()
+        return sut
     }
     
 }
