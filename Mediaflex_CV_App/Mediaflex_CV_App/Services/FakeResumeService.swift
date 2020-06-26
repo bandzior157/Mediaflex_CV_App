@@ -15,8 +15,8 @@ class FakeResumeService {
         imageUrl: "https://media-exp1.licdn.com/dms/image/C4D03AQF5fFNIFwTLLA/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=DoVe9sBKssGRF01TyOX60xW754ABQ1fchbjhrOS1wXM",
         role: "iOS Developer",
         summary: "Some information about person. It could be summary of his pros and cons, experience, motivation or projects involed in. Should be visible in multiple lines.",
-        email: "fake@gmail.com",
-        phoneNumber: "+48507332167",
+        email: "lukasz.bazior@gmail.com",
+        phoneNumber: "+48 507 332 167",
         linkedInUrl: "https://www.linkedin.com/in/łukasz-bazior-91821798",
         gitHubUrl: "https://github.com/bandzior157",
         skillsGroups: [
