@@ -45,6 +45,7 @@ class SkillsViewController: UIViewController {
     
     private func setupTabBar() {
         navigationController?.tabBarController?.tabBar.backgroundColor = .systemBackground
+        navigationController?.tabBarController?.tabBar.isTranslucent = false
     }
     
     private func setupSubviews() {
