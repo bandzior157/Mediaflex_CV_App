@@ -21,6 +21,8 @@ class PhoneNumberHandler {
 extension PhoneNumberHandler: PhoneNumberHandling {
     
     func call(phoneNumber: String) throws {
+        let phoneNumber = phoneNumber.replacingOccurrences(of: " ", with: "", options: .literal)
+        
         guard let url = URL(string: "tel://\(phoneNumber)") else {
             throw PhoneNumberHandlingError.wrongPhoneNumber
         }
