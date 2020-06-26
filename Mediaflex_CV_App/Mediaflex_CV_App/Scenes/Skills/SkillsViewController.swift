@@ -26,26 +26,7 @@ class SkillsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemTeal
-
-        setupNavigationBar()
-        setupTabBar()
         setupSubviews()
-    }
-    
-    private func setupNavigationBar() {
-        guard let navigationBar = navigationController?.navigationBar else { return }
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
-        navigationBar.prefersLargeTitles = true
-        navigationBar.backgroundColor = .systemTeal
-        navigationBar.barTintColor = .systemTeal
-        navigationBar.isTranslucent = true
-    }
-    
-    private func setupTabBar() {
-        navigationController?.tabBarController?.tabBar.backgroundColor = .systemBackground
-        navigationController?.tabBarController?.tabBar.isTranslucent = false
     }
     
     private func setupSubviews() {

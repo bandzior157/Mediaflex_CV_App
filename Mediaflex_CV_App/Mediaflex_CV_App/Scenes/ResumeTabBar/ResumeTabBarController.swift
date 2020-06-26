@@ -12,17 +12,21 @@ class ResumeTabBarController: UITabBarController {
     
     typealias GeneralView = UIViewController & GeneralViewing
     typealias SkillsView = UIViewController & SkillsViewing
+    typealias ExperienceView = UIViewController
     
     private var generalView: GeneralView
     private var skillsView: SkillsView
+    private var experienceView: ExperienceView
     
     var presenter: ResumeTabBarPresenting?
 
     init(generalView: GeneralView = GeneralViewController(),
-         skillsView: SkillsView = SkillsViewController()
+         skillsView: SkillsView = SkillsViewController(),
+         experienceView: ExperienceView = ExperienceViewController()
     ) {
         self.generalView = generalView
         self.skillsView = skillsView
+        self.experienceView = experienceView
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,8 +37,12 @@ class ResumeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTabBar()
+        
         configureGeneralView()
         configureSkillsView()
+        configureExperienceView()
+        
         addChilds()
         
         presenter?.viewDidLoad()
@@ -42,6 +50,11 @@ class ResumeTabBarController: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         presenter?.viewDidLoad()
+    }
+    
+    private func setupTabBar() {
+        tabBarController?.tabBar.backgroundColor = .systemBackground
+        tabBarController?.tabBar.isTranslucent = false
     }
     
     private func configureGeneralView() {
@@ -54,9 +67,15 @@ class ResumeTabBarController: UITabBarController {
         skillsView.tabBarItem.image = UIImage(systemName: "star.fill")
     }
     
+    private func configureExperienceView() {
+        experienceView.title = "Experience"
+        experienceView.tabBarItem.image = UIImage(systemName: "briefcase.fill")
+    }
+    
     private func addChilds() {
         addChild(generalView)
-        addChild(UINavigationController(rootViewController: skillsView))
+        addChild(TealNavigationController(rootViewController: skillsView))
+        addChild(TealNavigationController(rootViewController: experienceView))
     }
     
 }

@@ -11,10 +11,6 @@ import XCTest
 
 class ExperienceViewControllerTests: XCTestCase {
     
-    func test_title() {
-        XCTAssertEqual(makeSUT().title, "Experience")
-    }
-    
     
     // MARK: - Helpers
     
