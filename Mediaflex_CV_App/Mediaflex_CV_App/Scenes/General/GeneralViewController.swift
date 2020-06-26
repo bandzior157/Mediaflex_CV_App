@@ -40,8 +40,7 @@ class GeneralViewController: UIViewController {
     }
     
     private func setupSubviews() {
-        view.addSubview(personView)
-        view.addSubview(tableView)
+        view.addSubviews(personView, tableView)
         layoutSubviews()
     }
     
