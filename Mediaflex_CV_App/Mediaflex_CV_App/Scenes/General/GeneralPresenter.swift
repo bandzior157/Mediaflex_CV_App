@@ -31,21 +31,25 @@ class GeneralPresenter: GeneralPresenting {
     }
     
     func didSelect(row: Int) {
-        switch generalCellTypes?[row] {
+        do {switch generalCellTypes?[row] {
         case let .phoneNumber(value):
-            call(phoneNumber: value)
+            try PhoneNumberHandler.call(phoneNumber: value)
+        case let .linkedIn(value), let .gitHub(value):
+            open(urlFromString: value)
         default:
             break
         }
-    }
-    
-    private func call(phoneNumber: String) {
-        if let url = URL(string: "tel://\(phoneNumber)"),
-            UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
+        } catch let error {
+            print("MY PRINT", error.localizedDescription)
         }
     }
     
+    private func open(urlFromString url: String) {
+        guard let newUrl = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
+        if let url = URL(string: newUrl), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
 }
 
 extension GeneralPresenter: ResumeSetting {
