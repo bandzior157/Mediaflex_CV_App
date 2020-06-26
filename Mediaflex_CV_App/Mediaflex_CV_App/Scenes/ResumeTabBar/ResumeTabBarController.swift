@@ -33,20 +33,30 @@ class ResumeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        generalView.tabBarItem.title = "General"
-        generalView.tabBarItem.image = UIImage(systemName: "person.crop.circle")
-        
-        skillsView.title = "Skills"
-        skillsView.tabBarItem.image = UIImage(systemName: "star.fill")
-        
-        addChild(generalView)
-        addChild(UINavigationController(rootViewController: skillsView))
+        configureGeneralView()
+        configureSkillsView()
+        addChilds()
         
         presenter?.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         presenter?.viewDidLoad()
+    }
+    
+    private func configureGeneralView() {
+        generalView.tabBarItem.title = "General"
+        generalView.tabBarItem.image = UIImage(systemName: "person.crop.circle")
+    }
+    
+    private func configureSkillsView() {
+        skillsView.title = "Skills"
+        skillsView.tabBarItem.image = UIImage(systemName: "star.fill")
+    }
+    
+    private func addChilds() {
+        addChild(generalView)
+        addChild(UINavigationController(rootViewController: skillsView))
     }
     
 }
