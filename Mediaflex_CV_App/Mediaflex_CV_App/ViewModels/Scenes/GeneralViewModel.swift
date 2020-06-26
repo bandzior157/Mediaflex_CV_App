@@ -10,17 +10,3 @@ struct GeneralViewModel {
     let personViewViewModel: PersonViewViewModel
     let elements: [CellViewModel]
 }
-
-extension GeneralViewModel {
-    init(resume: Resume) {
-        self.personViewViewModel = PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role)
-        
-        let summaryCellViewModel = CellViewModel(title: resume.summary, imageName: nil, selectable: false)
-        let emailCellViewModel = CellViewModel(title: "Email", subtitle: resume.email, imageName: "email", selectable: true)
-        let phoneCellViewModel = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, imageName: "phone", selectable: true)
-        let linkedInCellViewModel = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
-        let githubCellViewModel = CellViewModel(title: "GitHub", subtitle: resume.gitHubUrl, imageName: "github", selectable: true)
-
-        self.elements = [summaryCellViewModel, emailCellViewModel, phoneCellViewModel, linkedInCellViewModel, githubCellViewModel]
-    }
-}
