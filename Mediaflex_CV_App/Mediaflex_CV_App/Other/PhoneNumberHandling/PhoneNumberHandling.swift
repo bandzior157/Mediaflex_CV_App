@@ -7,5 +7,5 @@
 //
 
 protocol PhoneNumberHandling {
-    static func call(phoneNumber: String) throws
+    func call(phoneNumber: String) throws
 }

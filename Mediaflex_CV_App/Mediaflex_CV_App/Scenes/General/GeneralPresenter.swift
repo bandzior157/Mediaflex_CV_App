@@ -15,6 +15,8 @@ class GeneralPresenter: GeneralPresenting {
     
     let cellTypesProvider: GeneralCellTypesProviding
     let cellViewModelsProvider: GeneralCellViewModelsProviding
+    let phoneNumberHandler: PhoneNumberHandling
+    let urlBrowserHandler: UrlBrowserHandling
     
     private var generalCellTypes: [GeneralCellType]?
     private var viewModel: GeneralViewModel? {
@@ -25,18 +27,20 @@ class GeneralPresenter: GeneralPresenting {
     }
     
     init(cellTypesProvider: GeneralCellTypesProviding = GeneralCellTypesProvider(),
-         cellViewModelsProvider: GeneralCellViewModelsProviding = GeneralCellViewModelsProvider()) {
+         cellViewModelsProvider: GeneralCellViewModelsProviding = GeneralCellViewModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
         self.cellTypesProvider = cellTypesProvider
         self.cellViewModelsProvider = cellViewModelsProvider
+        self.phoneNumberHandler = phoneNumberHandler
+        self.urlBrowserHandler = urlBrowserHandler
     }
     
     func didSelect(row: Int) {
         do {
             switch generalCellTypes?[row] {
             case let .phoneNumber(value):
-                try PhoneNumberHandler.call(phoneNumber: value)
+                try phoneNumberHandler.call(phoneNumber: value)
             case let .linkedIn(value), let .gitHub(value):
-                try UrlBrowserHandler.open(urlString: value)
+                try urlBrowserHandler.open(urlString: value)
             default:
                 break
             }

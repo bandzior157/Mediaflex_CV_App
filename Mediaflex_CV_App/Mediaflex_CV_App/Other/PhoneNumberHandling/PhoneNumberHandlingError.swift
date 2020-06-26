@@ -1,5 +1,5 @@
 //
-//  PhoneNumberError.swift
+//  PhoneNumberHandlingError.swift
 //  Mediaflex_CV_App
 //
 //  Created by Damian Tabański on 26/06/2020.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum PhoneNumberError: Error {
+enum PhoneNumberHandlingError: Error {
     case wrongPhoneNumber
     case unableToCall
 }
 
-extension PhoneNumberError: LocalizedError {
+extension PhoneNumberHandlingError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .wrongPhoneNumber:

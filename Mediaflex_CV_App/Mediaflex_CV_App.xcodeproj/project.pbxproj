@@ -47,7 +47,7 @@
 		26A8B8E424A622FC006DF5A1 /* ResumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8E324A622FC006DF5A1 /* ResumeSetting.swift */; };
 		26A8B8E724A64194006DF5A1 /* PhoneNumberHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8E624A64194006DF5A1 /* PhoneNumberHandling.swift */; };
 		26A8B8E924A641AF006DF5A1 /* PhoneNumberHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8E824A641AF006DF5A1 /* PhoneNumberHandler.swift */; };
-		26A8B8EB24A641CA006DF5A1 /* PhoneNumberError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8EA24A641CA006DF5A1 /* PhoneNumberError.swift */; };
+		26A8B8EB24A641CA006DF5A1 /* PhoneNumberHandlingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8EA24A641CA006DF5A1 /* PhoneNumberHandlingError.swift */; };
 		26A8B8EE24A645DD006DF5A1 /* UrlBrowserHandlingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */; };
 		26A8B8F024A645F4006DF5A1 /* UrlBrowserHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8EF24A645F4006DF5A1 /* UrlBrowserHandling.swift */; };
 		26A8B8F224A64605006DF5A1 /* UrlBrowserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */; };
@@ -129,7 +129,7 @@
 		26A8B8E324A622FC006DF5A1 /* ResumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeSetting.swift; sourceTree = "<group>"; };
 		26A8B8E624A64194006DF5A1 /* PhoneNumberHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberHandling.swift; sourceTree = "<group>"; };
 		26A8B8E824A641AF006DF5A1 /* PhoneNumberHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberHandler.swift; sourceTree = "<group>"; };
-		26A8B8EA24A641CA006DF5A1 /* PhoneNumberError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberError.swift; sourceTree = "<group>"; };
+		26A8B8EA24A641CA006DF5A1 /* PhoneNumberHandlingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberHandlingError.swift; sourceTree = "<group>"; };
 		26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandlingError.swift; sourceTree = "<group>"; };
 		26A8B8EF24A645F4006DF5A1 /* UrlBrowserHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandling.swift; sourceTree = "<group>"; };
 		26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBrowserHandler.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 			children = (
 				26A8B8E624A64194006DF5A1 /* PhoneNumberHandling.swift */,
 				26A8B8E824A641AF006DF5A1 /* PhoneNumberHandler.swift */,
-				26A8B8EA24A641CA006DF5A1 /* PhoneNumberError.swift */,
+				26A8B8EA24A641CA006DF5A1 /* PhoneNumberHandlingError.swift */,
 			);
 			path = PhoneNumberHandling;
 			sourceTree = "<group>";
@@ -305,9 +305,9 @@
 		26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */ = {
 			isa = PBXGroup;
 			children = (
-				26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */,
 				26A8B8EF24A645F4006DF5A1 /* UrlBrowserHandling.swift */,
 				26A8B8F124A64605006DF5A1 /* UrlBrowserHandler.swift */,
+				26A8B8ED24A645DC006DF5A1 /* UrlBrowserHandlingError.swift */,
 			);
 			path = UrlBrowserHandling;
 			sourceTree = "<group>";
@@ -633,7 +633,7 @@
 				26A8B8E924A641AF006DF5A1 /* PhoneNumberHandler.swift in Sources */,
 				5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */,
 				26A8B8D424A617D1006DF5A1 /* GeneralCellTypesProvider.swift in Sources */,
-				26A8B8EB24A641CA006DF5A1 /* PhoneNumberError.swift in Sources */,
+				26A8B8EB24A641CA006DF5A1 /* PhoneNumberHandlingError.swift in Sources */,
 				262960A824A3FD7A0009FD29 /* SkillsViewController.swift in Sources */,
 				262960AA24A3FE360009FD29 /* SkillsViewModel.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,

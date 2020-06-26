@@ -9,13 +9,13 @@
 import UIKit
 
 class PhoneNumberHandler: PhoneNumberHandling {
-    static func call(phoneNumber: String) throws {
+    func call(phoneNumber: String) throws {
         guard let url = URL(string: "tel://\(phoneNumber)") else {
-            throw PhoneNumberError.wrongPhoneNumber
+            throw PhoneNumberHandlingError.wrongPhoneNumber
         }
         
         guard UIApplication.shared.canOpenURL(url) else {
-            throw PhoneNumberError.unableToCall
+            throw PhoneNumberHandlingError.unableToCall
         }
         
         UIApplication.shared.open(url)

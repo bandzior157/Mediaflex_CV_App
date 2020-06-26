@@ -9,7 +9,7 @@
 import UIKit
 
 class UrlBrowserHandler: UrlBrowserHandling {
-    static func open(urlString: String) throws {
+    func open(urlString: String) throws {
         guard let urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
             throw UrlBrowserHandlingError.unknownError
         }
