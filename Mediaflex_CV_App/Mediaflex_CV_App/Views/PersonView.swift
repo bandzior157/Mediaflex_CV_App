@@ -51,7 +51,7 @@ class PersonView: UIView {
         let stackView = UIStackView(arrangedSubviews: [imageView, nameLabel, roleLabel])
         stackView.alignment = .center
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = 16
         
         addSubview(stackView)
         layoutImageView()
