@@ -13,14 +13,30 @@ class ExperienceViewControllerTests: XCTestCase {
     
     func test_tableViewRowsCount_providedByViewModel() {
         let sut = makeSUT()
-        let viewModel = ExperienceViewModel(companyExperienceViewModels: [])
+        let viewModel = ExperienceViewModel(cellViewModels: [])
         
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = ExperienceViewModel(companyExperienceViewModels: [CompanyExperienceViewModel.dummy, CompanyExperienceViewModel.dummy])
+        let viewModel2 = ExperienceViewModel(cellViewModels: [CellViewModel(), CellViewModel()])
         sut.update(viewModel: viewModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
+    }
+    
+    func test_tableViewCell_isRenderedByCellViewModel() {
+        let sut = makeSUT()
+        let cellViewModel = CellViewModel(subtitle: "S")
+        let viewModel = ExperienceViewModel(cellViewModels: [cellViewModel])
+        sut.update(viewModel: viewModel)
+
+        Delay.performAfter(seconds: 10) {
+            let cell = sut.tableView.cell(at: 0)
+            XCTAssertNotNil(cell)
+            XCTAssertEqual(cell?.textLabel?.text, "T")
+            XCTAssertEqual(cell?.detailTextLabel?.text, "S")
+            XCTAssertNotNil(cell?.imageView?.image)
+            XCTAssertEqual(cell?.selectionStyle, .default)
+        }
         
     }
     
@@ -33,10 +49,4 @@ class ExperienceViewControllerTests: XCTestCase {
         return sut
     }
     
-}
-
-extension CompanyExperienceViewModel {
-    static var dummy: Self {
-        CompanyExperienceViewModel(companyName: "")
-    }
 }

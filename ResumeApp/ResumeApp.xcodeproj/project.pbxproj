@@ -13,6 +13,7 @@
 		2625269524A3CDF600E301F9 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625269424A3CDF600E301F9 /* CellViewModel.swift */; };
 		26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC124A78B90000CA5D2 /* ExperienceViewModel.swift */; };
 		26279BC424A78C32000CA5D2 /* ExperienceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC324A78C32000CA5D2 /* ExperienceContract.swift */; };
+		26279BC624A79D10000CA5D2 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC524A79D10000CA5D2 /* Delay.swift */; };
 		262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A124A3D16F0009FD29 /* UIImage+Resize.swift */; };
 		262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */; };
 		262960A824A3FD7A0009FD29 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A724A3FD7A0009FD29 /* SkillsViewController.swift */; };
@@ -109,6 +110,7 @@
 		2625269424A3CDF600E301F9 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		26279BC124A78B90000CA5D2 /* ExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModel.swift; sourceTree = "<group>"; };
 		26279BC324A78C32000CA5D2 /* ExperienceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceContract.swift; sourceTree = "<group>"; };
+		26279BC524A79D10000CA5D2 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		262960A124A3D16F0009FD29 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewControllerTests.swift; sourceTree = "<group>"; };
 		262960A724A3FD7A0009FD29 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		5A15B7CF249E2E0000DB62F5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				26279BC524A79D10000CA5D2 /* Delay.swift */,
 				5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */,
 				5A15B7D2249E2E1500DB62F5 /* Extensions */,
 			);
@@ -763,6 +766,7 @@
 				5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */,
 				26A8B8E024A6226A006DF5A1 /* MockResumeSetter.swift in Sources */,
 				5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */,
+				26279BC624A79D10000CA5D2 /* Delay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

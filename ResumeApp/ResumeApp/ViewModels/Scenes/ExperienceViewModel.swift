@@ -7,9 +7,5 @@
 //
 
 struct ExperienceViewModel {
-    let companyExperienceViewModels: [CompanyExperienceViewModel]
-}
-
-struct CompanyExperienceViewModel {
-    let companyName: String
+    let cellViewModels: [CellViewModel]
 }

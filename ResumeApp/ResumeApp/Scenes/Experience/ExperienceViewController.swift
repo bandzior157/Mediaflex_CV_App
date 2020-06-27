@@ -54,17 +54,17 @@ class ExperienceViewController: UIViewController {
 extension ExperienceViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.companyExperienceViewModels.count ?? 0
+        viewModel?.cellViewModels.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        guard let viewModel = viewModel?.companyExperienceViewModels[indexPath.row] else {
+        guard let cellViewModel = viewModel?.cellViewModels[indexPath.row] else {
             return cell
         }
         
-        cell.textLabel?.text = viewModel.companyName
+        cell.update(viewModel: cellViewModel)
         return cell
     }
     
