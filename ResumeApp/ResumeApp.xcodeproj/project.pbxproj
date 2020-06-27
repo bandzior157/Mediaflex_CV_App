@@ -15,6 +15,10 @@
 		26279BC424A78C32000CA5D2 /* ExperienceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC324A78C32000CA5D2 /* ExperienceContract.swift */; };
 		26279BC624A79D10000CA5D2 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC524A79D10000CA5D2 /* Delay.swift */; };
 		26279BC824A7A0C3000CA5D2 /* CompanyExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC724A7A0C3000CA5D2 /* CompanyExperience.swift */; };
+		26279BCA24A7A1C0000CA5D2 /* ExperiencePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */; };
+		26279BCC24A7A29E000CA5D2 /* ExperiencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */; };
+		26279BCE24A7A43A000CA5D2 /* MockExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCD24A7A43A000CA5D2 /* MockExperienceView.swift */; };
+		26279BD024A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */; };
 		262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A124A3D16F0009FD29 /* UIImage+Resize.swift */; };
 		262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */; };
 		262960A824A3FD7A0009FD29 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A724A3FD7A0009FD29 /* SkillsViewController.swift */; };
@@ -113,6 +117,10 @@
 		26279BC324A78C32000CA5D2 /* ExperienceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceContract.swift; sourceTree = "<group>"; };
 		26279BC524A79D10000CA5D2 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		26279BC724A7A0C3000CA5D2 /* CompanyExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperience.swift; sourceTree = "<group>"; };
+		26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencePresenterTests.swift; sourceTree = "<group>"; };
+		26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencePresenter.swift; sourceTree = "<group>"; };
+		26279BCD24A7A43A000CA5D2 /* MockExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExperienceView.swift; sourceTree = "<group>"; };
+		26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExperienceViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960A124A3D16F0009FD29 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewControllerTests.swift; sourceTree = "<group>"; };
 		262960A724A3FD7A0009FD29 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
+				26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */,
 				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
 				262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */,
 				262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */,
@@ -359,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				26279BC324A78C32000CA5D2 /* ExperienceContract.swift */,
+				26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */,
 				26A8B90C24A6AF30006DF5A1 /* ExperienceViewController.swift */,
 			);
 			path = Experience;
@@ -368,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				26A8B90A24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift */,
+				26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -380,6 +391,7 @@
 				26A8B8F324A65B13006DF5A1 /* MockGeneralView.swift */,
 				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
 				26A8B8F724A65BA4006DF5A1 /* MockPhoneNumberHandler.swift */,
+				26279BCD24A7A43A000CA5D2 /* MockExperienceView.swift */,
 				5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */,
 				26A8B8DF24A6226A006DF5A1 /* MockResumeSetter.swift */,
 				5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */,
@@ -691,6 +703,7 @@
 				26A8B8FF24A66417006DF5A1 /* MailHandling.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
 				262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */,
+				26279BCC24A7A29E000CA5D2 /* ExperiencePresenter.swift in Sources */,
 				26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */,
 				262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
@@ -756,6 +769,7 @@
 				26A8B8F624A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift in Sources */,
 				262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */,
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
+				26279BCE24A7A43A000CA5D2 /* MockExperienceView.swift in Sources */,
 				262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */,
 				262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */,
 				26A8B90B24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift in Sources */,
@@ -766,10 +780,12 @@
 				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
 				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
+				26279BD024A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift in Sources */,
 				5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */,
 				5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */,
 				26A8B8E024A6226A006DF5A1 /* MockResumeSetter.swift in Sources */,
 				5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */,
+				26279BCA24A7A1C0000CA5D2 /* ExperiencePresenterTests.swift in Sources */,
 				26279BC624A79D10000CA5D2 /* Delay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
