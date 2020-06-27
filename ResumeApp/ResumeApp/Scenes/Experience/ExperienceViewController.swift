@@ -39,9 +39,9 @@ class ExperienceViewController: UIViewController {
 }
 
 
-extension ExperienceViewController: ExperiencesViewing {
+extension ExperienceViewController: ExperienceViewing {
     
-    func update(viewModel: ExperiencesViewModel) {
+    func update(viewModel: ExperienceViewModel) {
 
     }
     

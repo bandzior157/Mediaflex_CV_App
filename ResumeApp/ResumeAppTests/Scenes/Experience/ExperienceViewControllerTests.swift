@@ -13,7 +13,7 @@ class ExperienceViewControllerTests: XCTestCase {
     
     func test_A() {
         let sut = makeSUT()
-        let viewModel = ExperiencesViewModel(experiences: [])
+        let viewModel = ExperienceViewModel(companyExperienceViewModels: [])
         sut.update(viewModel: viewModel)
         
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
