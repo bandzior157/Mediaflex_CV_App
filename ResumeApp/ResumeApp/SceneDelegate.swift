@@ -37,6 +37,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         skillsPresenter.view = skillsViewController
         
         let experienceViewController = ExperienceViewController()
+        let experiencePresenter = ExperiencePresenter()
+        experiencePresenter.view = experienceViewController
         
         let resumeTabBarController = ResumeTabBarController(generalView: generalViewController, skillsView: skillsViewController, experienceView: experienceViewController)
         let resumeTabBarPresenter = ResumeTabBarPresenter(service: service)

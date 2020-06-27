@@ -12,7 +12,8 @@ import XCTest
 class ResumeTabBarPresenterTests: XCTestCase {
         
     let mockResumeSetter = MockResumeSetter()
-    
+    let resume = Resume()
+
     func test_resumeService_fetchResume_getCalledOn_viewDidLoad() {
         let service = MockResumeService()
         let sut = makeSUT(service)
@@ -21,7 +22,6 @@ class ResumeTabBarPresenterTests: XCTestCase {
     }
     
     func test_generalPresenter_setResume_getCalledOn_didFetchResume() {
-        let resume = Resume()
         let sut = makeSUT()
         sut.generalResumeSetter = mockResumeSetter
         sut.didFetchResume(resume)
@@ -29,9 +29,15 @@ class ResumeTabBarPresenterTests: XCTestCase {
     }
     
     func test_skillsPresenter_setResume_getCalledOn_didFetchResume() {
-        let resume = Resume()
         let sut = makeSUT()
         sut.skillsResumeSetter = mockResumeSetter
+        sut.didFetchResume(resume)
+        XCTAssertEqual(mockResumeSetter.resumes, [resume])
+    }
+    
+    func test_experiencePresenter_setResume_getCalledOn_didFetchResume() {
+        let sut = makeSUT()
+        sut.experienceResumeSetter = mockResumeSetter
         sut.didFetchResume(resume)
         XCTAssertEqual(mockResumeSetter.resumes, [resume])
     }
