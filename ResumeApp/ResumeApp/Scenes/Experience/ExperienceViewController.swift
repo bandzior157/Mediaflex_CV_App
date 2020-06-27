@@ -37,3 +37,12 @@ class ExperienceViewController: UIViewController {
     }
 
 }
+
+
+extension ExperienceViewController: ExperiencesViewing {
+    
+    func update(viewModel: ExperiencesViewModel) {
+
+    }
+    
+}
