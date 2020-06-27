@@ -12,8 +12,15 @@ class ExperienceViewController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.dataSource = self
         return tableView
     }()
+    
+    private var viewModel: ExperienceViewModel? {
+        didSet {
+            reloadSubviews()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +43,37 @@ class ExperienceViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
 
+    private func reloadSubviews() {
+        ThreadGuarantee.guarantee(on: .main) { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
 }
 
+extension ExperienceViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel?.companyExperienceViewModels.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        guard let viewModel = viewModel?.companyExperienceViewModels[indexPath.row] else {
+            return cell
+        }
+        
+        cell.textLabel?.text = viewModel.companyName
+        return cell
+    }
+    
+}
 
 extension ExperienceViewController: ExperienceViewing {
     
     func update(viewModel: ExperienceViewModel) {
-
+        self.viewModel = viewModel
     }
     
 }

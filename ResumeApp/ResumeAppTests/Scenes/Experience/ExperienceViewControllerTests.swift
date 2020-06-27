@@ -11,12 +11,17 @@ import XCTest
 
 class ExperienceViewControllerTests: XCTestCase {
     
-    func test_A() {
+    func test_tableViewRowsCount_providedByViewModel() {
         let sut = makeSUT()
         let viewModel = ExperienceViewModel(companyExperienceViewModels: [])
-        sut.update(viewModel: viewModel)
         
+        sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
+        
+        let viewModel2 = ExperienceViewModel(companyExperienceViewModels: [CompanyExperienceViewModel.dummy, CompanyExperienceViewModel.dummy])
+        sut.update(viewModel: viewModel2)
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
+        
     }
     
     
@@ -28,4 +33,10 @@ class ExperienceViewControllerTests: XCTestCase {
         return sut
     }
     
+}
+
+extension CompanyExperienceViewModel {
+    static var dummy: Self {
+        CompanyExperienceViewModel(companyName: "")
+    }
 }
