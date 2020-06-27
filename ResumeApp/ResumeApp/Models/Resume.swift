@@ -17,8 +17,9 @@ struct Resume {
     let linkedInUrl: String
     let gitHubUrl: String
     let skillsGroups: [SkillsGroup]
+    let experience: [CompanyExperience]
     
-    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phoneNumber: String = "", linkedInUrl: String = "", gitHubUrl: String = "", skillsGroups: [SkillsGroup] = []) {
+    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phoneNumber: String = "", linkedInUrl: String = "", gitHubUrl: String = "", skillsGroups: [SkillsGroup] = [], experience: [CompanyExperience] = []) {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role
@@ -28,6 +29,7 @@ struct Resume {
         self.linkedInUrl = linkedInUrl
         self.gitHubUrl = gitHubUrl
         self.skillsGroups = skillsGroups
+        self.experience = experience
     }
     
 }
@@ -43,5 +45,6 @@ extension Resume: Decodable {
         case linkedInUrl = "linkedin_url"
         case gitHubUrl = "github_url"
         case skillsGroups = "skills_groups"
+        case experience
     }
 }
