@@ -45,7 +45,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         service.delegate = resumeTabBarPresenter
         resumeTabBarPresenter.generalResumeSetter = generalPresenter
         resumeTabBarPresenter.skillsResumeSetter = skillsPresenter
-        
+        resumeTabBarPresenter.experienceResumeSetter = experiencePresenter
+
         resumeTabBarController.presenter = resumeTabBarPresenter
         
         return resumeTabBarController
