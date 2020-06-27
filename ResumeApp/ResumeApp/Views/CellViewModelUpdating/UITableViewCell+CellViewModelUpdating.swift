@@ -9,6 +9,7 @@
 import UIKit
 
 extension UITableViewCell: CellViewModelUpdating {
+    
     func update(viewModel: CellViewModel) {
         textLabel?.numberOfLines = 0
         textLabel?.text = viewModel.title
@@ -21,6 +22,8 @@ extension UITableViewCell: CellViewModelUpdating {
         imageView?.tintColor = .systemTeal
         
         selectionStyle = viewModel.selectable ? .default : .none
+        
         accessoryType = viewModel.selectable ? .disclosureIndicator : .none
     }
+    
 }
