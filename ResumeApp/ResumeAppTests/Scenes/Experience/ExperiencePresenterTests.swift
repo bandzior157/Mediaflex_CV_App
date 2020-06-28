@@ -39,7 +39,7 @@ class ExperiencePresenterTests: XCTestCase {
                 title: "company\nrole",
                 subtitle: "01.2000 - 12.2010",
                 image: .init(type: .url(string: "logo"), size: Size(width: 80, height: 80)),
-                selectable: false)])]
+                selectable: true)])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     

@@ -48,6 +48,6 @@ extension CellViewModel {
             title: "\(companyExperience.companyName)\n\(companyExperience.role)",
             subtitle: datesText,
             image: .init(type: .url(string: companyExperience.companyLogoUrlString), size: Size(width: 80, height: 80)),
-            selectable: false)
+            selectable: true)
     }
 }
