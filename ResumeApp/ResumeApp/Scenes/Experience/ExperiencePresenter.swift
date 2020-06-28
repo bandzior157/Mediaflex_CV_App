@@ -11,7 +11,7 @@ import Foundation
 class ExperiencePresenter {
     
     var view: ExperienceViewing?
-    var router: Router?
+    var router: Routing?
     
     private(set) var experience: [CompanyExperience] = [] {
         didSet {

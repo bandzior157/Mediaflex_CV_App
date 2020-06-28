@@ -14,6 +14,6 @@ protocol ExperiencePresenting {
     func didSelect(row: Int)
 }
 
-protocol Router {
+protocol Routing {
     func show(companyExperience: CompanyExperience)
 }

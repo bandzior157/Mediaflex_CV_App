@@ -8,7 +8,7 @@
 
 @testable import ResumeApp
 
-class MockRouter: Router {
+class MockRouter: Routing {
     
     private(set) var showedCompanyExperiences = [CompanyExperience]()
     
