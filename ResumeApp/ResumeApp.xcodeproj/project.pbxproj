@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,6 +39,7 @@
 		262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */; };
 		262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */; };
 		262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */; };
+		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
@@ -143,6 +144,7 @@
 		262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RemoveTrailingSeparators.swift"; sourceTree = "<group>"; };
 		262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellStyle.swift"; sourceTree = "<group>"; };
 		262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+SelectionStyle.swift"; sourceTree = "<group>"; };
+		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */,
+				2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */,
 				26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */,
 				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
 				262960A124A3D16F0009FD29 /* UIImage+Resize.swift */,
@@ -622,7 +625,6 @@
 				38B09279F4BDA4250C1AB77B /* Pods-ResumeAppTests.debug.xcconfig */,
 				B16A3A00A36E2436DE3D84FE /* Pods-ResumeAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -833,6 +835,7 @@
 				26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 				26A8B90324A66454006DF5A1 /* MailHandler.swift in Sources */,
+				2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */,
 				26A8B90724A6A97A006DF5A1 /* UIView+AddSubviews.swift in Sources */,
 				26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */,
 				26A8B8E724A64194006DF5A1 /* PhoneNumberHandling.swift in Sources */,
