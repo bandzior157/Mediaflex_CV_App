@@ -14,6 +14,7 @@ struct CompanyExperience {
     let role: String
     let dateFrom: Date
     let dateTo: Date
+    let details: [CompanyExperienceDetails]
 }
 
 extension CompanyExperience: Decodable {
@@ -23,5 +24,6 @@ extension CompanyExperience: Decodable {
         case role
         case dateFrom = "date_from"
         case dateTo = "date_to"
+        case details
     }
 }
