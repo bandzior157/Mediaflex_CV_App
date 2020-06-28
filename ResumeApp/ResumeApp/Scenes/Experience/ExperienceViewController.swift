@@ -85,6 +85,7 @@ extension ExperienceViewController: ExperienceViewing {
 extension ExperienceViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter?.didSelect(row: indexPath.row)
     }
     
