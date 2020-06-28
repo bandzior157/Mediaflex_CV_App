@@ -13,6 +13,7 @@ class ExperienceViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.removeTrailingSeparators()
         return tableView
     }()
@@ -22,6 +23,8 @@ class ExperienceViewController: UIViewController {
             reloadSubviews()
         }
     }
+    
+    var presenter: ExperiencePresenting?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +78,14 @@ extension ExperienceViewController: ExperienceViewing {
     
     func update(viewModel: ExperienceViewModel) {
         self.viewModel = viewModel
+    }
+    
+}
+
+extension ExperienceViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelect(row: indexPath.row)
     }
     
 }

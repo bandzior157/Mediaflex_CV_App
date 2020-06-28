@@ -45,6 +45,7 @@
 		262E826024A931AE00B8373F /* ImageType+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825F24A931AE00B8373F /* ImageType+Equatable.swift */; };
 		262E826224A931D100B8373F /* Size+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826124A931D100B8373F /* Size+Equatable.swift */; };
 		262E826424A9480A00B8373F /* CompanyExperienceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826324A9480A00B8373F /* CompanyExperienceDetails.swift */; };
+		262E826624A94C4800B8373F /* MockExperiencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826524A94C4800B8373F /* MockExperiencePresenter.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
@@ -156,6 +157,7 @@
 		262E825F24A931AE00B8373F /* ImageType+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageType+Equatable.swift"; sourceTree = "<group>"; };
 		262E826124A931D100B8373F /* Size+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Size+Equatable.swift"; sourceTree = "<group>"; };
 		262E826324A9480A00B8373F /* CompanyExperienceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetails.swift; sourceTree = "<group>"; };
+		262E826524A94C4800B8373F /* MockExperiencePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExperiencePresenter.swift; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				26A8B8F524A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift */,
+				262E826524A94C4800B8373F /* MockExperiencePresenter.swift */,
 				262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */,
 				26A8B8F324A65B13006DF5A1 /* MockGeneralView.swift */,
 				5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */,
@@ -901,6 +904,7 @@
 				262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */,
 				26A8B8FC24A661FA006DF5A1 /* ResumeTabBarControllerTests.swift in Sources */,
 				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
+				262E826624A94C4800B8373F /* MockExperiencePresenter.swift in Sources */,
 				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
 				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,

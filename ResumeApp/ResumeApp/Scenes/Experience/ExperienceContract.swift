@@ -9,3 +9,7 @@
 protocol ExperienceViewing {
     func update(viewModel: ExperienceViewModel)
 }
+
+protocol ExperiencePresenting {
+    func didSelect(row: Int)
+}
