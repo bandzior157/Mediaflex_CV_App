@@ -6,10 +6,14 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
+import Foundation
+
 struct CompanyExperience {
     let companyName: String
     let companyLogoUrlString: String
     let role: String
+    let dateFrom: Date
+    let dateTo: Date
 }
 
 extension CompanyExperience: Decodable {
@@ -17,5 +21,7 @@ extension CompanyExperience: Decodable {
         case companyName = "company_name"
         case companyLogoUrlString = "company_logo_url"
         case role
+        case dateFrom = "date_from"
+        case dateTo = "date_to"
     }
 }

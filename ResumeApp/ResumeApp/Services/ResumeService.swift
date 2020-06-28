@@ -12,7 +12,7 @@ class ResumeService {
     
     var delegate: ResumeServiceDelegate?
     
-    private let urlString = "https://gist.githubusercontent.com/bandzior157/e5c090e5ca14346eea6dd024e50fe882/raw/538773464ba02bbe1a57f15c753282bb74ebefb6/cv.json"
+    private let urlString = "https://gist.githubusercontent.com/bandzior157/e5c090e5ca14346eea6dd024e50fe882/raw/287a5313385c05c36e2f148d3aeb0121709e6c71/cv.json"
 
 }
 
@@ -25,7 +25,9 @@ extension ResumeService: ResumeServicing {
             guard let data = data else { return }
             
             do {
-                let resume = try JSONDecoder().decode(Resume.self, from: data)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let resume = try decoder.decode(Resume.self, from: data)
                 self.delegate?.didFetchResume(resume)
             } catch {
                 

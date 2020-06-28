@@ -16,7 +16,7 @@ class ExperiencePresenterTests: XCTestCase {
         let view = MockExperienceView()
         sut.view = view
         
-        let resume = Resume(experience: [CompanyExperience(companyName: "company", companyLogoUrlString: "logo", role: "role")])
+        let resume = Resume(experience: [CompanyExperience(companyName: "company", companyLogoUrlString: "logo", role: "role", dateFrom: Date(), dateTo: Date())])
         sut.setResume(resume)
         
         let expected = [ExperienceViewModel(cellViewModels: [CellViewModel(title: "company\nrole", image: .init(type: .url(string: "logo"), size: Size(width: 80, height: 80)), selectable: false)])]
