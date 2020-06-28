@@ -39,6 +39,11 @@
 		262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */; };
 		262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */; };
 		262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */; };
+		262E825A24A92FA200B8373F /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825924A92FA200B8373F /* ImageViewModel.swift */; };
+		262E825C24A92FF000B8373F /* CGSize+InitSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825B24A92FF000B8373F /* CGSize+InitSize.swift */; };
+		262E825E24A9303F00B8373F /* ImageViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825D24A9303F00B8373F /* ImageViewModel+Equatable.swift */; };
+		262E826024A931AE00B8373F /* ImageType+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825F24A931AE00B8373F /* ImageType+Equatable.swift */; };
+		262E826224A931D100B8373F /* Size+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826124A931D100B8373F /* Size+Equatable.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
@@ -144,6 +149,11 @@
 		262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RemoveTrailingSeparators.swift"; sourceTree = "<group>"; };
 		262960C924A5093F0009FD29 /* UITableViewCell+CellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellStyle.swift"; sourceTree = "<group>"; };
 		262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+SelectionStyle.swift"; sourceTree = "<group>"; };
+		262E825924A92FA200B8373F /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		262E825B24A92FF000B8373F /* CGSize+InitSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+InitSize.swift"; sourceTree = "<group>"; };
+		262E825D24A9303F00B8373F /* ImageViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262E825F24A931AE00B8373F /* ImageType+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageType+Equatable.swift"; sourceTree = "<group>"; };
+		262E826124A931D100B8373F /* Size+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Size+Equatable.swift"; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
@@ -302,6 +312,7 @@
 			children = (
 				262960B724A4BB670009FD29 /* SectionViewModel.swift */,
 				2625269424A3CDF600E301F9 /* CellViewModel.swift */,
+				262E825924A92FA200B8373F /* ImageViewModel.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -309,13 +320,16 @@
 		262960BA24A4BC420009FD29 /* Equatable */ = {
 			isa = PBXGroup;
 			children = (
-				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
+				262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */,
 				26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */,
 				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
-				262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */,
-				262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */,
-				262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */,
+				262E825F24A931AE00B8373F /* ImageType+Equatable.swift */,
+				262E825D24A9303F00B8373F /* ImageViewModel+Equatable.swift */,
 				262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */,
+				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
+				262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */,
+				262E826124A931D100B8373F /* Size+Equatable.swift */,
+				262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */,
 			);
 			path = Equatable;
 			sourceTree = "<group>";
@@ -513,6 +527,7 @@
 				5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */,
 				2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */,
 				26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */,
+				262E825B24A92FF000B8373F /* CGSize+InitSize.swift */,
 				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
 				262960A124A3D16F0009FD29 /* UIImage+Resize.swift */,
 				262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */,
@@ -816,6 +831,7 @@
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
 				26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */,
 				262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */,
+				262E825C24A92FF000B8373F /* CGSize+InitSize.swift in Sources */,
 				262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */,
 				26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */,
 				26A8B90D24A6AF30006DF5A1 /* ExperienceViewController.swift in Sources */,
@@ -831,6 +847,7 @@
 				2625269124A3CDBF00E301F9 /* GeneralViewModel.swift in Sources */,
 				262960AC24A3FE880009FD29 /* SkillsContract.swift in Sources */,
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
+				262E825A24A92FA200B8373F /* ImageViewModel.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
@@ -863,6 +880,7 @@
 				26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */,
 				262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
+				262E825E24A9303F00B8373F /* ImageViewModel+Equatable.swift in Sources */,
 				26A8B8F824A65BA4006DF5A1 /* MockPhoneNumberHandler.swift in Sources */,
 				26A8B8FA24A65BD4006DF5A1 /* MockUrlBrowserHandler.swift in Sources */,
 				26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */,
@@ -885,9 +903,11 @@
 				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
 				26279BD024A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift in Sources */,
 				5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */,
+				262E826024A931AE00B8373F /* ImageType+Equatable.swift in Sources */,
 				5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */,
 				26A8B8E024A6226A006DF5A1 /* MockResumeSetter.swift in Sources */,
 				5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */,
+				262E826224A931D100B8373F /* Size+Equatable.swift in Sources */,
 				26279BCA24A7A1C0000CA5D2 /* ExperiencePresenterTests.swift in Sources */,
 				26279BC624A79D10000CA5D2 /* Delay.swift in Sources */,
 			);

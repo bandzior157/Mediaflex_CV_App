@@ -19,39 +19,52 @@ extension UITableViewCell: CellViewModelUpdating {
         detailTextLabel?.textColor = .secondaryLabel
         detailTextLabel?.text = viewModel.subtitle
         
-        if let imageName = viewModel.imageName {
-            imageView?.image = UIImage(named: imageName)?
-                .resized(to: self.getImageSize())
-                .withRenderingMode(.alwaysTemplate)
-        }
+        setImage(imageViewModel: viewModel.imageViewModel)
         
         imageView?.tintColor = .systemTeal
-
-        if let imageUrlString = viewModel.imageUrlString {
-            configureImageViewAsPlaceholder(true)
-
-            imageView?.sd_setImage(with: URL(string: imageUrlString), placeholderImage: getPlaceholderImage(), completed: { [weak self] (image, _, _, _) in
-                ThreadGuarantee.guarantee(on: .main) {
-                    guard let size = self?.getImageSize(),
-                        let image = image else { return }
-                    
-                    self?.imageView?.image = image.resized(to: size)
-                    self?.configureImageViewAsPlaceholder(false)
-                }
-            })
-        }
 
         selectionStyle = viewModel.selectable ? .default : .none
         
         accessoryType = viewModel.selectable ? .disclosureIndicator : .none
     }
     
-    private func getImageSize() -> CGSize {
-        CGSize(width: 40, height: 40)
+    private func setImage(imageViewModel: ImageViewModel?) {
+        guard let imageViewModel = imageViewModel else {
+            imageView?.image = nil
+            return
+        }
+        
+        let size = CGSize(size: imageViewModel.size)
+        
+        switch imageViewModel.type {
+        case let .named(imageName):
+            setImage(named: imageName, size: size)
+        case let .url(urlString):
+            setImage(urlString: urlString, size: size)
+        }
     }
     
-    private func getPlaceholderImage() -> UIImage? {
-        UIImage(color: .secondarySystemBackground, size: getImageSize())
+    private func setImage(named imageName: String, size: CGSize) {
+        imageView?.image = UIImage(named: imageName)?
+        .resized(to: size)
+        .withRenderingMode(.alwaysTemplate)
+    }
+    
+    private func setImage(urlString: String, size: CGSize) {
+        configureImageViewAsPlaceholder(true)
+
+        imageView?.sd_setImage(with: URL(string: urlString), placeholderImage: getPlaceholderImage(size: size), completed: { [weak self] (image, _, _, _) in
+            ThreadGuarantee.guarantee(on: .main) {
+                guard let image = image else { return }
+                
+                self?.imageView?.image = image.resized(to: size)
+                self?.configureImageViewAsPlaceholder(false)
+            }
+        })
+    }
+    
+    private func getPlaceholderImage(size: CGSize) -> UIImage? {
+        UIImage(color: .secondarySystemBackground, size: size)
     }
     
     private func configureImageViewAsPlaceholder(_ isPlaceholder: Bool) {
