@@ -13,6 +13,7 @@ class ExperienceViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.removeTrailingSeparators()
         return tableView
     }()
     
