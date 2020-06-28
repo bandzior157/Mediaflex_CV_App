@@ -12,7 +12,7 @@ class ResumeService {
     
     var delegate: ResumeServiceDelegate?
     
-    private let urlString = "https://gist.githubusercontent.com/bandzior157/e5c090e5ca14346eea6dd024e50fe882/raw/287a5313385c05c36e2f148d3aeb0121709e6c71/cv.json"
+    private let urlString = "https://gist.githubusercontent.com/bandzior157/e5c090e5ca14346eea6dd024e50fe882/raw/309e3175d26f5b2bcd28f0e33578965032f34b23/cv.json"
 
 }
 
