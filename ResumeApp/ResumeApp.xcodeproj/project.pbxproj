@@ -49,6 +49,8 @@
 		262E826824A94F6800B8373F /* CompanyExperience+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826724A94F6800B8373F /* CompanyExperience+Equatable.swift */; };
 		262E826A24A9501600B8373F /* CompanyExperienceDetails+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826924A9501600B8373F /* CompanyExperienceDetails+Equatable.swift */; };
 		262E826C24A9515C00B8373F /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826B24A9515C00B8373F /* MockRouter.swift */; };
+		262E826E24A956A900B8373F /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826D24A956A900B8373F /* RouterTests.swift */; };
+		262E827024A956E400B8373F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826F24A956E400B8373F /* Router.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
@@ -164,6 +166,8 @@
 		262E826724A94F6800B8373F /* CompanyExperience+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyExperience+Equatable.swift"; sourceTree = "<group>"; };
 		262E826924A9501600B8373F /* CompanyExperienceDetails+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyExperienceDetails+Equatable.swift"; sourceTree = "<group>"; };
 		262E826B24A9515C00B8373F /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		262E826D24A956A900B8373F /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		262E826F24A956E400B8373F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 				26279BC324A78C32000CA5D2 /* ExperienceContract.swift */,
 				26A8B90C24A6AF30006DF5A1 /* ExperienceViewController.swift */,
 				26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */,
+				262E826F24A956E400B8373F /* Router.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 			children = (
 				26A8B90A24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift */,
 				26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */,
+				262E826D24A956A900B8373F /* RouterTests.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -877,6 +883,7 @@
 				26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */,
 				26A8B90124A66440006DF5A1 /* MailHandlingError.swift in Sources */,
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
+				262E827024A956E400B8373F /* Router.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
 				262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */,
 				26A8B8F024A645F4006DF5A1 /* UrlBrowserHandling.swift in Sources */,
@@ -891,6 +898,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262E826E24A956A900B8373F /* RouterTests.swift in Sources */,
 				26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */,
 				262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */,
 				26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */,
