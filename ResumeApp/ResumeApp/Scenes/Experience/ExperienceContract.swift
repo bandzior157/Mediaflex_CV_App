@@ -13,3 +13,7 @@ protocol ExperienceViewing {
 protocol ExperiencePresenting {
     func didSelect(row: Int)
 }
+
+protocol Router {
+    func show(companyExperience: CompanyExperience)
+}

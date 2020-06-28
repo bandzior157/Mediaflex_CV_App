@@ -43,6 +43,19 @@ class ExperiencePresenterTests: XCTestCase {
         XCTAssertEqual(view.updateViewModels, expected)
     }
     
+    func test_routerPresent_getCalled_onPresenterDidSelect() {
+        let sut = makeSUT()
+        let router = MockRouter()
+        sut.router = router
+        
+        let companyExperience = CompanyExperience(companyName: "", companyLogoUrlString: "", role: "", dateFrom: Date(), dateTo: Date(), details: [CompanyExperienceDetails(title: "A", elements: ["A1", "A2"]), CompanyExperienceDetails(title: "B", elements: ["B1"])])
+        let resume = Resume(experience: [companyExperience])
+        sut.setResume(resume)
+        sut.didSelect(row: 0)
+        
+        XCTAssertEqual(router.showedCompanyExperiences, [companyExperience])
+    }
+    
     
     // MARK: - Helpers
     

@@ -11,18 +11,28 @@ import Foundation
 class ExperiencePresenter {
     
     var view: ExperienceViewing?
+    var router: Router?
+    
+    private(set) var experience: [CompanyExperience] = [] {
+        didSet {
+            view?.update(viewModel: ExperienceViewModel(cellViewModels: experience.map { CellViewModel(companyExperience: $0) }))
+        }
+    }
     
 }
 
 extension ExperiencePresenter: ResumeSetting {
     
     func setResume(_ resume: Resume) {
-        let cellViewModels = resume.experience.map {
-            CellViewModel(companyExperience: $0)
-        }
-        
-        let viewModel = ExperienceViewModel(cellViewModels: cellViewModels)
-        view?.update(viewModel: viewModel)
+        self.experience = resume.experience
+    }
+    
+}
+
+extension ExperiencePresenter: ExperiencePresenting {
+    
+    func didSelect(row: Int) {
+        router?.show(companyExperience: experience[row])
     }
     
 }
