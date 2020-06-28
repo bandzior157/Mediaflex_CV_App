@@ -18,7 +18,7 @@ extension ExperiencePresenter: ResumeSetting {
         let cellViewModels = resume.experience.map {
             CellViewModel(
                 title: "\($0.companyName)\n\($0.role)",
-                imageUrlString: $0.companyLogoUrlString,
+                image: .init(type: .url(string: $0.companyLogoUrlString), size: Size(width: 80, height: 80)),
                 selectable: false)
         }
         

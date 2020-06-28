@@ -11,6 +11,8 @@ import XCTest
 
 class GeneralViewControllerTests: XCTestCase {
     
+    private let dummySize = Size(width: 0, height: 0)
+    
     func test_personViewSubviews_areSet_onUpdateWithViewModel() {
         let sut = makeSUT()
         let personVM = PersonViewViewModel(fullName: "name", imageUrl: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png", role: "role")
@@ -56,7 +58,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_image_renderedByViewModelImageName() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(imageName: "linkedIn")
+        let cellViewModel = CellViewModel(image: .init(type: .named(imageName: "phone"), size: dummySize))
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -65,7 +67,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_noImage_renderedByViewModelWithoutImageName() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(imageName: nil)
+        let cellViewModel = CellViewModel(image: nil)
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)

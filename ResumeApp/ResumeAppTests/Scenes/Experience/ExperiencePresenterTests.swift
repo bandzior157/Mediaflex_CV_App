@@ -19,7 +19,7 @@ class ExperiencePresenterTests: XCTestCase {
         let resume = Resume(experience: [CompanyExperience(companyName: "company", companyLogoUrlString: "logo", role: "role")])
         sut.setResume(resume)
         
-        let expected = [ExperienceViewModel(cellViewModels: [CellViewModel(title: "company\nrole", imageUrlString: "logo", selectable: false)])]
+        let expected = [ExperienceViewModel(cellViewModels: [CellViewModel(title: "company\nrole", image: .init(type: .url(string: "logo"), size: Size(width: 80, height: 80)), selectable: false)])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     

@@ -17,12 +17,13 @@ class GeneralPresenterTests: XCTestCase {
         let resume = Resume(name: "full name", imageUrl: "imageUrl", role: "role")
         sut.view = view
         sut.setResume(resume)
+        let size = Size(width: 40, height: 40)
         
-        let summary = CellViewModel(title: resume.summary, imageName: nil, selectable: false)
-        let email = CellViewModel(title: "Email", subtitle: resume.email, imageName: "email", selectable: true)
-        let phone = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, imageName: "phone", selectable: true)
-        let linkedIn = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, imageName: "linkedIn", selectable: true)
-        let gitHub = CellViewModel(title: "GitHub", subtitle: resume.gitHubUrl, imageName: "github", selectable: true)
+        let summary = CellViewModel(title: resume.summary, selectable: false)
+        let email = CellViewModel(title: "Email", subtitle: resume.email, image: .init(type: .named(imageName: "email"), size: size), selectable: true)
+        let phone = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, image: .init(type: .named(imageName: "phone"), size: size), selectable: true)
+        let linkedIn = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, image: .init(type: .named(imageName: "linkedIn"), size: size), selectable: true)
+        let gitHub = CellViewModel(title: "GitHub", subtitle: resume.gitHubUrl, image: .init(type: .named(imageName: "github"), size: size), selectable: true)
 
         let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", imageUrl: "imageUrl", role: "role"), elements: [summary, email, phone, linkedIn, gitHub])]
         XCTAssertEqual(view.updateViewModels, expected)

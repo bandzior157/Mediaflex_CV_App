@@ -13,19 +13,19 @@ struct CellViewModel {
     let selectable: Bool
     let imageViewModel: ImageViewModel?
     
-    init(title: String = "", subtitle: String? = nil, imageName: String? = nil, imageUrlString: String? = nil, selectable: Bool = false) {
+    init(title: String = "", subtitle: String? = nil, image imageViewModel: ImageViewModel? = nil, selectable: Bool = false) {
         self.title = title
         self.subtitle = subtitle
         self.selectable = selectable
-        
-        let size = Size(width: 40, height: 40)
-        if let imageName = imageName {
-            self.imageViewModel = ImageViewModel(type: .named(imageName: imageName), size: size)
-        } else if let imageUrlString = imageUrlString {
-            self.imageViewModel = ImageViewModel(type: .url(string: imageUrlString), size: size)
-        } else {
-            self.imageViewModel = nil
-        }
+        self.imageViewModel = imageViewModel
+//        let size = Size(width: 40, height: 40)
+//        if let imageName = imageName {
+//            self.imageViewModel = ImageViewModel(type: .named(imageName: imageName), size: size)
+//        } else if let imageUrlString = imageUrlString {
+//            self.imageViewModel = ImageViewModel(type: .url(string: imageUrlString), size: size)
+//        } else {
+//            self.imageViewModel = nil
+//        }
     }
     
 }
