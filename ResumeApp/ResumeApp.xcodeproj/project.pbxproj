@@ -403,8 +403,8 @@
 			isa = PBXGroup;
 			children = (
 				26279BC324A78C32000CA5D2 /* ExperienceContract.swift */,
-				26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */,
 				26A8B90C24A6AF30006DF5A1 /* ExperienceViewController.swift */,
+				26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";

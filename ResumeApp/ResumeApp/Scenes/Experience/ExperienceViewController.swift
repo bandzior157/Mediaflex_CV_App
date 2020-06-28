@@ -58,8 +58,8 @@ extension ExperienceViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+
         guard let cellViewModel = viewModel?.cellViewModels[indexPath.row] else {
             return cell
         }
