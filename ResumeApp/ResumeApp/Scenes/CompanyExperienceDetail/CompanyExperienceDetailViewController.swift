@@ -20,6 +20,7 @@ class CompanyExperienceDetailViewController: UIViewController {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.removeTrailingSeparators()
         return tableView
     }()
     
@@ -72,7 +73,6 @@ extension CompanyExperienceDetailViewController: UITableViewDataSource {
         cell.update(viewModel: sections[indexPath.section].elements[indexPath.row])
         return cell
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
