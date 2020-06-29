@@ -51,13 +51,10 @@ class CompanyExperienceDetailViewController: UIViewController {
     
 }
 
-
 extension CompanyExperienceDetailViewController: CompanyExperienceDetailViewing {
     
     func update(viewModel: CompanyExperienceDetailViewModel) {
-        headerView.companyLabel.text = viewModel.companyName
-        headerView.imageView.setImage(at: viewModel.companyLogoUrlString)
-        headerView.roleLabel.text = viewModel.role
+        headerView.update(viewModel: CompanyExperienceHeaderViewModel(viewModel: viewModel))
     }
     
 }

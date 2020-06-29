@@ -11,6 +11,7 @@ protocol PersonViewing {
 }
 
 extension PersonView: PersonViewing {
+    
     func update(viewModel: PersonViewViewModel) {
         nameLabel.text = viewModel.fullName
         roleLabel.text = viewModel.role
@@ -18,4 +19,5 @@ extension PersonView: PersonViewing {
         
         setLabelsVisible(true)
     }
+    
 }

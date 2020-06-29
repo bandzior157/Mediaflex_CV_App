@@ -99,3 +99,15 @@ class CompanyExperienceHeaderView: UIView {
     }
     
 }
+
+extension CompanyExperienceHeaderView: CompanyExperienceHeaderViewing {
+    
+    func update(viewModel: CompanyExperienceHeaderViewModel) {
+        companyLabel.text = viewModel.companyName
+        imageView.setImage(at: viewModel.companyLogoUrlString)
+        roleLabel.text = viewModel.role
+        
+        setLabelsVisible(true)
+    }
+    
+}

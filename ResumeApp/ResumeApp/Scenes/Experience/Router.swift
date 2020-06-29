@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Router: Routing {
+class Router {
     
     private let viewController: UIViewController
     
@@ -16,9 +16,21 @@ class Router: Routing {
         self.viewController = viewController
     }
     
+}
+
+extension Router: Routing {
+    
     func show(companyExperience: CompanyExperience) {
-        let uv = CompanyExperienceDetailViewController()
-        viewController.present(uv, animated: true)
+        let vc = makeCompanyExperienceDetailViewController(for: companyExperience)
+        viewController.present(vc, animated: true)
+    }
+    
+    private func makeCompanyExperienceDetailViewController(for companyExperience: CompanyExperience) -> CompanyExperienceDetailViewController {
+        let vc = CompanyExperienceDetailViewController()
+        let presenter = CompanyExperienceDetailPresenter(companyExperience: companyExperience)
+        vc.presenter = presenter
+        presenter.view = vc
+        return vc
     }
     
 }

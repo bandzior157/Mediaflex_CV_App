@@ -60,6 +60,8 @@
 		2636AB4E24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */; };
 		2636AB5024AA10FE004B866D /* CompanyExperienceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4F24AA10FE004B866D /* CompanyExperienceDetailPresenter.swift */; };
 		2636AB5224AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5124AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift */; };
+		2636AB5424AA168F004B866D /* CompanyExperienceHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */; };
+		2636AB5724AA16E3004B866D /* CompanyExperienceHeaderViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
@@ -186,6 +188,8 @@
 		2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresenterTests.swift; sourceTree = "<group>"; };
 		2636AB4F24AA10FE004B866D /* CompanyExperienceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresenter.swift; sourceTree = "<group>"; };
 		2636AB5124AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyExperienceDetailViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderViewModel.swift; sourceTree = "<group>"; };
+		2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderViewing.swift; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 		2625269324A3CDDE00E301F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */,
 				2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */,
 				262960B924A4BBFE0009FD29 /* TableView */,
 			);
@@ -387,6 +392,15 @@
 				2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */,
 			);
 			path = CompanyExperienceDetail;
+			sourceTree = "<group>";
+		};
+		2636AB5524AA169A004B866D /* CompanyExperienceHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */,
+				2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */,
+			);
+			path = CompanyExperienceHeaderView;
 			sourceTree = "<group>";
 		};
 		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
@@ -601,9 +615,9 @@
 			isa = PBXGroup;
 			children = (
 				5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */,
+				2636AB5524AA169A004B866D /* CompanyExperienceHeaderView */,
 				26742ACF24A3A6BD001D9444 /* PersonViewing.swift */,
 				262960C524A4D0900009FD29 /* TableViewHeaderView.swift */,
-				2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */,
 				26742AD324A3ACF8001D9444 /* CellViewModelUpdating */,
 			);
 			path = Views;
@@ -913,10 +927,12 @@
 				26A8B90F24A6B643006DF5A1 /* TealNavigationController.swift in Sources */,
 				262960AA24A3FE360009FD29 /* SkillsViewModel.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,
+				2636AB5724AA16E3004B866D /* CompanyExperienceHeaderViewing.swift in Sources */,
 				2625269124A3CDBF00E301F9 /* GeneralViewModel.swift in Sources */,
 				262960AC24A3FE880009FD29 /* SkillsContract.swift in Sources */,
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				262E825A24A92FA200B8373F /* ImageViewModel.swift in Sources */,
+				2636AB5424AA168F004B866D /* CompanyExperienceHeaderViewModel.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,

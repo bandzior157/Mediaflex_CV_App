@@ -10,10 +10,10 @@ class CompanyExperienceDetailPresenter {
     
     var view: CompanyExperienceDetailViewing?
     
-    let viewModel: CompanyExperienceDetailViewModel
+    private let companyExperience: CompanyExperience
     
-    init(viewModel: CompanyExperienceDetailViewModel) {
-        self.viewModel = viewModel
+    init(companyExperience: CompanyExperience) {
+        self.companyExperience = companyExperience
     }
     
 }
@@ -21,6 +21,7 @@ class CompanyExperienceDetailPresenter {
 extension CompanyExperienceDetailPresenter: CompanyExperienceDetailPresenting {
     
     func viewDidLoad() {
+        let viewModel = CompanyExperienceDetailViewModel(companyLogoUrlString: companyExperience.companyLogoUrlString, companyName: companyExperience.companyName, role: companyExperience.role)
         view?.update(viewModel: viewModel)
     }
     
