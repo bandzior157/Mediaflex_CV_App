@@ -10,6 +10,7 @@ struct CompanyExperienceHeaderViewModel {
     let companyLogoUrlString: String
     let companyName: String
     let role: String
+    let dates: String
 }
 
 extension CompanyExperienceHeaderViewModel {
@@ -18,6 +19,7 @@ extension CompanyExperienceHeaderViewModel {
         self.companyLogoUrlString = viewModel.companyLogoUrlString
         self.companyName = viewModel.companyName
         self.role = viewModel.role
+        self.dates = viewModel.dates
     }
     
 }

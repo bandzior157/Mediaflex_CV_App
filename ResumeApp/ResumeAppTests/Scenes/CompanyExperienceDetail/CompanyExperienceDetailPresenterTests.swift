@@ -12,14 +12,17 @@ import XCTest
 class CompanyExperienceDetailPresenterTests: XCTestCase {
     
     func test_callUpdateOnView_onViewDidLoad() {
-        let companyExperience = CompanyExperience(companyName: "company nam", companyLogoUrlString: "url", role: "role", dateFrom: Date(), dateTo: Date(), details: [])
+        let january2000 = Date(timeIntervalSince1970: 949093397)
+        let december2010 = Date(timeIntervalSince1970: 1293570197)
+        
+        let companyExperience = CompanyExperience(companyName: "company nam", companyLogoUrlString: "url", role: "role", dateFrom: january2000, dateTo: december2010, details: [])
         let sut = makeSUT(companyExperience)
         let view = MockCompanyExperienceDetailView()
         sut.view = view
         
         sut.viewDidLoad()
         
-        let expected = [CompanyExperienceDetailViewModel(companyLogoUrlString: "url", companyName: "company nam", role: "role")]
+        let expected = [CompanyExperienceDetailViewModel(companyLogoUrlString: "url", companyName: "company nam", role: "role", dates: "01.2000 - 12.2010")]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     

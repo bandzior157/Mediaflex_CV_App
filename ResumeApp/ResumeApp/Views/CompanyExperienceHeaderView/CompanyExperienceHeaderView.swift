@@ -113,6 +113,7 @@ extension CompanyExperienceHeaderView: CompanyExperienceHeaderViewing {
         companyLabel.text = viewModel.companyName
         imageView.setImage(at: viewModel.companyLogoUrlString)
         roleLabel.text = viewModel.role
+        datesLabel.text = viewModel.dates
         
         setLabelsVisible(true)
     }

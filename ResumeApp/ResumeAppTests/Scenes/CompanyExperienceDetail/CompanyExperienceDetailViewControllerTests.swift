@@ -13,11 +13,12 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
     
     func test_updateCompanyExperienceViewModel_rendersSubviews() {
         let sut = makeSUT()
-        let viewModel = CompanyExperienceDetailViewModel(companyLogoUrlString: "logo url string", companyName: "company name", role: "role")
+        let viewModel = CompanyExperienceDetailViewModel(companyLogoUrlString: "logo url string", companyName: "company name", role: "role", dates: "dates")
         sut.update(viewModel: viewModel)
         
         XCTAssertEqual(sut.headerView.companyLabel.text, "company name")
         XCTAssertEqual(sut.headerView.roleLabel.text, "role")
+        XCTAssertEqual(sut.headerView.datesLabel.text, "dates")
     }
     
     func test_callPresenterViewDidLoad_onViewDidLoad() {

@@ -21,8 +21,7 @@ class CompanyExperienceDetailPresenter {
 extension CompanyExperienceDetailPresenter: CompanyExperienceDetailPresenting {
     
     func viewDidLoad() {
-        let viewModel = CompanyExperienceDetailViewModel(companyLogoUrlString: companyExperience.companyLogoUrlString, companyName: companyExperience.companyName, role: companyExperience.role)
-        view?.update(viewModel: viewModel)
+        view?.update(viewModel: CompanyExperienceDetailViewModel(companyExperience: companyExperience))
     }
     
 }
