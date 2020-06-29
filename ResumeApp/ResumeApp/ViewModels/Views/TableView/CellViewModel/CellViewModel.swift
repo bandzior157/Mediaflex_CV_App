@@ -18,14 +18,6 @@ struct CellViewModel {
         self.subtitle = subtitle
         self.selectable = selectable
         self.imageViewModel = imageViewModel
-//        let size = Size(width: 40, height: 40)
-//        if let imageName = imageName {
-//            self.imageViewModel = ImageViewModel(type: .named(imageName: imageName), size: size)
-//        } else if let imageUrlString = imageUrlString {
-//            self.imageViewModel = ImageViewModel(type: .url(string: imageUrlString), size: size)
-//        } else {
-//            self.imageViewModel = nil
-//        }
     }
     
 }
