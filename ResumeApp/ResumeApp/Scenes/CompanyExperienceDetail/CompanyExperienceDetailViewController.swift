@@ -19,6 +19,7 @@ class CompanyExperienceDetailViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
     
@@ -75,6 +76,16 @@ extension CompanyExperienceDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
+    }
+    
+}
+
+extension CompanyExperienceDetailViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = TableViewHeaderView()
+        view.update(title: sections[section].title)
+        return view
     }
     
 }

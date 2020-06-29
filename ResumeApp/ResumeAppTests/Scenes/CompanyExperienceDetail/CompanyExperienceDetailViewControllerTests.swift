@@ -48,6 +48,10 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
         let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertNotNil(cell)
         XCTAssertEqual(cell.textLabel?.text, "S1E1")
+        
+        let header = sut.tableView(sut.tableView, viewForHeaderInSection: 0) as? TableViewHeaderView
+        XCTAssertNotNil(header)
+        XCTAssertEqual(header?.textLabel.text, "S1")
     }
     
     func test_callPresenterViewDidLoad_onViewDidLoad() {
