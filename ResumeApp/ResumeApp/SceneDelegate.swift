@@ -26,37 +26,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func makeResumeTabBarController() -> UIViewController {
         let service = ResumeService()
         
-        let generalViewController = GeneralViewController()
-        let generalPresenter = GeneralPresenter()
-        generalPresenter.view = generalViewController
-        generalViewController.presenter = generalPresenter
-        generalPresenter.mailHandler = MailHandler(viewController: generalViewController)
+        let general = GeneralConfigurator()
+        let skills = SkillsConfigurator()
+        let experience = ExperienceConfigurator()
+        let education = EducationConfigurator()
         
-        let skillsViewController = SkillsViewController()
-        let skillsPresenter = SkillsPresenter()
-        skillsPresenter.view = skillsViewController
-        
-        let experienceViewController = ExperienceViewController()
-        let experiencePresenter = ExperiencePresenter()
-        experiencePresenter.view = experienceViewController
-        experienceViewController.presenter = experiencePresenter
-        
-        let educationViewController = EducationViewController()
-        let educationPresenter = EducationPresenter()
-        educationPresenter.view = educationViewController
+        let modules: [Configurating] = [general, skills, experience, education]
+        modules.forEach { $0.configure() }
     
-        let resumeTabBarController = ResumeTabBarController(generalView: generalViewController, skillsView: skillsViewController, experienceView: experienceViewController, educationView: educationViewController)
+        let resumeTabBarController = ResumeTabBarController(generalView: general.viewController, skillsView: skills.viewController, experienceView: experience.viewController, educationView: education.viewController)
+        
         let resumeTabBarPresenter = ResumeTabBarPresenter(service: service)
         service.delegate = resumeTabBarPresenter
-        resumeTabBarPresenter.generalResumeSetter = generalPresenter
-        resumeTabBarPresenter.skillsResumeSetter = skillsPresenter
-        resumeTabBarPresenter.experienceResumeSetter = experiencePresenter
-        resumeTabBarPresenter.educationResumeSetter = educationPresenter
+        resumeTabBarPresenter.generalResumeSetter = general.presenter
+        resumeTabBarPresenter.skillsResumeSetter = skills.presenter
+        resumeTabBarPresenter.experienceResumeSetter = experience.presenter
+        resumeTabBarPresenter.educationResumeSetter = education.presenter
         
         resumeTabBarController.presenter = resumeTabBarPresenter
-        
-        let router = Router(viewController: experienceViewController)
-        experiencePresenter.router = router
         
         return resumeTabBarController
     }

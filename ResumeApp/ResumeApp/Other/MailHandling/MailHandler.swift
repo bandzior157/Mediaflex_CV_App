@@ -10,11 +10,7 @@ import MessageUI
 
 class MailHandler: NSObject {
     
-    private let viewController: UIViewController
-    
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+    var viewController: UIViewController?
     
 }
 
@@ -29,7 +25,7 @@ extension MailHandler: MailHandling {
         mail.mailComposeDelegate = self
         mail.setToRecipients([recipent])
 
-        viewController.present(mail, animated: true)
+        viewController?.present(mail, animated: true)
     }
     
 }

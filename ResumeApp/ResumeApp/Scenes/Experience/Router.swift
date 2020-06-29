@@ -10,11 +10,7 @@ import UIKit
 
 class Router {
     
-    private let viewController: UIViewController
-    
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+    var viewController: UIViewController?
     
 }
 
@@ -22,7 +18,7 @@ extension Router: Routing {
     
     func show(companyExperience: CompanyExperience) {
         let vc = makeCompanyExperienceDetailViewController(for: companyExperience)
-        viewController.present(vc, animated: true)
+        viewController?.present(vc, animated: true)
     }
     
     private func makeCompanyExperienceDetailViewController(for companyExperience: CompanyExperience) -> CompanyExperienceDetailViewController {
