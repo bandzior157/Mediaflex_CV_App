@@ -36,7 +36,7 @@ class CompanyExperienceHeaderView: UIView {
     
     lazy var datesLabel: UILabel = {
         var label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.font = .systemFont(ofSize: 18, weight: .regular)
         return label
     }()
     
