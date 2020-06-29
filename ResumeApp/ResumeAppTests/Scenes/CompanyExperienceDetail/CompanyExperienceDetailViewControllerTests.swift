@@ -12,13 +12,42 @@ import XCTest
 class CompanyExperienceDetailViewControllerTests: XCTestCase {
     
     func test_updateCompanyExperienceViewModel_rendersSubviews() {
+        let viewModel = CompanyExperienceDetailViewModel(
+            companyLogoUrlString: "logo url string",
+            companyName: "company name",
+            role: "role",
+            dates: "dates",
+            sections: [
+                SectionViewModel(
+                    title: "S1",
+                    elements: [
+                        CellViewModel(title: "S1E1"),
+                        CellViewModel(title: "S1E2")
+                    ]
+                ),
+                SectionViewModel(
+                    title: "S2",
+                    elements: [
+                        CellViewModel(title: "S2E2")
+                    ]
+                )
+            ]
+        )
+        
         let sut = makeSUT()
-        let viewModel = CompanyExperienceDetailViewModel(companyLogoUrlString: "logo url string", companyName: "company name", role: "role", dates: "dates")
         sut.update(viewModel: viewModel)
         
         XCTAssertEqual(sut.headerView.companyLabel.text, "company name")
         XCTAssertEqual(sut.headerView.roleLabel.text, "role")
         XCTAssertEqual(sut.headerView.datesLabel.text, "dates")
+        
+        XCTAssertEqual(sut.tableView.numberOfSections, 2)
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 1)
+        
+        let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertNotNil(cell)
+        XCTAssertEqual(cell.textLabel?.text, "S1E1")
     }
     
     func test_callPresenterViewDidLoad_onViewDidLoad() {

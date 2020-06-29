@@ -16,7 +16,15 @@ class CompanyExperienceDetailViewController: UIViewController {
         return view
     }()
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        return tableView
+    }()
+    
     var presenter: CompanyExperienceDetailPresenting?
+    
+    private(set) var sections = [SectionViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +64,26 @@ extension CompanyExperienceDetailViewController: CompanyExperienceDetailViewing 
     
     func update(viewModel: CompanyExperienceDetailViewModel) {
         headerView.update(viewModel: CompanyExperienceHeaderViewModel(viewModel: viewModel))
+        sections = viewModel.sections
+    }
+    
+}
+
+extension CompanyExperienceDetailViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        sections[section].elements.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.update(viewModel: sections[indexPath.section].elements[indexPath.row])
+        return cell
+    }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        sections.count
     }
     
 }
