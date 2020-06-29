@@ -653,13 +653,13 @@
 			isa = PBXGroup;
 			children = (
 				5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */,
-				2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */,
-				26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */,
 				262E825B24A92FF000B8373F /* CGSize+InitSize.swift */,
 				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
-				2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */,
 				262960A124A3D16F0009FD29 /* UIImage+Resize.swift */,
+				2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */,
+				2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */,
 				262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */,
+				26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
