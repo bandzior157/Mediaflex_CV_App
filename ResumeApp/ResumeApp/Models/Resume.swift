@@ -11,16 +11,26 @@ struct Resume {
     let name: String
     let imageUrl: String?
     let role: String
-    let summary: String
-    let email: String
-    let phoneNumber: String
+    let summary: String?
+    let email: String?
+    let phoneNumber: String?
     let linkedInUrl: String?
-    let gitHubUrl: String
+    let gitHubUrl: String?
     let skillsGroups: [SkillsGroup]
     let experience: [CompanyExperience]
     let education: [EducationRecord]
     
-    init(name: String = "", imageUrl: String? = nil, role: String = "", summary: String = "", email: String = "", phoneNumber: String = "", linkedInUrl: String = "", gitHubUrl: String = "", skillsGroups: [SkillsGroup] = [], experience: [CompanyExperience] = [], education: [EducationRecord] = []) {
+    init(name: String = "",
+         imageUrl: String? = nil,
+         role: String = "",
+         summary: String? = nil,
+         email: String? = nil,
+         phoneNumber: String? = nil,
+         linkedInUrl: String? = nil,
+         gitHubUrl: String? = nil,
+         skillsGroups: [SkillsGroup] = [],
+         experience: [CompanyExperience] = [],
+         education: [EducationRecord] = []) {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role

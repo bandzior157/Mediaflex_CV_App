@@ -24,13 +24,15 @@ class FakeResumeService {
             SkillsGroup(title: "Needless", skills: ["Drive licence"]),
             SkillsGroup(title: "Not visible skills", skills: [])
         ])
-
+    
+    private let emptyResume = Resume(name: "Name", role: "role")
+    
 }
 
 extension FakeResumeService: ResumeServicing {
     
     func fetchResume() {
-        delegate?.didFetchResume(resume)
+        delegate?.didFetchResume(emptyResume)
     }
     
 }

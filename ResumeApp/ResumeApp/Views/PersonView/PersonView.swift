@@ -14,6 +14,7 @@ class PersonView: UIView {
     
     lazy var imageView: UIImageView = {
         var imageView = UIImageView()
+        imageView.backgroundColor = .systemBackground
         imageView.image = UIImage(systemName: "person.crop.circle")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit

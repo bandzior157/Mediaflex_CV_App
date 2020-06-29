@@ -14,18 +14,29 @@ class GeneralPresenterTests: XCTestCase {
     func test_setResume_callsViewUpdateWithGeneralViewModel() {
         let sut = makeSUT(GeneralCellTypesProvider())
         let view = MockGeneralView()
-        let resume = Resume(name: "full name", imageUrl: "imageUrl", role: "role")
+        let resume = Resume(name: "full name", imageUrl: "imageUrl", role: "role", summary: "summary body", email: "email@email.com", phoneNumber: "555666777", linkedInUrl: "linked in", gitHubUrl: "git hub")
         sut.view = view
         sut.setResume(resume)
         let size = Size(width: 40, height: 40)
         
-        let summary = CellViewModel(title: resume.summary, selectable: false)
-        let email = CellViewModel(title: "Email", subtitle: resume.email, image: .init(type: .named(imageName: "email"), size: size), selectable: true)
-        let phone = CellViewModel(title: "Phone", subtitle: resume.phoneNumber, image: .init(type: .named(imageName: "phone"), size: size), selectable: true)
-        let linkedIn = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, image: .init(type: .named(imageName: "linkedIn"), size: size), selectable: true)
-        let gitHub = CellViewModel(title: "GitHub", subtitle: resume.gitHubUrl, image: .init(type: .named(imageName: "github"), size: size), selectable: true)
+        let summary = CellViewModel(title: "summary body", selectable: false)
+        let email = CellViewModel(title: "Email", subtitle: "email@email.com", image: .init(type: .named(imageName: "email"), size: size), selectable: true)
+        let phone = CellViewModel(title: "Phone", subtitle: "555666777", image: .init(type: .named(imageName: "phone"), size: size), selectable: true)
+        let linkedIn = CellViewModel(title: "LinkedIn", subtitle: "linked in", image: .init(type: .named(imageName: "linkedIn"), size: size), selectable: true)
+        let gitHub = CellViewModel(title: "GitHub", subtitle: "git hub", image: .init(type: .named(imageName: "github"), size: size), selectable: true)
 
         let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", image: ImageViewModel(type: .url(string: "imageUrl"), size: Size(width: 120, height: 120)), role: "role"), elements: [summary, email, phone, linkedIn, gitHub])]
+        XCTAssertEqual(view.updateViewModels, expected)
+    }
+    
+    func test_setResume_callsViewUpdateWithGeneralViewModel_missingOptionals() {
+        let sut = makeSUT(GeneralCellTypesProvider())
+        let view = MockGeneralView()
+        let resume = Resume(name: "full name", imageUrl: "imageUrl", role: "role")
+        sut.view = view
+        sut.setResume(resume)
+
+        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", image: ImageViewModel(type: .url(string: "imageUrl"), size: Size(width: 120, height: 120)), role: "role"), elements: [])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     
