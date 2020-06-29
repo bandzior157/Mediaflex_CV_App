@@ -13,6 +13,7 @@ class EducationViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.removeTrailingSeparators()
         return tableView
     }()
     
@@ -21,7 +22,23 @@ class EducationViewController: UIViewController {
             reloadSubviews()
         }
     }
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSubviews()
+    }
+
+    private func setupSubviews() {
+        view.addSubview(tableView)
+        layoutTableView()
+    }
+
+    private func layoutTableView() {
+        let constraints = NSLayoutConstraint.anchorConstraints(view: tableView, in: view.safeAreaLayoutGuide, margins: Margins.init(vertical: 0, horizontal: 0))
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate(constraints)
+    }
+       
     private func reloadSubviews() {
         ThreadGuarantee.guarantee(on: .main) { [weak self] in
             self?.tableView.reloadData()
@@ -45,7 +62,10 @@ extension EducationViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        guard let viewModel = viewModel?.cellViewModels[indexPath.row] else { return cell }
+        cell.update(viewModel: viewModel)
+        return cell
     }
     
 }
