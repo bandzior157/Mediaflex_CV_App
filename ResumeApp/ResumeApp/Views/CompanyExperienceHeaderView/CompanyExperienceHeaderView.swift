@@ -34,6 +34,12 @@ class CompanyExperienceHeaderView: UIView {
         return label
     }()
     
+    lazy var datesLabel: UILabel = {
+        var label = UILabel()
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -48,7 +54,7 @@ class CompanyExperienceHeaderView: UIView {
         
         placeholderSetup()
         
-        let stackView = UIStackView(arrangedSubviews: [imageView, companyLabel, roleLabel])
+        let stackView = UIStackView(arrangedSubviews: [imageView, companyLabel, roleLabel, datesLabel])
         stackView.alignment = .center
         stackView.axis = .vertical
         stackView.spacing = 16
@@ -61,18 +67,19 @@ class CompanyExperienceHeaderView: UIView {
     private func placeholderSetup() {
         companyLabel.text = "ABCDEFGHIJKLMNOPRS"
         roleLabel.text = "ABCDEFGHIJK"
+        datesLabel.text = "ABCDEFGHIJK"
         
         setLabelsVisible(false)
     }
     
     internal func setLabelsVisible(_ visible: Bool) {
+        let labels = [companyLabel, roleLabel, datesLabel]
+        
         let textColor : UIColor = visible ? .label : .clear
         let backgroundColor: UIColor = visible ? .clear : .lightGray
-        companyLabel.textColor = textColor
-        roleLabel.textColor = textColor
         
-        companyLabel.backgroundColor = backgroundColor
-        roleLabel.backgroundColor = backgroundColor
+        labels.forEach { $0.textColor = textColor }
+        labels.forEach { $0.backgroundColor = backgroundColor }
     }
     
     
