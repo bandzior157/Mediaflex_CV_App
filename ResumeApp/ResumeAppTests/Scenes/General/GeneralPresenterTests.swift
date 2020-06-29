@@ -25,7 +25,7 @@ class GeneralPresenterTests: XCTestCase {
         let linkedIn = CellViewModel(title: "LinkedIn", subtitle: resume.linkedInUrl, image: .init(type: .named(imageName: "linkedIn"), size: size), selectable: true)
         let gitHub = CellViewModel(title: "GitHub", subtitle: resume.gitHubUrl, image: .init(type: .named(imageName: "github"), size: size), selectable: true)
 
-        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", imageUrl: "imageUrl", role: "role"), elements: [summary, email, phone, linkedIn, gitHub])]
+        let expected = [GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "full name", image: ImageViewModel(type: .url(string: "imageUrl"), size: Size(width: 120, height: 120)), role: "role"), elements: [summary, email, phone, linkedIn, gitHub])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     

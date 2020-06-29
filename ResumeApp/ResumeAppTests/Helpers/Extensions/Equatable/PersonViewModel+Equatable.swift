@@ -12,7 +12,7 @@ extension PersonViewViewModel: Equatable {
     
     public static func ==(lhs: PersonViewViewModel, rhs: PersonViewViewModel) -> Bool {
         lhs.fullName == rhs.fullName &&
-            lhs.imageUrl == rhs.imageUrl &&
+            lhs.image == rhs.image &&
             lhs.role == rhs.role
     }
     

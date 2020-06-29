@@ -9,7 +9,7 @@
 struct Resume {
     
     let name: String
-    let imageUrl: String
+    let imageUrl: String?
     let role: String
     let summary: String
     let email: String
@@ -20,7 +20,7 @@ struct Resume {
     let experience: [CompanyExperience]
     let education: [EducationRecord]
     
-    init(name: String = "", imageUrl: String = "", role: String = "", summary: String = "", email: String = "", phoneNumber: String = "", linkedInUrl: String = "", gitHubUrl: String = "", skillsGroups: [SkillsGroup] = [], experience: [CompanyExperience] = [], education: [EducationRecord] = []) {
+    init(name: String = "", imageUrl: String? = nil, role: String = "", summary: String = "", email: String = "", phoneNumber: String = "", linkedInUrl: String = "", gitHubUrl: String = "", skillsGroups: [SkillsGroup] = [], experience: [CompanyExperience] = [], education: [EducationRecord] = []) {
         self.name = name
         self.imageUrl = imageUrl
         self.role = role

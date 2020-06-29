@@ -65,9 +65,15 @@ extension GeneralPresenter: ResumeSetting {
         
         guard let generalCellTypes = generalCellTypes else { return }
         let elements = cellViewModelsProvider.get(for: generalCellTypes)
-        let viewModel = GeneralViewModel(
-            personViewViewModel: PersonViewViewModel(fullName: resume.name, imageUrl: resume.imageUrl, role: resume.role),
-            elements: elements)
+        
+        var imageViewModel: ImageViewModel?
+        if let imageUrlString = resume.imageUrl {
+            imageViewModel = ImageViewModel(type: .url(string: imageUrlString), size: Size(width: 120, height: 120))
+        }
+        
+        let personViewViewModel = PersonViewViewModel(fullName: resume.name, image: imageViewModel, role: resume.role)
+        
+        let viewModel = GeneralViewModel(personViewViewModel: personViewViewModel, elements: elements)
         
         self.viewModel = viewModel
     }
