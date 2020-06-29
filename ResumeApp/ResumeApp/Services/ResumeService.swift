@@ -30,7 +30,7 @@ extension ResumeService: ResumeServicing {
                 let resume = try decoder.decode(Resume.self, from: data)
                 self.delegate?.didFetchResume(resume)
             } catch {
-                
+                self.delegate?.resumeServiceDidFail(with: error.localizedDescription)
             }
         }.resume()
     }
