@@ -80,6 +80,7 @@
 		2685250524AA4646000AEDDA /* EducationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250424AA4646000AEDDA /* EducationRecord.swift */; };
 		2685250824AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250724AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift */; };
 		2685250A24AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */; };
+		2685250E24AA6E13000AEDDA /* TableViewHeaderViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250D24AA6E13000AEDDA /* TableViewHeaderViewing.swift */; };
 		26A8B8D424A617D1006DF5A1 /* GeneralCellTypesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */; };
 		26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */; };
 		26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D824A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift */; };
@@ -217,6 +218,7 @@
 		2685250424AA4646000AEDDA /* EducationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationRecord.swift; sourceTree = "<group>"; };
 		2685250724AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellViewModel+InitEducationRecord.swift"; sourceTree = "<group>"; };
 		2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImageViewModel.swift"; sourceTree = "<group>"; };
+		2685250D24AA6E13000AEDDA /* TableViewHeaderViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderViewing.swift; sourceTree = "<group>"; };
 		26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellTypesProvider.swift; sourceTree = "<group>"; };
 		26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellType.swift; sourceTree = "<group>"; };
 		26A8B8D824A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellViewModelsProviding.swift; sourceTree = "<group>"; };
@@ -338,8 +340,6 @@
 		2625269324A3CDDE00E301F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */,
-				2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */,
 				262960B924A4BBFE0009FD29 /* TableView */,
 			);
 			path = Views;
@@ -419,6 +419,7 @@
 			children = (
 				2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */,
 				2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */,
+				2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */,
 			);
 			path = CompanyExperienceHeaderView;
 			sourceTree = "<group>";
@@ -466,6 +467,25 @@
 				2685250724AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift */,
 			);
 			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		2685250B24AA6DE6000AEDDA /* PersonView */ = {
+			isa = PBXGroup;
+			children = (
+				26742ACF24A3A6BD001D9444 /* PersonViewing.swift */,
+				5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */,
+				2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */,
+			);
+			path = PersonView;
+			sourceTree = "<group>";
+		};
+		2685250C24AA6DFF000AEDDA /* TableViewHeaderViewing */ = {
+			isa = PBXGroup;
+			children = (
+				2685250D24AA6E13000AEDDA /* TableViewHeaderViewing.swift */,
+				262960C524A4D0900009FD29 /* TableViewHeaderView.swift */,
+			);
+			path = TableViewHeaderViewing;
 			sourceTree = "<group>";
 		};
 		26A8B8D724A61BCC006DF5A1 /* GeneralCellViewModelsProviding */ = {
@@ -664,10 +684,9 @@
 		5A6E87FC24A0EC8200DD8789 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */,
+				2685250B24AA6DE6000AEDDA /* PersonView */,
 				2636AB5524AA169A004B866D /* CompanyExperienceHeaderView */,
-				26742ACF24A3A6BD001D9444 /* PersonViewing.swift */,
-				262960C524A4D0900009FD29 /* TableViewHeaderView.swift */,
+				2685250C24AA6DFF000AEDDA /* TableViewHeaderViewing */,
 				26742AD324A3ACF8001D9444 /* CellViewModelUpdating */,
 			);
 			path = Views;
@@ -995,6 +1014,7 @@
 				2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */,
 				26A8B90724A6A97A006DF5A1 /* UIView+AddSubviews.swift in Sources */,
 				26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */,
+				2685250E24AA6E13000AEDDA /* TableViewHeaderViewing.swift in Sources */,
 				26A8B8E724A64194006DF5A1 /* PhoneNumberHandling.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				26279BC424A78C32000CA5D2 /* ExperienceContract.swift in Sources */,

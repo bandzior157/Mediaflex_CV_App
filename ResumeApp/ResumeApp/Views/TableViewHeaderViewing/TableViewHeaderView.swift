@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol TableViewHeaderViewing {
-    func update(title: String?)
-}
-
 class TableViewHeaderView: UIView {
     
     lazy var textLabel: UILabel = {
