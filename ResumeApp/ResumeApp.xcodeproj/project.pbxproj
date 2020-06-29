@@ -121,6 +121,7 @@
 		26D31AF224AA8086001D46FC /* SkillsGroup+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF124AA8086001D46FC /* SkillsGroup+Equatable.swift */; };
 		26D31AF424AA80A5001D46FC /* EducationRecord+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */; };
 		26D31AF924AA85C8001D46FC /* WeakRef+GeneralPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */; };
+		26D31AFB24AA866E001D46FC /* GeneralConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */; };
 		4C4052293D205555A87BB507 /* Pods_ResumeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
@@ -272,6 +273,7 @@
 		26D31AF124AA8086001D46FC /* SkillsGroup+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsGroup+Equatable.swift"; sourceTree = "<group>"; };
 		26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationRecord+Equatable.swift"; sourceTree = "<group>"; };
 		26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+GeneralPresenting.swift"; sourceTree = "<group>"; };
+		26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConfiguratorTests.swift; sourceTree = "<group>"; };
 		2E227BA0C0214DEDAD5BB6CF /* Pods-ResumeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp.debug.xcconfig"; path = "Target Support Files/Pods-ResumeApp/Pods-ResumeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68214AD81EB5919DB1F71 /* Pods_ResumeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -683,6 +685,7 @@
 		5A15B7EB249FFD4500DB62F5 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */,
 				5A15B7EC249FFD5D00DB62F5 /* GeneralViewControllerTests.swift */,
 				26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */,
 			);
@@ -1096,6 +1099,7 @@
 				26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */,
 				2636AB4424AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift in Sources */,
 				262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */,
+				26D31AFB24AA866E001D46FC /* GeneralConfiguratorTests.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
 				262E825E24A9303F00B8373F /* ImageViewModel+Equatable.swift in Sources */,
 				26D31AF224AA8086001D46FC /* SkillsGroup+Equatable.swift in Sources */,
