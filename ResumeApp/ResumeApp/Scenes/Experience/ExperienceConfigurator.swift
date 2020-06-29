@@ -23,7 +23,7 @@ class ExperienceConfigurator {
 extension ExperienceConfigurator: Configurating {
     
     func configure() {
-        viewController.presenter = presenter
+        viewController.presenter = WeakRef(presenter)
         
         presenter.view = viewController
         presenter.router = router

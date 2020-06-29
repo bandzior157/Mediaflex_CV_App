@@ -123,6 +123,8 @@
 		26D31AF924AA85C8001D46FC /* WeakRef+GeneralPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */; };
 		26D31AFB24AA866E001D46FC /* GeneralConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */; };
 		26D31AFD24AA86C1001D46FC /* SkillsConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AFC24AA86C1001D46FC /* SkillsConfiguratorTests.swift */; };
+		26D31AFF24AA87AA001D46FC /* ExperienceConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AFE24AA87AA001D46FC /* ExperienceConfiguratorTests.swift */; };
+		26D31B0124AA8892001D46FC /* WeakRef+ExperiencePresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31B0024AA8892001D46FC /* WeakRef+ExperiencePresenting.swift */; };
 		4C4052293D205555A87BB507 /* Pods_ResumeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
@@ -276,6 +278,8 @@
 		26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+GeneralPresenting.swift"; sourceTree = "<group>"; };
 		26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConfiguratorTests.swift; sourceTree = "<group>"; };
 		26D31AFC24AA86C1001D46FC /* SkillsConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsConfiguratorTests.swift; sourceTree = "<group>"; };
+		26D31AFE24AA87AA001D46FC /* ExperienceConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceConfiguratorTests.swift; sourceTree = "<group>"; };
+		26D31B0024AA8892001D46FC /* WeakRef+ExperiencePresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+ExperiencePresenting.swift"; sourceTree = "<group>"; };
 		2E227BA0C0214DEDAD5BB6CF /* Pods-ResumeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp.debug.xcconfig"; path = "Target Support Files/Pods-ResumeApp/Pods-ResumeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68214AD81EB5919DB1F71 /* Pods_ResumeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -582,6 +586,7 @@
 		26A8B90924A6AECD006DF5A1 /* Experience */ = {
 			isa = PBXGroup;
 			children = (
+				26D31AFE24AA87AA001D46FC /* ExperienceConfiguratorTests.swift */,
 				26A8B90A24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift */,
 				26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */,
 				262E826D24A956A900B8373F /* RouterTests.swift */,
@@ -594,6 +599,7 @@
 			children = (
 				26D31AEF24AA7AD7001D46FC /* WeakRef.swift */,
 				26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */,
+				26D31B0024AA8892001D46FC /* WeakRef+ExperiencePresenting.swift */,
 			);
 			path = WeakRef;
 			sourceTree = "<group>";
@@ -1074,6 +1080,7 @@
 				26279BC424A78C32000CA5D2 /* ExperienceContract.swift in Sources */,
 				2685250A24AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift in Sources */,
 				26D31AF024AA7AD7001D46FC /* WeakRef.swift in Sources */,
+				26D31B0124AA8892001D46FC /* WeakRef+ExperiencePresenting.swift in Sources */,
 				268524F924AA40FA000AEDDA /* EducationViewController.swift in Sources */,
 				26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */,
 				26A8B90124A66440006DF5A1 /* MailHandlingError.swift in Sources */,
@@ -1132,6 +1139,7 @@
 				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
 				2685250324AA4553000AEDDA /* EducationViewModel+Equatable.swift in Sources */,
 				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,
+				26D31AFF24AA87AA001D46FC /* ExperienceConfiguratorTests.swift in Sources */,
 				268524FF24AA43C4000AEDDA /* EducationPresenterTests.swift in Sources */,
 				2685252424AA7989000AEDDA /* PhoneNumberHandlingErrorTests.swift in Sources */,
 				2685252224AA796C000AEDDA /* UrlBrowserHandlingErrorTests.swift in Sources */,
