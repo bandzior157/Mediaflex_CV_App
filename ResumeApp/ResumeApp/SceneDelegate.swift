@@ -41,13 +41,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         experiencePresenter.view = experienceViewController
         experienceViewController.presenter = experiencePresenter
         
-        let resumeTabBarController = ResumeTabBarController(generalView: generalViewController, skillsView: skillsViewController, experienceView: experienceViewController)
+        let educationViewController = EducationViewController()
+        let educationPresenter = EducationPresenter()
+        educationPresenter.view = educationViewController
+    
+        let resumeTabBarController = ResumeTabBarController(generalView: generalViewController, skillsView: skillsViewController, experienceView: experienceViewController, educationView: educationViewController)
         let resumeTabBarPresenter = ResumeTabBarPresenter(service: service)
         service.delegate = resumeTabBarPresenter
         resumeTabBarPresenter.generalResumeSetter = generalPresenter
         resumeTabBarPresenter.skillsResumeSetter = skillsPresenter
         resumeTabBarPresenter.experienceResumeSetter = experiencePresenter
-
+        resumeTabBarPresenter.educationResumeSetter = educationPresenter
+        
         resumeTabBarController.presenter = resumeTabBarPresenter
         
         let router = Router(viewController: experienceViewController)

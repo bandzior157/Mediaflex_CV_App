@@ -13,20 +13,24 @@ class ResumeTabBarController: UITabBarController {
     typealias GeneralView = UIViewController & GeneralViewing
     typealias SkillsView = UIViewController & SkillsViewing
     typealias ExperienceView = UIViewController
+    typealias EducationView = UIViewController & EducationViewing
     
     private var generalView: GeneralView
     private var skillsView: SkillsView
     private var experienceView: ExperienceView
+    private var educationView: EducationView
     
     var presenter: ResumeTabBarPresenting?
 
     init(generalView: GeneralView = GeneralViewController(),
          skillsView: SkillsView = SkillsViewController(),
-         experienceView: ExperienceView = ExperienceViewController()
+         experienceView: ExperienceView = ExperienceViewController(),
+         educationView: EducationView = EducationViewController()
     ) {
         self.generalView = generalView
         self.skillsView = skillsView
         self.experienceView = experienceView
+        self.educationView = educationView
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,6 +46,7 @@ class ResumeTabBarController: UITabBarController {
         configureGeneralView()
         configureSkillsView()
         configureExperienceView()
+        configureEducationView()
         
         addChilds()
         
@@ -74,10 +79,16 @@ class ResumeTabBarController: UITabBarController {
         experienceView.tabBarItem.image = UIImage(systemName: "briefcase.fill")
     }
     
+    private func configureEducationView() {
+        educationView.title = "Education"
+        educationView.tabBarItem.image = UIImage(systemName: "book.circle.fill")
+    }
+    
     private func addChilds() {
         addChild(generalView)
         addChild(TealNavigationController(rootViewController: skillsView))
         addChild(TealNavigationController(rootViewController: experienceView))
+        addChild(TealNavigationController(rootViewController: educationView))
     }
     
 }
