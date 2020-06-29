@@ -9,6 +9,7 @@
 class ResumeTabBarPresenter: ResumeTabBarPresenting {
     
     private let service: ResumeServicing
+    var alertPresenter: AlertPresenting?
     
     var generalResumeSetter: ResumeSetting?
     var skillsResumeSetter: ResumeSetting?
@@ -27,9 +28,13 @@ class ResumeTabBarPresenter: ResumeTabBarPresenting {
 
 extension ResumeTabBarPresenter: ResumeServiceDelegate {
     
+    func resumeServiceDidFail(with message: String) {
+        alertPresenter?.show(message: message)
+    }
+    
     func didFetchResume(_ resume: Resume) {
         let resumeSetters = [generalResumeSetter, skillsResumeSetter, experienceResumeSetter, educationResumeSetter]
-        
+
         resumeSetters.forEach {
             $0?.setResume(resume)
         }

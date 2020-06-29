@@ -45,6 +45,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         resumeTabBarController.presenter = resumeTabBarPresenter
         
+        let alertPresenter = AlertPresenter()
+        alertPresenter.viewController = resumeTabBarController
+        resumeTabBarPresenter.alertPresenter = alertPresenter
+        
         return resumeTabBarController
     }
 

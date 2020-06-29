@@ -127,6 +127,8 @@
 		26D31B0124AA8892001D46FC /* WeakRef+ExperiencePresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31B0024AA8892001D46FC /* WeakRef+ExperiencePresenting.swift */; };
 		26D31B0324AA88DE001D46FC /* EducationConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31B0224AA88DE001D46FC /* EducationConfiguratorTests.swift */; };
 		26D31B0524AA8B48001D46FC /* WeakRef+CompanyExperienceDetailViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31B0424AA8B48001D46FC /* WeakRef+CompanyExperienceDetailViewing.swift */; };
+		26D31B0724AA8EC7001D46FC /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31B0624AA8EC7001D46FC /* AlertPresenter.swift */; };
+		26D31B0A24AA8EE4001D46FC /* AlertPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31B0924AA8EE4001D46FC /* AlertPresenting.swift */; };
 		4C4052293D205555A87BB507 /* Pods_ResumeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
@@ -284,6 +286,8 @@
 		26D31B0024AA8892001D46FC /* WeakRef+ExperiencePresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+ExperiencePresenting.swift"; sourceTree = "<group>"; };
 		26D31B0224AA88DE001D46FC /* EducationConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationConfiguratorTests.swift; sourceTree = "<group>"; };
 		26D31B0424AA8B48001D46FC /* WeakRef+CompanyExperienceDetailViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+CompanyExperienceDetailViewing.swift"; sourceTree = "<group>"; };
+		26D31B0624AA8EC7001D46FC /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		26D31B0924AA8EE4001D46FC /* AlertPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenting.swift; sourceTree = "<group>"; };
 		2E227BA0C0214DEDAD5BB6CF /* Pods-ResumeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp.debug.xcconfig"; path = "Target Support Files/Pods-ResumeApp/Pods-ResumeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68214AD81EB5919DB1F71 /* Pods_ResumeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -610,6 +614,15 @@
 			path = WeakRef;
 			sourceTree = "<group>";
 		};
+		26D31B0B24AA8EE6001D46FC /* AlertPresenting */ = {
+			isa = PBXGroup;
+			children = (
+				26D31B0924AA8EE4001D46FC /* AlertPresenting.swift */,
+				26D31B0624AA8EC7001D46FC /* AlertPresenter.swift */,
+			);
+			path = AlertPresenting;
+			sourceTree = "<group>";
+		};
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +727,7 @@
 				26A8B8E524A64179006DF5A1 /* PhoneNumberHandling */,
 				26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */,
 				26A8B8FD24A66404006DF5A1 /* MailHandling */,
+				26D31B0B24AA8EE6001D46FC /* AlertPresenting */,
 				2685251B24AA7707000AEDDA /* Configurating.swift */,
 				5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */,
 				26A8B90E24A6B643006DF5A1 /* TealNavigationController.swift */,
@@ -1035,6 +1049,7 @@
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
 				268524FB24AA413C000AEDDA /* EducationViewModel.swift in Sources */,
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
+				26D31B0724AA8EC7001D46FC /* AlertPresenter.swift in Sources */,
 				26A8B8DB24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift in Sources */,
 				262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */,
 				2636AB4624AA0892004B866D /* CompanyExperienceHeaderView.swift in Sources */,
@@ -1073,6 +1088,7 @@
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				2685250124AA4401000AEDDA /* EducationPresenter.swift in Sources */,
 				26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */,
+				26D31B0A24AA8EE4001D46FC /* AlertPresenting.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
 				2685250524AA4646000AEDDA /* EducationRecord.swift in Sources */,
 				2685251A24AA76ED000AEDDA /* SkillsConfigurator.swift in Sources */,

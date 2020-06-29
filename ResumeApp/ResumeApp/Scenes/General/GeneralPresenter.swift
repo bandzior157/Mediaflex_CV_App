@@ -12,6 +12,7 @@ import UIKit
 class GeneralPresenter {
     
     var view: GeneralViewing?
+    var alertPresenter: AlertPresenting?
     
     let cellTypesProvider: GeneralCellTypesProviding
     let cellViewModelsProvider: GeneralCellViewModelsProviding
@@ -52,7 +53,7 @@ extension GeneralPresenter: GeneralPresenting {
                 break
             }
         } catch {
-
+            alertPresenter?.show(message: error.localizedDescription)
         }
     }
     

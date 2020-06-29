@@ -45,7 +45,7 @@ class ResumeTabBarPresenterTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(_ service: MockResumeService = MockResumeService()) -> ResumeTabBarPresenter {
+    private func makeSUT(_ service: ResumeServicing = MockResumeService()) -> ResumeTabBarPresenter {
         ResumeTabBarPresenter(service: service)
     }
     

@@ -18,7 +18,7 @@ class ResumeService {
 
 extension ResumeService: ResumeServicing {
     
-    func fetchResume() {
+    @objc func fetchResume() {
         guard let gitUrl = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response, error) in

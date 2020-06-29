@@ -8,4 +8,5 @@
 
 protocol ResumeServiceDelegate {
     func didFetchResume(_ resume: Resume)
+    func resumeServiceDidFail(with message: String)
 }
