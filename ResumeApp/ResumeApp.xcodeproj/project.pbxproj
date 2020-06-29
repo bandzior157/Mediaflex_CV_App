@@ -363,9 +363,9 @@
 		2625268F24A3CD9F00E301F9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				262E825924A92FA200B8373F /* ImageViewModel.swift */,
 				262960B724A4BB670009FD29 /* SectionViewModel.swift */,
 				2685250624AA493B000AEDDA /* CellViewModel */,
-				262E825924A92FA200B8373F /* ImageViewModel.swift */,
 				2625269224A3CDD200E301F9 /* Scenes */,
 			);
 			path = ViewModels;
