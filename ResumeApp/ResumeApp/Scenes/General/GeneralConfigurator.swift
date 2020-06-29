@@ -25,7 +25,7 @@ class GeneralConfigurator {
 extension GeneralConfigurator: Configurating {
     
     func configure() {
-        viewController.presenter = presenter
+        viewController.presenter = WeakRef(presenter)
         
         presenter.view = viewController
         presenter.mailHandler = mailHandler

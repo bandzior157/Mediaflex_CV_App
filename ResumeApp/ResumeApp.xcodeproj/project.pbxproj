@@ -120,6 +120,7 @@
 		26D31AF024AA7AD7001D46FC /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AEF24AA7AD7001D46FC /* WeakRef.swift */; };
 		26D31AF224AA8086001D46FC /* SkillsGroup+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF124AA8086001D46FC /* SkillsGroup+Equatable.swift */; };
 		26D31AF424AA80A5001D46FC /* EducationRecord+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */; };
+		26D31AF924AA85C8001D46FC /* WeakRef+GeneralPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */; };
 		4C4052293D205555A87BB507 /* Pods_ResumeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
@@ -270,6 +271,7 @@
 		26D31AEF24AA7AD7001D46FC /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		26D31AF124AA8086001D46FC /* SkillsGroup+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsGroup+Equatable.swift"; sourceTree = "<group>"; };
 		26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationRecord+Equatable.swift"; sourceTree = "<group>"; };
+		26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+GeneralPresenting.swift"; sourceTree = "<group>"; };
 		2E227BA0C0214DEDAD5BB6CF /* Pods-ResumeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp.debug.xcconfig"; path = "Target Support Files/Pods-ResumeApp/Pods-ResumeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68214AD81EB5919DB1F71 /* Pods_ResumeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -582,6 +584,15 @@
 			path = Experience;
 			sourceTree = "<group>";
 		};
+		26D31AF724AA85AE001D46FC /* WeakRef */ = {
+			isa = PBXGroup;
+			children = (
+				26D31AEF24AA7AD7001D46FC /* WeakRef.swift */,
+				26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */,
+			);
+			path = WeakRef;
+			sourceTree = "<group>";
+		};
 		5A15B7CA249E2DB400DB62F5 /* Test dummies */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,11 +692,11 @@
 		5A6E87F424A0EBD900DD8789 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				26D31AF724AA85AE001D46FC /* WeakRef */,
 				26A8B8E524A64179006DF5A1 /* PhoneNumberHandling */,
 				26A8B8EC24A64585006DF5A1 /* UrlBrowserHandling */,
 				26A8B8FD24A66404006DF5A1 /* MailHandling */,
 				2685251B24AA7707000AEDDA /* Configurating.swift */,
-				26D31AEF24AA7AD7001D46FC /* WeakRef.swift */,
 				5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */,
 				26A8B90E24A6B643006DF5A1 /* TealNavigationController.swift */,
 				5A6E87FA24A0EC6E00DD8789 /* Margins.swift */,
@@ -1062,6 +1073,7 @@
 				26A8B90124A66440006DF5A1 /* MailHandlingError.swift in Sources */,
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
 				262E827024A956E400B8373F /* Router.swift in Sources */,
+				26D31AF924AA85C8001D46FC /* WeakRef+GeneralPresenting.swift in Sources */,
 				2685251224AA6EDD000AEDDA /* ImageType.swift in Sources */,
 				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
 				262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */,
