@@ -24,3 +24,7 @@ struct Margins {
         right = hori
     }
 }
+
+extension Margins {
+    static var zero = Margins(vertical: 0, horizontal: 0)
+}

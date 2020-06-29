@@ -47,7 +47,7 @@ class CompanyExperienceDetailViewController: UIViewController {
         
         view.addSubview(stackView)
         
-        let stackViewConstraints = NSLayoutConstraint.anchorConstraints(view: stackView, in: view.safeAreaLayoutGuide, margins: Margins(vertical: 0, horizontal: 0))
+        let stackViewConstraints = NSLayoutConstraint.anchorConstraints(view: stackView, in: view.safeAreaLayoutGuide)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(stackViewConstraints)

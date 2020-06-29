@@ -10,7 +10,7 @@ import UIKit
 
 extension NSLayoutConstraint {
     
-    static func anchorConstraints(view: UIView, in layoutGuide: UILayoutGuide, margins: Margins) -> [NSLayoutConstraint] {
+    static func anchorConstraints(view: UIView, in layoutGuide: UILayoutGuide, margins: Margins = .zero) -> [NSLayoutConstraint] {
         [view.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: margins.top),
          view.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: margins.left),
          view.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: -margins.right),
