@@ -122,6 +122,7 @@
 		26D31AF424AA80A5001D46FC /* EducationRecord+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */; };
 		26D31AF924AA85C8001D46FC /* WeakRef+GeneralPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */; };
 		26D31AFB24AA866E001D46FC /* GeneralConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */; };
+		26D31AFD24AA86C1001D46FC /* SkillsConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D31AFC24AA86C1001D46FC /* SkillsConfiguratorTests.swift */; };
 		4C4052293D205555A87BB507 /* Pods_ResumeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */; };
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
@@ -274,6 +275,7 @@
 		26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationRecord+Equatable.swift"; sourceTree = "<group>"; };
 		26D31AF824AA85C8001D46FC /* WeakRef+GeneralPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+GeneralPresenting.swift"; sourceTree = "<group>"; };
 		26D31AFA24AA866E001D46FC /* GeneralConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConfiguratorTests.swift; sourceTree = "<group>"; };
+		26D31AFC24AA86C1001D46FC /* SkillsConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsConfiguratorTests.swift; sourceTree = "<group>"; };
 		2E227BA0C0214DEDAD5BB6CF /* Pods-ResumeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp.debug.xcconfig"; path = "Target Support Files/Pods-ResumeApp/Pods-ResumeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F029934BB1B6E51E85B5019 /* Pods_ResumeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68214AD81EB5919DB1F71 /* Pods_ResumeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +385,7 @@
 		262960A424A3FAD90009FD29 /* Skills */ = {
 			isa = PBXGroup;
 			children = (
+				26D31AFC24AA86C1001D46FC /* SkillsConfiguratorTests.swift */,
 				262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */,
 				262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */,
 			);
@@ -1105,6 +1108,7 @@
 				26D31AF224AA8086001D46FC /* SkillsGroup+Equatable.swift in Sources */,
 				26A8B8F824A65BA4006DF5A1 /* MockPhoneNumberHandler.swift in Sources */,
 				26A8B8FA24A65BD4006DF5A1 /* MockUrlBrowserHandler.swift in Sources */,
+				26D31AFD24AA86C1001D46FC /* SkillsConfiguratorTests.swift in Sources */,
 				26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */,
 				5A15B7E4249FF3DE00DB62F5 /* Resume+Equatable.swift in Sources */,
 				262960AE24A410430009FD29 /* UITableView+CellAtRow.swift in Sources */,
