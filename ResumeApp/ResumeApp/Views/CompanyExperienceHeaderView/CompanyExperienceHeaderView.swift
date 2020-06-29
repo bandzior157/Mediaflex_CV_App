@@ -111,11 +111,7 @@ extension CompanyExperienceHeaderView: CompanyExperienceHeaderViewing {
     
     func update(viewModel: CompanyExperienceHeaderViewModel) {
         companyLabel.text = viewModel.companyName
-        
-        if let url = URL(string: viewModel.companyLogoUrlString) {
-            imageView.sd_setImage(with: url)
-        }
-        
+        imageView.setImage(imageViewModel: viewModel.companyImage)
         roleLabel.text = viewModel.role
         datesLabel.text = viewModel.dates
         

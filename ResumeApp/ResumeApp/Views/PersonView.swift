@@ -18,7 +18,6 @@ class PersonView: UIView {
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = PersonView.imageViewSide/2
-        imageView.clipsToBounds = true
         return imageView
     }()
     
