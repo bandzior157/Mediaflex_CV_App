@@ -73,7 +73,6 @@ class PersonView: UIView {
         
         nameLabel.backgroundColor = backgroundColor
         roleLabel.backgroundColor = backgroundColor
-        
     }
     
     
