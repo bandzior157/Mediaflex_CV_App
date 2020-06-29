@@ -52,6 +52,10 @@
 		262E826E24A956A900B8373F /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826D24A956A900B8373F /* RouterTests.swift */; };
 		262E827024A956E400B8373F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826F24A956E400B8373F /* Router.swift */; };
 		2636AB4124AA03D7004B866D /* CompanyExperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4024AA03D7004B866D /* CompanyExperienceDetailViewController.swift */; };
+		2636AB4424AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4324AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift */; };
+		2636AB4624AA0892004B866D /* CompanyExperienceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */; };
+		2636AB4824AA0982004B866D /* CompanyExperienceDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4724AA0982004B866D /* CompanyExperienceDetailContract.swift */; };
+		2636AB4A24AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
@@ -170,6 +174,10 @@
 		262E826D24A956A900B8373F /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		262E826F24A956E400B8373F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2636AB4024AA03D7004B866D /* CompanyExperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailViewController.swift; sourceTree = "<group>"; };
+		2636AB4324AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderView.swift; sourceTree = "<group>"; };
+		2636AB4724AA0982004B866D /* CompanyExperienceDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailContract.swift; sourceTree = "<group>"; };
+		2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailViewModel.swift; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
@@ -291,6 +299,7 @@
 				2625269024A3CDBF00E301F9 /* GeneralViewModel.swift */,
 				262960A924A3FE360009FD29 /* SkillsViewModel.swift */,
 				26279BC124A78B90000CA5D2 /* ExperienceViewModel.swift */,
+				2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -356,6 +365,15 @@
 			isa = PBXGroup;
 			children = (
 				2636AB4024AA03D7004B866D /* CompanyExperienceDetailViewController.swift */,
+				2636AB4724AA0982004B866D /* CompanyExperienceDetailContract.swift */,
+			);
+			path = CompanyExperienceDetail;
+			sourceTree = "<group>";
+		};
+		2636AB4224AA047D004B866D /* CompanyExperienceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2636AB4324AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift */,
 			);
 			path = CompanyExperienceDetail;
 			sourceTree = "<group>";
@@ -516,6 +534,7 @@
 				5A15B7EB249FFD4500DB62F5 /* General */,
 				262960A424A3FAD90009FD29 /* Skills */,
 				26A8B90924A6AECD006DF5A1 /* Experience */,
+				2636AB4224AA047D004B866D /* CompanyExperienceDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -572,6 +591,7 @@
 				5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */,
 				26742ACF24A3A6BD001D9444 /* PersonViewing.swift */,
 				262960C524A4D0900009FD29 /* TableViewHeaderView.swift */,
+				2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */,
 				26742AD324A3ACF8001D9444 /* CellViewModelUpdating */,
 			);
 			path = Views;
@@ -859,6 +879,7 @@
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				26A8B8DB24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift in Sources */,
 				262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */,
+				2636AB4624AA0892004B866D /* CompanyExperienceHeaderView.swift in Sources */,
 				26A8B90524A6812A006DF5A1 /* ResumeService.swift in Sources */,
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
 				2636AB4124AA03D7004B866D /* CompanyExperienceDetailViewController.swift in Sources */,
@@ -868,6 +889,7 @@
 				262E826424A9480A00B8373F /* CompanyExperienceDetails.swift in Sources */,
 				262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */,
 				26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */,
+				2636AB4824AA0982004B866D /* CompanyExperienceDetailContract.swift in Sources */,
 				26A8B90D24A6AF30006DF5A1 /* ExperienceViewController.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
 				26A8B8E924A641AF006DF5A1 /* PhoneNumberHandler.swift in Sources */,
@@ -903,6 +925,7 @@
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 				26A8B8F224A64605006DF5A1 /* UrlBrowserHandler.swift in Sources */,
 				26279BC824A7A0C3000CA5D2 /* CompanyExperience.swift in Sources */,
+				2636AB4A24AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +937,7 @@
 				26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */,
 				262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */,
 				26A8B8F424A65B13006DF5A1 /* MockGeneralView.swift in Sources */,
+				2636AB4424AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift in Sources */,
 				262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
 				262E825E24A9303F00B8373F /* ImageViewModel+Equatable.swift in Sources */,
