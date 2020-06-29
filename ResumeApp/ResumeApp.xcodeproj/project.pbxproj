@@ -121,7 +121,6 @@
 		5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7EC249FFD5D00DB62F5 /* GeneralViewControllerTests.swift */; };
 		5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A648F63249D060100F7222F /* ResumeTabBarContract.swift */; };
 		5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */; };
-		5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */; };
 		5A6E87FB24A0EC6E00DD8789 /* Margins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87FA24A0EC6E00DD8789 /* Margins.swift */; };
 		5A6E87FE24A0EC8D00DD8789 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */; };
 		5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B9A6C249CC39A007D8199 /* AppDelegate.swift */; };
@@ -261,7 +260,6 @@
 		5A15B7EC249FFD5D00DB62F5 /* GeneralViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewControllerTests.swift; sourceTree = "<group>"; };
 		5A648F63249D060100F7222F /* ResumeTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarContract.swift; sourceTree = "<group>"; };
 		5A6E87F524A0EBFF00DD8789 /* ThreadGuarantee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadGuarantee.swift; sourceTree = "<group>"; };
-		5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImageAtUrlString.swift"; sourceTree = "<group>"; };
 		5A6E87FA24A0EC6E00DD8789 /* Margins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margins.swift; sourceTree = "<group>"; };
 		5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		5A7B9A69249CC39A007D8199 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -652,7 +650,6 @@
 		5A6E87F724A0EC2D00DD8789 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5A6E87F824A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift */,
 				262E825B24A92FF000B8373F /* CGSize+InitSize.swift */,
 				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
 				262960A124A3D16F0009FD29 /* UIImage+Resize.swift */,
@@ -945,7 +942,6 @@
 				5A6E87FE24A0EC8D00DD8789 /* PersonView.swift in Sources */,
 				2625268E24A3CD7500E301F9 /* PersonViewViewModel.swift in Sources */,
 				5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */,
-				5A6E87F924A0EC3E00DD8789 /* UIImageView+setImageAtUrlString.swift in Sources */,
 				26A8B8DE24A61C29006DF5A1 /* GeneralCellTypesProviding.swift in Sources */,
 				26A8B8E424A622FC006DF5A1 /* ResumeSetting.swift in Sources */,
 				26A8B8EE24A645DD006DF5A1 /* UrlBrowserHandlingError.swift in Sources */,
