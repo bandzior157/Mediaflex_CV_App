@@ -74,6 +74,11 @@
 		268524F924AA40FA000AEDDA /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524F824AA40FA000AEDDA /* EducationViewController.swift */; };
 		268524FB24AA413C000AEDDA /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FA24AA413C000AEDDA /* EducationViewModel.swift */; };
 		268524FD24AA4198000AEDDA /* EducationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FC24AA4198000AEDDA /* EducationContract.swift */; };
+		268524FF24AA43C4000AEDDA /* EducationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FE24AA43C4000AEDDA /* EducationPresenterTests.swift */; };
+		2685250124AA4401000AEDDA /* EducationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250024AA4401000AEDDA /* EducationPresenter.swift */; };
+		2685250324AA4553000AEDDA /* EducationViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250224AA4553000AEDDA /* EducationViewModel+Equatable.swift */; };
+		2685250524AA4646000AEDDA /* EducationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250424AA4646000AEDDA /* EducationRecord.swift */; };
+		2685250824AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250724AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift */; };
 		26A8B8D424A617D1006DF5A1 /* GeneralCellTypesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */; };
 		26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */; };
 		26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D824A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift */; };
@@ -206,6 +211,11 @@
 		268524F824AA40FA000AEDDA /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		268524FA24AA413C000AEDDA /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
 		268524FC24AA4198000AEDDA /* EducationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationContract.swift; sourceTree = "<group>"; };
+		268524FE24AA43C4000AEDDA /* EducationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPresenterTests.swift; sourceTree = "<group>"; };
+		2685250024AA4401000AEDDA /* EducationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPresenter.swift; sourceTree = "<group>"; };
+		2685250224AA4553000AEDDA /* EducationViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		2685250424AA4646000AEDDA /* EducationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationRecord.swift; sourceTree = "<group>"; };
+		2685250724AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellViewModel+InitEducationRecord.swift"; sourceTree = "<group>"; };
 		26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellTypesProvider.swift; sourceTree = "<group>"; };
 		26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellType.swift; sourceTree = "<group>"; };
 		26A8B8D824A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellViewModelsProviding.swift; sourceTree = "<group>"; };
@@ -358,8 +368,8 @@
 			isa = PBXGroup;
 			children = (
 				262960B724A4BB670009FD29 /* SectionViewModel.swift */,
-				2625269424A3CDF600E301F9 /* CellViewModel.swift */,
 				262E825924A92FA200B8373F /* ImageViewModel.swift */,
+				2685250624AA493B000AEDDA /* CellViewModel */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -371,6 +381,7 @@
 				262E826724A94F6800B8373F /* CompanyExperience+Equatable.swift */,
 				2636AB5124AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift */,
 				262E826924A9501600B8373F /* CompanyExperienceDetails+Equatable.swift */,
+				2685250224AA4553000AEDDA /* EducationViewModel+Equatable.swift */,
 				26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */,
 				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
 				262E825F24A931AE00B8373F /* ImageType+Equatable.swift */,
@@ -433,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				268524F524AA407D000AEDDA /* EducationViewControllerTests.swift */,
+				268524FE24AA43C4000AEDDA /* EducationPresenterTests.swift */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -440,10 +452,20 @@
 		268524F724AA40E8000AEDDA /* Education */ = {
 			isa = PBXGroup;
 			children = (
-				268524F824AA40FA000AEDDA /* EducationViewController.swift */,
 				268524FC24AA4198000AEDDA /* EducationContract.swift */,
+				268524F824AA40FA000AEDDA /* EducationViewController.swift */,
+				2685250024AA4401000AEDDA /* EducationPresenter.swift */,
 			);
 			path = Education;
+			sourceTree = "<group>";
+		};
+		2685250624AA493B000AEDDA /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2625269424A3CDF600E301F9 /* CellViewModel.swift */,
+				2685250724AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift */,
+			);
+			path = CellViewModel;
 			sourceTree = "<group>";
 		};
 		26A8B8D724A61BCC006DF5A1 /* GeneralCellViewModelsProviding */ = {
@@ -575,6 +597,7 @@
 				262960C324A4BD7B0009FD29 /* SkillsGroup.swift */,
 				26279BC724A7A0C3000CA5D2 /* CompanyExperience.swift */,
 				262E826324A9480A00B8373F /* CompanyExperienceDetails.swift */,
+				2685250424AA4646000AEDDA /* EducationRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -958,14 +981,17 @@
 				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,
 				2636AB5724AA16E3004B866D /* CompanyExperienceHeaderViewing.swift in Sources */,
 				2625269124A3CDBF00E301F9 /* GeneralViewModel.swift in Sources */,
+				2685250824AA4953000AEDDA /* CellViewModel+InitEducationRecord.swift in Sources */,
 				262960AC24A3FE880009FD29 /* SkillsContract.swift in Sources */,
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				262E825A24A92FA200B8373F /* ImageViewModel.swift in Sources */,
 				2636AB5424AA168F004B866D /* CompanyExperienceHeaderViewModel.swift in Sources */,
 				268524FD24AA4198000AEDDA /* EducationContract.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
+				2685250124AA4401000AEDDA /* EducationPresenter.swift in Sources */,
 				26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
+				2685250524AA4646000AEDDA /* EducationRecord.swift in Sources */,
 				26A8B90324A66454006DF5A1 /* MailHandler.swift in Sources */,
 				2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */,
 				26A8B90724A6A97A006DF5A1 /* UIView+AddSubviews.swift in Sources */,
@@ -1023,7 +1049,9 @@
 				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
 				262E826624A94C4800B8373F /* MockExperiencePresenter.swift in Sources */,
 				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
+				2685250324AA4553000AEDDA /* EducationViewModel+Equatable.swift in Sources */,
 				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,
+				268524FF24AA43C4000AEDDA /* EducationPresenterTests.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
 				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
 				26279BD024A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift in Sources */,

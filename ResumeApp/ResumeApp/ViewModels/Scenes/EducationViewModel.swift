@@ -9,3 +9,13 @@
 struct EducationViewModel {
     let cellViewModels: [CellViewModel]
 }
+
+extension EducationViewModel {
+    
+    init(resume: Resume) {
+        self.cellViewModels = resume.education.map {
+            CellViewModel(educationRecord: $0)
+        }
+    }
+    
+}
