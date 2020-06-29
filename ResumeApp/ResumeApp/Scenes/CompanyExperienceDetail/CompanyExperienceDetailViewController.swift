@@ -21,7 +21,8 @@ class CompanyExperienceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .orange
+        view.backgroundColor = .systemBackground
+        
         configureSubviews()
         presenter?.viewDidLoad()
     }
