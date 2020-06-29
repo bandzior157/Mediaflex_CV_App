@@ -14,10 +14,10 @@ class CompanyExperienceHeaderView: UIView {
     
     lazy var imageView: UIImageView = {
         var imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person.crop.circle")
+        imageView.backgroundColor = .white
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = CompanyExperienceHeaderView.imageViewSide/2
+        imageView.layer.cornerRadius = 12
         imageView.clipsToBounds = true
         return imageView
     }()
