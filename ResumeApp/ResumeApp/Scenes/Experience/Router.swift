@@ -25,7 +25,7 @@ extension Router: Routing {
         let vc = CompanyExperienceDetailViewController()
         let presenter = CompanyExperienceDetailPresenter(companyExperience: companyExperience)
         vc.presenter = presenter
-        presenter.view = vc
+        presenter.view = WeakRef(vc)
         return vc
     }
     
