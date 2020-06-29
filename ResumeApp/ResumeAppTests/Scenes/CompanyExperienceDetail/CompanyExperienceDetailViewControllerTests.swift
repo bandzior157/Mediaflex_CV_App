@@ -40,10 +40,10 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.headerView.companyLabel.text, "company name")
         XCTAssertEqual(sut.headerView.roleLabel.text, "role")
         XCTAssertEqual(sut.headerView.datesLabel.text, "dates")
-        
-        XCTAssertEqual(sut.tableView.numberOfSections, 2)
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 1)
+
+        XCTAssertEqual(sut.numberOfSections(in: sut.tableView), 2)
+        XCTAssertEqual(sut.tableView(sut.tableView, numberOfRowsInSection: 0), 2)
+        XCTAssertEqual(sut.tableView(sut.tableView, numberOfRowsInSection: 1), 1)
         
         let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertNotNil(cell)

@@ -18,9 +18,9 @@ class CompanyExperienceDetailViewController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.removeTrailingSeparators()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.removeTrailingSeparators()
         return tableView
     }()
     
@@ -38,6 +38,8 @@ class CompanyExperienceDetailViewController: UIViewController {
     }
     
     private func configureSubviews() {
+        tableView.removeTrailingSeparators()
+
         let stackView = UIStackView(arrangedSubviews: [headerView, tableView])
         stackView.alignment = .fill
         stackView.axis = .vertical
