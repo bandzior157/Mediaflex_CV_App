@@ -36,26 +36,17 @@ class CompanyExperienceDetailViewController: UIViewController {
     }
     
     private func configureSubviews() {
-        addSubviews()
-        layoutSubviews()
-    }
-    
-    private func addSubviews() {
-        view.addSubview(headerView)
-    }
-    
-    private func layoutSubviews() {
-        let layoutGuide = view.safeAreaLayoutGuide
+        let stackView = UIStackView(arrangedSubviews: [headerView, tableView])
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.spacing = 0
         
-        let headerViewConstraints = [
-            headerView.topAnchor.constraint(equalTo: view.topAnchor),
-            headerView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor),
-            headerView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor),
-            headerView.bottomAnchor.constraint(lessThanOrEqualTo: layoutGuide.bottomAnchor)
-        ]
+        view.addSubview(stackView)
         
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(headerViewConstraints)
+        let stackViewConstraints = NSLayoutConstraint.anchorConstraints(view: stackView, in: view.safeAreaLayoutGuide, margins: Margins(vertical: 0, horizontal: 0))
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate(stackViewConstraints)
     }
     
 }
