@@ -70,6 +70,10 @@
 		26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */; };
 		26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */; };
 		26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD924A3C289001D9444 /* PersonViewTests.swift */; };
+		268524F624AA407D000AEDDA /* EducationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524F524AA407D000AEDDA /* EducationViewControllerTests.swift */; };
+		268524F924AA40FA000AEDDA /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524F824AA40FA000AEDDA /* EducationViewController.swift */; };
+		268524FB24AA413C000AEDDA /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FA24AA413C000AEDDA /* EducationViewModel.swift */; };
+		268524FD24AA4198000AEDDA /* EducationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FC24AA4198000AEDDA /* EducationContract.swift */; };
 		26A8B8D424A617D1006DF5A1 /* GeneralCellTypesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */; };
 		26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */; };
 		26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D824A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift */; };
@@ -198,6 +202,10 @@
 		26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelUpdating.swift; sourceTree = "<group>"; };
 		26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellViewModelUpdating.swift"; sourceTree = "<group>"; };
 		26742AD924A3C289001D9444 /* PersonViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewTests.swift; sourceTree = "<group>"; };
+		268524F524AA407D000AEDDA /* EducationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewControllerTests.swift; sourceTree = "<group>"; };
+		268524F824AA40FA000AEDDA /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		268524FA24AA413C000AEDDA /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
+		268524FC24AA4198000AEDDA /* EducationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationContract.swift; sourceTree = "<group>"; };
 		26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellTypesProvider.swift; sourceTree = "<group>"; };
 		26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellType.swift; sourceTree = "<group>"; };
 		26A8B8D824A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellViewModelsProviding.swift; sourceTree = "<group>"; };
@@ -312,6 +320,7 @@
 				262960A924A3FE360009FD29 /* SkillsViewModel.swift */,
 				26279BC124A78B90000CA5D2 /* ExperienceViewModel.swift */,
 				2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */,
+				268524FA24AA413C000AEDDA /* EducationViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -418,6 +427,23 @@
 				26742AD924A3C289001D9444 /* PersonViewTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		268524F424AA4041000AEDDA /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				268524F524AA407D000AEDDA /* EducationViewControllerTests.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		268524F724AA40E8000AEDDA /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				268524F824AA40FA000AEDDA /* EducationViewController.swift */,
+				268524FC24AA4198000AEDDA /* EducationContract.swift */,
+			);
+			path = Education;
 			sourceTree = "<group>";
 		};
 		26A8B8D724A61BCC006DF5A1 /* GeneralCellViewModelsProviding */ = {
@@ -561,6 +587,7 @@
 				262960A424A3FAD90009FD29 /* Skills */,
 				26A8B90924A6AECD006DF5A1 /* Experience */,
 				2636AB4224AA047D004B866D /* CompanyExperienceDetail */,
+				268524F424AA4041000AEDDA /* Education */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -682,6 +709,7 @@
 				262960A324A3FAB90009FD29 /* Skills */,
 				26A8B90824A6AE86006DF5A1 /* Experience */,
 				2636AB3F24AA03A2004B866D /* CompanyExperienceDetail */,
+				268524F724AA40E8000AEDDA /* Education */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -902,6 +930,7 @@
 				26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */,
 				262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */,
 				5A7B9A6D249CC39A007D8199 /* AppDelegate.swift in Sources */,
+				268524FB24AA413C000AEDDA /* EducationViewModel.swift in Sources */,
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				26A8B8DB24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift in Sources */,
 				262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */,
@@ -933,6 +962,7 @@
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				262E825A24A92FA200B8373F /* ImageViewModel.swift in Sources */,
 				2636AB5424AA168F004B866D /* CompanyExperienceHeaderViewModel.swift in Sources */,
+				268524FD24AA4198000AEDDA /* EducationContract.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
 				26279BC224A78B90000CA5D2 /* ExperienceViewModel.swift in Sources */,
 				5A7B9A6F249CC39A007D8199 /* SceneDelegate.swift in Sources */,
@@ -943,6 +973,7 @@
 				26A8B8E724A64194006DF5A1 /* PhoneNumberHandling.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				26279BC424A78C32000CA5D2 /* ExperienceContract.swift in Sources */,
+				268524F924AA40FA000AEDDA /* EducationViewController.swift in Sources */,
 				26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */,
 				26A8B90124A66440006DF5A1 /* MailHandlingError.swift in Sources */,
 				2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */,
@@ -978,6 +1009,7 @@
 				5A15B7D6249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift in Sources */,
 				26A8B8F624A65B47006DF5A1 /* MockGeneralCellTypesProvider.swift in Sources */,
 				262E826A24A9501600B8373F /* CompanyExperienceDetails+Equatable.swift in Sources */,
+				268524F624AA407D000AEDDA /* EducationViewControllerTests.swift in Sources */,
 				262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */,
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
 				26279BCE24A7A43A000CA5D2 /* MockExperienceView.swift in Sources */,
