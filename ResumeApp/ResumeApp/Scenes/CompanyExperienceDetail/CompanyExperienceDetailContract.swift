@@ -9,3 +9,7 @@
 protocol CompanyExperienceDetailViewing {
     func update(viewModel: CompanyExperienceDetailViewModel)
 }
+
+protocol CompanyExperienceDetailPresenting {
+    func viewDidLoad()
+}

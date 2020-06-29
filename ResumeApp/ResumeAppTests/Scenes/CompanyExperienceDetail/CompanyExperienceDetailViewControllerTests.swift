@@ -19,6 +19,15 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.headerView.companyLabel.text, "company name")
         XCTAssertEqual(sut.headerView.roleLabel.text, "role")
     }
+    
+    func test_callPresenterViewDidLoad_onViewDidLoad() {
+        let sut = CompanyExperienceDetailViewController()
+        let presenter = MockCompanyExperienceDetailPresenter()
+        sut.presenter = presenter
+        
+        sut.loadViewIfNeeded()
+        XCTAssertEqual(presenter.viewDidLoadCounter, 1)
+    }
  
     
     // MARK: - Helpers

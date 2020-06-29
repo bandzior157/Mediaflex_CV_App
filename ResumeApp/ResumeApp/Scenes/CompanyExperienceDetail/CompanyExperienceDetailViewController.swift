@@ -16,11 +16,14 @@ class CompanyExperienceDetailViewController: UIViewController {
         return view
     }()
     
+    var presenter: CompanyExperienceDetailPresenting?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .orange
         configureSubviews()
+        presenter?.viewDidLoad()
     }
     
     private func configureSubviews() {
