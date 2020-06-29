@@ -13,7 +13,9 @@ extension CompanyExperienceDetailViewModel: Equatable {
     public static func ==(lhs: CompanyExperienceDetailViewModel, rhs: CompanyExperienceDetailViewModel) -> Bool {
         lhs.companyLogoUrlString == rhs.companyLogoUrlString &&
             lhs.companyName == rhs.companyName &&
-            lhs.role == rhs.role
+            lhs.role == rhs.role &&
+            lhs.dates == rhs.dates &&
+            lhs.sections == rhs.sections
     }
     
 }
