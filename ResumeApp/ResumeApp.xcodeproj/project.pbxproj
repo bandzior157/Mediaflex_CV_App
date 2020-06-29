@@ -51,6 +51,7 @@
 		262E826C24A9515C00B8373F /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826B24A9515C00B8373F /* MockRouter.swift */; };
 		262E826E24A956A900B8373F /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826D24A956A900B8373F /* RouterTests.swift */; };
 		262E827024A956E400B8373F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826F24A956E400B8373F /* Router.swift */; };
+		2636AB4124AA03D7004B866D /* CompanyExperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4024AA03D7004B866D /* CompanyExperienceDetailViewController.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
@@ -168,6 +169,7 @@
 		262E826B24A9515C00B8373F /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
 		262E826D24A956A900B8373F /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		262E826F24A956E400B8373F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2636AB4024AA03D7004B866D /* CompanyExperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailViewController.swift; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
@@ -348,6 +350,14 @@
 				262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */,
 			);
 			path = Equatable;
+			sourceTree = "<group>";
+		};
+		2636AB3F24AA03A2004B866D /* CompanyExperienceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2636AB4024AA03D7004B866D /* CompanyExperienceDetailViewController.swift */,
+			);
+			path = CompanyExperienceDetail;
 			sourceTree = "<group>";
 		};
 		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
@@ -625,6 +635,7 @@
 				5A7B9A93249CF11E007D8199 /* General */,
 				262960A324A3FAB90009FD29 /* Skills */,
 				26A8B90824A6AE86006DF5A1 /* Experience */,
+				2636AB3F24AA03A2004B866D /* CompanyExperienceDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -850,6 +861,7 @@
 				262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */,
 				26A8B90524A6812A006DF5A1 /* ResumeService.swift in Sources */,
 				5A6E87F624A0EBFF00DD8789 /* ThreadGuarantee.swift in Sources */,
+				2636AB4124AA03D7004B866D /* CompanyExperienceDetailViewController.swift in Sources */,
 				26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */,
 				262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */,
 				262E825C24A92FF000B8373F /* CGSize+InitSize.swift in Sources */,

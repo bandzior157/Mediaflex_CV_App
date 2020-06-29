@@ -17,9 +17,7 @@ class Router: Routing {
     }
     
     func show(companyExperience: CompanyExperience) {
-        let uv = UIViewController()
-        uv.view.backgroundColor = .systemTeal
-        
+        let uv = CompanyExperienceDetailViewController()
         viewController.present(uv, animated: true)
     }
     
