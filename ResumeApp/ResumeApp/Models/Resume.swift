@@ -14,7 +14,7 @@ struct Resume {
     let summary: String
     let email: String
     let phoneNumber: String
-    let linkedInUrl: String
+    let linkedInUrl: String?
     let gitHubUrl: String
     let skillsGroups: [SkillsGroup]
     let experience: [CompanyExperience]

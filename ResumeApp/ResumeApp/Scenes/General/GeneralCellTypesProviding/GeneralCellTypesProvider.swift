@@ -8,10 +8,18 @@
 
 class GeneralCellTypesProvider: GeneralCellTypesProviding {
     func ordered(for resume: Resume) -> [GeneralCellType] {
-        [.summary(resume.summary),
-         .email(resume.email),
-         .phoneNumber(resume.phoneNumber),
-         .linkedIn(resume.linkedInUrl),
-         .gitHub(resume.gitHubUrl)]
+        var output = [GeneralCellType]()
+        
+        output.append(.summary(resume.summary))
+        output.append(.email(resume.email))
+        output.append(.phoneNumber(resume.phoneNumber))
+        
+        if let linkedInUrl = resume.linkedInUrl {
+            output.append(.linkedIn(linkedInUrl))
+        }
+        
+        output.append(.gitHub(resume.gitHubUrl))
+
+        return output
     }
 }
