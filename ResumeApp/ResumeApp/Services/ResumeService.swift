@@ -19,20 +19,22 @@ class ResumeService {
 extension ResumeService: ResumeServicing {
     
     @objc func fetchResume() {
-        guard let gitUrl = URL(string: urlString) else { return }
-        
-        URLSession.shared.dataTask(with: gitUrl) { (data, response, error) in
-            guard let data = data else { return }
+        ThreadGuarantee.guarantee(on: .background) { [weak self] in
+            guard let gitUrl = URL(string: self?.urlString ?? "") else { return }
             
-            do {
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                let resume = try decoder.decode(Resume.self, from: data)
-                self.delegate?.didFetchResume(resume)
-            } catch {
-                self.delegate?.resumeServiceDidFail(with: error.localizedDescription)
-            }
-        }.resume()
+            URLSession.shared.dataTask(with: gitUrl) { (data, response, error) in
+                guard let data = data else { return }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    let resume = try decoder.decode(Resume.self, from: data)
+                    self?.delegate?.didFetchResume(resume)
+                } catch {
+                    self?.delegate?.resumeServiceDidFail(with: error.localizedDescription)
+                }
+            }.resume()
+        }
     }
     
 }
