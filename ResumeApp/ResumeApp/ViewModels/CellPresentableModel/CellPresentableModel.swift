@@ -11,9 +11,9 @@ struct CellPresentableModel {
     let title: String
     let subtitle: String?
     let selectable: Bool
-    let imageViewModel: ImageViewModel?
+    let imageViewModel: ImagePresentableModel?
     
-    init(title: String = "", subtitle: String? = nil, image imageViewModel: ImageViewModel? = nil, selectable: Bool = false) {
+    init(title: String = "", subtitle: String? = nil, image imageViewModel: ImagePresentableModel? = nil, selectable: Bool = false) {
         self.title = title
         self.subtitle = subtitle
         self.selectable = selectable

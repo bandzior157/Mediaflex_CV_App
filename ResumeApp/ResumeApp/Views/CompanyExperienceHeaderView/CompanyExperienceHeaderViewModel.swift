@@ -7,7 +7,7 @@
 //
 
 struct CompanyExperienceHeaderViewModel {
-    let companyImage: ImageViewModel?
+    let companyImage: ImagePresentableModel?
     let companyName: String
     let role: String
     let dates: String
@@ -16,7 +16,7 @@ struct CompanyExperienceHeaderViewModel {
 extension CompanyExperienceHeaderViewModel {
     
     init(viewModel: CompanyExperienceDetailPresentableModel) {
-        self.companyImage = ImageViewModel(type: .url(string: viewModel.companyLogoUrlString), size: Size(width: 120, height: 120))
+        self.companyImage = ImagePresentableModel(type: .url(string: viewModel.companyLogoUrlString), size: Size(width: 120, height: 120))
         self.companyName = viewModel.companyName
         self.role = viewModel.role
         self.dates = viewModel.dates

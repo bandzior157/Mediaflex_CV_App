@@ -17,7 +17,7 @@ class PersonViewTests: XCTestCase {
     
     func test_updateSubviewsByViewModel() {
         let sut = makeSUT()
-        sut.update(viewModel: PersonViewViewModel(fullName: "some name", image: ImageViewModel(type: .url(string: "some url"), size: Size(width: 0, height: 0)), role: "some role"))
+        sut.update(viewModel: PersonViewViewModel(fullName: "some name", image: ImagePresentableModel(type: .url(string: "some url"), size: Size(width: 0, height: 0)), role: "some role"))
         XCTAssertEqual(sut.nameLabel.text, "some name")
         XCTAssertEqual(sut.roleLabel.text, "some role")
     }

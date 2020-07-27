@@ -15,7 +15,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_personViewSubviews_areSet_onUpdateWithViewModel() {
         let sut = makeSUT()
-        let personVM = PersonViewViewModel(fullName: "name", image: ImageViewModel(type: .url(string: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png"), size: Size(width: 0, height: 0)), role: "role")
+        let personVM = PersonViewViewModel(fullName: "name", image: ImagePresentableModel(type: .url(string: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png"), size: Size(width: 0, height: 0)), role: "role")
         let viewModel =
             GeneralPresentableModel(personViewViewModel: personVM, elements: [])
         

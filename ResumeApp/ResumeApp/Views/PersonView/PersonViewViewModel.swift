@@ -8,6 +8,6 @@
 
 struct PersonViewViewModel {
     let fullName: String
-    let image: ImageViewModel?
+    let image: ImagePresentableModel?
     let role: String
 }

@@ -11,7 +11,7 @@ import SDWebImage
 
 extension UIImageView {
     
-    func setImage(imageViewModel: ImageViewModel?) {
+    func setImage(imageViewModel: ImagePresentableModel?) {
         guard let imageViewModel = imageViewModel else {
             image = nil
             return
