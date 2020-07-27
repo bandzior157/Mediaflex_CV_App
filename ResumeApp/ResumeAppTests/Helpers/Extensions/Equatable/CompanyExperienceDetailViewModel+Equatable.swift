@@ -1,5 +1,5 @@
 //
-//  CompanyExperienceDetailViewModel+Equatable.swift
+//  CompanyExperienceDetailPresentableModel+Equatable.swift
 //  ResumeAppTests
 //
 //  Created by Łukasz Bazior on 29/06/2020.
@@ -8,9 +8,9 @@
 
 @testable import ResumeApp
 
-extension CompanyExperienceDetailViewModel: Equatable {
+extension CompanyExperienceDetailPresentableModel: Equatable {
     
-    public static func ==(lhs: CompanyExperienceDetailViewModel, rhs: CompanyExperienceDetailViewModel) -> Bool {
+    public static func ==(lhs: CompanyExperienceDetailPresentableModel, rhs: CompanyExperienceDetailPresentableModel) -> Bool {
         lhs.companyLogoUrlString == rhs.companyLogoUrlString &&
             lhs.companyName == rhs.companyName &&
             lhs.role == rhs.role &&

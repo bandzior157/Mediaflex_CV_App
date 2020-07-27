@@ -55,7 +55,7 @@
 		2636AB4424AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4324AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift */; };
 		2636AB4624AA0892004B866D /* CompanyExperienceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */; };
 		2636AB4824AA0982004B866D /* CompanyExperienceDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4724AA0982004B866D /* CompanyExperienceDetailContract.swift */; };
-		2636AB4A24AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */; };
+		2636AB4A24AA0ACD004B866D /* CompanyExperienceDetailPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4924AA0ACD004B866D /* CompanyExperienceDetailPresentableModel.swift */; };
 		2636AB4C24AA1087004B866D /* MockCompanyExperienceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4B24AA1087004B866D /* MockCompanyExperienceDetailPresenter.swift */; };
 		2636AB4E24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */; };
 		2636AB5024AA10FE004B866D /* CompanyExperienceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4F24AA10FE004B866D /* CompanyExperienceDetailPresenter.swift */; };
@@ -215,7 +215,7 @@
 		2636AB4324AA063A004B866D /* CompanyExperienceDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderView.swift; sourceTree = "<group>"; };
 		2636AB4724AA0982004B866D /* CompanyExperienceDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailContract.swift; sourceTree = "<group>"; };
-		2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailViewModel.swift; sourceTree = "<group>"; };
+		2636AB4924AA0ACD004B866D /* CompanyExperienceDetailPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresentableModel.swift; sourceTree = "<group>"; };
 		2636AB4B24AA1087004B866D /* MockCompanyExperienceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCompanyExperienceDetailPresenter.swift; sourceTree = "<group>"; };
 		2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresenterTests.swift; sourceTree = "<group>"; };
 		2636AB4F24AA10FE004B866D /* CompanyExperienceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresenter.swift; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 				2625269024A3CDBF00E301F9 /* GeneralPresentableModel.swift */,
 				262960A924A3FE360009FD29 /* SkillsPresentableModel.swift */,
 				26279BC124A78B90000CA5D2 /* ExperiencePresentableModel.swift */,
-				2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */,
+				2636AB4924AA0ACD004B866D /* CompanyExperienceDetailPresentableModel.swift */,
 				268524FA24AA413C000AEDDA /* EducationViewModel.swift */,
 			);
 			path = Scenes;
@@ -1118,7 +1118,7 @@
 				5A7B9A99249CF4AB007D8199 /* ResumeTabBarPresenter.swift in Sources */,
 				26A8B8F224A64605006DF5A1 /* UrlBrowserHandler.swift in Sources */,
 				26279BC824A7A0C3000CA5D2 /* CompanyExperience.swift in Sources */,
-				2636AB4A24AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift in Sources */,
+				2636AB4A24AA0ACD004B866D /* CompanyExperienceDetailPresentableModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

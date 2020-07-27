@@ -57,7 +57,7 @@ class CompanyExperienceDetailViewController: UIViewController {
 
 extension CompanyExperienceDetailViewController: CompanyExperienceDetailViewing {
     
-    func update(viewModel: CompanyExperienceDetailViewModel) {
+    func update(viewModel: CompanyExperienceDetailPresentableModel) {
         headerView.update(viewModel: CompanyExperienceHeaderViewModel(viewModel: viewModel))
         sections = viewModel.sections
     }

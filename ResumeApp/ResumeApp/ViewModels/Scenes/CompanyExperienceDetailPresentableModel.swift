@@ -1,5 +1,5 @@
 //
-//  CompanyExperienceDetailViewModel.swift
+//  CompanyExperienceDetailPresentableModel.swift
 //  ResumeApp
 //
 //  Created by Łukasz Bazior on 29/06/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CompanyExperienceDetailViewModel {
+struct CompanyExperienceDetailPresentableModel {
     let companyLogoUrlString: String
     let companyName: String
     let role: String
@@ -24,7 +24,7 @@ struct CompanyExperienceDetailViewModel {
     }
 }
 
-extension CompanyExperienceDetailViewModel {
+extension CompanyExperienceDetailPresentableModel {
     
     init(companyExperience: CompanyExperience) {
         let dateFormatter = DateFormatter()

@@ -7,7 +7,7 @@
 //
 
 protocol CompanyExperienceDetailViewing {
-    func update(viewModel: CompanyExperienceDetailViewModel)
+    func update(viewModel: CompanyExperienceDetailPresentableModel)
 }
 
 protocol CompanyExperienceDetailPresenting {

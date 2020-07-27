@@ -12,7 +12,7 @@ import XCTest
 class CompanyExperienceDetailViewControllerTests: XCTestCase {
     
     func test_updateCompanyExperienceViewModel_rendersSubviews() {
-        let viewModel = CompanyExperienceDetailViewModel(
+        let viewModel = CompanyExperienceDetailPresentableModel(
             companyLogoUrlString: "logo url string",
             companyName: "company name",
             role: "role",
