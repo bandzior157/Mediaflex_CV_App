@@ -9,10 +9,10 @@
 class GeneralCellPresentableModelsProvider: GeneralCellPresentableModelsProviding {
     
     func get(for cellTypes: [GeneralCellType]) -> [CellPresentableModel] {
-        cellTypes.map(cellViewModel(for:))
+        cellTypes.map(cellPresentableModel(for:))
     }
     
-    private func cellViewModel(for generalCellType: GeneralCellType) -> CellPresentableModel {
+    private func cellPresentableModel(for generalCellType: GeneralCellType) -> CellPresentableModel {
         let size = Size(width: 40, height: 40)
         
         switch generalCellType {
