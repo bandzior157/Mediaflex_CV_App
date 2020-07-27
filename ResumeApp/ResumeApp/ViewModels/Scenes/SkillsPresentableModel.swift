@@ -1,18 +1,18 @@
 //
-//  SkillsViewModel.swift
+//  SkillsPresentableModel.swift
 //  ResumeApp
 //
 //  Created by Łukasz Bazior on 24/06/2020.
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-struct SkillsViewModel {
+struct SkillsPresentableModel {
     
     let sections: [SectionViewModel]
     
 }
 
-extension SkillsViewModel {
+extension SkillsPresentableModel {
     
     init(resume: Resume) {
         var tempSections = [SectionViewModel]()

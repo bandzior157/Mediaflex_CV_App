@@ -18,7 +18,7 @@ class SkillsViewController: UIViewController {
         return tableView
     }()
     
-    private var viewModel: SkillsViewModel? {
+    private var viewModel: SkillsPresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -50,7 +50,7 @@ class SkillsViewController: UIViewController {
 
 extension SkillsViewController: SkillsViewing {
     
-    func update(viewModel: SkillsViewModel) {
+    func update(viewModel: SkillsPresentableModel) {
         self.viewModel = viewModel
     }
     

@@ -1,5 +1,5 @@
 //
-//  SkillsViewModel+Equatable.swift
+//  SkillsPresentableModel+Equatable.swift
 //  ResumeAppTests
 //
 //  Created by Łukasz Bazior on 25/06/2020.
@@ -8,9 +8,9 @@
 
 @testable import ResumeApp
 
-extension SkillsViewModel: Equatable {
+extension SkillsPresentableModel: Equatable {
     
-    public static func ==(lhs: SkillsViewModel, rhs: SkillsViewModel) -> Bool {
+    public static func ==(lhs: SkillsPresentableModel, rhs: SkillsPresentableModel) -> Bool {
         lhs.sections == rhs.sections
     }
     

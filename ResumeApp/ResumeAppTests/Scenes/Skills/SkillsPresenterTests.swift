@@ -22,7 +22,7 @@ class SkillsPresenterTests: XCTestCase {
         sut.setResume(resume)
     
         let expected = [
-            SkillsViewModel(sections: [
+            SkillsPresentableModel(sections: [
                 SectionViewModel(title: "Technical", elements: [
                     CellViewModel(title: "Xcode"),
                     CellViewModel(title: "Swift")
@@ -47,9 +47,9 @@ class SkillsPresenterTests: XCTestCase {
 
 class MockSkillsView: SkillsViewing {
     
-    private(set) var updateViewModels = [SkillsViewModel]()
+    private(set) var updateViewModels = [SkillsPresentableModel]()
     
-    func update(viewModel: SkillsViewModel) {
+    func update(viewModel: SkillsPresentableModel) {
         updateViewModels.append(viewModel)
     }
     

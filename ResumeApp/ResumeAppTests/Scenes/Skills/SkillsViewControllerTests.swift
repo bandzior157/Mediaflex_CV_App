@@ -13,18 +13,18 @@ class SkillsViewControllerTests: XCTestCase {
 
     func test_tableViewSectionsCount_equalsViewModelSectionsCount() {
         let sut = makeSUT()
-        let viewModel = SkillsViewModel(sections: [])
+        let viewModel = SkillsPresentableModel(sections: [])
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfSections, 0)
         
-        let twoSectionViewModel = SkillsViewModel(sections: [SectionViewModel(title: "first section", elements: []), SectionViewModel(title: "second section", elements: [])])
+        let twoSectionViewModel = SkillsPresentableModel(sections: [SectionViewModel(title: "first section", elements: []), SectionViewModel(title: "second section", elements: [])])
         sut.update(viewModel: twoSectionViewModel)
         XCTAssertEqual(sut.tableView.numberOfSections, 2)
     }
     
     func test_viewForHeaderInSection_forTableView() {
         let sut = makeSUT()
-        let viewModel = SkillsViewModel(sections: [SectionViewModel(title: "section title", elements: [])])
+        let viewModel = SkillsPresentableModel(sections: [SectionViewModel(title: "section title", elements: [])])
         sut.update(viewModel: viewModel)
         
         let header = sut.tableView(sut.tableView, viewForHeaderInSection: 0) as? TableViewHeaderView
@@ -34,7 +34,7 @@ class SkillsViewControllerTests: XCTestCase {
     
     func test_tableViewSectionElements_byViewModel() {
         let sut = makeSUT()
-        let viewModel = SkillsViewModel(sections: [SectionViewModel(title: "first", elements: [CellViewModel(title: "f1"), CellViewModel(title: "f2")]), SectionViewModel(title: "second", elements: [CellViewModel(title: "s1")])])
+        let viewModel = SkillsPresentableModel(sections: [SectionViewModel(title: "first", elements: [CellViewModel(title: "f1"), CellViewModel(title: "f2")]), SectionViewModel(title: "second", elements: [CellViewModel(title: "s1")])])
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 1)

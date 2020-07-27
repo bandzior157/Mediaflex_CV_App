@@ -11,7 +11,7 @@ class SkillsPresenter: SkillsPresenting {
     var view: SkillsViewing?
     
     func setResume(_ resume: Resume) {
-        view?.update(viewModel: SkillsViewModel(resume: resume))
+        view?.update(viewModel: SkillsPresentableModel(resume: resume))
     }
     
 }

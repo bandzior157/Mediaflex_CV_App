@@ -22,7 +22,7 @@
 		262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A124A3D16F0009FD29 /* UIImage+Resize.swift */; };
 		262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */; };
 		262960A824A3FD7A0009FD29 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A724A3FD7A0009FD29 /* SkillsViewController.swift */; };
-		262960AA24A3FE360009FD29 /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A924A3FE360009FD29 /* SkillsViewModel.swift */; };
+		262960AA24A3FE360009FD29 /* SkillsPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A924A3FE360009FD29 /* SkillsPresentableModel.swift */; };
 		262960AC24A3FE880009FD29 /* SkillsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960AB24A3FE880009FD29 /* SkillsContract.swift */; };
 		262960AE24A410430009FD29 /* UITableView+CellAtRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960AD24A410430009FD29 /* UITableView+CellAtRow.swift */; };
 		262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960AF24A4AAB70009FD29 /* MockSkillsPresenter.swift */; };
@@ -182,7 +182,7 @@
 		262960A124A3D16F0009FD29 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewControllerTests.swift; sourceTree = "<group>"; };
 		262960A724A3FD7A0009FD29 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
-		262960A924A3FE360009FD29 /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		262960A924A3FE360009FD29 /* SkillsPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresentableModel.swift; sourceTree = "<group>"; };
 		262960AB24A3FE880009FD29 /* SkillsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsContract.swift; sourceTree = "<group>"; };
 		262960AD24A410430009FD29 /* UITableView+CellAtRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellAtRow.swift"; sourceTree = "<group>"; };
 		262960AF24A4AAB70009FD29 /* MockSkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSkillsPresenter.swift; sourceTree = "<group>"; };
@@ -375,7 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				2625269024A3CDBF00E301F9 /* GeneralPresentableModel.swift */,
-				262960A924A3FE360009FD29 /* SkillsViewModel.swift */,
+				262960A924A3FE360009FD29 /* SkillsPresentableModel.swift */,
 				26279BC124A78B90000CA5D2 /* ExperienceViewModel.swift */,
 				2636AB4924AA0ACD004B866D /* CompanyExperienceDetailViewModel.swift */,
 				268524FA24AA413C000AEDDA /* EducationViewModel.swift */,
@@ -1072,7 +1072,7 @@
 				26A8B8EB24A641CA006DF5A1 /* PhoneNumberHandlingError.swift in Sources */,
 				262960A824A3FD7A0009FD29 /* SkillsViewController.swift in Sources */,
 				26A8B90F24A6B643006DF5A1 /* TealNavigationController.swift in Sources */,
-				262960AA24A3FE360009FD29 /* SkillsViewModel.swift in Sources */,
+				262960AA24A3FE360009FD29 /* SkillsPresentableModel.swift in Sources */,
 				2685251824AA76D6000AEDDA /* ExperienceConfigurator.swift in Sources */,
 				5A7B9A92249CCA18007D8199 /* ResumeTabBarController.swift in Sources */,
 				2685251424AA72B1000AEDDA /* GeneralConfigurator.swift in Sources */,
