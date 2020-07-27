@@ -17,7 +17,7 @@ class GeneralViewControllerTests: XCTestCase {
         let sut = makeSUT()
         let personVM = PersonViewViewModel(fullName: "name", image: ImageViewModel(type: .url(string: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png"), size: Size(width: 0, height: 0)), role: "role")
         let viewModel =
-            GeneralViewModel(personViewViewModel: personVM, elements: [])
+            GeneralPresentableModel(personViewViewModel: personVM, elements: [])
         
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.personView.nameLabel.text, viewModel.personViewViewModel.fullName)
@@ -153,8 +153,8 @@ class GeneralViewControllerTests: XCTestCase {
         return sut
     }
     
-    private func makeViewModel(elements: [CellViewModel] = []) -> GeneralViewModel {
-        GeneralViewModel(personViewViewModel: PersonViewViewModel(fullName: "", image: nil, role: ""), elements: elements)
+    private func makeViewModel(elements: [CellViewModel] = []) -> GeneralPresentableModel {
+        GeneralPresentableModel(personViewViewModel: PersonViewViewModel(fullName: "", image: nil, role: ""), elements: elements)
     }
     
     private func dummyCellViewModel() -> CellViewModel {

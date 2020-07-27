@@ -27,7 +27,7 @@ class GeneralViewController: UIViewController {
         
     var presenter: GeneralPresenting?
     
-    private var viewModel: GeneralViewModel? {
+    private var viewModel: GeneralPresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -80,7 +80,7 @@ class GeneralViewController: UIViewController {
 
 extension GeneralViewController: GeneralViewing {
     
-    func update(viewModel: GeneralViewModel) {
+    func update(viewModel: GeneralPresentableModel) {
         self.viewModel = viewModel
     }
     

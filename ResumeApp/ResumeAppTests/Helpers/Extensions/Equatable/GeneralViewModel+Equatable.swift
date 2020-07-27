@@ -1,5 +1,5 @@
 //
-//  GeneralViewModel+Equatable.swift
+//  GeneralPresentableModel+Equatable.swift
 //  ResumeAppTests
 //
 //  Created by Łukasz Bazior on 20/06/2020.
@@ -8,9 +8,9 @@
 
 @testable import ResumeApp
 
-extension GeneralViewModel: Equatable {
+extension GeneralPresentableModel: Equatable {
     
-    public static func ==(lhs: GeneralViewModel, rhs: GeneralViewModel) -> Bool {
+    public static func ==(lhs: GeneralPresentableModel, rhs: GeneralPresentableModel) -> Bool {
         lhs.personViewViewModel == rhs.personViewViewModel &&
             lhs.elements == rhs.elements
     }

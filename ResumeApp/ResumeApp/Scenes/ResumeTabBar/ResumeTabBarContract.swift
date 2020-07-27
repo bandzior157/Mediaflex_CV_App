@@ -11,5 +11,5 @@ protocol ResumeTabBarPresenting {
 }
 
 struct ResumeTabBarViewModel {
-    let general: GeneralViewModel
+    let general: GeneralPresentableModel
 }

@@ -7,7 +7,7 @@
 //
 
 protocol GeneralViewing {
-    func update(viewModel: GeneralViewModel)
+    func update(viewModel: GeneralPresentableModel)
 }
 
 protocol GeneralPresenting {
