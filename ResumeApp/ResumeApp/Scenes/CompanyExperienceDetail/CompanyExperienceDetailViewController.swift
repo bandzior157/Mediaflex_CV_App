@@ -26,7 +26,7 @@ class CompanyExperienceDetailViewController: UIViewController {
     
     var presenter: CompanyExperienceDetailPresenting?
     
-    private(set) var sections = [SectionViewModel]()
+    private(set) var sections = [SectionPresentableModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

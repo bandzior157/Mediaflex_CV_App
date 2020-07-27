@@ -13,9 +13,9 @@ struct CompanyExperienceDetailPresentableModel {
     let companyName: String
     let role: String
     let dates: String
-    let sections: [SectionViewModel]
+    let sections: [SectionPresentableModel]
     
-    init(companyLogoUrlString: String, companyName: String, role: String, dates: String, sections: [SectionViewModel] = []) {
+    init(companyLogoUrlString: String, companyName: String, role: String, dates: String, sections: [SectionPresentableModel] = []) {
         self.companyLogoUrlString = companyLogoUrlString
         self.companyName = companyName
         self.role = role
@@ -37,7 +37,7 @@ extension CompanyExperienceDetailPresentableModel {
         
         self.sections = companyExperience.details.map {
             let elements = $0.elements.map { CellPresentableModel(title: $0) }
-            return SectionViewModel(title: $0.title, elements: elements)
+            return SectionPresentableModel(title: $0.title, elements: elements)
         }
     }
     

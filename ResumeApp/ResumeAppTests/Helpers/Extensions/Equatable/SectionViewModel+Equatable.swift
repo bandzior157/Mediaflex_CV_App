@@ -1,5 +1,5 @@
 //
-//  SectionViewModel+Equatable.swift
+//  SectionPresentableModel+Equatable.swift
 //  ResumeAppTests
 //
 //  Created by Łukasz Bazior on 25/06/2020.
@@ -8,9 +8,9 @@
 
 @testable import ResumeApp
 
-extension SectionViewModel: Equatable {
+extension SectionPresentableModel: Equatable {
     
-    public static func ==(lhs: SectionViewModel, rhs: SectionViewModel) -> Bool {
+    public static func ==(lhs: SectionPresentableModel, rhs: SectionPresentableModel) -> Bool {
         lhs.title == rhs.title &&
             lhs.elements == rhs.elements
     }

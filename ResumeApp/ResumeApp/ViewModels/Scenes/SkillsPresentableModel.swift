@@ -8,19 +8,19 @@
 
 struct SkillsPresentableModel {
     
-    let sections: [SectionViewModel]
+    let sections: [SectionPresentableModel]
     
 }
 
 extension SkillsPresentableModel {
     
     init(resume: Resume) {
-        var tempSections = [SectionViewModel]()
+        var tempSections = [SectionPresentableModel]()
         
         for skillsGroup in resume.skillsGroups {
             let elements = skillsGroup.skills.map { CellPresentableModel(title: $0) }
             if elements.isEmpty { continue }
-            tempSections.append(SectionViewModel(title: skillsGroup.title, elements: elements))
+            tempSections.append(SectionPresentableModel(title: skillsGroup.title, elements: elements))
         }
         
         self.sections = tempSections

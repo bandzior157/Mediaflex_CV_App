@@ -29,7 +29,7 @@
 		262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */; };
 		262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */; };
 		262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B524A4AD510009FD29 /* SkillsPresenter.swift */; };
-		262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B724A4BB670009FD29 /* SectionViewModel.swift */; };
+		262960B824A4BB670009FD29 /* SectionPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B724A4BB670009FD29 /* SectionPresentableModel.swift */; };
 		262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */; };
 		262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */; };
 		262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */; };
@@ -189,7 +189,7 @@
 		262960B124A4AAE10009FD29 /* MockGeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralPresenter.swift; sourceTree = "<group>"; };
 		262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenterTests.swift; sourceTree = "<group>"; };
 		262960B524A4AD510009FD29 /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
-		262960B724A4BB670009FD29 /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
+		262960B724A4BB670009FD29 /* SectionPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPresentableModel.swift; sourceTree = "<group>"; };
 		262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonViewModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellViewModel+Equatable.swift"; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				262E825924A92FA200B8373F /* ImagePresentableModel.swift */,
-				262960B724A4BB670009FD29 /* SectionViewModel.swift */,
+				262960B724A4BB670009FD29 /* SectionPresentableModel.swift */,
 				2685250624AA493B000AEDDA /* CellPresentableModel */,
 				2625269224A3CDD200E301F9 /* Scenes */,
 			);
@@ -1042,7 +1042,7 @@
 				26A8B8EE24A645DD006DF5A1 /* UrlBrowserHandlingError.swift in Sources */,
 				26A8B8FF24A66417006DF5A1 /* MailHandling.swift in Sources */,
 				26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */,
-				262960B824A4BB670009FD29 /* SectionViewModel.swift in Sources */,
+				262960B824A4BB670009FD29 /* SectionPresentableModel.swift in Sources */,
 				26279BCC24A7A29E000CA5D2 /* ExperiencePresenter.swift in Sources */,
 				26A8B8D924A61BD5006DF5A1 /* GeneralCellViewModelsProviding.swift in Sources */,
 				262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */,

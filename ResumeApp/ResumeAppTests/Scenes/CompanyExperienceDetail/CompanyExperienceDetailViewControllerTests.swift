@@ -18,14 +18,14 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
             role: "role",
             dates: "dates",
             sections: [
-                SectionViewModel(
+                SectionPresentableModel(
                     title: "S1",
                     elements: [
                         CellPresentableModel(title: "S1E1"),
                         CellPresentableModel(title: "S1E2")
                     ]
                 ),
-                SectionViewModel(
+                SectionPresentableModel(
                     title: "S2",
                     elements: [
                         CellPresentableModel(title: "S2E2")
