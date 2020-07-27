@@ -13,12 +13,12 @@ class EducationViewControllerTests: XCTestCase {
     
     func test_tableViewRowsCount_providedByViewModel() {
         let sut = makeSUT()
-        let viewModel = EducationViewModel(cellViewModels: [])
+        let viewModel = EducationPresentableModel(cellViewModels: [])
         
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = EducationViewModel(cellViewModels: [CellViewModel(), CellViewModel()])
+        let viewModel2 = EducationPresentableModel(cellViewModels: [CellViewModel(), CellViewModel()])
         sut.update(viewModel: viewModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
     }

@@ -29,7 +29,7 @@ class EducationPresenterTests: XCTestCase {
                 dateTo: december2010)])
         sut.setResume(resume)
         
-        let expected = [EducationViewModel(cellViewModels: [CellViewModel(title: "school\ndegree, specialization", subtitle: "01.2000 - 12.2010", image: ImageViewModel(type: .url(string: "school logo url"), size: Size(width: 80, height: 80)), selectable: false)])]
+        let expected = [EducationPresentableModel(cellViewModels: [CellViewModel(title: "school\ndegree, specialization", subtitle: "01.2000 - 12.2010", image: ImageViewModel(type: .url(string: "school logo url"), size: Size(width: 80, height: 80)), selectable: false)])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     
@@ -44,9 +44,9 @@ class EducationPresenterTests: XCTestCase {
 
 class MockEducationView: EducationViewing {
     
-    private(set) var updateViewModels = [EducationViewModel]()
+    private(set) var updateViewModels = [EducationPresentableModel]()
     
-    func update(viewModel: EducationViewModel) {
+    func update(viewModel: EducationPresentableModel) {
         updateViewModels.append(viewModel)
     }
     

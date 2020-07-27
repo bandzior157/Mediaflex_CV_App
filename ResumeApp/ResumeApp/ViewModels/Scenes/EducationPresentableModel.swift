@@ -1,16 +1,16 @@
 //
-//  EducationViewModel.swift
+//  EducationPresentableModel.swift
 //  ResumeApp
 //
 //  Created by Łukasz Bazior on 29/06/2020.
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-struct EducationViewModel {
+struct EducationPresentableModel {
     let cellViewModels: [CellViewModel]
 }
 
-extension EducationViewModel {
+extension EducationPresentableModel {
     
     init(resume: Resume) {
         self.cellViewModels = resume.education.map {

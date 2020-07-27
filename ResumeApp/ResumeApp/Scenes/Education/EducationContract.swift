@@ -7,5 +7,5 @@
 //
 
 protocol EducationViewing {
-    func update(viewModel: EducationViewModel)
+    func update(viewModel: EducationPresentableModel)
 }

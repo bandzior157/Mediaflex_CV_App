@@ -17,7 +17,7 @@ class EducationViewController: UIViewController {
         return tableView
     }()
     
-    private var viewModel: EducationViewModel? {
+    private var viewModel: EducationPresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -49,7 +49,7 @@ class EducationViewController: UIViewController {
 
 extension EducationViewController: EducationViewing {
     
-    func update(viewModel: EducationViewModel) {
+    func update(viewModel: EducationPresentableModel) {
         self.viewModel = viewModel
     }
     
