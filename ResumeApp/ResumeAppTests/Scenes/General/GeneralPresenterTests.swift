@@ -19,11 +19,11 @@ class GeneralPresenterTests: XCTestCase {
         sut.setResume(resume)
         let size = Size(width: 40, height: 40)
         
-        let summary = CellViewModel(title: "summary body", selectable: false)
-        let email = CellViewModel(title: "Email", subtitle: "email@email.com", image: .init(type: .named(imageName: "email"), size: size), selectable: true)
-        let phone = CellViewModel(title: "Phone", subtitle: "555666777", image: .init(type: .named(imageName: "phone"), size: size), selectable: true)
-        let linkedIn = CellViewModel(title: "LinkedIn", subtitle: "linked in", image: .init(type: .named(imageName: "linkedIn"), size: size), selectable: true)
-        let gitHub = CellViewModel(title: "GitHub", subtitle: "git hub", image: .init(type: .named(imageName: "github"), size: size), selectable: true)
+        let summary = CellPresentableModel(title: "summary body", selectable: false)
+        let email = CellPresentableModel(title: "Email", subtitle: "email@email.com", image: .init(type: .named(imageName: "email"), size: size), selectable: true)
+        let phone = CellPresentableModel(title: "Phone", subtitle: "555666777", image: .init(type: .named(imageName: "phone"), size: size), selectable: true)
+        let linkedIn = CellPresentableModel(title: "LinkedIn", subtitle: "linked in", image: .init(type: .named(imageName: "linkedIn"), size: size), selectable: true)
+        let gitHub = CellPresentableModel(title: "GitHub", subtitle: "git hub", image: .init(type: .named(imageName: "github"), size: size), selectable: true)
 
         let expected = [GeneralPresentableModel(personViewViewModel: PersonViewViewModel(fullName: "full name", image: ImageViewModel(type: .url(string: "imageUrl"), size: Size(width: 120, height: 120)), role: "role"), elements: [summary, email, phone, linkedIn, gitHub])]
         XCTAssertEqual(view.updateViewModels, expected)

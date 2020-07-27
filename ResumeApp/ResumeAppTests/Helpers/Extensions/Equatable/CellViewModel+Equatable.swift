@@ -1,5 +1,5 @@
 //
-//  CellViewModel+Equatable.swift
+//  CellPresentableModel+Equatable.swift
 //  ResumeAppTests
 //
 //  Created by Łukasz Bazior on 25/06/2020.
@@ -8,9 +8,9 @@
 
 @testable import ResumeApp
 
-extension CellViewModel: Equatable {
+extension CellPresentableModel: Equatable {
     
-    public static func ==(lhs: CellViewModel, rhs: CellViewModel) -> Bool {
+    public static func ==(lhs: CellPresentableModel, rhs: CellPresentableModel) -> Bool {
         lhs.title == rhs.title &&
             lhs.subtitle == rhs.subtitle &&
             lhs.selectable == rhs.selectable &&

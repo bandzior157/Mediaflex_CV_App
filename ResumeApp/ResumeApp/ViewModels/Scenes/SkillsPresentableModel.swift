@@ -18,7 +18,7 @@ extension SkillsPresentableModel {
         var tempSections = [SectionViewModel]()
         
         for skillsGroup in resume.skillsGroups {
-            let elements = skillsGroup.skills.map { CellViewModel(title: $0) }
+            let elements = skillsGroup.skills.map { CellPresentableModel(title: $0) }
             if elements.isEmpty { continue }
             tempSections.append(SectionViewModel(title: skillsGroup.title, elements: elements))
         }

@@ -24,11 +24,11 @@ class SkillsPresenterTests: XCTestCase {
         let expected = [
             SkillsPresentableModel(sections: [
                 SectionViewModel(title: "Technical", elements: [
-                    CellViewModel(title: "Xcode"),
-                    CellViewModel(title: "Swift")
+                    CellPresentableModel(title: "Xcode"),
+                    CellPresentableModel(title: "Swift")
                 ]),
                 SectionViewModel(title: "Hidden skills", elements: [
-                    CellViewModel(title: "Invisibility")
+                    CellPresentableModel(title: "Invisibility")
                 ])
             ])
         ]

@@ -40,7 +40,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_renderedCell_styleSubtitle() {
         let sut = makeSUT()
-        sut.update(viewModel: makeViewModel(elements: [CellViewModel()]))
+        sut.update(viewModel: makeViewModel(elements: [CellPresentableModel()]))
         let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertNotNil(cell)
         XCTAssertEqual(cell.cellStyle, .subtitle)
@@ -48,7 +48,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_text_isViewModelTitle() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(title: "First")
+        let cellViewModel = CellPresentableModel(title: "First")
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -57,7 +57,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_image_renderedByViewModelImageName() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(image: .init(type: .named(imageName: "phone"), size: dummySize))
+        let cellViewModel = CellPresentableModel(image: .init(type: .named(imageName: "phone"), size: dummySize))
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -66,7 +66,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_noImage_renderedByViewModelWithoutImageName() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(image: nil)
+        let cellViewModel = CellPresentableModel(image: nil)
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -75,7 +75,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_defaultSelection_renderedByViewModelSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(selectable: true)
+        let cellViewModel = CellPresentableModel(selectable: true)
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -84,7 +84,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_noneSelection_renderedByViewModelNotSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(selectable: false)
+        let cellViewModel = CellPresentableModel(selectable: false)
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -93,7 +93,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_subtitle_fromViewModel() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(subtitle: "text")
+        let cellViewModel = CellPresentableModel(subtitle: "text")
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -102,7 +102,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_defaultNoSubtitle() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel()
+        let cellViewModel = CellPresentableModel()
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -111,7 +111,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_hasChevron_whenSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(selectable: true)
+        let cellViewModel = CellPresentableModel(selectable: true)
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -120,7 +120,7 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_hasNoChevron_whenNotSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellViewModel(selectable: false)
+        let cellViewModel = CellPresentableModel(selectable: false)
         sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
                 
         let cell = sut.tableView.cell(at: 0)
@@ -132,7 +132,7 @@ class GeneralViewControllerTests: XCTestCase {
         let presenter = MockGeneralPresenter()
         sut.presenter = presenter
         
-        sut.update(viewModel: makeViewModel(elements: [CellViewModel(), CellViewModel()]))
+        sut.update(viewModel: makeViewModel(elements: [CellPresentableModel(), CellPresentableModel()]))
         
         sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
         XCTAssertEqual(presenter.selectedRows, [1])
@@ -153,12 +153,12 @@ class GeneralViewControllerTests: XCTestCase {
         return sut
     }
     
-    private func makeViewModel(elements: [CellViewModel] = []) -> GeneralPresentableModel {
+    private func makeViewModel(elements: [CellPresentableModel] = []) -> GeneralPresentableModel {
         GeneralPresentableModel(personViewViewModel: PersonViewViewModel(fullName: "", image: nil, role: ""), elements: elements)
     }
     
-    private func dummyCellViewModel() -> CellViewModel {
-        CellViewModel(title: "")
+    private func dummyCellViewModel() -> CellPresentableModel {
+        CellPresentableModel(title: "")
     }
 
 }

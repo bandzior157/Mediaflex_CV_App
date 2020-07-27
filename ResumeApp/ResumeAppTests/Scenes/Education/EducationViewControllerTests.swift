@@ -18,7 +18,7 @@ class EducationViewControllerTests: XCTestCase {
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = EducationPresentableModel(cellViewModels: [CellViewModel(), CellViewModel()])
+        let viewModel2 = EducationPresentableModel(cellViewModels: [CellPresentableModel(), CellPresentableModel()])
         sut.update(viewModel: viewModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
     }

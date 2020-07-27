@@ -7,5 +7,5 @@
 //
 
 protocol CellViewModelUpdating {
-    func update(viewModel: CellViewModel)
+    func update(viewModel: CellPresentableModel)
 }

@@ -1,12 +1,12 @@
 //
-//  CellViewModel.swift
+//  CellPresentableModel.swift
 //  ResumeApp
 //
 //  Created by Łukasz Bazior on 24/06/2020.
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-struct CellViewModel {
+struct CellPresentableModel {
     
     let title: String
     let subtitle: String?

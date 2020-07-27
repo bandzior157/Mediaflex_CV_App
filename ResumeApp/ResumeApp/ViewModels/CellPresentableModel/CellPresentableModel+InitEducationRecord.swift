@@ -1,5 +1,5 @@
 //
-//  CellViewModel+InitEducationRecord.swift
+//  CellPresentableModel+InitEducationRecord.swift
 //  ResumeApp
 //
 //  Created by Łukasz Bazior on 29/06/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension CellViewModel {
+extension CellPresentableModel {
     
     init(educationRecord: EducationRecord) {
         let dateFormatter = DateFormatter()

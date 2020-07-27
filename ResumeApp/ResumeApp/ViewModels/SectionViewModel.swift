@@ -8,5 +8,5 @@
 
 struct SectionViewModel {
     let title: String
-    let elements: [CellViewModel]
+    let elements: [CellPresentableModel]
 }

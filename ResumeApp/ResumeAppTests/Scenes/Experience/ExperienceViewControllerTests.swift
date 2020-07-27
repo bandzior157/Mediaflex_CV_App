@@ -18,7 +18,7 @@ class ExperienceViewControllerTests: XCTestCase {
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = ExperiencePresentableModel(cellViewModels: [CellViewModel(), CellViewModel()])
+        let viewModel2 = ExperiencePresentableModel(cellViewModels: [CellPresentableModel(), CellPresentableModel()])
         sut.update(viewModel: viewModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
     }
@@ -28,7 +28,7 @@ class ExperienceViewControllerTests: XCTestCase {
         let presenter = MockExperiencePresenter()
         sut.presenter = presenter
         
-        let viewModel = ExperiencePresentableModel(cellViewModels: [CellViewModel(), CellViewModel()])
+        let viewModel = ExperiencePresentableModel(cellViewModels: [CellPresentableModel(), CellPresentableModel()])
         sut.update(viewModel: viewModel)
                
         sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))

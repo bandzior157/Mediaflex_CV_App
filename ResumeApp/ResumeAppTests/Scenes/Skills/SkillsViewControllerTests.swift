@@ -34,7 +34,7 @@ class SkillsViewControllerTests: XCTestCase {
     
     func test_tableViewSectionElements_byViewModel() {
         let sut = makeSUT()
-        let viewModel = SkillsPresentableModel(sections: [SectionViewModel(title: "first", elements: [CellViewModel(title: "f1"), CellViewModel(title: "f2")]), SectionViewModel(title: "second", elements: [CellViewModel(title: "s1")])])
+        let viewModel = SkillsPresentableModel(sections: [SectionViewModel(title: "first", elements: [CellPresentableModel(title: "f1"), CellPresentableModel(title: "f2")]), SectionViewModel(title: "second", elements: [CellPresentableModel(title: "s1")])])
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 1)

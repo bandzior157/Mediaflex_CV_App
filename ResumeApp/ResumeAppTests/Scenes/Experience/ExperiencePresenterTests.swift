@@ -35,7 +35,7 @@ class ExperiencePresenterTests: XCTestCase {
         sut.setResume(resume)
         
         let expected = [ExperiencePresentableModel(cellViewModels: [
-            CellViewModel(
+            CellPresentableModel(
                 title: "company\nrole",
                 subtitle: "01.2000 - 12.2010",
                 image: .init(type: .url(string: "logo"), size: Size(width: 80, height: 80)),

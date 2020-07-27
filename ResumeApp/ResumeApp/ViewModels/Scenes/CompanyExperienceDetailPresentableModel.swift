@@ -36,7 +36,7 @@ extension CompanyExperienceDetailPresentableModel {
         self.dates = "\(dateFormatter.string(from: companyExperience.dateFrom)) - \(dateFormatter.string(from: companyExperience.dateTo))"
         
         self.sections = companyExperience.details.map {
-            let elements = $0.elements.map { CellViewModel(title: $0) }
+            let elements = $0.elements.map { CellPresentableModel(title: $0) }
             return SectionViewModel(title: $0.title, elements: elements)
         }
     }

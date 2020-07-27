@@ -7,5 +7,5 @@
 //
 
 protocol GeneralCellViewModelsProviding {
-    func get(for cellTypes: [GeneralCellType]) -> [CellViewModel]
+    func get(for cellTypes: [GeneralCellType]) -> [CellPresentableModel]
 }

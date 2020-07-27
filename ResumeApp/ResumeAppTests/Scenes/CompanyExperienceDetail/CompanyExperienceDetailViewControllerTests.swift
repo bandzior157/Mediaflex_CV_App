@@ -21,14 +21,14 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
                 SectionViewModel(
                     title: "S1",
                     elements: [
-                        CellViewModel(title: "S1E1"),
-                        CellViewModel(title: "S1E2")
+                        CellPresentableModel(title: "S1E1"),
+                        CellPresentableModel(title: "S1E2")
                     ]
                 ),
                 SectionViewModel(
                     title: "S2",
                     elements: [
-                        CellViewModel(title: "S2E2")
+                        CellPresentableModel(title: "S2E2")
                     ]
                 )
             ]

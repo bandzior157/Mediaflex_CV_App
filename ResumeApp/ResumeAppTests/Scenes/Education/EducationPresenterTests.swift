@@ -29,7 +29,7 @@ class EducationPresenterTests: XCTestCase {
                 dateTo: december2010)])
         sut.setResume(resume)
         
-        let expected = [EducationPresentableModel(cellViewModels: [CellViewModel(title: "school\ndegree, specialization", subtitle: "01.2000 - 12.2010", image: ImageViewModel(type: .url(string: "school logo url"), size: Size(width: 80, height: 80)), selectable: false)])]
+        let expected = [EducationPresentableModel(cellViewModels: [CellPresentableModel(title: "school\ndegree, specialization", subtitle: "01.2000 - 12.2010", image: ImageViewModel(type: .url(string: "school logo url"), size: Size(width: 80, height: 80)), selectable: false)])]
         XCTAssertEqual(view.updateViewModels, expected)
     }
     

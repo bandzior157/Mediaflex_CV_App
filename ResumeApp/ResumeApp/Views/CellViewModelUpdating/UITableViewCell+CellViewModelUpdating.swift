@@ -10,7 +10,7 @@ import UIKit
 
 extension UITableViewCell: CellViewModelUpdating {
         
-    func update(viewModel: CellViewModel) {
+    func update(viewModel: CellPresentableModel) {
         textLabel?.numberOfLines = 0
         textLabel?.text = viewModel.title
         
