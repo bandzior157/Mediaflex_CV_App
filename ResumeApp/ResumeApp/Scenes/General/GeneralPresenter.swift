@@ -15,7 +15,7 @@ class GeneralPresenter {
     var alertPresenter: AlertPresenting?
     
     let cellTypesProvider: GeneralCellTypesProviding
-    let cellViewModelsProvider: GeneralCellViewModelsProviding
+    let cellViewModelsProvider: GeneralCellPresentableModelsProviding
     let phoneNumberHandler: PhoneNumberHandling
     let urlBrowserHandler: UrlBrowserHandling
     var mailHandler: MailHandling?
@@ -29,7 +29,7 @@ class GeneralPresenter {
     }
     
     init(cellTypesProvider: GeneralCellTypesProviding = GeneralCellTypesProvider(),
-         cellViewModelsProvider: GeneralCellViewModelsProviding = GeneralCellViewModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
+         cellViewModelsProvider: GeneralCellPresentableModelsProviding = GeneralCellViewModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
         self.cellTypesProvider = cellTypesProvider
         self.cellViewModelsProvider = cellViewModelsProvider
         self.phoneNumberHandler = phoneNumberHandler

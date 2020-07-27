@@ -6,7 +6,7 @@
 //  Copyright © 2020 Łukasz Bazior. All rights reserved.
 //
 
-class GeneralCellViewModelsProvider: GeneralCellViewModelsProviding {
+class GeneralCellViewModelsProvider: GeneralCellPresentableModelsProviding {
     
     func get(for cellTypes: [GeneralCellType]) -> [CellPresentableModel] {
         cellTypes.map(cellViewModel(for:))
