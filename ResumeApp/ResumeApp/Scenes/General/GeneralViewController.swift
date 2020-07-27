@@ -27,7 +27,7 @@ class GeneralViewController: UIViewController {
         
     var presenter: GeneralPresenting?
     
-    private var viewModel: GeneralPresentableModel? {
+    private var presentableModel: GeneralPresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -72,7 +72,7 @@ class GeneralViewController: UIViewController {
         ThreadGuarantee.guarantee(on: .main) { [weak self] in
             self?.tableView.reloadData()
             
-            guard let viewModel = self?.viewModel else { return }
+            guard let viewModel = self?.presentableModel else { return }
             self?.personView.update(viewModel: viewModel.personViewViewModel)
         }
     }
@@ -81,7 +81,7 @@ class GeneralViewController: UIViewController {
 extension GeneralViewController: GeneralViewing {
     
     func update(viewModel: GeneralPresentableModel) {
-        self.viewModel = viewModel
+        self.presentableModel = viewModel
     }
     
 }
@@ -91,7 +91,7 @@ extension GeneralViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
 
-        guard let cellViewModel = viewModel?.elements[indexPath.row] else {
+        guard let cellViewModel = presentableModel?.elements[indexPath.row] else {
             return cell
         }
 
@@ -100,7 +100,7 @@ extension GeneralViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.elements.count ?? 0
+        presentableModel?.elements.count ?? 0
     }
     
 }
