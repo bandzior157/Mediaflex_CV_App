@@ -21,10 +21,10 @@ class GeneralPresenter {
     var mailHandler: MailHandling?
     
     private var generalCellTypes: [GeneralCellType]?
-    private var viewModel: GeneralPresentableModel? {
+    private var presentableModel: GeneralPresentableModel? {
         didSet {
-            guard let viewModel = viewModel else { return }
-            view?.update(viewModel: viewModel)
+            guard let presentableModel = presentableModel else { return }
+            view?.update(viewModel: presentableModel)
         }
     }
     
@@ -76,7 +76,7 @@ extension GeneralPresenter: ResumeSetting {
         
         let viewModel = GeneralPresentableModel(personViewViewModel: personViewViewModel, elements: elements)
         
-        self.viewModel = viewModel
+        self.presentableModel = viewModel
     }
     
 }
