@@ -29,7 +29,7 @@ class GeneralPresenter {
     }
     
     init(cellTypesProvider: GeneralCellTypesProviding = GeneralCellTypesProvider(),
-         cellViewModelsProvider: GeneralCellPresentableModelsProviding = GeneralCellViewModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
+         cellViewModelsProvider: GeneralCellPresentableModelsProviding = GeneralCellPresentableModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
         self.cellTypesProvider = cellTypesProvider
         self.cellViewModelsProvider = cellViewModelsProvider
         self.phoneNumberHandler = phoneNumberHandler

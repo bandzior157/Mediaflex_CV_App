@@ -94,7 +94,7 @@
 		26A8B8D424A617D1006DF5A1 /* GeneralCellTypesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */; };
 		26A8B8D624A61A4F006DF5A1 /* GeneralCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */; };
 		26A8B8D924A61BD5006DF5A1 /* GeneralCellPresentableModelsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8D824A61BD5006DF5A1 /* GeneralCellPresentableModelsProviding.swift */; };
-		26A8B8DB24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8DA24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift */; };
+		26A8B8DB24A61C03006DF5A1 /* GeneralCellPresentableModelsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8DA24A61C03006DF5A1 /* GeneralCellPresentableModelsProvider.swift */; };
 		26A8B8DE24A61C29006DF5A1 /* GeneralCellTypesProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8DD24A61C29006DF5A1 /* GeneralCellTypesProviding.swift */; };
 		26A8B8E024A6226A006DF5A1 /* MockResumeSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8DF24A6226A006DF5A1 /* MockResumeSetter.swift */; };
 		26A8B8E424A622FC006DF5A1 /* ResumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A8B8E324A622FC006DF5A1 /* ResumeSetting.swift */; };
@@ -254,7 +254,7 @@
 		26A8B8D324A617D1006DF5A1 /* GeneralCellTypesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellTypesProvider.swift; sourceTree = "<group>"; };
 		26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellType.swift; sourceTree = "<group>"; };
 		26A8B8D824A61BD5006DF5A1 /* GeneralCellPresentableModelsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellPresentableModelsProviding.swift; sourceTree = "<group>"; };
-		26A8B8DA24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellViewModelsProvider.swift; sourceTree = "<group>"; };
+		26A8B8DA24A61C03006DF5A1 /* GeneralCellPresentableModelsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellPresentableModelsProvider.swift; sourceTree = "<group>"; };
 		26A8B8DD24A61C29006DF5A1 /* GeneralCellTypesProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCellTypesProviding.swift; sourceTree = "<group>"; };
 		26A8B8DF24A6226A006DF5A1 /* MockResumeSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeSetter.swift; sourceTree = "<group>"; };
 		26A8B8E324A622FC006DF5A1 /* ResumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeSetting.swift; sourceTree = "<group>"; };
@@ -536,7 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				26A8B8D824A61BD5006DF5A1 /* GeneralCellPresentableModelsProviding.swift */,
-				26A8B8DA24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift */,
+				26A8B8DA24A61C03006DF5A1 /* GeneralCellPresentableModelsProvider.swift */,
 			);
 			path = GeneralCellViewModelsProviding;
 			sourceTree = "<group>";
@@ -1050,7 +1050,7 @@
 				268524FB24AA413C000AEDDA /* EducationPresentableModel.swift in Sources */,
 				5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */,
 				26D31B0724AA8EC7001D46FC /* AlertPresenter.swift in Sources */,
-				26A8B8DB24A61C03006DF5A1 /* GeneralCellViewModelsProvider.swift in Sources */,
+				26A8B8DB24A61C03006DF5A1 /* GeneralCellPresentableModelsProvider.swift in Sources */,
 				262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */,
 				2636AB4624AA0892004B866D /* CompanyExperienceHeaderView.swift in Sources */,
 				26A8B90524A6812A006DF5A1 /* ResumeService.swift in Sources */,
