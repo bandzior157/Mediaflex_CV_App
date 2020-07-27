@@ -18,7 +18,7 @@ class ExperienceViewController: UIViewController {
         return tableView
     }()
     
-    private var viewModel: ExperienceViewModel? {
+    private var viewModel: ExperiencePresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -76,7 +76,7 @@ extension ExperienceViewController: UITableViewDataSource {
 
 extension ExperienceViewController: ExperienceViewing {
     
-    func update(viewModel: ExperienceViewModel) {
+    func update(viewModel: ExperiencePresentableModel) {
         self.viewModel = viewModel
     }
     

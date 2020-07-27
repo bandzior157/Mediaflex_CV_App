@@ -34,7 +34,7 @@ class ExperiencePresenterTests: XCTestCase {
                 details: details)])
         sut.setResume(resume)
         
-        let expected = [ExperienceViewModel(cellViewModels: [
+        let expected = [ExperiencePresentableModel(cellViewModels: [
             CellViewModel(
                 title: "company\nrole",
                 subtitle: "01.2000 - 12.2010",

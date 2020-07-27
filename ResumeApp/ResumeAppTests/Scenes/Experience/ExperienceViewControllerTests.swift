@@ -13,12 +13,12 @@ class ExperienceViewControllerTests: XCTestCase {
     
     func test_tableViewRowsCount_providedByViewModel() {
         let sut = makeSUT()
-        let viewModel = ExperienceViewModel(cellViewModels: [])
+        let viewModel = ExperiencePresentableModel(cellViewModels: [])
         
         sut.update(viewModel: viewModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = ExperienceViewModel(cellViewModels: [CellViewModel(), CellViewModel()])
+        let viewModel2 = ExperiencePresentableModel(cellViewModels: [CellViewModel(), CellViewModel()])
         sut.update(viewModel: viewModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
     }
@@ -28,7 +28,7 @@ class ExperienceViewControllerTests: XCTestCase {
         let presenter = MockExperiencePresenter()
         sut.presenter = presenter
         
-        let viewModel = ExperienceViewModel(cellViewModels: [CellViewModel(), CellViewModel()])
+        let viewModel = ExperiencePresentableModel(cellViewModels: [CellViewModel(), CellViewModel()])
         sut.update(viewModel: viewModel)
                
         sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))

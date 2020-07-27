@@ -10,9 +10,9 @@
 
 class MockExperienceView: ExperienceViewing {
     
-    private(set) var updateViewModels = [ExperienceViewModel]()
+    private(set) var updateViewModels = [ExperiencePresentableModel]()
     
-    func update(viewModel: ExperienceViewModel) {
+    func update(viewModel: ExperiencePresentableModel) {
         updateViewModels.append(viewModel)
     }
     
