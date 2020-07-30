@@ -57,9 +57,9 @@ class CompanyExperienceDetailViewController: UIViewController {
 
 extension CompanyExperienceDetailViewController: CompanyExperienceDetailViewing {
     
-    func update(viewModel: CompanyExperienceDetailPresentableModel) {
-        headerView.update(viewModel: CompanyExperienceHeaderViewModel(viewModel: viewModel))
-        sections = viewModel.sections
+    func update(presentableModel: CompanyExperienceDetailPresentableModel) {
+        headerView.update(presentableModel: CompanyExperienceHeaderPresentableModel(presentableModel: presentableModel))
+        sections = presentableModel.sections
     }
     
 }
@@ -72,7 +72,7 @@ extension CompanyExperienceDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.update(viewModel: sections[indexPath.section].elements[indexPath.row])
+        cell.update(presentableModel: sections[indexPath.section].elements[indexPath.row])
         return cell
     }
     

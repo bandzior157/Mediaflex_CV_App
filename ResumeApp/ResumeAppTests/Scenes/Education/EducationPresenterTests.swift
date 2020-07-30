@@ -11,7 +11,7 @@ import XCTest
 
 class EducationPresenterTests: XCTestCase {
     
-    func test_viewModelProperConfiguration() {
+    func test_viewPresentableProperConfiguration() {
         let sut = makeSUT()
         let view = MockEducationView()
         sut.view = view
@@ -29,8 +29,8 @@ class EducationPresenterTests: XCTestCase {
                 dateTo: december2010)])
         sut.setResume(resume)
         
-        let expected = [EducationPresentableModel(cellViewModels: [CellPresentableModel(title: "school\ndegree, specialization", subtitle: "01.2000 - 12.2010", image: ImagePresentableModel(type: .url(string: "school logo url"), size: Size(width: 80, height: 80)), selectable: false)])]
-        XCTAssertEqual(view.updateViewModels, expected)
+        let expected = [EducationPresentableModel(cellPresentableModels: [CellPresentableModel(title: "school\ndegree, specialization", subtitle: "01.2000 - 12.2010", image: ImagePresentableModel(type: .url(string: "school logo url"), size: Size(width: 80, height: 80)), selectable: false)])]
+        XCTAssertEqual(view.updatePresentableModels, expected)
     }
     
     
@@ -44,10 +44,10 @@ class EducationPresenterTests: XCTestCase {
 
 class MockEducationView: EducationViewing {
     
-    private(set) var updateViewModels = [EducationPresentableModel]()
+    private(set) var updatePresentableModels = [EducationPresentableModel]()
     
-    func update(viewModel: EducationPresentableModel) {
-        updateViewModels.append(viewModel)
+    func update(presentableModel: EducationPresentableModel) {
+        updatePresentableModels.append(presentableModel)
     }
     
 }

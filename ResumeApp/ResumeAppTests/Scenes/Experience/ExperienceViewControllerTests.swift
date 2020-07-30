@@ -11,15 +11,15 @@ import XCTest
 
 class ExperienceViewControllerTests: XCTestCase {
     
-    func test_tableViewRowsCount_providedByViewModel() {
+    func test_tableViewRowsCount_providedByPresentableModel() {
         let sut = makeSUT()
-        let viewModel = ExperiencePresentableModel(cellViewModels: [])
+        let presentableModel = ExperiencePresentableModel(cellPresentableModels: [])
         
-        sut.update(viewModel: viewModel)
+        sut.update(presentableModel: presentableModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = ExperiencePresentableModel(cellViewModels: [CellPresentableModel(), CellPresentableModel()])
-        sut.update(viewModel: viewModel2)
+        let presentableModel2 = ExperiencePresentableModel(cellPresentableModels: [CellPresentableModel(), CellPresentableModel()])
+        sut.update(presentableModel: presentableModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
     }
     
@@ -28,8 +28,8 @@ class ExperienceViewControllerTests: XCTestCase {
         let presenter = MockExperiencePresenter()
         sut.presenter = presenter
         
-        let viewModel = ExperiencePresentableModel(cellViewModels: [CellPresentableModel(), CellPresentableModel()])
-        sut.update(viewModel: viewModel)
+        let presentableModel = ExperiencePresentableModel(cellPresentableModels: [CellPresentableModel(), CellPresentableModel()])
+        sut.update(presentableModel: presentableModel)
                
         sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
         sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))

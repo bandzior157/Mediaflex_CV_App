@@ -1,5 +1,5 @@
 //
-//  UIImageView+SetImageViewModel.swift
+//  UIImageView+SetImagePresentableModel.swift
 //  ResumeApp
 //
 //  Created by Łukasz Bazior on 29/06/2020.
@@ -11,15 +11,15 @@ import SDWebImage
 
 extension UIImageView {
     
-    func setImage(imageViewModel: ImagePresentableModel?) {
-        guard let imageViewModel = imageViewModel else {
+    func setImage(imagePresentableModel: ImagePresentableModel?) {
+        guard let imagePresentableModel = imagePresentableModel else {
             image = nil
             return
         }
         
-        let size = CGSize(size: imageViewModel.size)
+        let size = CGSize(size: imagePresentableModel.size)
         
-        switch imageViewModel.type {
+        switch imagePresentableModel.type {
         case let .named(imageName):
             setImage(named: imageName, size: size)
         case let .url(urlString):

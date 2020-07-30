@@ -11,7 +11,7 @@ import XCTest
 
 class ExperiencePresenterTests: XCTestCase {
     
-    func test_updateViewModel_afterSettingResume() {
+    func test_updatePresentableModel_afterSettingResume() {
         let sut = makeSUT()
         let view = MockExperienceView()
         sut.view = view
@@ -34,13 +34,13 @@ class ExperiencePresenterTests: XCTestCase {
                 details: details)])
         sut.setResume(resume)
         
-        let expected = [ExperiencePresentableModel(cellViewModels: [
+        let expected = [ExperiencePresentableModel(cellPresentableModels: [
             CellPresentableModel(
                 title: "company\nrole",
                 subtitle: "01.2000 - 12.2010",
                 image: .init(type: .url(string: "logo"), size: Size(width: 80, height: 80)),
                 selectable: true)])]
-        XCTAssertEqual(view.updateViewModels, expected)
+        XCTAssertEqual(view.updatePresentableModels, expected)
     }
     
     func test_routerPresent_getCalled_onPresenterDidSelect() {

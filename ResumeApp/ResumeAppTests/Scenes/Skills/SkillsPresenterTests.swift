@@ -11,7 +11,7 @@ import XCTest
 
 class SkillsPresenterTests: XCTestCase {
     
-    func test_setResume_callsViewUpdateWithGeneralViewModel() {
+    func test_setResume_callsViewUpdateWithGeneralPresentableModel() {
         let sut = makeSUT()
         let view = MockSkillsView()
         let resume = Resume(skillsGroups: [
@@ -33,7 +33,7 @@ class SkillsPresenterTests: XCTestCase {
             ])
         ]
         
-        XCTAssertEqual(view.updateViewModels, expected)
+        XCTAssertEqual(view.updatePresentableModels, expected)
     }
     
     
@@ -47,10 +47,10 @@ class SkillsPresenterTests: XCTestCase {
 
 class MockSkillsView: SkillsViewing {
     
-    private(set) var updateViewModels = [SkillsPresentableModel]()
+    private(set) var updatePresentableModels = [SkillsPresentableModel]()
     
-    func update(viewModel: SkillsPresentableModel) {
-        updateViewModels.append(viewModel)
+    func update(presentableModel: SkillsPresentableModel) {
+        updatePresentableModels.append(presentableModel)
     }
     
 }

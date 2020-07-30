@@ -11,10 +11,10 @@ import UIKit
 
 class MockGeneralViewController: UIViewController, GeneralViewing {
     
-    private(set) var updateViewModels = [GeneralPresentableModel]()
+    private(set) var updatePresentableModels = [GeneralPresentableModel]()
     
-    func update(viewModel: GeneralPresentableModel) {
-        updateViewModels.append(viewModel)
+    func update(presentableModel: GeneralPresentableModel) {
+        updatePresentableModels.append(presentableModel)
     }
     
 }

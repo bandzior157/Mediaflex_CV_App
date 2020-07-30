@@ -109,11 +109,11 @@ class CompanyExperienceHeaderView: UIView {
 
 extension CompanyExperienceHeaderView: CompanyExperienceHeaderViewing {
     
-    func update(viewModel: CompanyExperienceHeaderViewModel) {
-        companyLabel.text = viewModel.companyName
-        imageView.setImage(imageViewModel: viewModel.companyImage)
-        roleLabel.text = viewModel.role
-        datesLabel.text = viewModel.dates
+    func update(presentableModel: CompanyExperienceHeaderPresentableModel) {
+        companyLabel.text = presentableModel.companyName
+        imageView.setImage(imagePresentableModel: presentableModel.companyImage)
+        roleLabel.text = presentableModel.role
+        datesLabel.text = presentableModel.dates
         
         setLabelsVisible(true)
     }

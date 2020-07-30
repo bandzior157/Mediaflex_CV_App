@@ -11,15 +11,15 @@ import XCTest
 
 class EducationViewControllerTests: XCTestCase {
     
-    func test_tableViewRowsCount_providedByViewModel() {
+    func test_tableViewRowsCount_providedByPresentableModel() {
         let sut = makeSUT()
-        let viewModel = EducationPresentableModel(cellViewModels: [])
+        let presentableModel = EducationPresentableModel(cellPresentableModels: [])
         
-        sut.update(viewModel: viewModel)
+        sut.update(presentableModel: presentableModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        let viewModel2 = EducationPresentableModel(cellViewModels: [CellPresentableModel(), CellPresentableModel()])
-        sut.update(viewModel: viewModel2)
+        let presentableModel2 = EducationPresentableModel(cellPresentableModels: [CellPresentableModel(), CellPresentableModel()])
+        sut.update(presentableModel: presentableModel2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
     }
     

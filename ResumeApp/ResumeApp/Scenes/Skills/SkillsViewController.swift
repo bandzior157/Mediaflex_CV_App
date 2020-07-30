@@ -18,7 +18,7 @@ class SkillsViewController: UIViewController {
         return tableView
     }()
     
-    private var viewModel: SkillsPresentableModel? {
+    private var presentableModel: SkillsPresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -50,8 +50,8 @@ class SkillsViewController: UIViewController {
 
 extension SkillsViewController: SkillsViewing {
     
-    func update(viewModel: SkillsPresentableModel) {
-        self.viewModel = viewModel
+    func update(presentableModel: SkillsPresentableModel) {
+        self.presentableModel = presentableModel
     }
     
 }
@@ -59,21 +59,21 @@ extension SkillsViewController: SkillsViewing {
 extension SkillsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = viewModel?.sections[section] else { return 0 }
+        guard let section = presentableModel?.sections[section] else { return 0 }
         return section.elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        guard let cellViewModel = viewModel?.sections[indexPath.section].elements[indexPath.row] else {
+        guard let cellPresentableModel = presentableModel?.sections[indexPath.section].elements[indexPath.row] else {
             return cell
         }
-        cell.update(viewModel: cellViewModel)
+        cell.update(presentableModel: cellPresentableModel)
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel?.sections.count ?? 0
+        presentableModel?.sections.count ?? 0
     }
     
 }
@@ -82,7 +82,7 @@ extension SkillsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = TableViewHeaderView()
-        view.update(title: viewModel?.sections[section].title)
+        view.update(title: presentableModel?.sections[section].title)
         return view
     }
     

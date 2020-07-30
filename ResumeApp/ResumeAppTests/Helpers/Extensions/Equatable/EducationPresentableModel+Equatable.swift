@@ -11,7 +11,7 @@
 extension EducationPresentableModel: Equatable {
     
     public static func ==(lhs: EducationPresentableModel, rhs: EducationPresentableModel) -> Bool {
-        lhs.cellViewModels == rhs.cellViewModels
+        lhs.cellPresentableModels == rhs.cellPresentableModels
     }
     
 }

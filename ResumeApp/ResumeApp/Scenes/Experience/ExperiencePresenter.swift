@@ -15,7 +15,7 @@ class ExperiencePresenter {
     
     private(set) var experience: [CompanyExperience] = [] {
         didSet {
-            view?.update(viewModel: ExperiencePresentableModel(cellViewModels: experience.map { CellPresentableModel(companyExperience: $0) }))
+            view?.update(presentableModel: ExperiencePresentableModel(cellPresentableModels: experience.map { CellPresentableModel(companyExperience: $0) }))
         }
     }
     

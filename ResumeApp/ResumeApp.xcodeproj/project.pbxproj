@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2625268C24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */; };
-		2625268E24A3CD7500E301F9 /* PersonViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */; };
+		2625268E24A3CD7500E301F9 /* PersonViewPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625268D24A3CD7500E301F9 /* PersonViewPresentableModel.swift */; };
 		2625269124A3CDBF00E301F9 /* GeneralPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625269024A3CDBF00E301F9 /* GeneralPresentableModel.swift */; };
 		2625269524A3CDF600E301F9 /* CellPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625269424A3CDF600E301F9 /* CellPresentableModel.swift */; };
 		26279BC224A78B90000CA5D2 /* ExperiencePresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC124A78B90000CA5D2 /* ExperiencePresentableModel.swift */; };
@@ -18,7 +18,7 @@
 		26279BCA24A7A1C0000CA5D2 /* ExperiencePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */; };
 		26279BCC24A7A29E000CA5D2 /* ExperiencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */; };
 		26279BCE24A7A43A000CA5D2 /* MockExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCD24A7A43A000CA5D2 /* MockExperienceView.swift */; };
-		26279BD024A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */; };
+		26279BD024A7A4C9000CA5D2 /* ExperiencePresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26279BCF24A7A4C9000CA5D2 /* ExperiencePresentableModel+Equatable.swift */; };
 		262960A224A3D16F0009FD29 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A124A3D16F0009FD29 /* UIImage+Resize.swift */; };
 		262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */; };
 		262960A824A3FD7A0009FD29 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960A724A3FD7A0009FD29 /* SkillsViewController.swift */; };
@@ -30,10 +30,10 @@
 		262960B424A4ACDB0009FD29 /* SkillsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */; };
 		262960B624A4AD510009FD29 /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B524A4AD510009FD29 /* SkillsPresenter.swift */; };
 		262960B824A4BB670009FD29 /* SectionPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960B724A4BB670009FD29 /* SectionPresentableModel.swift */; };
-		262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */; };
-		262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */; };
-		262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */; };
-		262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */; };
+		262960BC24A4BC610009FD29 /* SkillsPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BB24A4BC610009FD29 /* SkillsPresentableModel+Equatable.swift */; };
+		262960BE24A4BC9F0009FD29 /* PersonPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BD24A4BC9F0009FD29 /* PersonPresentableModel+Equatable.swift */; };
+		262960C024A4BCF00009FD29 /* CellPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960BF24A4BCF00009FD29 /* CellPresentableModel+Equatable.swift */; };
+		262960C224A4BD140009FD29 /* SectionPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C124A4BD140009FD29 /* SectionPresentableModel+Equatable.swift */; };
 		262960C424A4BD7B0009FD29 /* SkillsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C324A4BD7B0009FD29 /* SkillsGroup.swift */; };
 		262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C524A4D0900009FD29 /* TableViewHeaderView.swift */; };
 		262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */; };
@@ -41,7 +41,7 @@
 		262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */; };
 		262E825A24A92FA200B8373F /* ImagePresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825924A92FA200B8373F /* ImagePresentableModel.swift */; };
 		262E825C24A92FF000B8373F /* CGSize+InitSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825B24A92FF000B8373F /* CGSize+InitSize.swift */; };
-		262E825E24A9303F00B8373F /* ImageViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825D24A9303F00B8373F /* ImageViewModel+Equatable.swift */; };
+		262E825E24A9303F00B8373F /* ImagePresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825D24A9303F00B8373F /* ImagePresentableModel+Equatable.swift */; };
 		262E826024A931AE00B8373F /* ImageType+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E825F24A931AE00B8373F /* ImageType+Equatable.swift */; };
 		262E826224A931D100B8373F /* Size+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826124A931D100B8373F /* Size+Equatable.swift */; };
 		262E826424A9480A00B8373F /* CompanyExperienceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E826324A9480A00B8373F /* CompanyExperienceDetails.swift */; };
@@ -59,16 +59,16 @@
 		2636AB4C24AA1087004B866D /* MockCompanyExperienceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4B24AA1087004B866D /* MockCompanyExperienceDetailPresenter.swift */; };
 		2636AB4E24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */; };
 		2636AB5024AA10FE004B866D /* CompanyExperienceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB4F24AA10FE004B866D /* CompanyExperienceDetailPresenter.swift */; };
-		2636AB5224AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5124AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift */; };
-		2636AB5424AA168F004B866D /* CompanyExperienceHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */; };
+		2636AB5224AA1207004B866D /* CompanyExperienceDetailPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5124AA1207004B866D /* CompanyExperienceDetailPresentableModel+Equatable.swift */; };
+		2636AB5424AA168F004B866D /* CompanyExperienceHeaderPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5324AA168F004B866D /* CompanyExperienceHeaderPresentableModel.swift */; };
 		2636AB5724AA16E3004B866D /* CompanyExperienceHeaderViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */; };
 		2640ADF824A8CEA600F7134E /* UIImage+InitColorSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */; };
 		26742ACC24A39B3A001D9444 /* GeneralPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */; };
 		26742ACE24A39B99001D9444 /* GeneralPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */; };
 		26742AD024A3A6BD001D9444 /* PersonViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742ACF24A3A6BD001D9444 /* PersonViewing.swift */; };
 		26742AD224A3A73D001D9444 /* FakeResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD124A3A73D001D9444 /* FakeResumeService.swift */; };
-		26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */; };
-		26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */; };
+		26742AD524A3AD24001D9444 /* CellPresentableModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD424A3AD24001D9444 /* CellPresentableModelUpdating.swift */; };
+		26742AD724A3AD93001D9444 /* UITableViewCell+CellPresentableModelUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD624A3AD93001D9444 /* UITableViewCell+CellPresentableModelUpdating.swift */; };
 		26742ADA24A3C289001D9444 /* PersonViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26742AD924A3C289001D9444 /* PersonViewTests.swift */; };
 		268524F624AA407D000AEDDA /* EducationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524F524AA407D000AEDDA /* EducationViewControllerTests.swift */; };
 		268524F924AA40FA000AEDDA /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524F824AA40FA000AEDDA /* EducationViewController.swift */; };
@@ -76,10 +76,10 @@
 		268524FD24AA4198000AEDDA /* EducationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FC24AA4198000AEDDA /* EducationContract.swift */; };
 		268524FF24AA43C4000AEDDA /* EducationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268524FE24AA43C4000AEDDA /* EducationPresenterTests.swift */; };
 		2685250124AA4401000AEDDA /* EducationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250024AA4401000AEDDA /* EducationPresenter.swift */; };
-		2685250324AA4553000AEDDA /* EducationViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250224AA4553000AEDDA /* EducationViewModel+Equatable.swift */; };
+		2685250324AA4553000AEDDA /* EducationPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250224AA4553000AEDDA /* EducationPresentableModel+Equatable.swift */; };
 		2685250524AA4646000AEDDA /* EducationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250424AA4646000AEDDA /* EducationRecord.swift */; };
 		2685250824AA4953000AEDDA /* CellPresentableModel+InitEducationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250724AA4953000AEDDA /* CellPresentableModel+InitEducationRecord.swift */; };
-		2685250A24AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */; };
+		2685250A24AA6C8E000AEDDA /* UIImageView+SetImagePresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250924AA6C8E000AEDDA /* UIImageView+SetImagePresentableModel.swift */; };
 		2685250E24AA6E13000AEDDA /* TableViewHeaderViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250D24AA6E13000AEDDA /* TableViewHeaderViewing.swift */; };
 		2685251024AA6ED0000AEDDA /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685250F24AA6ED0000AEDDA /* Size.swift */; };
 		2685251224AA6EDD000AEDDA /* ImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685251124AA6EDD000AEDDA /* ImageType.swift */; };
@@ -133,7 +133,7 @@
 		5A15B7CC249E2DD000DB62F5 /* MockGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */; };
 		5A15B7CE249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */; };
 		5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */; };
-		5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */; };
+		5A15B7D4249E2E2300DB62F5 /* GeneralPresentableModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D3249E2E2300DB62F5 /* GeneralPresentableModel+Equatable.swift */; };
 		5A15B7D6249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D5249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift */; };
 		5A15B7D9249FEFF400DB62F5 /* ResumeServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */; };
 		5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */; };
@@ -168,7 +168,7 @@
 
 /* Begin PBXFileReference section */
 		2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+AnchorConstraints.swift"; sourceTree = "<group>"; };
-		2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewViewModel.swift; sourceTree = "<group>"; };
+		2625268D24A3CD7500E301F9 /* PersonViewPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewPresentableModel.swift; sourceTree = "<group>"; };
 		2625269024A3CDBF00E301F9 /* GeneralPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresentableModel.swift; sourceTree = "<group>"; };
 		2625269424A3CDF600E301F9 /* CellPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresentableModel.swift; sourceTree = "<group>"; };
 		26279BC124A78B90000CA5D2 /* ExperiencePresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencePresentableModel.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		26279BC924A7A1C0000CA5D2 /* ExperiencePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencePresenterTests.swift; sourceTree = "<group>"; };
 		26279BCB24A7A29E000CA5D2 /* ExperiencePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencePresenter.swift; sourceTree = "<group>"; };
 		26279BCD24A7A43A000CA5D2 /* MockExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExperienceView.swift; sourceTree = "<group>"; };
-		26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExperienceViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		26279BCF24A7A4C9000CA5D2 /* ExperiencePresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExperiencePresentableModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960A124A3D16F0009FD29 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		262960A524A3FC850009FD29 /* SkillsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewControllerTests.swift; sourceTree = "<group>"; };
 		262960A724A3FD7A0009FD29 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
@@ -190,10 +190,10 @@
 		262960B324A4ACDB0009FD29 /* SkillsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenterTests.swift; sourceTree = "<group>"; };
 		262960B524A4AD510009FD29 /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
 		262960B724A4BB670009FD29 /* SectionPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPresentableModel.swift; sourceTree = "<group>"; };
-		262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsViewModel+Equatable.swift"; sourceTree = "<group>"; };
-		262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonViewModel+Equatable.swift"; sourceTree = "<group>"; };
-		262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellViewModel+Equatable.swift"; sourceTree = "<group>"; };
-		262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960BB24A4BC610009FD29 /* SkillsPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960BD24A4BC9F0009FD29 /* PersonPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960BF24A4BCF00009FD29 /* CellPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
+		262960C124A4BD140009FD29 /* SectionPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
 		262960C324A4BD7B0009FD29 /* SkillsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsGroup.swift; sourceTree = "<group>"; };
 		262960C524A4D0900009FD29 /* TableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
 		262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RemoveTrailingSeparators.swift"; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		262960CB24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+SelectionStyle.swift"; sourceTree = "<group>"; };
 		262E825924A92FA200B8373F /* ImagePresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresentableModel.swift; sourceTree = "<group>"; };
 		262E825B24A92FF000B8373F /* CGSize+InitSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+InitSize.swift"; sourceTree = "<group>"; };
-		262E825D24A9303F00B8373F /* ImageViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		262E825D24A9303F00B8373F /* ImagePresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePresentableModel+Equatable.swift"; sourceTree = "<group>"; };
 		262E825F24A931AE00B8373F /* ImageType+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageType+Equatable.swift"; sourceTree = "<group>"; };
 		262E826124A931D100B8373F /* Size+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Size+Equatable.swift"; sourceTree = "<group>"; };
 		262E826324A9480A00B8373F /* CompanyExperienceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetails.swift; sourceTree = "<group>"; };
@@ -219,16 +219,16 @@
 		2636AB4B24AA1087004B866D /* MockCompanyExperienceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCompanyExperienceDetailPresenter.swift; sourceTree = "<group>"; };
 		2636AB4D24AA10B2004B866D /* CompanyExperienceDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresenterTests.swift; sourceTree = "<group>"; };
 		2636AB4F24AA10FE004B866D /* CompanyExperienceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceDetailPresenter.swift; sourceTree = "<group>"; };
-		2636AB5124AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyExperienceDetailViewModel+Equatable.swift"; sourceTree = "<group>"; };
-		2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderViewModel.swift; sourceTree = "<group>"; };
+		2636AB5124AA1207004B866D /* CompanyExperienceDetailPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyExperienceDetailPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
+		2636AB5324AA168F004B866D /* CompanyExperienceHeaderPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderPresentableModel.swift; sourceTree = "<group>"; };
 		2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyExperienceHeaderViewing.swift; sourceTree = "<group>"; };
 		2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+InitColorSize.swift"; sourceTree = "<group>"; };
 		26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenter.swift; sourceTree = "<group>"; };
 		26742ACD24A39B99001D9444 /* GeneralPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPresenterTests.swift; sourceTree = "<group>"; };
 		26742ACF24A3A6BD001D9444 /* PersonViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewing.swift; sourceTree = "<group>"; };
 		26742AD124A3A73D001D9444 /* FakeResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResumeService.swift; sourceTree = "<group>"; };
-		26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelUpdating.swift; sourceTree = "<group>"; };
-		26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellViewModelUpdating.swift"; sourceTree = "<group>"; };
+		26742AD424A3AD24001D9444 /* CellPresentableModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresentableModelUpdating.swift; sourceTree = "<group>"; };
+		26742AD624A3AD93001D9444 /* UITableViewCell+CellPresentableModelUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellPresentableModelUpdating.swift"; sourceTree = "<group>"; };
 		26742AD924A3C289001D9444 /* PersonViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewTests.swift; sourceTree = "<group>"; };
 		268524F524AA407D000AEDDA /* EducationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewControllerTests.swift; sourceTree = "<group>"; };
 		268524F824AA40FA000AEDDA /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
@@ -236,10 +236,10 @@
 		268524FC24AA4198000AEDDA /* EducationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationContract.swift; sourceTree = "<group>"; };
 		268524FE24AA43C4000AEDDA /* EducationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPresenterTests.swift; sourceTree = "<group>"; };
 		2685250024AA4401000AEDDA /* EducationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPresenter.swift; sourceTree = "<group>"; };
-		2685250224AA4553000AEDDA /* EducationViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		2685250224AA4553000AEDDA /* EducationPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
 		2685250424AA4646000AEDDA /* EducationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationRecord.swift; sourceTree = "<group>"; };
 		2685250724AA4953000AEDDA /* CellPresentableModel+InitEducationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellPresentableModel+InitEducationRecord.swift"; sourceTree = "<group>"; };
-		2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImageViewModel.swift"; sourceTree = "<group>"; };
+		2685250924AA6C8E000AEDDA /* UIImageView+SetImagePresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImagePresentableModel.swift"; sourceTree = "<group>"; };
 		2685250D24AA6E13000AEDDA /* TableViewHeaderViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderViewing.swift; sourceTree = "<group>"; };
 		2685250F24AA6ED0000AEDDA /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		2685251124AA6EDD000AEDDA /* ImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageType.swift; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 		5A15B7CB249E2DD000DB62F5 /* MockGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeneralViewController.swift; sourceTree = "<group>"; };
 		5A15B7CD249E2DEC00DB62F5 /* MockResumeTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeTabBarPresenter.swift; sourceTree = "<group>"; };
 		5A15B7D0249E2E0900DB62F5 /* TabBarItemProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemProperties.swift; sourceTree = "<group>"; };
-		5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeneralViewModel+Equatable.swift"; sourceTree = "<group>"; };
+		5A15B7D3249E2E2300DB62F5 /* GeneralPresentableModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeneralPresentableModel+Equatable.swift"; sourceTree = "<group>"; };
 		5A15B7D5249FEDBD00DB62F5 /* ResumeTabBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTabBarPresenterTests.swift; sourceTree = "<group>"; };
 		5A15B7D8249FEFF400DB62F5 /* ResumeServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServicing.swift; sourceTree = "<group>"; };
 		5A15B7DA249FF00C00DB62F5 /* MockResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResumeService.swift; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2625268F24A3CD9F00E301F9 /* ViewModels */ = {
+		2625268F24A3CD9F00E301F9 /* PresentableModels */ = {
 			isa = PBXGroup;
 			children = (
 				262E825924A92FA200B8373F /* ImagePresentableModel.swift */,
@@ -368,7 +368,7 @@
 				2685250624AA493B000AEDDA /* CellPresentableModel */,
 				2625269224A3CDD200E301F9 /* Scenes */,
 			);
-			path = ViewModels;
+			path = PresentableModels;
 			sourceTree = "<group>";
 		};
 		2625269224A3CDD200E301F9 /* Scenes */ = {
@@ -407,22 +407,22 @@
 		262960BA24A4BC420009FD29 /* Equatable */ = {
 			isa = PBXGroup;
 			children = (
-				262960BF24A4BCF00009FD29 /* CellViewModel+Equatable.swift */,
+				262960BF24A4BCF00009FD29 /* CellPresentableModel+Equatable.swift */,
 				262E826724A94F6800B8373F /* CompanyExperience+Equatable.swift */,
-				2636AB5124AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift */,
+				2636AB5124AA1207004B866D /* CompanyExperienceDetailPresentableModel+Equatable.swift */,
 				262E826924A9501600B8373F /* CompanyExperienceDetails+Equatable.swift */,
 				26D31AF324AA80A5001D46FC /* EducationRecord+Equatable.swift */,
-				2685250224AA4553000AEDDA /* EducationViewModel+Equatable.swift */,
-				26279BCF24A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift */,
-				5A15B7D3249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift */,
+				2685250224AA4553000AEDDA /* EducationPresentableModel+Equatable.swift */,
+				26279BCF24A7A4C9000CA5D2 /* ExperiencePresentableModel+Equatable.swift */,
+				5A15B7D3249E2E2300DB62F5 /* GeneralPresentableModel+Equatable.swift */,
 				262E825F24A931AE00B8373F /* ImageType+Equatable.swift */,
-				262E825D24A9303F00B8373F /* ImageViewModel+Equatable.swift */,
-				262960BD24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift */,
+				262E825D24A9303F00B8373F /* ImagePresentableModel+Equatable.swift */,
+				262960BD24A4BC9F0009FD29 /* PersonPresentableModel+Equatable.swift */,
 				5A15B7E3249FF3DE00DB62F5 /* Resume+Equatable.swift */,
-				262960C124A4BD140009FD29 /* SectionViewModel+Equatable.swift */,
+				262960C124A4BD140009FD29 /* SectionPresentableModel+Equatable.swift */,
 				262E826124A931D100B8373F /* Size+Equatable.swift */,
 				26D31AF124AA8086001D46FC /* SkillsGroup+Equatable.swift */,
-				262960BB24A4BC610009FD29 /* SkillsViewModel+Equatable.swift */,
+				262960BB24A4BC610009FD29 /* SkillsPresentableModel+Equatable.swift */,
 			);
 			path = Equatable;
 			sourceTree = "<group>";
@@ -451,18 +451,18 @@
 			children = (
 				2636AB5624AA16E3004B866D /* CompanyExperienceHeaderViewing.swift */,
 				2636AB4524AA0892004B866D /* CompanyExperienceHeaderView.swift */,
-				2636AB5324AA168F004B866D /* CompanyExperienceHeaderViewModel.swift */,
+				2636AB5324AA168F004B866D /* CompanyExperienceHeaderPresentableModel.swift */,
 			);
 			path = CompanyExperienceHeaderView;
 			sourceTree = "<group>";
 		};
-		26742AD324A3ACF8001D9444 /* CellViewModelUpdating */ = {
+		26742AD324A3ACF8001D9444 /* CellPresentableModelUpdating */ = {
 			isa = PBXGroup;
 			children = (
-				26742AD424A3AD24001D9444 /* CellViewModelUpdating.swift */,
-				26742AD624A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift */,
+				26742AD424A3AD24001D9444 /* CellPresentableModelUpdating.swift */,
+				26742AD624A3AD93001D9444 /* UITableViewCell+CellPresentableModelUpdating.swift */,
 			);
-			path = CellViewModelUpdating;
+			path = CellPresentableModelUpdating;
 			sourceTree = "<group>";
 		};
 		26742AD824A3C275001D9444 /* Views */ = {
@@ -508,7 +508,7 @@
 			children = (
 				26742ACF24A3A6BD001D9444 /* PersonViewing.swift */,
 				5A6E87FD24A0EC8D00DD8789 /* PersonView.swift */,
-				2625268D24A3CD7500E301F9 /* PersonViewViewModel.swift */,
+				2625268D24A3CD7500E301F9 /* PersonViewPresentableModel.swift */,
 			);
 			path = PersonView;
 			sourceTree = "<group>";
@@ -532,13 +532,13 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		26A8B8D724A61BCC006DF5A1 /* GeneralCellViewModelsProviding */ = {
+		26A8B8D724A61BCC006DF5A1 /* GeneralCellPresentableModelsProviding */ = {
 			isa = PBXGroup;
 			children = (
 				26A8B8D824A61BD5006DF5A1 /* GeneralCellPresentableModelsProviding.swift */,
 				26A8B8DA24A61C03006DF5A1 /* GeneralCellPresentableModelsProvider.swift */,
 			);
-			path = GeneralCellViewModelsProviding;
+			path = GeneralCellPresentableModelsProviding;
 			sourceTree = "<group>";
 		};
 		26A8B8DC24A61C1E006DF5A1 /* GeneralCellTypesProviding */ = {
@@ -745,7 +745,7 @@
 				262E825B24A92FF000B8373F /* CGSize+InitSize.swift */,
 				2625268B24A3CAF900E301F9 /* NSLayoutConstraint+AnchorConstraints.swift */,
 				262960A124A3D16F0009FD29 /* UIImage+Resize.swift */,
-				2685250924AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift */,
+				2685250924AA6C8E000AEDDA /* UIImageView+SetImagePresentableModel.swift */,
 				2640ADF724A8CEA600F7134E /* UIImage+InitColorSize.swift */,
 				262960C724A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift */,
 				26A8B90624A6A97A006DF5A1 /* UIView+AddSubviews.swift */,
@@ -759,7 +759,7 @@
 				2685250B24AA6DE6000AEDDA /* PersonView */,
 				2636AB5524AA169A004B866D /* CompanyExperienceHeaderView */,
 				2685250C24AA6DFF000AEDDA /* TableViewHeaderViewing */,
-				26742AD324A3ACF8001D9444 /* CellViewModelUpdating */,
+				26742AD324A3ACF8001D9444 /* CellPresentableModelUpdating */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -789,7 +789,7 @@
 			children = (
 				5A15B7DE249FF2D500DB62F5 /* Models */,
 				5A15B7D7249FEFEA00DB62F5 /* Services */,
-				2625268F24A3CD9F00E301F9 /* ViewModels */,
+				2625268F24A3CD9F00E301F9 /* PresentableModels */,
 				5A6E87FC24A0EC8200DD8789 /* Views */,
 				5A7B9A90249CCA0A007D8199 /* Scenes */,
 				5A6E87F424A0EBD900DD8789 /* Other */,
@@ -838,7 +838,7 @@
 				26742ACB24A39B3A001D9444 /* GeneralPresenter.swift */,
 				26A8B8D524A61A4F006DF5A1 /* GeneralCellType.swift */,
 				26A8B8DC24A61C1E006DF5A1 /* GeneralCellTypesProviding */,
-				26A8B8D724A61BCC006DF5A1 /* GeneralCellViewModelsProviding */,
+				26A8B8D724A61BCC006DF5A1 /* GeneralCellPresentableModelsProviding */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1034,7 +1034,7 @@
 			files = (
 				26D31B0524AA8B48001D46FC /* WeakRef+CompanyExperienceDetailViewing.swift in Sources */,
 				5A6E87FE24A0EC8D00DD8789 /* PersonView.swift in Sources */,
-				2625268E24A3CD7500E301F9 /* PersonViewViewModel.swift in Sources */,
+				2625268E24A3CD7500E301F9 /* PersonViewPresentableModel.swift in Sources */,
 				5A648F64249D060100F7222F /* ResumeTabBarContract.swift in Sources */,
 				2685251624AA76C1000AEDDA /* EducationConfigurator.swift in Sources */,
 				26A8B8DE24A61C29006DF5A1 /* GeneralCellTypesProviding.swift in Sources */,
@@ -1062,7 +1062,7 @@
 				262E825C24A92FF000B8373F /* CGSize+InitSize.swift in Sources */,
 				262E826424A9480A00B8373F /* CompanyExperienceDetails.swift in Sources */,
 				262960C624A4D0900009FD29 /* TableViewHeaderView.swift in Sources */,
-				26742AD524A3AD24001D9444 /* CellViewModelUpdating.swift in Sources */,
+				26742AD524A3AD24001D9444 /* CellPresentableModelUpdating.swift in Sources */,
 				2636AB4824AA0982004B866D /* CompanyExperienceDetailContract.swift in Sources */,
 				26A8B90D24A6AF30006DF5A1 /* ExperienceViewController.swift in Sources */,
 				5A7B9A95249CF147007D8199 /* GeneralViewController.swift in Sources */,
@@ -1082,7 +1082,7 @@
 				262960AC24A3FE880009FD29 /* SkillsContract.swift in Sources */,
 				5A15B7E0249FF2E000DB62F5 /* Resume.swift in Sources */,
 				262E825A24A92FA200B8373F /* ImagePresentableModel.swift in Sources */,
-				2636AB5424AA168F004B866D /* CompanyExperienceHeaderViewModel.swift in Sources */,
+				2636AB5424AA168F004B866D /* CompanyExperienceHeaderPresentableModel.swift in Sources */,
 				2685251024AA6ED0000AEDDA /* Size.swift in Sources */,
 				268524FD24AA4198000AEDDA /* EducationContract.swift in Sources */,
 				5A15B7E2249FF39A00DB62F5 /* GeneralContract.swift in Sources */,
@@ -1101,7 +1101,7 @@
 				2685251C24AA7707000AEDDA /* Configurating.swift in Sources */,
 				5A15B7DD249FF2B300DB62F5 /* ResumeServiceDelegate.swift in Sources */,
 				26279BC424A78C32000CA5D2 /* ExperienceContract.swift in Sources */,
-				2685250A24AA6C8E000AEDDA /* UIImageView+SetImageViewModel.swift in Sources */,
+				2685250A24AA6C8E000AEDDA /* UIImageView+SetImagePresentableModel.swift in Sources */,
 				26D31AF024AA7AD7001D46FC /* WeakRef.swift in Sources */,
 				26D31B0124AA8892001D46FC /* WeakRef+ExperiencePresenting.swift in Sources */,
 				268524F924AA40FA000AEDDA /* EducationViewController.swift in Sources */,
@@ -1111,7 +1111,7 @@
 				262E827024A956E400B8373F /* Router.swift in Sources */,
 				26D31AF924AA85C8001D46FC /* WeakRef+GeneralPresenting.swift in Sources */,
 				2685251224AA6EDD000AEDDA /* ImageType.swift in Sources */,
-				26742AD724A3AD93001D9444 /* UITableViewCell+CellViewModelUpdating.swift in Sources */,
+				26742AD724A3AD93001D9444 /* UITableViewCell+CellPresentableModelUpdating.swift in Sources */,
 				262960C824A4D2530009FD29 /* UITableView+RemoveTrailingSeparators.swift in Sources */,
 				26A8B8F024A645F4006DF5A1 /* UrlBrowserHandling.swift in Sources */,
 				2625269524A3CDF600E301F9 /* CellPresentableModel.swift in Sources */,
@@ -1135,7 +1135,7 @@
 				262960CA24A5093F0009FD29 /* UITableViewCell+CellStyle.swift in Sources */,
 				26D31AFB24AA866E001D46FC /* GeneralConfiguratorTests.swift in Sources */,
 				262960A624A3FC850009FD29 /* SkillsViewControllerTests.swift in Sources */,
-				262E825E24A9303F00B8373F /* ImageViewModel+Equatable.swift in Sources */,
+				262E825E24A9303F00B8373F /* ImagePresentableModel+Equatable.swift in Sources */,
 				26D31AF224AA8086001D46FC /* SkillsGroup+Equatable.swift in Sources */,
 				26A8B8F824A65BA4006DF5A1 /* MockPhoneNumberHandler.swift in Sources */,
 				26A8B8FA24A65BD4006DF5A1 /* MockUrlBrowserHandler.swift in Sources */,
@@ -1150,26 +1150,26 @@
 				262960B224A4AAE10009FD29 /* MockGeneralPresenter.swift in Sources */,
 				5A15B7ED249FFD5D00DB62F5 /* GeneralViewControllerTests.swift in Sources */,
 				26279BCE24A7A43A000CA5D2 /* MockExperienceView.swift in Sources */,
-				262960C024A4BCF00009FD29 /* CellViewModel+Equatable.swift in Sources */,
+				262960C024A4BCF00009FD29 /* CellPresentableModel+Equatable.swift in Sources */,
 				262E826824A94F6800B8373F /* CompanyExperience+Equatable.swift in Sources */,
 				262960CC24A5097C0009FD29 /* UITableViewCell+SelectionStyle.swift in Sources */,
 				26D31AF424AA80A5001D46FC /* EducationRecord+Equatable.swift in Sources */,
 				26A8B90B24A6AEE1006DF5A1 /* ExperienceViewControllerTests.swift in Sources */,
-				262960BC24A4BC610009FD29 /* SkillsViewModel+Equatable.swift in Sources */,
-				2636AB5224AA1207004B866D /* CompanyExperienceDetailViewModel+Equatable.swift in Sources */,
+				262960BC24A4BC610009FD29 /* SkillsPresentableModel+Equatable.swift in Sources */,
+				2636AB5224AA1207004B866D /* CompanyExperienceDetailPresentableModel+Equatable.swift in Sources */,
 				26A8B8FC24A661FA006DF5A1 /* ResumeTabBarControllerTests.swift in Sources */,
 				262960B024A4AAB70009FD29 /* MockSkillsPresenter.swift in Sources */,
 				262E826624A94C4800B8373F /* MockExperiencePresenter.swift in Sources */,
-				262960BE24A4BC9F0009FD29 /* PersonViewModel+Equatable.swift in Sources */,
-				2685250324AA4553000AEDDA /* EducationViewModel+Equatable.swift in Sources */,
-				262960C224A4BD140009FD29 /* SectionViewModel+Equatable.swift in Sources */,
+				262960BE24A4BC9F0009FD29 /* PersonPresentableModel+Equatable.swift in Sources */,
+				2685250324AA4553000AEDDA /* EducationPresentableModel+Equatable.swift in Sources */,
+				262960C224A4BD140009FD29 /* SectionPresentableModel+Equatable.swift in Sources */,
 				26D31AFF24AA87AA001D46FC /* ExperienceConfiguratorTests.swift in Sources */,
 				268524FF24AA43C4000AEDDA /* EducationPresenterTests.swift in Sources */,
 				2685252424AA7989000AEDDA /* PhoneNumberHandlingErrorTests.swift in Sources */,
 				2685252224AA796C000AEDDA /* UrlBrowserHandlingErrorTests.swift in Sources */,
 				5A15B7D1249E2E0900DB62F5 /* TabBarItemProperties.swift in Sources */,
-				5A15B7D4249E2E2300DB62F5 /* GeneralViewModel+Equatable.swift in Sources */,
-				26279BD024A7A4C9000CA5D2 /* ExperienceViewModel+Equatable.swift in Sources */,
+				5A15B7D4249E2E2300DB62F5 /* GeneralPresentableModel+Equatable.swift in Sources */,
+				26279BD024A7A4C9000CA5D2 /* ExperiencePresentableModel+Equatable.swift in Sources */,
 				262E826C24A9515C00B8373F /* MockRouter.swift in Sources */,
 				5A15B7DB249FF00C00DB62F5 /* MockResumeService.swift in Sources */,
 				262E826024A931AE00B8373F /* ImageType+Equatable.swift in Sources */,

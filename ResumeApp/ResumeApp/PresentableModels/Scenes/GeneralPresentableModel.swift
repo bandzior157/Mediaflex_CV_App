@@ -7,6 +7,6 @@
 //
 
 struct GeneralPresentableModel {
-    let personViewViewModel: PersonViewViewModel
+    let personViewPresentableModel: PersonViewPresentableModel
     let elements: [CellPresentableModel]
 }

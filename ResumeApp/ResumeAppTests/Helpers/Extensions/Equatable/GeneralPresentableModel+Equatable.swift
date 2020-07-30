@@ -11,7 +11,7 @@
 extension GeneralPresentableModel: Equatable {
     
     public static func ==(lhs: GeneralPresentableModel, rhs: GeneralPresentableModel) -> Bool {
-        lhs.personViewViewModel == rhs.personViewViewModel &&
+        lhs.personViewPresentableModel == rhs.personViewPresentableModel &&
             lhs.elements == rhs.elements
     }
     

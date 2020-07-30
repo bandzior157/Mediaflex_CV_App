@@ -13,88 +13,88 @@ class GeneralViewControllerTests: XCTestCase {
     
     private let dummySize = Size(width: 0, height: 0)
     
-    func test_personViewSubviews_areSet_onUpdateWithViewModel() {
+    func test_personViewSubviews_areSet_onUpdateWithPresentableModel() {
         let sut = makeSUT()
-        let personVM = PersonViewViewModel(fullName: "name", image: ImagePresentableModel(type: .url(string: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png"), size: Size(width: 0, height: 0)), role: "role")
-        let viewModel =
-            GeneralPresentableModel(personViewViewModel: personVM, elements: [])
+        let personViewPresentableModel = PersonViewPresentableModel(fullName: "name", image: ImagePresentableModel(type: .url(string: "https://docs-assets.developer.apple.com/published/06ba0eba91/63b0c95b-bf2f-4798-9cca-8a5e77631679.png"), size: Size(width: 0, height: 0)), role: "role")
+        let presentableModel =
+            GeneralPresentableModel(personViewPresentableModel: personViewPresentableModel, elements: [])
         
-        sut.update(viewModel: viewModel)
-        XCTAssertEqual(sut.personView.nameLabel.text, viewModel.personViewViewModel.fullName)
-        XCTAssertEqual(sut.personView.roleLabel.text, viewModel.personViewViewModel.role)
+        sut.update(presentableModel: presentableModel)
+        XCTAssertEqual(sut.personView.nameLabel.text, presentableModel.personViewPresentableModel.fullName)
+        XCTAssertEqual(sut.personView.roleLabel.text, presentableModel.personViewPresentableModel.role)
     }
     
-    func test_tableViewElements_basedOnViewModelElements() {
+    func test_tableViewElements_basedOnPresentableModelElements() {
         let sut = makeSUT()
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        sut.update(viewModel: makeViewModel(elements: []))
+        sut.update(presentableModel: makePresentableModel(elements: []))
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
         
-        sut.update(viewModel: makeViewModel(elements: [dummyCellViewModel()]))
+        sut.update(presentableModel: makePresentableModel(elements: [dummyCellPresentableModel()]))
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
         
-        sut.update(viewModel: makeViewModel(elements: [dummyCellViewModel(), dummyCellViewModel(), dummyCellViewModel()]))
+        sut.update(presentableModel: makePresentableModel(elements: [dummyCellPresentableModel(), dummyCellPresentableModel(), dummyCellPresentableModel()]))
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
     }
     
     func test_renderedCell_styleSubtitle() {
         let sut = makeSUT()
-        sut.update(viewModel: makeViewModel(elements: [CellPresentableModel()]))
+        sut.update(presentableModel: makePresentableModel(elements: [CellPresentableModel()]))
         let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertNotNil(cell)
         XCTAssertEqual(cell.cellStyle, .subtitle)
     }
     
-    func test_tableViewCell_text_isViewModelTitle() {
+    func test_tableViewCell_text_isPresentableModelTitle() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(title: "First")
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(title: "First")
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.textLabel?.text, "First")
     }
     
-    func test_tableViewCell_image_renderedByViewModelImageName() {
+    func test_tableViewCell_image_renderedByPresentableModelImageName() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(image: .init(type: .named(imageName: "phone"), size: dummySize))
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(image: .init(type: .named(imageName: "phone"), size: dummySize))
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertNotNil(cell?.imageView?.image)
     }
     
-    func test_tableViewCell_noImage_renderedByViewModelWithoutImageName() {
+    func test_tableViewCell_noImage_renderedByPresentableModelWithoutImageName() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(image: nil)
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(image: nil)
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertNil(cell?.imageView?.image)
     }
     
-    func test_tableViewCell_defaultSelection_renderedByViewModelSelectable() {
+    func test_tableViewCell_defaultSelection_renderedByPresentableModelSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(selectable: true)
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(selectable: true)
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.selectionStyle, .default)
     }
     
-    func test_tableViewCell_noneSelection_renderedByViewModelNotSelectable() {
+    func test_tableViewCell_noneSelection_renderedByPresentableModelNotSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(selectable: false)
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(selectable: false)
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.selectionStyle, UITableViewCell.SelectionStyle.none)
     }
     
-    func test_tableViewCell_subtitle_fromViewModel() {
+    func test_tableViewCell_subtitle_fromPresentableModel() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(subtitle: "text")
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(subtitle: "text")
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.detailTextLabel?.text, "text")
@@ -102,8 +102,8 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_defaultNoSubtitle() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel()
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel()
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertNil(cell?.detailTextLabel?.text)
@@ -111,8 +111,8 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_hasChevron_whenSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(selectable: true)
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(selectable: true)
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.accessoryType, UITableViewCell.AccessoryType.disclosureIndicator)
@@ -120,8 +120,8 @@ class GeneralViewControllerTests: XCTestCase {
     
     func test_tableViewCell_hasNoChevron_whenNotSelectable() {
         let sut = makeSUT()
-        let cellViewModel = CellPresentableModel(selectable: false)
-        sut.update(viewModel: makeViewModel(elements: [cellViewModel]))
+        let cellPresentableModel = CellPresentableModel(selectable: false)
+        sut.update(presentableModel: makePresentableModel(elements: [cellPresentableModel]))
                 
         let cell = sut.tableView.cell(at: 0)
         XCTAssertEqual(cell?.accessoryType, UITableViewCell.AccessoryType.none)
@@ -132,7 +132,7 @@ class GeneralViewControllerTests: XCTestCase {
         let presenter = MockGeneralPresenter()
         sut.presenter = presenter
         
-        sut.update(viewModel: makeViewModel(elements: [CellPresentableModel(), CellPresentableModel()]))
+        sut.update(presentableModel: makePresentableModel(elements: [CellPresentableModel(), CellPresentableModel()]))
         
         sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
         XCTAssertEqual(presenter.selectedRows, [1])
@@ -153,11 +153,11 @@ class GeneralViewControllerTests: XCTestCase {
         return sut
     }
     
-    private func makeViewModel(elements: [CellPresentableModel] = []) -> GeneralPresentableModel {
-        GeneralPresentableModel(personViewViewModel: PersonViewViewModel(fullName: "", image: nil, role: ""), elements: elements)
+    private func makePresentableModel(elements: [CellPresentableModel] = []) -> GeneralPresentableModel {
+        GeneralPresentableModel(personViewPresentableModel: PersonViewPresentableModel(fullName: "", image: nil, role: ""), elements: elements)
     }
     
-    private func dummyCellViewModel() -> CellPresentableModel {
+    private func dummyCellPresentableModel() -> CellPresentableModel {
         CellPresentableModel(title: "")
     }
 

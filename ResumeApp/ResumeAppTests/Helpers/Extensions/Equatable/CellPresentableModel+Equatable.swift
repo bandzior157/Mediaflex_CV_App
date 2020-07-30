@@ -14,7 +14,7 @@ extension CellPresentableModel: Equatable {
         lhs.title == rhs.title &&
             lhs.subtitle == rhs.subtitle &&
             lhs.selectable == rhs.selectable &&
-            lhs.imageViewModel == rhs.imageViewModel
+            lhs.imagePresentableModel == rhs.imagePresentableModel
     }
 
 }

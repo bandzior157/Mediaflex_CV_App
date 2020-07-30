@@ -10,6 +10,7 @@ protocol ResumeTabBarPresenting {
     func viewDidLoad()
 }
 
-struct ResumeTabBarViewModel {
+#warning("needless?")
+struct ResumeTabBarPresentableModel {
     let general: GeneralPresentableModel
 }

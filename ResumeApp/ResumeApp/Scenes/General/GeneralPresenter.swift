@@ -15,7 +15,7 @@ class GeneralPresenter {
     var alertPresenter: AlertPresenting?
     
     let cellTypesProvider: GeneralCellTypesProviding
-    let cellViewModelsProvider: GeneralCellPresentableModelsProviding
+    let cellPresentableModelsProvider: GeneralCellPresentableModelsProviding
     let phoneNumberHandler: PhoneNumberHandling
     let urlBrowserHandler: UrlBrowserHandling
     var mailHandler: MailHandling?
@@ -24,14 +24,14 @@ class GeneralPresenter {
     private var presentableModel: GeneralPresentableModel? {
         didSet {
             guard let presentableModel = presentableModel else { return }
-            view?.update(viewModel: presentableModel)
+            view?.update(presentableModel: presentableModel)
         }
     }
     
     init(cellTypesProvider: GeneralCellTypesProviding = GeneralCellTypesProvider(),
-         cellViewModelsProvider: GeneralCellPresentableModelsProviding = GeneralCellPresentableModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
+         cellPresentableModelsProvider: GeneralCellPresentableModelsProviding = GeneralCellPresentableModelsProvider(), phoneNumberHandler: PhoneNumberHandling = PhoneNumberHandler(), urlBrowserHandler: UrlBrowserHandling = UrlBrowserHandler()) {
         self.cellTypesProvider = cellTypesProvider
-        self.cellViewModelsProvider = cellViewModelsProvider
+        self.cellPresentableModelsProvider = cellPresentableModelsProvider
         self.phoneNumberHandler = phoneNumberHandler
         self.urlBrowserHandler = urlBrowserHandler
     }
@@ -65,18 +65,18 @@ extension GeneralPresenter: ResumeSetting {
         generalCellTypes = cellTypesProvider.ordered(for: resume)
         
         guard let generalCellTypes = generalCellTypes else { return }
-        let elements = cellViewModelsProvider.get(for: generalCellTypes)
+        let elements = cellPresentableModelsProvider.get(for: generalCellTypes)
         
-        var imageViewModel: ImagePresentableModel?
+        var imagePresentableModel: ImagePresentableModel?
         if let imageUrlString = resume.imageUrl {
-            imageViewModel = ImagePresentableModel(type: .url(string: imageUrlString), size: Size(width: 120, height: 120))
+            imagePresentableModel = ImagePresentableModel(type: .url(string: imageUrlString), size: Size(width: 120, height: 120))
         }
         
-        let personViewViewModel = PersonViewViewModel(fullName: resume.name, image: imageViewModel, role: resume.role)
+        let personViewPresentableModel = PersonViewPresentableModel(fullName: resume.name, image: imagePresentableModel, role: resume.role)
         
-        let viewModel = GeneralPresentableModel(personViewViewModel: personViewViewModel, elements: elements)
+        let presentableModel = GeneralPresentableModel(personViewPresentableModel: personViewPresentableModel, elements: elements)
         
-        self.presentableModel = viewModel
+        self.presentableModel = presentableModel
     }
     
 }

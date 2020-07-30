@@ -7,13 +7,13 @@
 //
 
 struct EducationPresentableModel {
-    let cellViewModels: [CellPresentableModel]
+    let cellPresentableModels: [CellPresentableModel]
 }
 
 extension EducationPresentableModel {
     
     init(resume: Resume) {
-        self.cellViewModels = resume.education.map {
+        self.cellPresentableModels = resume.education.map {
             CellPresentableModel(educationRecord: $0)
         }
     }

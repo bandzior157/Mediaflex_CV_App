@@ -7,16 +7,16 @@
 //
 
 protocol PersonViewing {
-    func update(viewModel: PersonViewViewModel)
+    func update(presentableModel: PersonViewPresentableModel)
 }
 
 extension PersonView: PersonViewing {
     
-    func update(viewModel: PersonViewViewModel) {
-        nameLabel.text = viewModel.fullName
-        roleLabel.text = viewModel.role
+    func update(presentableModel: PersonViewPresentableModel) {
+        nameLabel.text = presentableModel.fullName
+        roleLabel.text = presentableModel.role
         
-        imageView.setImage(imageViewModel: viewModel.image)
+        imageView.setImage(imagePresentableModel: presentableModel.image)
         
         setLabelsVisible(true)
     }

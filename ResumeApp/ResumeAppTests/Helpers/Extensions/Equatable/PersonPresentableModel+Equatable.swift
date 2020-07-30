@@ -1,5 +1,5 @@
 //
-//  PersonViewModel+Equatable.swift
+//  PersonViewPresentableModel+Equatable.swift
 //  ResumeAppTests
 //
 //  Created by Łukasz Bazior on 25/06/2020.
@@ -8,9 +8,9 @@
 
 @testable import ResumeApp
 
-extension PersonViewViewModel: Equatable {
+extension PersonViewPresentableModel: Equatable {
     
-    public static func ==(lhs: PersonViewViewModel, rhs: PersonViewViewModel) -> Bool {
+    public static func ==(lhs: PersonViewPresentableModel, rhs: PersonViewPresentableModel) -> Bool {
         lhs.fullName == rhs.fullName &&
             lhs.image == rhs.image &&
             lhs.role == rhs.role

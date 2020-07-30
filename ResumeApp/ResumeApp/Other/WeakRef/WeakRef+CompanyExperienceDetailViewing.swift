@@ -8,8 +8,8 @@
 
 extension WeakRef: CompanyExperienceDetailViewing where T: CompanyExperienceDetailViewing {
     
-    func update(viewModel: CompanyExperienceDetailPresentableModel) {
-        object?.update(viewModel: viewModel)
+    func update(presentableModel: CompanyExperienceDetailPresentableModel) {
+        object?.update(presentableModel: presentableModel)
     }
     
 }

@@ -17,7 +17,7 @@ class EducationViewController: UIViewController {
         return tableView
     }()
     
-    private var viewModel: EducationPresentableModel? {
+    private var presentableModel: EducationPresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -49,8 +49,8 @@ class EducationViewController: UIViewController {
 
 extension EducationViewController: EducationViewing {
     
-    func update(viewModel: EducationPresentableModel) {
-        self.viewModel = viewModel
+    func update(presentableModel: EducationPresentableModel) {
+        self.presentableModel = presentableModel
     }
     
 }
@@ -58,13 +58,13 @@ extension EducationViewController: EducationViewing {
 extension EducationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.cellViewModels.count ?? 0
+        presentableModel?.cellPresentableModels.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        guard let viewModel = viewModel?.cellViewModels[indexPath.row] else { return cell }
-        cell.update(viewModel: viewModel)
+        guard let cellPresentableModel = presentableModel?.cellPresentableModels[indexPath.row] else { return cell }
+        cell.update(presentableModel: cellPresentableModel)
         return cell
     }
     

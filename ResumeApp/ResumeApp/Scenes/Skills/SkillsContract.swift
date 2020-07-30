@@ -7,7 +7,7 @@
 //
 
 protocol SkillsViewing {
-    func update(viewModel: SkillsPresentableModel)
+    func update(presentableModel: SkillsPresentableModel)
 }
 
 protocol SkillsPresenting {

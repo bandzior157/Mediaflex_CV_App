@@ -7,5 +7,5 @@
 //
 
 protocol CompanyExperienceHeaderViewing {
-    func update(viewModel: CompanyExperienceHeaderViewModel)
+    func update(presentableModel: CompanyExperienceHeaderPresentableModel)
 }

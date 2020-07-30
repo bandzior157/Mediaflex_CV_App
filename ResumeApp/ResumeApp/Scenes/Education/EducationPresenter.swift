@@ -15,7 +15,7 @@ class EducationPresenter {
 extension EducationPresenter: ResumeSetting {
     
     func setResume(_ resume: Resume) {
-        view?.update(viewModel: EducationPresentableModel(resume: resume))
+        view?.update(presentableModel: EducationPresentableModel(resume: resume))
     }
     
 }

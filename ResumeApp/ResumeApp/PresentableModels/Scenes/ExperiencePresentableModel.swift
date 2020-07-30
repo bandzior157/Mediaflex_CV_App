@@ -7,5 +7,5 @@
 //
 
 struct ExperiencePresentableModel {
-    let cellViewModels: [CellPresentableModel]
+    let cellPresentableModels: [CellPresentableModel]
 }

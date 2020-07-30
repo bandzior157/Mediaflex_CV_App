@@ -11,31 +11,31 @@ import XCTest
 
 class SkillsViewControllerTests: XCTestCase {
 
-    func test_tableViewSectionsCount_equalsViewModelSectionsCount() {
+    func test_tableViewSectionsCount_equalsPresentableModelSectionsCount() {
         let sut = makeSUT()
-        let viewModel = SkillsPresentableModel(sections: [])
-        sut.update(viewModel: viewModel)
+        let presentableModel = SkillsPresentableModel(sections: [])
+        sut.update(presentableModel: presentableModel)
         XCTAssertEqual(sut.tableView.numberOfSections, 0)
         
-        let twoSectionViewModel = SkillsPresentableModel(sections: [SectionPresentableModel(title: "first section", elements: []), SectionPresentableModel(title: "second section", elements: [])])
-        sut.update(viewModel: twoSectionViewModel)
+        let twoSectionPresentableModel = SkillsPresentableModel(sections: [SectionPresentableModel(title: "first section", elements: []), SectionPresentableModel(title: "second section", elements: [])])
+        sut.update(presentableModel: twoSectionPresentableModel)
         XCTAssertEqual(sut.tableView.numberOfSections, 2)
     }
     
     func test_viewForHeaderInSection_forTableView() {
         let sut = makeSUT()
-        let viewModel = SkillsPresentableModel(sections: [SectionPresentableModel(title: "section title", elements: [])])
-        sut.update(viewModel: viewModel)
+        let presentableModel = SkillsPresentableModel(sections: [SectionPresentableModel(title: "section title", elements: [])])
+        sut.update(presentableModel: presentableModel)
         
         let header = sut.tableView(sut.tableView, viewForHeaderInSection: 0) as? TableViewHeaderView
         XCTAssertNotNil(header)
         XCTAssertEqual(header?.textLabel.text, "section title")
     }
     
-    func test_tableViewSectionElements_byViewModel() {
+    func test_tableViewSectionElements_byPresentableModel() {
         let sut = makeSUT()
-        let viewModel = SkillsPresentableModel(sections: [SectionPresentableModel(title: "first", elements: [CellPresentableModel(title: "f1"), CellPresentableModel(title: "f2")]), SectionPresentableModel(title: "second", elements: [CellPresentableModel(title: "s1")])])
-        sut.update(viewModel: viewModel)
+        let presentableModel = SkillsPresentableModel(sections: [SectionPresentableModel(title: "first", elements: [CellPresentableModel(title: "f1"), CellPresentableModel(title: "f2")]), SectionPresentableModel(title: "second", elements: [CellPresentableModel(title: "s1")])])
+        sut.update(presentableModel: presentableModel)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 1)
         XCTAssertEqual(sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).textLabel?.text, "f1")

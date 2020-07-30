@@ -18,7 +18,7 @@ class ExperienceViewController: UIViewController {
         return tableView
     }()
     
-    private var viewModel: ExperiencePresentableModel? {
+    private var presentableModel: ExperiencePresentableModel? {
         didSet {
             reloadSubviews()
         }
@@ -58,17 +58,17 @@ class ExperienceViewController: UIViewController {
 extension ExperienceViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.cellViewModels.count ?? 0
+        presentableModel?.cellPresentableModels.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
 
-        guard let cellViewModel = viewModel?.cellViewModels[indexPath.row] else {
+        guard let cellPresentableModel = presentableModel?.cellPresentableModels[indexPath.row] else {
             return cell
         }
         
-        cell.update(viewModel: cellViewModel)
+        cell.update(presentableModel: cellPresentableModel)
         return cell
     }
     
@@ -76,8 +76,8 @@ extension ExperienceViewController: UITableViewDataSource {
 
 extension ExperienceViewController: ExperienceViewing {
     
-    func update(viewModel: ExperiencePresentableModel) {
-        self.viewModel = viewModel
+    func update(presentableModel: ExperiencePresentableModel) {
+        self.presentableModel = presentableModel
     }
     
 }

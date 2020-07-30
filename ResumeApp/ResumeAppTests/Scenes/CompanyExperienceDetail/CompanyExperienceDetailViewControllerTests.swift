@@ -11,8 +11,8 @@ import XCTest
 
 class CompanyExperienceDetailViewControllerTests: XCTestCase {
     
-    func test_updateCompanyExperienceViewModel_rendersSubviews() {
-        let viewModel = CompanyExperienceDetailPresentableModel(
+    func test_updateCompanyExperiencePresentableModel_rendersSubviews() {
+        let presentableModel = CompanyExperienceDetailPresentableModel(
             companyLogoUrlString: "logo url string",
             companyName: "company name",
             role: "role",
@@ -35,7 +35,7 @@ class CompanyExperienceDetailViewControllerTests: XCTestCase {
         )
         
         let sut = makeSUT()
-        sut.update(viewModel: viewModel)
+        sut.update(presentableModel: presentableModel)
         
         XCTAssertEqual(sut.headerView.companyLabel.text, "company name")
         XCTAssertEqual(sut.headerView.roleLabel.text, "role")

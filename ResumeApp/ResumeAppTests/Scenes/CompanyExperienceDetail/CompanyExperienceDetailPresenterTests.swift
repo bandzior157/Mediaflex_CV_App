@@ -23,7 +23,7 @@ class CompanyExperienceDetailPresenterTests: XCTestCase {
         sut.viewDidLoad()
         
         let expected = [CompanyExperienceDetailPresentableModel(companyLogoUrlString: "url", companyName: "company nam", role: "role", dates: "01.2000 - 12.2010")]
-        XCTAssertEqual(view.updateViewModels, expected)
+        XCTAssertEqual(view.updatePresentableModels, expected)
     }
     
     
@@ -37,10 +37,10 @@ class CompanyExperienceDetailPresenterTests: XCTestCase {
 
 class MockCompanyExperienceDetailView: CompanyExperienceDetailViewing {
     
-    private(set) var updateViewModels = [CompanyExperienceDetailPresentableModel]()
+    private(set) var updatePresentableModels = [CompanyExperienceDetailPresentableModel]()
     
-    func update(viewModel: CompanyExperienceDetailPresentableModel) {
-        updateViewModels.append(viewModel)
+    func update(presentableModel: CompanyExperienceDetailPresentableModel) {
+        updatePresentableModels.append(presentableModel)
     }
     
 }

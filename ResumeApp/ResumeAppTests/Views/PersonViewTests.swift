@@ -15,9 +15,9 @@ class PersonViewTests: XCTestCase {
         XCTAssertNil(PersonView(coder: NSCoder()))
     }
     
-    func test_updateSubviewsByViewModel() {
+    func test_updateSubviewsByPresentableModel() {
         let sut = makeSUT()
-        sut.update(viewModel: PersonViewViewModel(fullName: "some name", image: ImagePresentableModel(type: .url(string: "some url"), size: Size(width: 0, height: 0)), role: "some role"))
+        sut.update(presentableModel: PersonViewPresentableModel(fullName: "some name", image: ImagePresentableModel(type: .url(string: "some url"), size: Size(width: 0, height: 0)), role: "some role"))
         XCTAssertEqual(sut.nameLabel.text, "some name")
         XCTAssertEqual(sut.roleLabel.text, "some role")
     }

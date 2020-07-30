@@ -72,16 +72,16 @@ class GeneralViewController: UIViewController {
         ThreadGuarantee.guarantee(on: .main) { [weak self] in
             self?.tableView.reloadData()
             
-            guard let viewModel = self?.presentableModel else { return }
-            self?.personView.update(viewModel: viewModel.personViewViewModel)
+            guard let presentableModel = self?.presentableModel else { return }
+            self?.personView.update(presentableModel: presentableModel.personViewPresentableModel)
         }
     }
 }
 
 extension GeneralViewController: GeneralViewing {
     
-    func update(viewModel: GeneralPresentableModel) {
-        self.presentableModel = viewModel
+    func update(presentableModel: GeneralPresentableModel) {
+        self.presentableModel = presentableModel
     }
     
 }
@@ -91,11 +91,11 @@ extension GeneralViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
 
-        guard let cellViewModel = presentableModel?.elements[indexPath.row] else {
+        guard let cellPresentableModel = presentableModel?.elements[indexPath.row] else {
             return cell
         }
 
-        cell.update(viewModel: cellViewModel)
+        cell.update(presentableModel: cellPresentableModel)
         return cell
     }
     
